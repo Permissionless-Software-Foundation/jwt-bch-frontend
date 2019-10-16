@@ -9,6 +9,6 @@
   },
   "plugins": ["react"],
   "rules": {
-    "anchor-is-valid": false
+    "anchor-is-valid": 0
   }
 }

@@ -1,8 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import { navigate } from "gatsby"
-import { handleLogin, isLoggedIn } from "../services/auth"
+import { navigate } from 'gatsby'
+import { handleLogin, isLoggedIn } from '../services/auth'
 
 import LoginForm from '../components/login-form'
 import Layout from '../components/layout'
@@ -13,7 +13,7 @@ import pic03 from '../assets/images/pic03.jpg'
 import pic04 from '../assets/images/pic04.jpg'
 import qrcode from '../assets/images/testnet-addr.png'
 
-const SERVER = 'http://localhost:5100'
+const SERVER = 'http://localhost:5001'
 
 const BchAddress = styled.p`
   text-align: center;
@@ -45,8 +45,6 @@ class Homepage extends React.Component {
   }
 
   render() {
-
-
     const siteTitle = 'Auth Boilerplate'
 
     return (
