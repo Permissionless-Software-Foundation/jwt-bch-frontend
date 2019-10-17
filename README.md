@@ -1,14 +1,17 @@
-# gatsby-login
-This is a front end boilerplate based on Gatsby. It started from the Gatsby
-[auth tutorial](https://www.gatsbyjs.org/docs/authentication-tutorial/), using
-the [gatsby-starter-photo template](https://github.com/codebushi/gatsby-starter-photon), and
-was customized to work with
-the [koa boilerplate](https://github.com/christroutner/babel-free-koa2-api-boilerplate) back
-end. It demonstrates the basic auth capability of the koa boilerplate.
+# jwt-bch-frontend
+
+This is a front end user interface based on Gatsby and React. It is forked from
+[this template](https://github.com/christroutner/gatsby-login). It is intended
+to be run with [this back end](https://github.com/Permissionless-Software-Foundation/jwt-bch-api).
+
+This single page app (SPA) allows users to:
+- Create an account.
+- Fund their account with BCH and receive credit.
+- Recieve a JWT token to access a REST API or other web service.
 
 ## Installation and Usage
-- Install and run the [koa boilerplate](https://github.com/christroutner/babel-free-koa2-api-boilerplate)
-- Clone this repository `git clone https://github.com/christroutner/gatsby-login`
+- Install and run the [the back end](https://github.com/Permissionless-Software-Foundation/jwt-bch-api)
+- Clone this repository `git clone https://github.com/Permissionless-Software-Foundation/jwt-bch-frontend`
 - Install dependencies: `npm install`
 - Run development server: `npm run develop`
 - Build for production: `npm run build`
