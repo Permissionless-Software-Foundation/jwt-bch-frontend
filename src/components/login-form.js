@@ -7,7 +7,9 @@ import styled from 'styled-components'
 import { handleLogin, isLoggedIn, setUser } from "../services/auth";
 import { Link, navigate } from "gatsby";
 
-const SERVER = `http://localhost:5001`;
+const config = require("../../config")
+
+const SERVER = config.server;
 // const SERVER = ``;
 
 const StyledButton = styled.a`
