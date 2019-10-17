@@ -98,7 +98,8 @@ class LoginForm extends React.Component {
 
       setUser({
         username: users.user.username,
-        jwt: users.token
+        jwt: users.token,
+        userdata: users
       })
 
       navigate(`/app/profile`)
