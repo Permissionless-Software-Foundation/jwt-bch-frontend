@@ -32,14 +32,15 @@ export const handleLogin = async ({ username, password }) => {
     };
     const data = await fetch(`${SERVER}/auth/`, options);
     const users = await data.json();
-    //console.log(`users: ${JSON.stringify(users, null, 2)}`);
+    // console.log(`users: ${JSON.stringify(users, null, 2)}`);
 
     //console.log(`name: ${users.user.username}`)
     //console.log(`token: ${users.token}`)
 
     return setUser({
       username: users.user.username,
-      jwt: users.token
+      jwt: users.token,
+      userdata: users
     })
   } catch (err) {
     // If something goes wrong with auth, return false.
