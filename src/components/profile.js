@@ -1,5 +1,6 @@
 import React from "react"
 import { getUser } from "../services/auth"
+var QRCode = require('qrcode.react');
 
 const Profile = () => {
   const userData = getUser()
@@ -12,6 +13,8 @@ const Profile = () => {
         <li>Name: {userData.username}</li>
         <li>JWT: {userData.jwt}</li>
       </ul>
+
+      <QRCode value="http://facebook.github.io/react/" />
     </>
   )
 }

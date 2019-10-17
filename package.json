@@ -12,6 +12,7 @@
     "gatsby-plugin-sass": "^2.0.1",
     "isomorphic-fetch": "^2.2.1",
     "node-sass": "^4.9.3",
+    "qrcode.react": "^0.9.3",
     "react": "^16.5.1",
     "react-chartjs-2": "^2.7.4",
     "react-dom": "^16.5.1",
