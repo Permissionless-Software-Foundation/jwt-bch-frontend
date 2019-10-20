@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 var QRCode = require('qrcode.react');
 import styled from 'styled-components'
+import { navigate } from 'gatsby'
 
 const config = require("../../config")
 
@@ -43,7 +44,11 @@ class Profile extends React.Component {
     const userData = await getUser()
     console.log(`userData: ${JSON.stringify(userData,null,2)}`)
 
-    // this.data = userData
+    // If the user is not logged in, send them back to the home page.
+    if(!userData.userdata) {
+      navigate(`/`)
+      return
+    }
 
     let apiToken = ''
     if(userData.userdata.user.apiToken) apiToken = userData.userdata.user.apiToken
