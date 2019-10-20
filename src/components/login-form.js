@@ -102,7 +102,7 @@ class LoginForm extends React.Component {
         userdata: users
       })
 
-      navigate(`/app/profile`)
+      navigate(`/profile`)
     } catch (err) {
       // If something goes wrong with auth, return false.
       //return false;
@@ -123,7 +123,7 @@ class LoginForm extends React.Component {
 
     await handleLogin(_this.state)
 
-    navigate(`/app/profile`)
+    navigate(`/profile`)
   }
 
 }

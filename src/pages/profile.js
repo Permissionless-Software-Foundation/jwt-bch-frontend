@@ -77,13 +77,20 @@ class Profile extends React.Component {
 
           </ul>
 
-          <QRCode value={this.state.bchAddr} />
+          <center><QRCode value={this.state.bchAddr} /></center>
 
           <br />
+          <center><div>
           <StyledButton href="#" className="button special" id="checkCreditBtn"
           onClick={this.getCredit}>
             Update Credit
           </StyledButton>
+
+          <StyledButton href="#" className="button special" id="getJWTBtn"
+          onClick={this.getJwt}>
+            Get API Token
+          </StyledButton>
+          </div></center>
           <br />
 
           <OutMsg>{this.state.message}</OutMsg>
@@ -103,10 +110,14 @@ class Profile extends React.Component {
   // Button click handler. Asks server to check BCH address and update credit
   // if BCH is found.
   async getCredit(event) {
+    let fetchData
+
     try {
       event.preventDefault()
 
-      // const id = thisUserData.userdata.user._id
+      _this.setState(prevState => ({
+        message: 'Checking BCH address...'
+      }))
 
       const options = {
         method: "GET",
@@ -115,17 +126,66 @@ class Profile extends React.Component {
           "Authorization": `Bearer ${_this.state.userJwt}`
         }
       };
-      const data = await fetch(`${SERVER}/apitoken/update-credit/${_this.state.id}`, options);
+      fetchData = await fetch(`${SERVER}/apitoken/update-credit/${_this.state.id}`, options);
 
-      const credit = await data.json();
+      const credit = await fetchData.json();
       console.log(`credit: ${credit}`)
 
       _this.setState(prevState => ({
-        credit: credit
+        credit: credit,
+        message: 'BCH address checked. Credit updated.'
       }))
 
     } catch(err) {
+      // console.log(`fetchData: `, fetchData)
+      // console.log(`fetchData.status: ${fetchData.status}`)
+
+      if(fetchData.status === 409) {
+        _this.setState(prevState => ({
+          message: 'Wait a minute for the indexer to update.'
+        }))
+        return
+      }
+
       console.error(`Error in getCredit(): `, err)
+      _this.setState(prevState => ({
+        message: err.message
+      }))
+    }
+  }
+
+  // Click handler for when user wants to get a new JWT token.
+  async getJwt(event) {
+    try {
+      event.preventDefault()
+
+      _this.setState(prevState => ({
+        message: 'Requesting new API JWT token...'
+      }))
+
+      const options = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${_this.state.userJwt}`
+        }
+      };
+      const data = await fetch(`${SERVER}/apitoken/new`, options);
+      // console.log(`data: `, data)
+
+      if(data.status > 399) throw new Error(`Could not get new JWT token.`)
+
+      const data2 = await data.json();
+      console.log(`apiToken: ${data2.apiToken}`)
+
+      _this.setState(prevState => ({
+        apiToken: data2.apiToken,
+        message: 'API JWT Token updated.'
+      }))
+
+    } catch(err) {
+      console.error(`Error in getJwt(): `, err)
+      console.log(`err: ${JSON.stringify(err,null,2)}`)
 
       _this.setState(prevState => ({
         message: err.message

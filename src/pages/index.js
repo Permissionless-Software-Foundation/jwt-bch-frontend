@@ -75,7 +75,7 @@ class Homepage extends React.Component {
   async componentDidMount() {
     // If user is already logged in, forward them to the private area.
     if (isLoggedIn()) {
-      navigate(`/app/profile`)
+      navigate(`/profile`)
     }
   }
 }

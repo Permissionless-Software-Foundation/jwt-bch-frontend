@@ -25,7 +25,7 @@ export default () => {
       <nav>
         <Link to="/">Home</Link>
         {` `}
-        <Link to="/app/profile">Profile</Link>
+        <Link to="/profile">Profile</Link>
         {` `}
         {isLoggedIn() ? (
           <a
