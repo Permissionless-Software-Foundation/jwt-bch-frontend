@@ -161,6 +161,8 @@ class Profile extends React.Component {
 
   // Click handler for when user wants to get a new JWT token.
   async getJwt(event) {
+    let fetchData
+
     try {
       event.preventDefault()
 
@@ -175,12 +177,12 @@ class Profile extends React.Component {
           "Authorization": `Bearer ${_this.state.userJwt}`
         }
       };
-      const data = await fetch(`${SERVER}/apitoken/new`, options);
+      fetchData = await fetch(`${SERVER}/apitoken/new`, options);
       // console.log(`data: `, data)
 
-      if(data.status > 399) throw new Error(`Could not get new JWT token.`)
+      if(fetchData.status > 399) throw new Error(`Could not get new JWT token.`)
 
-      const data2 = await data.json();
+      const data2 = await fetchData.json();
       console.log(`apiToken: ${data2.apiToken}`)
 
       _this.setState(prevState => ({
@@ -189,6 +191,13 @@ class Profile extends React.Component {
       }))
 
     } catch(err) {
+      if(fetchData.status === 402) {
+        _this.setState(prevState => ({
+          message: 'Not enough credit in your account. Send BCH to the address listed.'
+        }))
+        return
+      }
+
       console.error(`Error in getJwt(): `, err)
       console.log(`err: ${JSON.stringify(err,null,2)}`)
 
