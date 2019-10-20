@@ -1,8 +1,26 @@
 import React from 'react'
 import Layout from '../components/layout'
 var QRCode = require('qrcode.react');
+import styled from 'styled-components'
+
+const config = require("../../config")
 
 import { getUser } from "../services/auth"
+
+const SERVER = config.server;
+
+const StyledButton = styled.a`
+  margin: 10px;
+  margin-bottom: 25px;
+`
+
+const OutMsg = styled.p`
+  color: red;
+  font-weight: bold;
+  size: 18px;
+`
+
+let _this
 
 class Profile extends React.Component {
   constructor(props) {
@@ -12,8 +30,13 @@ class Profile extends React.Component {
       bchAddr: '',
       credit: 0,
       apiToken: '',
-      username: ''
+      username: '',
+      message: '',
+      id: '',
+      userJwt: ''
     }
+
+    _this = this
   }
 
   async componentDidMount() {
@@ -34,7 +57,10 @@ class Profile extends React.Component {
       bchAddr: userData.userdata.user.bchAddr,
       credit: userData.userdata.user.credit,
       apiToken: apiToken,
-      username: userData.username
+      username: userData.username,
+      message: '',
+      id: userData.userdata.user._id,
+      userJwt: userData.jwt
     }))
   }
 
@@ -52,22 +78,62 @@ class Profile extends React.Component {
           </ul>
 
           <QRCode value={this.state.bchAddr} />
+
+          <br />
+          <StyledButton href="#" className="button special" id="checkCreditBtn"
+          onClick={this.getCredit}>
+            Update Credit
+          </StyledButton>
+          <br />
+
+          <OutMsg>{this.state.message}</OutMsg>
         </div>
       </Layout>
     )
   }
 
+  // Round to two decimal places
   round(num) {
     let tmp = num*100
     tmp = Math.round(tmp)
     tmp = tmp / 100
     return tmp
   }
+
+  // Button click handler. Asks server to check BCH address and update credit
+  // if BCH is found.
+  async getCredit(event) {
+    try {
+      event.preventDefault()
+
+      // const id = thisUserData.userdata.user._id
+
+      const options = {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${_this.state.userJwt}`
+        }
+      };
+      const data = await fetch(`${SERVER}/apitoken/update-credit/${_this.state.id}`, options);
+
+      const credit = await data.json();
+      console.log(`credit: ${credit}`)
+
+      _this.setState(prevState => ({
+        credit: credit
+      }))
+
+    } catch(err) {
+      console.error(`Error in getCredit(): `, err)
+
+      _this.setState(prevState => ({
+        message: err.message
+      }))
+    }
+  }
 }
 
-/*
 
-
-*/
 
 export default Profile
