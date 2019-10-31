@@ -62,6 +62,7 @@ class Profile extends React.Component {
       bchAddr: userData.userdata.user.bchAddr,
       credit: userData.userdata.user.credit,
       apiToken: apiToken,
+      apiLevel: 0,
       username: userData.username,
       message: '',
       id: userData.userdata.user._id,
@@ -86,15 +87,26 @@ class Profile extends React.Component {
 
           <br />
           <center><div>
+
           <StyledButton href="#" className="button special" id="checkCreditBtn"
           onClick={this.getCredit}>
             Update Credit
           </StyledButton>
+          <br />
+          <br />
+
+          <select id="selectTier" onChange={this.handleDropDown} value={this.state.apiLevel}>
+            <option defaultValue="0">Free ($0)</option>
+            <option value="10">Full Node ($10/mo)</option>
+            <option value="20">Indexer ($20/mo)</option>
+          </select>
+
 
           <StyledButton href="#" className="button special" id="getJWTBtn"
           onClick={this.getJwt}>
             Get API Token
           </StyledButton>
+
           </div></center>
           <br />
 
@@ -175,7 +187,10 @@ class Profile extends React.Component {
         headers: {
           "Content-Type": "application/json",
           "Authorization": `Bearer ${_this.state.userJwt}`
-        }
+        },
+        body: JSON.stringify({
+          apiLevel: _this.state.apiLevel
+        })
       };
       fetchData = await fetch(`${SERVER}/apitoken/new`, options);
       // console.log(`data: `, data)
@@ -204,6 +219,20 @@ class Profile extends React.Component {
       _this.setState(prevState => ({
         message: err.message
       }))
+    }
+  }
+
+  // Change handler for the tier-select drop-down menu.
+  handleDropDown(event) {
+    try {
+      // console.log(`value: ${event.target.value}`)
+      const newValue = event.target.value
+
+      _this.setState(prevState => ({
+        apiLevel: newValue
+      }))
+    } catch(err) {
+      console.error(`Error in handleDropDown(): `, err)
     }
   }
 }

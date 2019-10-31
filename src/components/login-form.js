@@ -42,7 +42,7 @@ class LoginForm extends React.Component {
   render() {
     return (
       <form >
-        Login:<br />
+        Email:<br />
         <input type="text" name="username" onChange={this.handleUpdate} />
         <br />
         Password:<br />

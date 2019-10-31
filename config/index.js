@@ -5,6 +5,6 @@
 'use strict'
 
 module.exports = {
-  // server: process.env.SERVER ? process.env.SERVER : `http://localhost:5001`
-  server: process.env.SERVER ? process.env.SERVER : `https://auth.bchtest.net`
+  server: process.env.SERVER ? process.env.SERVER : `http://localhost:5001`
+  // server: process.env.SERVER ? process.env.SERVER : `https://auth.bchtest.net`
 }
