@@ -30,6 +30,7 @@ class Profile extends React.Component {
     this.state = {
       bchAddr: '',
       credit: 0,
+      apiLevel: 0,
       apiToken: '',
       username: '',
       message: '',
@@ -62,7 +63,7 @@ class Profile extends React.Component {
       bchAddr: userData.userdata.user.bchAddr,
       credit: userData.userdata.user.credit,
       apiToken: apiToken,
-      apiLevel: 0,
+      apiLevel: userData.userdata.user.apiLevel,
       username: userData.username,
       message: '',
       id: userData.userdata.user._id,
@@ -77,6 +78,7 @@ class Profile extends React.Component {
           <h1>Your Profile</h1>
           <ul>
             <li>Name: {this.state.username}</li>
+            <li>API Level: {this.state.apiLevel}</li>
             <li>API JWT Token: <br />{this.state.apiToken}</li>
             <li>Credit: ${this.round(this.state.credit)}</li>
             <li>BCH deposit: {this.state.bchAddr}</li>
@@ -193,15 +195,17 @@ class Profile extends React.Component {
         })
       };
       fetchData = await fetch(`${SERVER}/apitoken/new`, options);
-      // console.log(`data: `, data)
+
 
       if(fetchData.status > 399) throw new Error(`Could not get new JWT token.`)
 
       const data2 = await fetchData.json();
       console.log(`apiToken: ${data2.apiToken}`)
+      console.log(`apiLevel: ${data2.apiLevel}`)
 
       _this.setState(prevState => ({
         apiToken: data2.apiToken,
+        apiLevel: data2.apiLevel,
         message: 'API JWT Token updated.'
       }))
 
