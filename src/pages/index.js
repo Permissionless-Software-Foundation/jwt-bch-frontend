@@ -47,7 +47,7 @@ class Homepage extends React.Component {
   }
 
   render() {
-    const siteTitle = 'Auth Boilerplate'
+    const siteTitle = 'API Keys for api.bchjs.cash'
 
     return (
       <Layout loading="loading">
@@ -56,15 +56,32 @@ class Homepage extends React.Component {
 
           <section id="two" className="main style2">
             <div className="grid-wrapper">
-              <div className="col-4" />
-              <div className="col-4">
+              <div className="col-3" />
+              <div className="col-6">
                 <center>
-                  <h2>Auth Boilerplate</h2>
+                  <h2>Get Your API Key</h2>
+                  <p>
+                    This site distributes API keys for the <a href="https://api.bchjs.cash"
+                    target="_blank">api.bchjs.cash</a> REST API. Enter your email and
+                    password below to create an account or login.
+                  </p>
                   <LoginForm />
                 </center>
               </div>
-              <div className="col-4" />
+              <div className="col-3" />
             </div>
+
+            <div className="grid-wrapper">
+              <div className="col-3" />
+              <div className="col-6">
+                <p>
+                  If you need help or have questions, join our <a href="https://t.me/bch_js_toolkit"
+                  target="_blank">Telegram channel</a>.
+                </p>
+              </div>
+              <div className="col-3" />
+            </div>
+
           </section>
         </div>
       </Layout>
