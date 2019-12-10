@@ -98,7 +98,7 @@ class Profile extends React.Component {
           <br />
 
           <select id="selectTier" onChange={this.handleDropDown} value={this.state.apiLevel}>
-            <option defaultValue="0">Free ($0)</option>
+            <option value="0">Free ($0)</option>
             <option value="10">Full Node ($10/mo)</option>
             <option value="20">Indexer ($20/mo)</option>
           </select>
