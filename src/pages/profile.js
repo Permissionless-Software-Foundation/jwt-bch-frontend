@@ -1,14 +1,15 @@
 import React from 'react'
 import Layout from '../components/layout'
-var QRCode = require('qrcode.react');
+var QRCode = require('qrcode.react')
 import styled from 'styled-components'
 import { navigate } from 'gatsby'
+import '../components/profile.css'
 
-const config = require("../../config")
+const config = require('../../config')
 
-import { getUser } from "../services/auth"
+import { getUser } from '../services/auth'
 
-const SERVER = config.server;
+const SERVER = config.server
 
 const StyledButton = styled.a`
   margin: 10px;
@@ -35,7 +36,7 @@ class Profile extends React.Component {
       username: '',
       message: '',
       id: '',
-      userJwt: ''
+      userJwt: '',
     }
 
     _this = this
@@ -43,16 +44,17 @@ class Profile extends React.Component {
 
   async componentDidMount() {
     const userData = await getUser()
-    console.log(`userData: ${JSON.stringify(userData,null,2)}`)
+    console.log(`userData: ${JSON.stringify(userData, null, 2)}`)
 
     // If the user is not logged in, send them back to the home page.
-    if(!userData.userdata) {
+    if (!userData.userdata) {
       navigate(`/`)
       return
     }
 
     let apiToken = ''
-    if(userData.userdata.user.apiToken) apiToken = userData.userdata.user.apiToken
+    if (userData.userdata.user.apiToken)
+      apiToken = userData.userdata.user.apiToken
     //
     // this.data.credit = userData.userdata.user.credit
     // this.data.bchAddr = userData.userdata.user.bchAddr
@@ -67,50 +69,96 @@ class Profile extends React.Component {
       username: userData.username,
       message: '',
       id: userData.userdata.user._id,
-      userJwt: userData.jwt
+      userJwt: userData.jwt,
     }))
   }
 
   render() {
     return (
       <Layout>
-        <div style={{padding: '50px'}}>
-          <h1>Your Profile</h1>
-          <ul>
-            <li>Name: {this.state.username}</li>
-            <li>API Level: {this.state.apiLevel}</li>
-            <li>API JWT Token: <br />{this.state.apiToken}</li>
-            <li>Credit: ${this.round(this.state.credit)}</li>
-            <li>BCH deposit: {this.state.bchAddr}</li>
+        <div className="content-profile">
+          <div className="your-profile">
+            <div className="profile-title">
+              <h2>Your Profile</h2>
+            </div>
 
-          </ul>
+            <ul>
+              <li>
+                Name: <strong>{this.state.username}</strong>
+              </li>
+              <li>
+                API Level: <strong>{this.state.apiLevel}</strong>
+              </li>
+              <li>
+                API JWT Token: <br />
+                <strong> {this.state.apiToken}</strong>
+              </li>
+              <li>
+                Credit:<strong> ${this.round(this.state.credit)}</strong>
+              </li>
+              <li>
+                BCH deposit: <strong>{this.state.bchAddr}</strong>
+              </li>
+            </ul>
+          </div>
 
-          <center><QRCode value={this.state.bchAddr} /></center>
+          <div className="actions-profile">
+            <div className="profile-title">
+              <h2>Update Credit</h2>
+            </div>
+            <div>
+              <center>
+                <QRCode value={this.state.bchAddr} />
+              </center>
+              <div className="footer">
+                <center>
+                  <StyledButton
+                    href="#"
+                    className="button special"
+                    id="checkCreditBtn"
+                    onClick={this.getCredit}
+                  >
+                    Update Credit
+                  </StyledButton>
+                </center>
+              </div>
+            </div>
+          </div>
+          <div className="actions-profile">
+            <div className="profile-title">
+              <h2>Get API Token</h2>
+            </div>
+            <div className="body">
+              <center className="select-token">
+                <div>
+                  <select
+                    id="selectTier"
+                    onChange={this.handleDropDown}
+                    value={this.state.apiLevel}
+                  >
+                    <option defaultValue="0">Free ($0)</option>
+                    <option value="10">Full Node ($10/mo)</option>
+                    <option value="20">Indexer ($20/mo)</option>
+                  </select>
+                </div>
+              </center>
+              
+            </div>
+            <div className="footer">
+                <center>
+                  <StyledButton
+                    href="#"
+                    className="button special"
+                    id="getJWTBtn"
+                    onClick={this.getJwt}
+                  >
+                    Get API Token
+                  </StyledButton>
+                </center>
+              </div>
 
-          <br />
-          <center><div>
-
-          <StyledButton href="#" className="button special" id="checkCreditBtn"
-          onClick={this.getCredit}>
-            Update Credit
-          </StyledButton>
-          <br />
-          <br />
-
-          <select id="selectTier" onChange={this.handleDropDown} value={this.state.apiLevel}>
-            <option defaultValue="0">Free ($0)</option>
-            <option value="10">Full Node ($10/mo)</option>
-            <option value="20">Indexer ($20/mo)</option>
-          </select>
-
-
-          <StyledButton href="#" className="button special" id="getJWTBtn"
-          onClick={this.getJwt}>
-            Get API Token
-          </StyledButton>
-
-          </div></center>
-          <br />
+            <br />
+          </div>
 
           <OutMsg>{this.state.message}</OutMsg>
         </div>
@@ -120,7 +168,7 @@ class Profile extends React.Component {
 
   // Round to two decimal places
   round(num) {
-    let tmp = num*100
+    let tmp = num * 100
     tmp = Math.round(tmp)
     tmp = tmp / 100
     return tmp
@@ -135,40 +183,42 @@ class Profile extends React.Component {
       event.preventDefault()
 
       _this.setState(prevState => ({
-        message: 'Checking BCH address...'
+        message: 'Checking BCH address...',
       }))
 
       const options = {
-        method: "GET",
+        method: 'GET',
         headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${_this.state.userJwt}`
-        }
-      };
-      fetchData = await fetch(`${SERVER}/apitoken/update-credit/${_this.state.id}`, options);
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${_this.state.userJwt}`,
+        },
+      }
+      fetchData = await fetch(
+        `${SERVER}/apitoken/update-credit/${_this.state.id}`,
+        options
+      )
 
-      const credit = await fetchData.json();
+      const credit = await fetchData.json()
       console.log(`credit: ${credit}`)
 
       _this.setState(prevState => ({
         credit: credit,
-        message: 'BCH address checked. Credit updated.'
+        message: 'BCH address checked. Credit updated.',
       }))
-
-    } catch(err) {
+    } catch (err) {
       // console.log(`fetchData: `, fetchData)
       // console.log(`fetchData.status: ${fetchData.status}`)
 
-      if(fetchData.status === 409) {
+      if (fetchData.status === 409) {
         _this.setState(prevState => ({
-          message: 'Wait a minute for the indexer to update.'
+          message: 'Wait a minute for the indexer to update.',
         }))
         return
       }
 
       console.error(`Error in getCredit(): `, err)
       _this.setState(prevState => ({
-        message: err.message
+        message: err.message,
       }))
     }
   }
@@ -181,47 +231,47 @@ class Profile extends React.Component {
       event.preventDefault()
 
       _this.setState(prevState => ({
-        message: 'Requesting new API JWT token...'
+        message: 'Requesting new API JWT token...',
       }))
 
       const options = {
-        method: "POST",
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${_this.state.userJwt}`
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${_this.state.userJwt}`,
         },
         body: JSON.stringify({
-          apiLevel: _this.state.apiLevel
-        })
-      };
-      fetchData = await fetch(`${SERVER}/apitoken/new`, options);
+          apiLevel: _this.state.apiLevel,
+        }),
+      }
+      fetchData = await fetch(`${SERVER}/apitoken/new`, options)
 
+      if (fetchData.status > 399)
+        throw new Error(`Could not get new JWT token.`)
 
-      if(fetchData.status > 399) throw new Error(`Could not get new JWT token.`)
-
-      const data2 = await fetchData.json();
+      const data2 = await fetchData.json()
       console.log(`apiToken: ${data2.apiToken}`)
       console.log(`apiLevel: ${data2.apiLevel}`)
 
       _this.setState(prevState => ({
         apiToken: data2.apiToken,
         apiLevel: data2.apiLevel,
-        message: 'API JWT Token updated.'
+        message: 'API JWT Token updated.',
       }))
-
-    } catch(err) {
-      if(fetchData.status === 402) {
+    } catch (err) {
+      if (fetchData.status === 402) {
         _this.setState(prevState => ({
-          message: 'Not enough credit in your account. Send BCH to the address listed.'
+          message:
+            'Not enough credit in your account. Send BCH to the address listed.',
         }))
         return
       }
 
       console.error(`Error in getJwt(): `, err)
-      console.log(`err: ${JSON.stringify(err,null,2)}`)
+      console.log(`err: ${JSON.stringify(err, null, 2)}`)
 
       _this.setState(prevState => ({
-        message: err.message
+        message: err.message,
       }))
     }
   }
@@ -233,14 +283,12 @@ class Profile extends React.Component {
       const newValue = event.target.value
 
       _this.setState(prevState => ({
-        apiLevel: newValue
+        apiLevel: newValue,
       }))
-    } catch(err) {
+    } catch (err) {
       console.error(`Error in handleDropDown(): `, err)
     }
   }
 }
-
-
 
 export default Profile

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, navigate } from "gatsby";
 import { getUser, isLoggedIn, logout } from "../services/auth";
-
+import './nav-bar.css'
 export default () => {
   // Show logged-in status of user.
   const content = { message: "", login: true };
@@ -12,23 +12,16 @@ export default () => {
   }
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flex: "1",
-        justifyContent: "space-between",
-        borderBottom: "1px solid #d1c1e0"
-      }}
-    >
+    <div className="content-navbar">
       <span>{content.message}</span>
 
       <nav>
-        <Link to="/">Home</Link>
+        <Link  className="nav-link" to="/">Home</Link>
         {` `}
-        <Link to="/profile">Profile</Link>
+        <Link  className="nav-link" to="/profile">Profile</Link>
         {` `}
         {isLoggedIn() ? (
-          <a
+          <a className="nav-link" 
             href="/"
             onClick={event => {
               event.preventDefault();
