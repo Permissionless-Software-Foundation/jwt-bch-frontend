@@ -37,6 +37,8 @@ class Profile extends React.Component {
       message: '',
       id: '',
       userJwt: '',
+      name: '',
+      email: '',
     }
 
     _this = this
@@ -67,6 +69,8 @@ class Profile extends React.Component {
       apiToken: apiToken,
       apiLevel: userData.userdata.user.apiLevel,
       username: userData.username,
+      name: userData.userdata.user.name,
+      email: userData.userdata.user.email,
       message: '',
       id: userData.userdata.user._id,
       userJwt: userData.jwt,
@@ -84,7 +88,13 @@ class Profile extends React.Component {
 
             <ul>
               <li>
-                Name: <strong>{this.state.username}</strong>
+                Email: <strong>{this.state.email}</strong>
+              </li>
+              <li>
+                UserName: <strong>{this.state.username}</strong>
+              </li>
+              <li>
+                Name: <strong>{this.state.name}</strong>
               </li>
               <li>
                 API Level: <strong>{this.state.apiLevel}</strong>
@@ -134,28 +144,26 @@ class Profile extends React.Component {
                   <select
                     id="selectTier"
                     onChange={this.handleDropDown}
-                    value={this.state.apiLevel}
-                  >
+                    value={this.state.apiLevel}>
                     <option defaultValue="0">Free ($0)</option>
                     <option value="10">Full Node ($10/mo)</option>
                     <option value="20">Indexer ($20/mo)</option>
                   </select>
                 </div>
               </center>
-              
             </div>
             <div className="footer">
-                <center>
-                  <StyledButton
-                    href="#"
-                    className="button special"
-                    id="getJWTBtn"
-                    onClick={this.getJwt}
-                  >
-                    Get API Token
-                  </StyledButton>
-                </center>
-              </div>
+              <center>
+                <StyledButton
+                  href="#"
+                  className="button special"
+                  id="getJWTBtn"
+                  onClick={this.getJwt}
+                >
+                  Get API Token
+                </StyledButton>
+              </center>
+            </div>
 
             <br />
           </div>
