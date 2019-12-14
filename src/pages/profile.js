@@ -103,7 +103,7 @@ class Profile extends React.Component {
                     onChange={_this.handleUpdate}
                     onBlur={_this.resetFieldToEdit}
                     onKeyDown={_this.handleKeyDown}
-                    placeholder ='Enter Email'
+                    placeholder="Enter Email"
                   ></input>
                 )}
               </li>
@@ -120,7 +120,7 @@ class Profile extends React.Component {
                     onChange={_this.handleUpdate}
                     onBlur={_this.resetFieldToEdit}
                     onKeyDown={_this.handleKeyDown}
-                    placeholder ='Enter username'
+                    placeholder="Enter username"
                   ></input>
                 )}
               </li>
@@ -137,7 +137,7 @@ class Profile extends React.Component {
                     onChange={_this.handleUpdate}
                     onBlur={_this.resetFieldToEdit}
                     onKeyDown={_this.handleKeyDown}
-                    placeholder ='Enter name'
+                    placeholder="Enter name"
                   ></input>
                 )}
               </li>
@@ -149,10 +149,14 @@ class Profile extends React.Component {
                 {this.state.apiToken && <strong> {this.state.apiToken}</strong>}
               </li>
               <li>
-                Credit:{this.state.credit && <strong> ${this.round(this.state.credit)}</strong>}
+                Credit:
+                {this.state.credit && (
+                  <strong> ${this.round(this.state.credit)}</strong>
+                )}
               </li>
               <li>
-                BCH deposit: {this.state.bchAddr && <strong>{this.state.bchAddr}</strong>}
+                BCH deposit:{' '}
+                {this.state.bchAddr && <strong>{this.state.bchAddr}</strong>}
               </li>
             </ul>
           </div>
@@ -219,53 +223,74 @@ class Profile extends React.Component {
       </Layout>
     )
   }
-  validateEmail(email) 
-  {
-   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
-    {
-      return (true)
+  validateEmail(email) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+      return true
     }
-      return (false)
+    return false
   }
   async handleKeyDown(e) {
+
+  	// if user press esc, cancel edit
+  	if (e.key === 'Escape') {
+  		_this.resetFieldToEdit()
+  		return
+  	} 
+    // if user press enter
     if (e.key === 'Enter') {
-      const name = e.currentTarget.name
-      if(name === 'email'){
-        const elementEmail = document.getElementById('editField_email')
-        const isEmail = _this.validateEmail(elementEmail.value)
-        if(!isEmail){
-          window.alert('Error : Incorrect Email format')
-        return}
-      }
       const fieldName = `editField_${e.currentTarget.name}`
 
       const user = getUser()
+      // Get value from field
+      let fieldValue = _this.state[fieldName]
+
+      //Delete blank space
+      if (fieldValue[0] === ' ') {
+        fieldValue = _this.state[fieldName].substr(1)
+      }
+      const name = e.currentTarget.name
+      if (name === 'email') {
+        const isEmail = _this.validateEmail(fieldValue)
+        if (!isEmail) {
+          window.alert('Error : Incorrect Email format')
+          return
+        }
+      }
+      // Model to update
       const userUpdated = {
-        [e.currentTarget.name]: _this.state[fieldName],
+        [e.currentTarget.name]: fieldValue,
         _id: user.userdata.user._id,
       }
-      const updateResult = await updateUser(userUpdated)
-      console.log(updateResult['user']['email'])
-      _this.setState({
-        [fieldName]: '',
-        [name]: updateResult['user'][name],
-      })
+      // try to update user data
+      try {
+        const updateResult = await updateUser(userUpdated)
+        _this.setState({
+          [fieldName]: '',
+          [name]: updateResult['user'][name],
+        })
+      } catch (error) {
+        window.alert('Error : This email already exists')
+      }
     }
   }
   // On change value
   handleUpdate(event) {
+    if (!event.target.value) {
+      event.target.value = ' ' // add blank space for  field input persist
+    }
     const fieldName = `editField_${event.target.name}`
     _this.setState({
       [fieldName]: event.target.value,
     })
   }
+  // Reset input values and state values
   resetFieldToEdit() {
     const doc_A = document.getElementById('editField_email')
     const doc_B = document.getElementById('editField_username')
     const doc_C = document.getElementById('editField_name')
-    doc_A  ?  doc_A.value = '' : ''
-    doc_B  ?  doc_B.value = '' : ''
-    doc_C  ?  doc_C.value = '' : ''
+    doc_A ? (doc_A.value = '') : ''
+    doc_B ? (doc_B.value = '') : ''
+    doc_C ? (doc_C.value = '') : ''
 
     _this.setState(prevState => ({
       editField_email: '',
