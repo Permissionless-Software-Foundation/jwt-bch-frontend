@@ -48,6 +48,16 @@
     top: calc(50% - 1em);
     width: 100%;
 }
+.your-profile ul li input {
+    margin-left:10px;
+    height: 25px;
+}
+.your-profile ul li strong {
+    margin-left:10px;
+}
+.your-profile ul li  {
+    margin-top:10px;
+}
 /* responsive  */
 @media (max-width: 750px) {
     .actions-profile{

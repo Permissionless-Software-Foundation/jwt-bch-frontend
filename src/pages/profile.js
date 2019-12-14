@@ -8,6 +8,7 @@ import '../components/profile.css'
 const config = require('../../config')
 
 import { getUser } from '../services/auth'
+import { updateUser } from '../services/users'
 
 const SERVER = config.server
 
@@ -39,6 +40,9 @@ class Profile extends React.Component {
       userJwt: '',
       name: '',
       email: '',
+      editField_name: '',
+      editField_username: '',
+      editField_email: '',
     }
 
     _this = this
@@ -46,7 +50,6 @@ class Profile extends React.Component {
 
   async componentDidMount() {
     const userData = await getUser()
-    console.log(`userData: ${JSON.stringify(userData, null, 2)}`)
 
     // If the user is not logged in, send them back to the home page.
     if (!userData.userdata) {
@@ -87,27 +90,69 @@ class Profile extends React.Component {
             </div>
 
             <ul>
-              <li>
-                Email: <strong>{this.state.email}</strong>
+              <li onClick={() => _this.editField('email')}>
+                Email:
+                {!_this.state.editField_email && _this.state.email ? (
+                  <strong>{this.state.email}</strong>
+                ) : (
+                  <input
+                    id="editField_email"
+                    name="email"
+                    type="text "
+                    defaultValue={_this.state.editField_email}
+                    onChange={_this.handleUpdate}
+                    onBlur={_this.resetFieldToEdit}
+                    onKeyDown={_this.handleKeyDown}
+                    placeholder ='Enter Email'
+                  ></input>
+                )}
               </li>
-              <li>
-                UserName: <strong>{this.state.username}</strong>
+              <li onClick={() => _this.editField('username')}>
+                UserName:
+                {!_this.state.editField_username && _this.state.username ? (
+                  <strong>{_this.state.username}</strong>
+                ) : (
+                  <input
+                    id="editField_username"
+                    name="username"
+                    type="text "
+                    defaultValue={_this.state.editField_username}
+                    onChange={_this.handleUpdate}
+                    onBlur={_this.resetFieldToEdit}
+                    onKeyDown={_this.handleKeyDown}
+                    placeholder ='Enter username'
+                  ></input>
+                )}
               </li>
-              <li>
-                Name: <strong>{this.state.name}</strong>
+              <li onClick={() => _this.editField('name')}>
+                Name:
+                {!_this.state.editField_name && _this.state.name ? (
+                  <strong>{_this.state.name}</strong>
+                ) : (
+                  <input
+                    id="editField_name"
+                    name="name"
+                    type="text "
+                    defaultValue={_this.state.editField_name}
+                    onChange={_this.handleUpdate}
+                    onBlur={_this.resetFieldToEdit}
+                    onKeyDown={_this.handleKeyDown}
+                    placeholder ='Enter name'
+                  ></input>
+                )}
               </li>
               <li>
                 API Level: <strong>{this.state.apiLevel}</strong>
               </li>
               <li>
                 API JWT Token: <br />
-                <strong> {this.state.apiToken}</strong>
+                {this.state.apiToken && <strong> {this.state.apiToken}</strong>}
               </li>
               <li>
-                Credit:<strong> ${this.round(this.state.credit)}</strong>
+                Credit:{this.state.credit && <strong> ${this.round(this.state.credit)}</strong>}
               </li>
               <li>
-                BCH deposit: <strong>{this.state.bchAddr}</strong>
+                BCH deposit: {this.state.bchAddr && <strong>{this.state.bchAddr}</strong>}
               </li>
             </ul>
           </div>
@@ -144,7 +189,8 @@ class Profile extends React.Component {
                   <select
                     id="selectTier"
                     onChange={this.handleDropDown}
-                    value={this.state.apiLevel}>
+                    value={this.state.apiLevel}
+                  >
                     <option defaultValue="0">Free ($0)</option>
                     <option value="10">Full Node ($10/mo)</option>
                     <option value="20">Indexer ($20/mo)</option>
@@ -172,6 +218,72 @@ class Profile extends React.Component {
         </div>
       </Layout>
     )
+  }
+  validateEmail(email) 
+  {
+   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
+    {
+      return (true)
+    }
+      return (false)
+  }
+  async handleKeyDown(e) {
+    if (e.key === 'Enter') {
+      const name = e.currentTarget.name
+      if(name === 'email'){
+        const elementEmail = document.getElementById('editField_email')
+        const isEmail = _this.validateEmail(elementEmail.value)
+        if(!isEmail){
+          window.alert('Error : Incorrect Email format')
+        return}
+      }
+      const fieldName = `editField_${e.currentTarget.name}`
+
+      const user = getUser()
+      const userUpdated = {
+        [e.currentTarget.name]: _this.state[fieldName],
+        _id: user.userdata.user._id,
+      }
+      const updateResult = await updateUser(userUpdated)
+      console.log(updateResult['user']['email'])
+      _this.setState({
+        [fieldName]: '',
+        [name]: updateResult['user'][name],
+      })
+    }
+  }
+  // On change value
+  handleUpdate(event) {
+    const fieldName = `editField_${event.target.name}`
+    _this.setState({
+      [fieldName]: event.target.value,
+    })
+  }
+  resetFieldToEdit() {
+    const doc_A = document.getElementById('editField_email')
+    const doc_B = document.getElementById('editField_username')
+    const doc_C = document.getElementById('editField_name')
+    doc_A  ?  doc_A.value = '' : ''
+    doc_B  ?  doc_B.value = '' : ''
+    doc_C  ?  doc_C.value = '' : ''
+
+    _this.setState(prevState => ({
+      editField_email: '',
+      editField_name: '',
+      editField_username: '',
+    }))
+  }
+  // Edit field to update
+  editField(field) {
+    const fieldName = `editField_${field}`
+
+    _this.setState(prevState => ({
+      [fieldName]: _this.state[field],
+    }))
+    setTimeout(() => {
+      const myElement = document.getElementById(fieldName)
+      myElement && myElement.focus()
+    }, 250)
   }
 
   // Round to two decimal places

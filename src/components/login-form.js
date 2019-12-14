@@ -43,10 +43,18 @@ class LoginForm extends React.Component {
     return (
       <form >
         Email:<br />
-        <input type="text" name="email" onChange={this.handleUpdate} />
+        <input 
+        type="text" 
+        name="email" 
+        onChange={this.handleUpdate} 
+        onKeyDown={_this.handleKeyDown}/>
         <br />
         Password:<br />
-        <input type="password" name="password" onChange={this.handleUpdate} />
+        <input 
+        type="password" 
+        name="password" 
+        onChange={this.handleUpdate} 
+        onKeyDown={_this.handleKeyDown}/>
         <br></br>
         <StyledButton href="#" className="button special" id="createBtn"
         onClick={this.createClick}
@@ -64,6 +72,11 @@ class LoginForm extends React.Component {
       </form>
 
     )
+  }
+  async handleKeyDown(e) {
+    if (e.key === 'Enter') {
+      _this.loginClick(e)
+    }
   }
   validateEmail(email) 
   {

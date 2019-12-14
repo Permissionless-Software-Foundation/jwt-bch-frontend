@@ -52,7 +52,6 @@ export const handleLogin = async ({ email, password }) => {
 // Return true if user is logged in. Otherwise false.
 export const isLoggedIn = () => {
   const user = getUser();
-  console.log('user',user)
   return !!user.email;
 };
 
