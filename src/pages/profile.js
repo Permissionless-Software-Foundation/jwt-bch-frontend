@@ -221,12 +221,14 @@ class Profile extends React.Component {
       </Layout>
     )
   }
+
   validateEmail(email) {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
       return true
     }
     return false
   }
+  
   async handleKeyDown(e) {
 
   	// if user press esc, cancel edit

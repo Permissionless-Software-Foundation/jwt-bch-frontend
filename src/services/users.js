@@ -1,9 +1,7 @@
 import 'isomorphic-fetch'
 import { getUser } from './auth'
 
-const SERVER = `http://localhost:5001`;
-//const SERVER = `/api`;
-//const SERVER = '/api'
+const SERVER = process.env.AUTHSERVER
 
 // Detect if the app is running in a browser.
 export const isBrowser = () => typeof window !== 'undefined'
@@ -59,7 +57,7 @@ export const getUserById = async id => {
 export const updateUser = async user => {
   console.log(user)
     const token = getUser().jwt ? getUser().jwt : ''
-  
+
     //try to get all projects
     try {
       const options = {
