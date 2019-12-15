@@ -7,10 +7,11 @@ import styled from 'styled-components'
 import { handleLogin, isLoggedIn, setUser } from "../services/auth";
 import { Link, navigate } from "gatsby";
 
-const config = require("../../config")
+// const config = require("../../config")
 
-const SERVER = config.server;
+// const SERVER = config.server;
 // const SERVER = ``;
+const SERVER = process.env.AUTHSERVER
 
 const StyledButton = styled.a`
   margin: 10px;
@@ -34,7 +35,7 @@ class LoginForm extends React.Component {
 
     this.state = {
       message: "",
-      username: "",
+      email: "",
       password: ""
     }
   }
@@ -43,10 +44,18 @@ class LoginForm extends React.Component {
     return (
       <form >
         Email:<br />
-        <input type="text" name="username" onChange={this.handleUpdate} />
+        <input
+        type="text"
+        name="email"
+        onChange={this.handleUpdate}
+        onKeyDown={_this.handleKeyDown}/>
         <br />
         Password:<br />
-        <input type="password" name="password" onChange={this.handleUpdate} />
+        <input
+        type="password"
+        name="password"
+        onChange={this.handleUpdate}
+        onKeyDown={_this.handleKeyDown}/>
         <br></br>
         <StyledButton href="#" className="button special" id="createBtn"
         onClick={this.createClick}
@@ -66,6 +75,21 @@ class LoginForm extends React.Component {
     )
   }
 
+  async handleKeyDown(e) {
+    if (e.key === 'Enter') {
+      _this.loginClick(e)
+    }
+  }
+
+  validateEmail(email)
+  {
+   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
+    {
+      return (true)
+    }
+      return (false)
+  }
+
   handleUpdate(event) {
     _this.setState({
       [event.target.name]: event.target.value,
@@ -74,7 +98,13 @@ class LoginForm extends React.Component {
 
   async createClick(event) {
     event.preventDefault()
-
+    const isEmail = _this.validateEmail(_this.state.email)
+    if(!isEmail){
+      _this.setState(prevState => ({
+        message: 'Error:  Must be Email Format'
+      }))
+      return
+    }
     try {
       const options = {
         method: "POST",
@@ -83,11 +113,13 @@ class LoginForm extends React.Component {
         },
         body: JSON.stringify({
           user: {
-            username: _this.state.username,
+            email: _this.state.email,
             password: _this.state.password
           }
         })
       }
+
+      console.log(`options.body: ${JSON.stringify(options.body,null,2)}`)
 
       const data = await fetch(`${SERVER}/users/`, options);
       const users = await data.json();
@@ -97,6 +129,7 @@ class LoginForm extends React.Component {
       //console.log(`token: ${users.token}`)
 
       setUser({
+        email:users.user.email,
         username: users.user.username,
         jwt: users.token,
         userdata: users
@@ -114,6 +147,13 @@ class LoginForm extends React.Component {
 
   async loginClick(event) {
     event.preventDefault()
+    const isEmail = _this.validateEmail(_this.state.email)
+    if(!isEmail){
+      _this.setState(prevState => ({
+        message: 'Error:  Must be Email Format'
+      }))
+      return
+    }
 
     //_this.setState(prevState => ({
     //  message: "You clicked the Login button."

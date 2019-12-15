@@ -3,9 +3,7 @@ import { getUser } from "../services/auth"
 var QRCode = require('qrcode.react');
 import styled from 'styled-components'
 
-const config = require("../../config")
-
-const SERVER = config.server;
+const SERVER = process.env.AUTHSERVER
 
 const StyledButton = styled.a`
   margin: 10px;
