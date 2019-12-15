@@ -7,10 +7,11 @@ import styled from 'styled-components'
 import { handleLogin, isLoggedIn, setUser } from "../services/auth";
 import { Link, navigate } from "gatsby";
 
-const config = require("../../config")
+// const config = require("../../config")
 
-const SERVER = config.server;
+// const SERVER = config.server;
 // const SERVER = ``;
+const SERVER = process.env.AUTHSERVER
 
 const StyledButton = styled.a`
   margin: 10px;
@@ -43,17 +44,17 @@ class LoginForm extends React.Component {
     return (
       <form >
         Email:<br />
-        <input 
-        type="text" 
-        name="email" 
-        onChange={this.handleUpdate} 
+        <input
+        type="text"
+        name="email"
+        onChange={this.handleUpdate}
         onKeyDown={_this.handleKeyDown}/>
         <br />
         Password:<br />
-        <input 
-        type="password" 
-        name="password" 
-        onChange={this.handleUpdate} 
+        <input
+        type="password"
+        name="password"
+        onChange={this.handleUpdate}
         onKeyDown={_this.handleKeyDown}/>
         <br></br>
         <StyledButton href="#" className="button special" id="createBtn"
@@ -73,12 +74,14 @@ class LoginForm extends React.Component {
 
     )
   }
+
   async handleKeyDown(e) {
     if (e.key === 'Enter') {
       _this.loginClick(e)
     }
   }
-  validateEmail(email) 
+
+  validateEmail(email)
   {
    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
     {
@@ -86,6 +89,7 @@ class LoginForm extends React.Component {
     }
       return (false)
   }
+
   handleUpdate(event) {
     _this.setState({
       [event.target.name]: event.target.value,
@@ -114,6 +118,8 @@ class LoginForm extends React.Component {
           }
         })
       }
+
+      console.log(`options.body: ${JSON.stringify(options.body,null,2)}`)
 
       const data = await fetch(`${SERVER}/users/`, options);
       const users = await data.json();

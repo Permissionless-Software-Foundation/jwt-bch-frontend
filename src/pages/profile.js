@@ -5,12 +5,10 @@ import styled from 'styled-components'
 import { navigate } from 'gatsby'
 import '../components/profile.css'
 
-const config = require('../../config')
-
 import { getUser } from '../services/auth'
 import { updateUser } from '../services/users'
 
-const SERVER = config.server
+const SERVER = process.env.AUTHSERVER
 
 const StyledButton = styled.a`
   margin: 10px;
@@ -235,7 +233,7 @@ class Profile extends React.Component {
   	if (e.key === 'Escape') {
   		_this.resetFieldToEdit()
   		return
-  	} 
+  	}
     // if user press enter
     if (e.key === 'Enter') {
       const fieldName = `editField_${e.currentTarget.name}`

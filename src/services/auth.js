@@ -1,8 +1,6 @@
 import "isomorphic-fetch";
 
-const config = require("../../config")
-
-const SERVER = config.server;
+const SERVER = process.env.AUTHSERVER
 
 // Detect if the app is running in a browser.
 export const isBrowser = () => typeof window !== "undefined";

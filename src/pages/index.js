@@ -13,9 +13,7 @@ import pic03 from '../assets/images/pic03.jpg'
 import pic04 from '../assets/images/pic04.jpg'
 import qrcode from '../assets/images/testnet-addr.png'
 
-const config = require("../../config")
-
-const SERVER = config.server;
+const SERVER = process.env.AUTHSERVER
 
 const BchAddress = styled.p`
   text-align: center;
