@@ -119,7 +119,7 @@ class LoginForm extends React.Component {
         })
       }
 
-      console.log(`options.body: ${JSON.stringify(options.body,null,2)}`)
+      // console.log(`options.body: ${JSON.stringify(options.body,null,2)}`)
 
       const data = await fetch(`${SERVER}/users/`, options);
       const users = await data.json();
