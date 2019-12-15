@@ -218,6 +218,17 @@ class Profile extends React.Component {
 
           <OutMsg>{this.state.message}</OutMsg>
         </div>
+
+        <br /><br />
+        <div className="your-profile">
+          <h2><u>How to use your JWT token</u></h2>
+          Your API JWT Token is used to unlock increased rate limits. Follow
+          the directions in
+          the <a href="https://github.com/christroutner/bch-js#api-key" target="_blank">bch-js README</a>.
+          Copy the text into the <code>BCHJSTOKEN</code> environment variable to
+          use it implicitly, or use it explictly by setting the <code>apiToken</code>
+          property when instantiating the bch-js library.
+        </div>
       </Layout>
     )
   }
@@ -228,7 +239,7 @@ class Profile extends React.Component {
     }
     return false
   }
-  
+
   async handleKeyDown(e) {
 
   	// if user press esc, cancel edit
