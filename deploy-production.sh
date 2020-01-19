@@ -7,5 +7,4 @@ export DATA="{\"ref\":\"$DEPLOY_SECRET\"}"
 
 #echo $DATA
 
-npx semantic release && \
 curl -X POST http://fullstack.cash:9000/hooks/production -H "Content-Type: application/json" -d $DATA
