@@ -5,7 +5,7 @@
   "author": "Chris Troutner <chris.troutner@gmail.com>",
   "contributors": [
     "Kyle Mathews <mathews.kyle@gmail.com>"
-  ]
+  ],
   "dependencies": {
     "chart.js": "^2.7.3",
     "gatsby": "^2.0.0",
@@ -48,5 +48,5 @@
         "npmPublish": false
       }
     ]
-  },
+  }
 }
