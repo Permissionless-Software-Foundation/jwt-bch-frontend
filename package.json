@@ -1,8 +1,11 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "jwt-bch-frontend",
+  "description": "Gatsby front end for fullstack.cash",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Chris Troutner <chris.troutner@gmail.com>",
+  "contributors": [
+    "Kyle Mathews <mathews.kyle@gmail.com>"
+  ],
   "dependencies": {
     "chart.js": "^2.7.3",
     "gatsby": "^2.0.0",
@@ -27,14 +30,23 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write '**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo no tests yet"
   },
   "devDependencies": {
     "gatsby-plugin-eslint": "^2.0.1",
-    "prettier": "^1.14.2"
+    "prettier": "^1.14.2",
+    "semantic-release": "^16.0.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/Permissionless-Software-Foundation/jwt-bch-frontend"
+  },
+  "release": {
+    "publish": [
+      {
+        "path": "@semantic-release/npm",
+        "npmPublish": false
+      }
+    ]
   }
 }
