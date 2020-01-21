@@ -59,8 +59,8 @@ class Homepage extends React.Component {
                             </header>
                             <h4>
                               It's the full stack of software allowing modern
-                              apps to talk to the blockchain, <b>and send
-                              uncensorable money.</b>
+                              apps to talk to the blockchain, <b>and use
+                              permissionless money.</b>
                             </h4>
                             <p>
 For full-stack developers who want to run their own
@@ -116,7 +116,7 @@ call the <a href="https://api.fullstack.cash">bch-api REST API at api.fullstack.
 
                     </div>
                 </section>
-                
+
             </Layout>
         );
     }
