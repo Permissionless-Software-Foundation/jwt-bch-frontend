@@ -33,7 +33,7 @@ class Homepage extends React.Component {
                             </h3>
                             <ul className="actions uniform">
                                 <li><a href="/login" className="button special">Sign Up</a></li>
-                                <li><a href="#" className="button">Pricing</a></li>
+                                <li><a href="/pricing" className="button">Pricing</a></li>
                             </ul>
                         </div>
                         <div className="col-6">
