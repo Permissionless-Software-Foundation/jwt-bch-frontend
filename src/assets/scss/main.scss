@@ -6,6 +6,7 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic");
 
 @import "css-grid";
+
 /*
 	Photon by HTML5 UP
 	html5up.net | @ajlkn
@@ -241,6 +242,34 @@
 		}
 	}
 
+	#nav nav{
+		
+		background-color:_palette(bg-dark) ;
+
+		a{
+			color:_palette(fg-strong)
+		}
+
+		:hover{
+			color:_palette(highlight)
+		}
+		
+
+	}
+
+	#menu{
+		color:_palette(fg-strong);
+
+		.actions{
+
+			background-color:_palette(fg-strong);
+			
+			:hover{
+				background-color:_palette(highlight);
+			}
+		}
+	}
+
 /* Form */
 
 	form {
@@ -317,7 +346,7 @@
 	}
 
 	input[type="checkbox"],
-	input[type="radio"], {
+	input[type="radio"] {
 		@include vendor('appearance', 'none');
 		display: block;
 		float: left;
@@ -1256,6 +1285,7 @@
 		/* Header */
 
 			#header {
+
 				@include padding(4em, 3em, (0,0,_size(element-margin),0));
 
 				.actions {
@@ -1334,7 +1364,6 @@
 
 			#header {
 				@include padding(4em, 2em, (0,0,_size(element-margin),0));
-
 				br {
 					display: none;
 				}
@@ -1360,6 +1389,11 @@
 					}
 				}
 			}
+		/*Body Grid Wrapper*/
+
+			.grid-wrapper{
+				margin-top:(_size(element-margin) * 0.5) ;
+			}
 
 	}
 
@@ -1382,8 +1416,16 @@
 		/* Header */
 
 			#header {
+
 				@include padding(3em, 1em, (0,0,_size(element-margin),0));
+
 			}
+
+		/* Body Grid Wrapper*/
+
+		    .grid-wrapper{
+		    	margin-top:(_size(element-margin) * 0.5) ;
+		    }
 
 		/* Footer */
 
@@ -1392,3 +1434,6 @@
 			}
 
 	}
+	// Layout
+@import 'layout/nav';
+@import 'layout/menu';
