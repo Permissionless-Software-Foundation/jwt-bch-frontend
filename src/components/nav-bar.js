@@ -1,37 +1,34 @@
-import React from "react";
-import { Link, navigate } from "gatsby";
-import { getUser, isLoggedIn, logout } from "../services/auth";
+import React from 'react'
+import { Link, navigate } from 'gatsby'
+import PropTypes from 'prop-types'
+
+import { getUser, isLoggedIn, logout } from '../services/auth'
 import './nav-bar.css'
-export default () => {
-  // Show logged-in status of user.
-  const content = { message: "", login: true };
-  if (isLoggedIn()) {
-    content.message = `Hello, ${getUser().username ? getUser().username :getUser().userdata.user.email}`;
-  } else {
-    content.message = "You are not logged in";
+
+class Header extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {}
   }
-
-  return (
-    <div className="content-navbar">
-      <span>{content.message}</span>
-
-      <nav>
-        <Link  className="nav-link" to="/">Home</Link>
-        {` `}
-        <Link  className="nav-link" to="/profile">Profile</Link>
-        {` `}
-        {isLoggedIn() ? (
-          <a className="nav-link" 
-            href="/"
-            onClick={event => {
-              event.preventDefault();
-              logout(() => navigate(`/`));
-            }}
+  render() {
+    return (
+      <header id="nav" className="alt reveal">
+        <nav>
+          <a
+            className="menu-link"
+            onClick={this.props.onToggleMenu}
+            href="javascript:;"
           >
-            Logout
+            Menu
           </a>
-        ) : null}
-      </nav>
-    </div>
-  );
-};
+        </nav>
+      </header>
+    )
+  }
+}
+
+Header.propTypes = {
+  onToggleMenu: PropTypes.func,
+}
+export default Header
