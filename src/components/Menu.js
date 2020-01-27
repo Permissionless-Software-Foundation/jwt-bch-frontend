@@ -15,11 +15,21 @@ const Menu = props => (
         </li>
         <li>
           <Link onClick={props.onToggleMenu} to="/profile">
-            Profile
+            Account
+          </Link>
+        </li>
+        <li>
+          <Link onClick={props.onToggleMenu} to="/pricing">
+            Pricing
+          </Link>
+        </li>
+        <li>
+          <Link onClick={props.onToggleMenu} to="/cashstrap">
+            CashStrap
           </Link>
         </li>
       </ul>
-     {/* <ul className="actions vertical">
+      {/* <ul className="actions vertical">
         <li>
           <a href="#" className="button fit">
             Log In

@@ -59,9 +59,12 @@ class Homepage extends React.Component {
                 <center>
                   <h2>Get Your API Key</h2>
                   <p>
-                    This site distributes API keys for the <a href="https://api.bchjs.cash"
-                    target="_blank">api.bchjs.cash</a> REST API. Enter your email and
-                    password below to create an account or login.
+                    This site distributes API keys for the{' '}
+                    <a href="https://api.bchjs.cash" target="_blank">
+                      api.bchjs.cash
+                    </a>{' '}
+                    REST API. Enter your email and password below to create an
+                    account or login.
                   </p>
                   <LoginForm />
                 </center>
@@ -73,13 +76,15 @@ class Homepage extends React.Component {
               <div className="col-3" />
               <div className="col-6">
                 <p>
-                  If you need help or have questions, join our <a href="https://t.me/bch_js_toolkit"
-                  target="_blank">Telegram channel</a>.
+                  If you need help or have questions, join our{' '}
+                  <a href="https://t.me/bch_js_toolkit" target="_blank">
+                    Telegram channel
+                  </a>
+                  .
                 </p>
               </div>
               <div className="col-3" />
             </div>
-
           </section>
         </div>
       </Layout>
