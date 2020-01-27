@@ -4,8 +4,8 @@
 
 import React from 'react'
 import styled from 'styled-components'
-import { handleLogin, isLoggedIn, setUser } from "../services/auth";
-import { Link, navigate } from "gatsby";
+import { handleLogin, isLoggedIn, setUser } from '../services/auth'
+import { Link, navigate } from 'gatsby'
 
 // const config = require("../../config")
 
@@ -27,51 +27,60 @@ const OutMsg = styled.p`
 let _this
 
 class LoginForm extends React.Component {
-
   constructor(props) {
     super(props)
 
     _this = this
 
     this.state = {
-      message: "",
-      email: "",
-      password: ""
+      message: '',
+      email: '',
+      password: '',
     }
   }
 
   render() {
     return (
-      <form >
-        Email:<br />
-        <input
-        type="text"
-        name="email"
-        onChange={this.handleUpdate}
-        onKeyDown={_this.handleKeyDown}/>
+      <form>
+        Email:
         <br />
-        Password:<br />
         <input
-        type="password"
-        name="password"
-        onChange={this.handleUpdate}
-        onKeyDown={_this.handleKeyDown}/>
+          type="text"
+          name="email"
+          onChange={this.handleUpdate}
+          onKeyDown={_this.handleKeyDown}
+        />
+        <br />
+        Password:
+        <br />
+        <input
+          type="password"
+          name="password"
+          onChange={this.handleUpdate}
+          onKeyDown={_this.handleKeyDown}
+        />
         <br></br>
-        <StyledButton href="#" className="button special" id="createBtn"
-        onClick={this.createClick}
-        data-to="bitcoincash:qzl6k0wvdd5ky99hewghqdgfj2jhcpqnfq8xtct0al">
+        <StyledButton
+          href="#"
+          className="button special"
+          id="createBtn"
+          onClick={this.createClick}
+          data-to="bitcoincash:qzl6k0wvdd5ky99hewghqdgfj2jhcpqnfq8xtct0al"
+        >
           Create
         </StyledButton>
-        <StyledButton href="#" className="button special" id="loginBtn"
-        onClick={this.loginClick}
-        data-to="bitcoincash:qzl6k0wvdd5ky99hewghqdgfj2jhcpqnfq8xtct0al">
+        <StyledButton
+          href="#"
+          className="button special"
+          id="loginBtn"
+          onClick={this.loginClick}
+          data-to="bitcoincash:qzl6k0wvdd5ky99hewghqdgfj2jhcpqnfq8xtct0al"
+        >
           Login
         </StyledButton>
         <br />
         <OutMsg>{this.state.message}</OutMsg>
-
       </form>
-
     )
   }
 
@@ -81,13 +90,11 @@ class LoginForm extends React.Component {
     }
   }
 
-  validateEmail(email)
-  {
-   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
-    {
-      return (true)
+  validateEmail(email) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+      return true
     }
-      return (false)
+    return false
   }
 
   handleUpdate(event) {
@@ -99,40 +106,40 @@ class LoginForm extends React.Component {
   async createClick(event) {
     event.preventDefault()
     const isEmail = _this.validateEmail(_this.state.email)
-    if(!isEmail){
+    if (!isEmail) {
       _this.setState(prevState => ({
-        message: 'Error:  Must be Email Format'
+        message: 'Error:  Must be Email Format',
       }))
       return
     }
     try {
       const options = {
-        method: "POST",
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json"
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           user: {
             email: _this.state.email,
-            password: _this.state.password
-          }
-        })
+            password: _this.state.password,
+          },
+        }),
       }
 
       // console.log(`options.body: ${JSON.stringify(options.body,null,2)}`)
 
-      const data = await fetch(`${SERVER}/users/`, options);
-      const users = await data.json();
-      console.log(`users: ${JSON.stringify(users, null, 2)}`);
+      const data = await fetch(`${SERVER}/users/`, options)
+      const users = await data.json()
+      console.log(`users: ${JSON.stringify(users, null, 2)}`)
 
       //console.log(`name: ${users.user.username}`)
       //console.log(`token: ${users.token}`)
 
       setUser({
-        email:users.user.email,
+        email: users.user.email,
         username: users.user.username,
         jwt: users.token,
-        userdata: users
+        userdata: users,
       })
 
       navigate(`/profile`)
@@ -140,7 +147,7 @@ class LoginForm extends React.Component {
       // If something goes wrong with auth, return false.
       //return false;
       _this.setState(prevState => ({
-        message: err.message
+        message: err.message,
       }))
     }
   }
@@ -148,9 +155,9 @@ class LoginForm extends React.Component {
   async loginClick(event) {
     event.preventDefault()
     const isEmail = _this.validateEmail(_this.state.email)
-    if(!isEmail){
+    if (!isEmail) {
       _this.setState(prevState => ({
-        message: 'Error:  Must be Email Format'
+        message: 'Error:  Must be Email Format',
       }))
       return
     }
@@ -165,7 +172,6 @@ class LoginForm extends React.Component {
 
     navigate(`/profile`)
   }
-
 }
 
 export default LoginForm

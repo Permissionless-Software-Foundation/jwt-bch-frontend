@@ -19,7 +19,7 @@ const Menu = props => (
           </Link>
         </li>
       </ul>
-     {/* <ul className="actions vertical">
+      {/* <ul className="actions vertical">
         <li>
           <a href="#" className="button fit">
             Log In

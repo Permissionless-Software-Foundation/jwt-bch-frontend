@@ -56,26 +56,26 @@ export const getUserById = async id => {
 
 export const updateUser = async user => {
   console.log(user)
-    const token = getUser().jwt ? getUser().jwt : ''
+  const token = getUser().jwt ? getUser().jwt : ''
 
-    //try to get all projects
-    try {
-      const options = {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({user:user})
-      }
-      const resp = await fetch(`${SERVER}/users/${user._id}`, options)
-      console.log(resp)
-      if (resp.ok) {
-        return resp.json()
-      } else {
-        return false
-      }
-    } catch (e) {
+  //try to get all projects
+  try {
+    const options = {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({ user: user }),
+    }
+    const resp = await fetch(`${SERVER}/users/${user._id}`, options)
+    console.log(resp)
+    if (resp.ok) {
+      return resp.json()
+    } else {
       return false
     }
+  } catch (e) {
+    return false
   }
+}
