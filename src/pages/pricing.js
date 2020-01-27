@@ -53,23 +53,23 @@ class Homepage extends React.Component {
                   <td>3</td>
                   <td>10</td>
                   <td>100</td>
-                  <td>10</td>
-                  <td>10</td>
+                  <td>100</td>
+                  <td>100</td>
                 </tr>
                 <tr>
                   <td>Indexer RPM:</td>
                   <td>3</td>
                   <td>10</td>
-                  <td>100</td>
-                  <td>100</td>
                   <td>10</td>
+                  <td>100</td>
+                  <td>100</td>
                 </tr>
                 <tr>
                   <td>SLPDB RPM:</td>
                   <td>3</td>
                   <td>10</td>
-                  <td>100</td>
-                  <td>100</td>
+                  <td>10</td>
+                  <td>10</td>
                   <td>100</td>
                 </tr>
               </table>
