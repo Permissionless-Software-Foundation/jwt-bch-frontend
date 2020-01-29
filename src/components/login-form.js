@@ -168,9 +168,15 @@ class LoginForm extends React.Component {
 
     //console.log(`state: ${JSON.stringify(_this.state,null,2)}`)
 
-    await handleLogin(_this.state)
+    const handleSuccess = await handleLogin(_this.state)
 
-    navigate(`/profile`)
+    if (!handleSuccess) {
+      _this.setState(prevState => ({
+        message: 'Username or password does not match.',
+      }))
+    } else {
+      navigate(`/profile`)
+    }
   }
 }
 
