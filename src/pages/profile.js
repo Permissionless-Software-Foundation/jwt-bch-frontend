@@ -378,7 +378,12 @@ class Profile extends React.Component {
         options
       )
 
-      const credit = await fetchData.json()
+      let credit = 0
+      let data = {}
+
+      data = await fetch(`${SERVER}/apitoken/update-credit/${_this.state.id}`, options)
+
+      credit = await data.json()
       console.log(`credit: ${credit}`)
 
       _this.setState(prevState => ({
@@ -398,7 +403,8 @@ class Profile extends React.Component {
 
       console.error(`Error in getCredit(): `, err)
       _this.setState(prevState => ({
-        message: err.message,
+        // message: err.message,
+        message: 'Error trying to get balance. Wait a minute for the indexer to update.',
       }))
     }
   }
