@@ -126,7 +126,7 @@ class ChangePassword extends React.Component {
     }, 250)
   }
 
-  // TODO: we can validate old password 
+  // TODO: we can validate old password
   // with the auth service for more security
   async changeRequest() {
     // try to update user data
@@ -138,7 +138,7 @@ class ChangePassword extends React.Component {
         _id: user.userdata.user._id,
       }
       const updateResult = await updateUser(userUpdated)
-      if(!updateResult) throw new Error('Error  Changing Password')
+      if (!updateResult) throw new Error('Error  Changing Password')
       window.alert('Password Changed Successfully.!')
     } catch (error) {
       window.alert('Error  Changing Password')

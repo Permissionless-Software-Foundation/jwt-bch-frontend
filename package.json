@@ -33,6 +33,7 @@
     "test": "echo no tests yet"
   },
   "devDependencies": {
+    "eslint-plugin-react": "^7.18.0",
     "gatsby-plugin-eslint": "^2.0.1",
     "prettier": "^1.14.2",
     "semantic-release": "^16.0.2"

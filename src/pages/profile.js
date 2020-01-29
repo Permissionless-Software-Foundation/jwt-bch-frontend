@@ -156,9 +156,9 @@ class Profile extends React.Component {
               <li>
                 BCH deposit:{' '}
                 {this.state.bchAddr && <strong>{this.state.bchAddr}</strong>}
-              </li>          
+              </li>
             </ul>
-            <ChangePassword/>
+            <ChangePassword />
           </div>
 
           <div className="actions-profile">
@@ -254,7 +254,6 @@ class Profile extends React.Component {
           </button>
         </div>
         <br />
-        
       </Layout>
     )
   }
