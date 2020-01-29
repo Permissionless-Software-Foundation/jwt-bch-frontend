@@ -35,12 +35,14 @@ export const handleLogin = async ({ email, password }) => {
     //console.log(`name: ${users.user.username}`)
     //console.log(`token: ${users.token}`)
 
-    return setUser({
+    setUser({
       username: users.user.username,
       jwt: users.token,
       userdata: users,
       email: users.user.email,
     })
+
+    return true
   } catch (err) {
     // If something goes wrong with auth, return false.
     return false
