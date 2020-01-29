@@ -2,7 +2,8 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
+import { Link, navigate } from 'gatsby'
+import { isLoggedIn, logout } from '../services/auth'
 
 const Menu = props => (
   <nav id="menu">
@@ -13,30 +14,52 @@ const Menu = props => (
             Home
           </Link>
         </li>
+
         <li>
-          <Link onClick={props.onToggleMenu} to="/profile">
-            Account
-          </Link>
+          {isLoggedIn() ? (
+            <Link onClick={props.onToggleMenu} to="/profile">
+              Account
+            </Link>
+          ) : (
+            <Link onClick={props.onToggleMenu} to="/login">
+              Account
+            </Link>
+          )}
         </li>
+
         <li>
           <Link onClick={props.onToggleMenu} to="/pricing">
             Pricing
           </Link>
         </li>
+
         <li>
           <Link onClick={props.onToggleMenu} to="/cashstrap">
             CashStrap
           </Link>
         </li>
       </ul>
-      {/* <ul className="actions vertical">
-        <li>
-          <a href="#" className="button fit">
+
+      <ul className="actions vertical">
+        {isLoggedIn() ? (
+          <Link
+            className="button  fit"
+            to="/"
+            onClick={event => {
+              event.preventDefault()
+              logout(() => navigate(`/`))
+            }}
+          >
+            Logout
+          </Link>
+        ) : (
+          <Link to="/login" className="button fit">
             Log In
-          </a>
-        </li>
-      </ul> */}
+          </Link>
+        )}
+      </ul>
     </div>
+
     <a className="close" onClick={props.onToggleMenu} href="javascript:;">
       Close
     </a>

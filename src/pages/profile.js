@@ -6,7 +6,7 @@ import { navigate } from 'gatsby'
 import ChangePassword from '../components/change-password'
 import '../components/profile.css'
 
-import { getUser } from '../services/auth'
+import { getUser, isLoggedIn, logout } from '../services/auth'
 import { updateUser } from '../services/users'
 
 const SERVER = process.env.AUTHSERVER
@@ -240,6 +240,21 @@ class Profile extends React.Component {
           <code>apiToken</code>
           property when instantiating the bch-js library.
         </div>
+        <br />
+
+        <div className="content-profile">
+          <button
+            className="button  special"
+            onClick={event => {
+              event.preventDefault()
+              logout(() => navigate(`/`))
+            }}
+          >
+            Logout
+          </button>
+        </div>
+        <br />
+        
       </Layout>
     )
   }
