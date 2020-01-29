@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 var QRCode = require('qrcode.react')
 import styled from 'styled-components'
 import { navigate } from 'gatsby'
+import ChangePassword from '../components/change-password'
 import '../components/profile.css'
 
 import { getUser } from '../services/auth'
@@ -155,8 +156,9 @@ class Profile extends React.Component {
               <li>
                 BCH deposit:{' '}
                 {this.state.bchAddr && <strong>{this.state.bchAddr}</strong>}
-              </li>
+              </li>          
             </ul>
+            <ChangePassword/>
           </div>
 
           <div className="actions-profile">
