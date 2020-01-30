@@ -7,6 +7,9 @@ import styled from 'styled-components'
 import { handleLogin, isLoggedIn, setUser } from '../services/auth'
 import { Link, navigate } from 'gatsby'
 
+import NOTIFICATION from '../lib/notification'
+const Notification = new NOTIFICATION()
+
 // const config = require("../../config")
 
 // const SERVER = config.server;
@@ -37,6 +40,7 @@ class LoginForm extends React.Component {
       email: '',
       password: '',
     }
+    this.Notification = Notification
   }
 
   render() {
@@ -110,6 +114,9 @@ class LoginForm extends React.Component {
       _this.setState(prevState => ({
         message: 'Error:  Must be Email Format',
       }))
+
+      _this.Notification.notify('Email', 'Must be Email Format', 'danger')
+
       return
     }
     try {
@@ -142,13 +149,20 @@ class LoginForm extends React.Component {
         userdata: users,
       })
 
-      navigate(`/profile`)
+      _this.Notification.notify('LogIn', 'Success!!', 'success')
+
+      setTimeout(() => {
+        navigate(`/profile`)
+      }, 1500)
     } catch (err) {
       // If something goes wrong with auth, return false.
       //return false;
       _this.setState(prevState => ({
         message: err.message,
       }))
+
+      _this.Notification.notify('Error', err.message, 'danger')
+
     }
   }
 
@@ -159,6 +173,9 @@ class LoginForm extends React.Component {
       _this.setState(prevState => ({
         message: 'Error:  Must be Email Format',
       }))
+
+      _this.Notification.notify('Email', 'Must be Email Format', 'danger')
+
       return
     }
 
@@ -174,8 +191,14 @@ class LoginForm extends React.Component {
       _this.setState(prevState => ({
         message: 'Username or password does not match.',
       }))
+
+      _this.Notification.notify('Error', 'Email or password does not match.','danger')
+
     } else {
-      navigate(`/profile`)
+      _this.Notification.notify('LogIn', 'Success!!', 'success')
+      setTimeout(() => {
+        navigate(`/profile`)
+      }, 1500);
     }
   }
 }

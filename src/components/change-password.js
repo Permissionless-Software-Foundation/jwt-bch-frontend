@@ -3,6 +3,9 @@ import styled from 'styled-components'
 import { updateUser } from '../services/users'
 import { getUser } from '../services/auth'
 
+import NOTIFICATION from '../lib/notification'
+const Notification = new NOTIFICATION()
+
 const StyledContent = styled.div`
   display: flex;
   width: 100%;
@@ -24,6 +27,7 @@ class ChangePassword extends React.Component {
       step: 1,
     }
     _this = this
+    this.Notification = Notification
   }
 
   render() {
@@ -88,7 +92,7 @@ class ChangePassword extends React.Component {
 
           // Validate Password Match
           if (value !== _this.state.firtsPassword) {
-            window.alert('ERROR: the passwords do not match')
+            Notification.notify('ERROR', 'Passwords do not match', 'danger')
             _this.resetState()
             return
           }
@@ -139,9 +143,9 @@ class ChangePassword extends React.Component {
       }
       const updateResult = await updateUser(userUpdated)
       if (!updateResult) throw new Error('Error  Changing Password')
-      window.alert('Password Changed Successfully.!')
+      Notification.notify('Success!', 'Password Changed Successfully.!', 'success')
     } catch (error) {
-      window.alert('Error  Changing Password')
+      Notification.notify('Error', 'Error  Changing Password', 'danger')
     }
   }
 }
