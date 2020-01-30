@@ -6,6 +6,9 @@ import '../assets/scss/main.scss'
 import NavBar from './nav-bar'
 import Menu from './Menu'
 
+import ReactNotification from 'react-notifications-component'
+import 'react-notifications-component/dist/theme.css'
+
 class Template extends React.Component {
   constructor(props) {
     super(props)
@@ -39,6 +42,8 @@ class Template extends React.Component {
     const { children } = this.props
 
     return (
+      <>
+      <ReactNotification />
       <div
         className={`body ${this.state.loading} ${
           this.state.isMenuVisible ? 'is-menu-visible' : ''
@@ -50,6 +55,7 @@ class Template extends React.Component {
         </div>
         <Menu onToggleMenu={this.handleToggleMenu} />
       </div>
+      </>
     )
   }
 }

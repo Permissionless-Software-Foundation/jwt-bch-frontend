@@ -9,6 +9,9 @@ import '../components/profile.css'
 import { getUser, isLoggedIn, logout } from '../services/auth'
 import { updateUser } from '../services/users'
 
+import NOTIFICATION from '../lib/notification'
+const Notification = new NOTIFICATION()
+
 const SERVER = process.env.AUTHSERVER
 
 const StyledButton = styled.a`
@@ -45,6 +48,8 @@ class Profile extends React.Component {
     }
 
     _this = this
+    this.Notification = Notification
+
   }
 
   async componentDidMount() {
@@ -287,7 +292,7 @@ class Profile extends React.Component {
       if (name === 'email') {
         const isEmail = _this.validateEmail(fieldValue)
         if (!isEmail) {
-          window.alert('Error : Incorrect Email format')
+          _this.Notification.notify('Error', 'Incorrect Email format', 'danger')
           return
         }
       }
@@ -304,7 +309,7 @@ class Profile extends React.Component {
           [name]: updateResult['user'][name],
         })
       } catch (error) {
-        window.alert('Error : This email already exists')
+        _this.Notification.notify('Error', 'This email already exists', 'danger')
       }
     }
   }
