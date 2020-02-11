@@ -1434,7 +1434,11 @@
 			}
 
 	}
+// Component.
 
-	// Layout
+@import 'components/contact-method';
+
+// Layout
 @import 'layout/nav';
 @import 'layout/menu';
+@import 'layout/contact';
