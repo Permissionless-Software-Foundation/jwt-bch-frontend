@@ -38,6 +38,11 @@ const Menu = props => (
             CashStrap
           </Link>
         </li>
+        <li>
+          <Link onClick={props.onToggleMenu} to="/contact">
+            Contact
+          </Link>
+        </li>
       </ul>
 
       <ul className="actions vertical">
