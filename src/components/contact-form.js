@@ -8,7 +8,7 @@
 import React from 'react'
 import styled from 'styled-components'
 //import BadgerButton from './badger-button'
-
+import Captcha from './captcha'
 import NOTIFICATION from '../lib/notification'
 const Notification = new NOTIFICATION()
 
@@ -18,6 +18,7 @@ const SERVER = `https://bchjs.cash/api`
 const StyledButton = styled.a`
   margin: 10px;
   margin-bottom: 25px;
+  margin-left: 0px;
 `
 
 const OutMsg = styled.p`
@@ -48,6 +49,7 @@ class ContactForm extends React.Component {
       bchAddr: '',
       //bchPrice: 200/DEFAULT_BCH_PRICE
       bchPrice: null,
+      captchaIsValid: false
     }
     this.Notification = Notification
   }
@@ -83,15 +85,17 @@ class ContactForm extends React.Component {
             <br />
             <OutMsg>{this.state.message}</OutMsg>
             <br />
-            <StyledButton
+            <Captcha callback = {_this.captchaState}/>;
+            <br />
+            <a
               href="#"
-              className="button special badger-button"
+              className="button special badger-button contact-button"
               //onClick={this.invokeBadger}
               onClick={this.clickSubmitForm}
               data-to="bitcoincash:qzl6k0wvdd5ky99hewghqdgfj2jhcpqnfq8xtct0al"
             >
               Place Order
-            </StyledButton>
+            </a>
           </form>
         </div>
 
@@ -135,7 +139,7 @@ class ContactForm extends React.Component {
     try {
       event.preventDefault()
 
-      const validInput = _this.validateForm(_this.state)
+      _this.validateForm(_this.state)
 
       _this.submitOrderFormData()
 
@@ -211,10 +215,19 @@ class ContactForm extends React.Component {
     if (!email || email === '') {
       throw new Error(`Email can not be empty`)
     }
+    const isEmail =  _this.validateEmail(email)
+    if (!isEmail) {
+      throw new Error(`Email must be Email Format`)
+    }
 
     const message = state.formMessage
     if (!message || message === '') {
       throw new Error(`Message can not be empty`)
+    }
+    const captchaState = _this.state.captchaIsValid
+
+    if(!captchaState){
+      throw new Error(`Catpcha is Invalid`)
     }
 
     return state
@@ -225,6 +238,20 @@ class ContactForm extends React.Component {
     _this.setState({
       [event.target.name]: event.target.value,
     })
+  }
+  captchaState(isValid){
+    console.log('Catpcha State',isValid)
+    _this.setState({
+      captchaIsValid:isValid
+    })
+  }
+  validateEmail(email) 
+  {
+   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
+    {
+      return (true)
+    }
+      return (false)
   }
 }
 
