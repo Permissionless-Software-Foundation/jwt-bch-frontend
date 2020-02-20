@@ -54,10 +54,12 @@ class Profile extends React.Component {
 
   async componentDidMount() {
     const userData = await getUser()
+    console.log(`userData.userdata: ${JSON.stringify(userData.userdata,null,2)}`)
 
     // If the user is not logged in, send them back to the home page.
     if (!userData.userdata) {
-      navigate(`/`)
+      // navigate(`/`)
+      logout(() => navigate(`/`))
       return
     }
 
