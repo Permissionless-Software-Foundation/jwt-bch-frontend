@@ -94,7 +94,7 @@ class ContactForm extends React.Component {
               onClick={this.clickSubmitForm}
               data-to="bitcoincash:qzl6k0wvdd5ky99hewghqdgfj2jhcpqnfq8xtct0al"
             >
-              Place Order
+              Send Message
             </a>
           </form>
         </div>
@@ -200,7 +200,7 @@ class ContactForm extends React.Component {
     } catch (err) {
       console.log(`Error in submitOrderFormData(): `, err)
 	  _this.Notification.notify('Error',  'An error occured.','danger')
-	  	
+
       // Hide  the 1st panel and show the second.
       _this.setState(prevState => ({
         showPanel1: { display: 'none' },
@@ -245,7 +245,7 @@ class ContactForm extends React.Component {
       captchaIsValid:isValid
     })
   }
-  validateEmail(email) 
+  validateEmail(email)
   {
    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
     {
