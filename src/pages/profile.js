@@ -202,9 +202,10 @@ class Profile extends React.Component {
                     onChange={this.handleDropDown}
                     value={this.state.apiLevel}
                   >
-                    <option defaultValue="0">Free ($0)</option>
-                    <option value="10">Full Node ($10/mo)</option>
-                    <option value="20">Indexer ($20/mo)</option>
+                    <option defaultValue="10">Free ($0)</option>
+                    <option value="20">Full Node ($10/mo)</option>
+                    <option value="30">Indexer ($20/mo)</option>
+                    <option value="40">SLP tokens ($30/mo)</option>
                   </select>
                 </div>
               </center>
