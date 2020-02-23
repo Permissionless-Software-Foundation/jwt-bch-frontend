@@ -65,7 +65,7 @@ const Menu = props => (
       </ul>
     </div>
 
-    <a className="close" onClick={props.onToggleMenu} href="javascript:;">
+    <a className="close" onClick={props.onToggleMenu} href="#!">
       Close
     </a>
   </nav>

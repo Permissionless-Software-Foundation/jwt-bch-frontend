@@ -42,4 +42,61 @@
         width: 100%;
 
     } 
+    .captcha-container{
+        -webkit-box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+        box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+        max-width: 15%;
+        padding: 1em;
+        margin-left: 2px;
+    }
+    .contact-button{
+        width: 15%;
+        margin: 10px;
+        margin-bottom: 25px;
+        margin-left: 0px;
+    }
+    .captcha-content{
+        display: flex;
+        justify-content: center;
+    }
+
+
+     @include breakpoint(xlarge) {
+        .captcha-container{
+            max-width: 15%;
+        }
+        .contact-button{
+            width: 15%;
+        }
+    }
+
+    @include breakpoint(large) {
+        .captcha-container{
+            max-width: 25%;
+        }
+        .contact-button{
+            width: 25%;
+        }
+    }
+
+    @include breakpoint(small) {
+        .captcha-container{
+            max-width: 35%;
+        }
+        .contact-button{
+            width: 35%;
+        }
+    }
+
+    @include breakpoint(xsmall) {
+        .captcha-container{
+            max-width: 65%;
+        }
+        .contact-button{
+            width: 65%;
+        }
+    } 
+    
+
 }
