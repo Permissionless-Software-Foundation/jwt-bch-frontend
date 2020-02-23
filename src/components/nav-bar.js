@@ -18,7 +18,7 @@ class Header extends React.Component {
           <a
             className="menu-link"
             onClick={this.props.onToggleMenu}
-            href="javascript:;"
+            href="#!"
           >
             Menu
           </a>

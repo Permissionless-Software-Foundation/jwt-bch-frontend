@@ -32,46 +32,50 @@ class Homepage extends React.Component {
                 that your API key unlocks.
               </p>
               <table style={{ border: '1px solid black' }}>
-                <tr>
-                  <th>Tiers:</th>
-                  <th>Anonymous</th>
-                  <th>Free</th>
-                  <th>Full-Node</th>
-                  <th>Indexer</th>
-                  <th>SLP</th>
-                </tr>
-                <tr>
-                  <td>Price per month:</td>
-                  <td>$0</td>
-                  <td>$0</td>
-                  <td>$10</td>
-                  <td>$20</td>
-                  <td>$30</td>
-                </tr>
-                <tr>
-                  <td>Full Node RPM:</td>
-                  <td>3</td>
-                  <td>10</td>
-                  <td>100</td>
-                  <td>100</td>
-                  <td>100</td>
-                </tr>
-                <tr>
-                  <td>Indexer RPM:</td>
-                  <td>3</td>
-                  <td>10</td>
-                  <td>10</td>
-                  <td>100</td>
-                  <td>100</td>
-                </tr>
-                <tr>
-                  <td>SLPDB RPM:</td>
-                  <td>3</td>
-                  <td>10</td>
-                  <td>10</td>
-                  <td>10</td>
-                  <td>100</td>
-                </tr>
+                <thead>
+                  <tr>
+                    <th>Tiers:</th>
+                    <th>Anonymous</th>
+                    <th>Free</th>
+                    <th>Full-Node</th>
+                    <th>Indexer</th>
+                    <th>SLP</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Price per month:</td>
+                    <td>$0</td>
+                    <td>$0</td>
+                    <td>$10</td>
+                    <td>$20</td>
+                    <td>$30</td>
+                  </tr>
+                  <tr>
+                    <td>Full Node RPM:</td>
+                    <td>3</td>
+                    <td>10</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                  </tr>
+                  <tr>
+                    <td>Indexer RPM:</td>
+                    <td>3</td>
+                    <td>10</td>
+                    <td>10</td>
+                    <td>100</td>
+                    <td>100</td>
+                  </tr>
+                  <tr>
+                    <td>SLPDB RPM:</td>
+                    <td>3</td>
+                    <td>10</td>
+                    <td>10</td>
+                    <td>10</td>
+                    <td>100</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </div>
