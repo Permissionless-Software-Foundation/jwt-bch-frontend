@@ -18,6 +18,8 @@ class Template extends React.Component {
       isMenuVisible: false,
     }
     this.handleToggleMenu = this.handleToggleMenu.bind(this)
+    this.ignoreWarningsLifeCycles()
+
   }
 
   componentDidMount() {
@@ -37,24 +39,33 @@ class Template extends React.Component {
       isMenuVisible: !this.state.isMenuVisible,
     })
   }
+  // Ignore Deprecated Warnings lyfe cicle  from dependencies
+  ignoreWarningsLifeCycles() {
+    console.warn = e => {
+      const warnKeyToIgnore = 'deprecated lifecycles to their new names'
+      if (!e.match(warnKeyToIgnore)) {
+        console.error(`WARNING:${e}`)
+      }
+    }
+  }
 
   render() {
     const { children } = this.props
 
     return (
       <>
-      <ReactNotification />
-      <div
-        className={`body ${this.state.loading} ${
-          this.state.isMenuVisible ? 'is-menu-visible' : ''
-        }`}
-      >
-        <div id="wrapper">
-          <NavBar onToggleMenu={this.handleToggleMenu} />
-          {children}
+        <ReactNotification />
+        <div
+          className={`body ${this.state.loading} ${
+            this.state.isMenuVisible ? 'is-menu-visible' : ''
+          }`}
+        >
+          <div id="wrapper">
+            <NavBar onToggleMenu={this.handleToggleMenu} />
+            {children}
+          </div>
+          <Menu onToggleMenu={this.handleToggleMenu} />
         </div>
-        <Menu onToggleMenu={this.handleToggleMenu} />
-      </div>
       </>
     )
   }
