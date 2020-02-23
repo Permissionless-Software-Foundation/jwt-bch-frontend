@@ -31,7 +31,8 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write '**/*.js'",
-    "test": "echo no tests yet"
+    "test": "echo no tests yet",
+    "start": "gatsby develop"
   },
   "devDependencies": {
     "eslint-plugin-react": "^7.18.0",
