@@ -21,7 +21,7 @@ class Captcha extends React.Component {
       code: '',
       value: '',
     }
-    this.Notification = Notification
+    // this.Notification = Notification
   }
 
   render() {
