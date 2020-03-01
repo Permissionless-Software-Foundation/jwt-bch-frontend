@@ -43,6 +43,11 @@ const Menu = props => (
             Contact
           </Link>
         </li>
+        <li>
+          <Link onClick={props.onToggleMenu} to="/free-access">
+            Free Access
+          </Link>
+        </li>
       </ul>
 
       <ul className="actions vertical">

@@ -12,8 +12,8 @@ import Captcha from './captcha'
 import NOTIFICATION from '../lib/notification'
 const Notification = new NOTIFICATION()
 
-const SERVER = `https://bchjs.cash/api`
-//const SERVER = `http://localhost:5001`
+// const SERVER = `https://bchjs.cash/api`
+const SERVER = `http://localhost:5001`
 
 const StyledButton = styled.a`
   margin: 10px;
@@ -29,7 +29,7 @@ const OutMsg = styled.p`
 
 let _this
 
-class ContactForm extends React.Component {
+class FreeAccessForm extends React.Component {
   constructor(props) {
     super(props)
 
@@ -255,4 +255,4 @@ class ContactForm extends React.Component {
   }
 }
 
-export default ContactForm
+export default FreeAccessForm
