@@ -428,6 +428,12 @@ class Profile extends React.Component {
         message: 'Requesting new API JWT token...',
       }))
 
+      // Fix weird default-value bug.
+      if(_this.state.apiLevel.indexOf('Free') > -1)
+        _this.state.apiLevel = 10
+
+      console.log(`Requestion token for API level: ${_this.state.apiLevel}`)
+
       const options = {
         method: 'POST',
         headers: {
