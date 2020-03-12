@@ -429,8 +429,11 @@ class Profile extends React.Component {
       }))
 
       // Fix weird default-value bug.
+      console.log(`_this.state.apiLevel: ${_this.state.apiLevel}`)
+      if(typeof _this.state.apiLevel === 'string') {
       if(_this.state.apiLevel.indexOf('Free') > -1)
         _this.state.apiLevel = 10
+      }
 
       console.log(`Requestion token for API level: ${_this.state.apiLevel}`)
 
@@ -459,7 +462,7 @@ class Profile extends React.Component {
         message: 'API JWT Token updated.',
       }))
     } catch (err) {
-      if (fetchData.status === 402) {
+      if (fetchData && fetchData.status === 402) {
         _this.setState(prevState => ({
           message:
             'Not enough credit in your account. Send BCH to the address listed.',
