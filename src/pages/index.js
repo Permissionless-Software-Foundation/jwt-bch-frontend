@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
+import Footer from '../components/Footer'
 
 import pic01 from '../assets/images/pic01.jpg'
 import pic02 from '../assets/images/pic02.jpg'
@@ -13,7 +14,7 @@ import '../assets/css/main2.css'
 
 class Homepage extends React.Component {
   render() {
-    const siteTitle = 'Gatsby Starter - Photon'
+    const siteTitle = 'BCH Blockchain As-A-Service SaaS'
 
     return (
       <Layout>
@@ -175,6 +176,8 @@ class Homepage extends React.Component {
             </div>
           </div>
         </section>
+
+        <Footer />
       </Layout>
     )
   }

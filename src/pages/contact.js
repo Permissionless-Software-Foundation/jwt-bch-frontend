@@ -3,6 +3,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
+import Footer from '../components/Footer'
 
 // Page specific components
 import ContactForm from '../components/contact-form'
@@ -10,10 +11,10 @@ import ContactForm from '../components/contact-form'
 const Generic = props => (
   <Layout>
     <Helmet>
-      <title>Buy Trout's Bitcoin Cash JavaScript Toolkit</title>
+      <title>Contact Us</title>
       <meta
-        name="description"
-        content="Buy Trout's Bitcoin Cash JavaScript Toolkit"
+        name="contact"
+        content="Contact FullStack.cash"
       />
     </Helmet>
 
@@ -27,13 +28,17 @@ const Generic = props => (
               <p>
                 <b>
                 Fill out the form below to send an email to the organization
-                running this website.
+                running this website. You can also reach the community by
+                joining <a href="https://t.me/permissionless_software">this
+                Telegram channel</a>.
                 </b>
               </p>
           <ContactForm />
         </div>
       </section>
     </div>
+
+    <Footer />
   </Layout>
 )
 

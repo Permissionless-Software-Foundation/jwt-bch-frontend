@@ -6,18 +6,8 @@ class Footer extends React.Component {
       <section id="footer">
         <ul className="icons">
           <li>
-            <a href="#" className="icon alt fa-twitter">
-              <span className="label">Twitter</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="icon alt fa-facebook">
-              <span className="label">Facebook</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="icon alt fa-instagram">
-              <span className="label">Instagram</span>
+            <a href="https://t.me/permissionless_software" className="icon alt fa-telegram">
+              <span className="label">Telegram</span>
             </a>
           </li>
           <li>
@@ -30,15 +20,16 @@ class Footer extends React.Component {
             </a>
           </li>
           <li>
-            <a href="#" className="icon alt fa-envelope">
+            <a href="/contact" className="icon alt fa-envelope">
               <span className="label">Email</span>
             </a>
           </li>
         </ul>
         <ul className="copyright">
-          <li>&copy; Untitled</li>
+          <li>MIT licensed <a href="https://github.com/Permissionless-Software-Foundation/jwt-bch-frontend" target="_blank">source code</a></li>
           <li>
-            Design: <a href="http://html5up.net">HTML5 UP</a>
+            An inititive of
+            the <a href="https://psfoundation.cash/" target="_blank">Permissionless Software Foundation</a>.
           </li>
         </ul>
       </section>
