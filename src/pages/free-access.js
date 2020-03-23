@@ -30,7 +30,10 @@ const FreeAccess = props => (
                 Do you have an awesome Bitcoin Cash project? FullStack.cash provides
                 free access to selected projects in order to support the BCH
                 community. Describe your project in the message below and let
-                us know how to contact you. If selected, you will recieve $100
+                us know how to contact you. Be sure to tell us how your project
+                would help the Bitcoin Cash community or spread adoption.
+                <br /><br />
+                If selected, you will recieve $100
                 in free credit.
                 </b>
               </p>

@@ -144,8 +144,7 @@ class Homepage extends React.Component {
               <ul className="actions">
                 <li>
                   <a
-                    href="https://api.fullstack.cash"
-                    target="_blank"
+                    href="/documentation"
                     className="button"
                   >
                     More
