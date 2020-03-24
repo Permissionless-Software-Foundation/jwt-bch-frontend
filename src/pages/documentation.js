@@ -12,7 +12,7 @@ import masteringBitcoinCash from '../assets/images/mastering-bitcoin-cash.jpg'
 
 class Homepage extends React.Component {
   render() {
-    const siteTitle = 'Gatsby Starter - Photon'
+    const siteTitle = 'Documentation'
 
     return (
       <Layout>
@@ -29,10 +29,19 @@ class Homepage extends React.Component {
               <p>
                 Adapted from Mastering Bitcoin
                 by <a href="https://twitter.com/aantonop" target="_blank">Andreas Antonopolis</a>,
-                Mastering Bitcoin Cash is the most approachable technical reference
+                <a href="https://developer.bitcoin.com/mastering-bitcoin-cash/" target="_blank">Mastering Bitcoin Cash</a> is
+                the most approachable technical reference
                 to working with the Bitcoin Cash protocol.
               </p>
+              <ul className="actions">
+                <li>
+                  <a href="https://developer.bitcoin.com/mastering-bitcoin-cash/" target="_blank" className="button">
+                    More
+                  </a>
+                </li>
+              </ul>
             </div>
+
             <div className="col-6">
               <span className="image fit">
                 <img src={masteringBitcoinCash} alt="" />
