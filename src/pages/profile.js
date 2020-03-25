@@ -6,7 +6,7 @@ import { navigate } from 'gatsby'
 import ChangePassword from '../components/change-password'
 import '../components/profile.css'
 
-import { getUser, isLoggedIn, logout } from '../services/auth'
+import { getUser, setUser, isLoggedIn, logout } from '../services/auth'
 import { updateUser } from '../services/users'
 
 import NOTIFICATION from '../lib/notification'
@@ -36,6 +36,7 @@ class Profile extends React.Component {
       credit: 0,
       apiLevel: 0,
       apiToken: '',
+      apiTokenExp: '',
       username: '',
       message: '',
       id: '',
@@ -54,7 +55,7 @@ class Profile extends React.Component {
 
   async componentDidMount() {
     const userData = await getUser()
-    console.log(`userData.userdata: ${JSON.stringify(userData.userdata,null,2)}`)
+    console.log(`userData.userdata: ${JSON.stringify(userData.userdata, null, 2)}`)
 
     // If the user is not logged in, send them back to the home page.
     if (!userData.userdata) {
@@ -66,6 +67,13 @@ class Profile extends React.Component {
     let apiToken = ''
     if (userData.userdata.user.apiToken)
       apiToken = userData.userdata.user.apiToken
+
+    let apiTokenExp = ''
+    if (userData.userdata.user.apiTokenExp) {
+      const expDate = new Date(userData.userdata.user.apiTokenExp)
+      apiTokenExp = expDate.toString()
+
+    }
     //
     // this.data.credit = userData.userdata.user.credit
     // this.data.bchAddr = userData.userdata.user.bchAddr
@@ -83,6 +91,7 @@ class Profile extends React.Component {
       message: '',
       id: userData.userdata.user._id,
       userJwt: userData.jwt,
+      apiTokenExp: apiTokenExp,
     }))
   }
 
@@ -101,51 +110,51 @@ class Profile extends React.Component {
                 {!_this.state.editField_email && _this.state.email ? (
                   <strong>{this.state.email}</strong>
                 ) : (
-                  <input
-                    id="editField_email"
-                    name="email"
-                    type="text "
-                    defaultValue={_this.state.editField_email}
-                    onChange={_this.handleUpdate}
-                    onBlur={_this.resetFieldToEdit}
-                    onKeyDown={_this.handleKeyDown}
-                    placeholder="Enter Email"
-                  ></input>
-                )}
+                    <input
+                      id="editField_email"
+                      name="email"
+                      type="text "
+                      defaultValue={_this.state.editField_email}
+                      onChange={_this.handleUpdate}
+                      onBlur={_this.resetFieldToEdit}
+                      onKeyDown={_this.handleKeyDown}
+                      placeholder="Enter Email"
+                    ></input>
+                  )}
               </li>
               <li onClick={() => _this.editField('username')}>
                 UserName:
                 {!_this.state.editField_username && _this.state.username ? (
                   <strong>{_this.state.username}</strong>
                 ) : (
-                  <input
-                    id="editField_username"
-                    name="username"
-                    type="text "
-                    defaultValue={_this.state.editField_username}
-                    onChange={_this.handleUpdate}
-                    onBlur={_this.resetFieldToEdit}
-                    onKeyDown={_this.handleKeyDown}
-                    placeholder="Enter username"
-                  ></input>
-                )}
+                    <input
+                      id="editField_username"
+                      name="username"
+                      type="text "
+                      defaultValue={_this.state.editField_username}
+                      onChange={_this.handleUpdate}
+                      onBlur={_this.resetFieldToEdit}
+                      onKeyDown={_this.handleKeyDown}
+                      placeholder="Enter username"
+                    ></input>
+                  )}
               </li>
               <li onClick={() => _this.editField('name')}>
                 Name:
                 {!_this.state.editField_name && _this.state.name ? (
                   <strong>{_this.state.name}</strong>
                 ) : (
-                  <input
-                    id="editField_name"
-                    name="name"
-                    type="text "
-                    defaultValue={_this.state.editField_name}
-                    onChange={_this.handleUpdate}
-                    onBlur={_this.resetFieldToEdit}
-                    onKeyDown={_this.handleKeyDown}
-                    placeholder="Enter name"
-                  ></input>
-                )}
+                    <input
+                      id="editField_name"
+                      name="name"
+                      type="text "
+                      defaultValue={_this.state.editField_name}
+                      onChange={_this.handleUpdate}
+                      onBlur={_this.resetFieldToEdit}
+                      onKeyDown={_this.handleKeyDown}
+                      placeholder="Enter name"
+                    ></input>
+                  )}
               </li>
               <li>
                 API Level: <strong>{this.state.apiLevel}</strong>
@@ -153,6 +162,10 @@ class Profile extends React.Component {
               <li>
                 API JWT Token: <br />
                 {this.state.apiToken && <strong> {this.state.apiToken}</strong>}
+              </li>
+              <li>
+                JWT Token Expiration:
+                {<strong>  {_this.state.apiTokenExp}</strong>}
               </li>
               <li>
                 Credit:
@@ -226,7 +239,7 @@ class Profile extends React.Component {
             <br />
           </div>
 
-          <OutMsg>{this.state.message}</OutMsg>
+          <OutMsg>{this.state.message}</OutMsg> 
         </div>
 
         <br />
@@ -366,6 +379,7 @@ class Profile extends React.Component {
   // if BCH is found.
   async getCredit(event) {
     let fetchData
+    let notificationType
 
     try {
       event.preventDefault()
@@ -398,6 +412,9 @@ class Profile extends React.Component {
         credit: credit,
         message: 'BCH address checked. Credit updated.',
       }))
+
+      notificationType = 'success'
+
     } catch (err) {
       // console.log(`fetchData: `, fetchData)
       // console.log(`fetchData.status: ${fetchData.status}`)
@@ -414,13 +431,23 @@ class Profile extends React.Component {
         // message: err.message,
         message: 'Error trying to get balance. Wait a minute for the indexer to update.',
       }))
+
+      notificationType = 'danger'
+
+    }
+
+    // Throw Notification
+    if (notificationType === 'danger') {
+      _this.Notification.notify('ERROR!', _this.state.message, 'danger')
+    } else {
+      _this.Notification.notify('SUCCESS!', _this.state.message, 'success')
     }
   }
 
   // Click handler for when user wants to get a new JWT token.
   async getJwt(event) {
     let fetchData
-
+    let notificationType
     try {
       event.preventDefault()
 
@@ -430,9 +457,9 @@ class Profile extends React.Component {
 
       // Fix weird default-value bug.
       console.log(`_this.state.apiLevel: ${_this.state.apiLevel}`)
-      if(typeof _this.state.apiLevel === 'string') {
-      if(_this.state.apiLevel.indexOf('Free') > -1)
-        _this.state.apiLevel = 10
+      if (typeof _this.state.apiLevel === 'string') {
+        if (_this.state.apiLevel.indexOf('Free') > -1)
+          _this.state.apiLevel = 10
       }
 
       console.log(`Requestion token for API level: ${_this.state.apiLevel}`)
@@ -453,14 +480,32 @@ class Profile extends React.Component {
         throw new Error(`Could not get new JWT token.`)
 
       const data2 = await fetchData.json()
+
       console.log(`apiToken: ${data2.apiToken}`)
       console.log(`apiLevel: ${data2.apiLevel}`)
+      console.log(`apiTokenExp: ${data2.apiTokenExp}`)
+
+      let apiTokenExp = ''
+      if (data2.apiTokenExp) {
+        const expDate = new Date(data2.apiTokenExp)
+        apiTokenExp = expDate.toString()
+      }
 
       _this.setState(prevState => ({
         apiToken: data2.apiToken,
         apiLevel: data2.apiLevel,
+        apiTokenExp: apiTokenExp,
         message: 'API JWT Token updated.',
       }))
+
+      // Update user in localSotrage
+      const userData = await getUser()
+      userData.userdata.user.apiTokenExp = data2.apiTokenExp
+      userData.userdata.user.apiToken = data2.apiToken
+      await setUser(userData)
+
+      notificationType = 'success'
+
     } catch (err) {
       if (fetchData && fetchData.status === 402) {
         _this.setState(prevState => ({
@@ -476,7 +521,17 @@ class Profile extends React.Component {
       _this.setState(prevState => ({
         message: err.message,
       }))
+      notificationType = 'danger'
+
     }
+
+    // Throw Notification
+    if (notificationType === 'danger') {
+      _this.Notification.notify('ERROR!', _this.state.message, 'danger')
+    } else {
+      _this.Notification.notify('SUCCESS!', _this.state.message, 'success')
+    }
+
   }
 
   // Change handler for the tier-select drop-down menu.
