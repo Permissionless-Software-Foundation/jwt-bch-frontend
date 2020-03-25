@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
+import Footer from '../components/Footer'
 
 import pic01 from '../assets/images/pic01.jpg'
 import pic02 from '../assets/images/pic02.jpg'
@@ -10,7 +11,7 @@ import pic04 from '../assets/images/pic04.jpg'
 
 class Homepage extends React.Component {
   render() {
-    const siteTitle = 'Gatsby Starter - Photon'
+    const siteTitle = 'Pricing'
 
     return (
       <Layout>
@@ -20,7 +21,7 @@ class Homepage extends React.Component {
           <div className="grid-wrapper">
             <div className="col-12">
               <header className="major">
-                <h2>How much does FullStack.com cost?</h2>
+                <h2>How much does FullStack.cash cost?</h2>
               </header>
               <p>
                 It depends on the infrastructure requirements for your app. If
@@ -97,6 +98,8 @@ class Homepage extends React.Component {
             </ul>
           </div>
         </section>
+
+        <Footer />
       </Layout>
     )
   }

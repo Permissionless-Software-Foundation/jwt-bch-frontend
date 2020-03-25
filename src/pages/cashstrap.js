@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
+import Footer from '../components/Footer'
 
 import pic01 from '../assets/images/pic01.jpg'
 import pic02 from '../assets/images/pic02.jpg'
@@ -39,9 +40,9 @@ class Homepage extends React.Component {
               <p>
                 You do not need to download all the files unless you want to run
                 the full stack of software for both <i>mainnet</i> and{' '}
-                <i>testnet</i>. Because the files are so large, they are shared
-                via file-sharing protocols like BitTorrent and IPFS. They are
-                not available for direct download.
+                <i>testnet</i>. Because the files are so large, they are shared via
+                the <a href="https://www.qbittorrent.org/" target="_blank">BitTorrent</a> file-sharing
+                protocol. They are not available for direct download.
               </p>
               <p>
                 Please help the Bitcoin Cash developer community by seeding the
@@ -55,54 +56,49 @@ class Homepage extends React.Component {
               <span className="image fit">
                 <img src={bitcoinAbc} alt="" />
                 <h3>Full Node Blockchain</h3>
+                <p>
+                  <b>
+                    Use the files with{' '}
+                    <a
+                      href="https://github.com/christroutner/docker-abc"
+                      target="_blank"
+                    >
+                      this Docker container
+                    </a>
+                  </b>
+                </p>
               </span>
             </div>
             <div className="col-6" style={{ padding: '20px' }}>
-              <p>
-                <b>
-                  Use the files below with{' '}
-                  <a
-                    href="https://github.com/christroutner/docker-abc"
-                    target="_blank"
-                  >
-                    this Docker container
-                  </a>
-                </b>
-              </p>
+
 
               <h3>Mainnet</h3>
               <ul style={{ textAlign: 'left' }}>
                 <li>
-                  <b>Filename:</b> bch-abc-mainnet-0.20.10-01-25-2020-619429.zip
+                  <b>Filename:</b> abc-mainnet-627883-v0.21.2-03-24-2020.zip
                 </li>
                 <li>
                   <b>File size:</b> 134GB
                 </li>
                 <li>
-                  <a href="magnet:?xt=urn:btih:81f1ecb3a21718a1fc9e1d6aafc29c059764cef5&dn=bch-abc-mainnet-0.20.10-01-25-2020-619429.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
+                  <a href="magnet:?xt=urn:btih:dcb738b13d997af066f90f82e77a9faa94616d2d&dn=abc-mainnet-627883-v0.21.2-03-24-2020.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
                     Torrent magnet link
                   </a>
-                </li>
-                <li>
-                  IPFS hash: QmdKwqb1xMasxyza8KuzRwUjShJoAfqL8AgiCemfYe71qC
                 </li>
               </ul>
 
               <h3>Testnet</h3>
               <ul style={{ textAlign: 'left' }}>
                 <li>
-                  <b>Filename:</b> bch-abc-testnet-01-25-2020-1355757.zip
+                  <b>Filename:</b> abc-testnet-1368227-v0.21.2-03-24-2020.zip
                 </li>
                 <li>
-                  <b>File size:</b> 22GB
+                  <b>File size:</b> 23GB
                 </li>
                 <li>
-                  <a href="magnet:?xt=urn:btih:d0b6bd7d307c206cec8c7a97b88de767b4a546c3&dn=bch-abc-testnet-01-25-2020-1355757.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
+                  <a href="magnet:?xt=urn:btih:a12f6c7a4c6ea04f47fcafd77209a3ce19f70dd6&dn=abc-testnet-1368227-v0.21.2-03-24-2020.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
                     Torrent magnet link
                   </a>
-                </li>
-                <li>
-                  IPFS hash: QmcyYdng94W1mpWn99RK2jSydz2DFApvW7UkN4Y5KMCdzs
                 </li>
               </ul>
             </div>
@@ -116,54 +112,47 @@ class Homepage extends React.Component {
               <span className="image fit">
                 <img src={trezor} alt="" />
                 <h3>Blockbook Indexer</h3>
+                <p>
+                  <b>
+                    Use the files with{' '}
+                    <a
+                      href="https://github.com/christroutner/docker-ubuntu-blockbook"
+                      target="_blank"
+                    >
+                      this Docker container
+                    </a>
+                  </b>
+                </p>
               </span>
             </div>
             <div className="col-6" style={{ padding: '20px' }}>
-              <p>
-                <b>
-                  Use the files below with{' '}
-                  <a
-                    href="https://github.com/christroutner/docker-ubuntu-blockbook"
-                    target="_blank"
-                  >
-                    this Docker container
-                  </a>
-                </b>
-              </p>
-
               <h3>Mainnet</h3>
               <ul style={{ textAlign: 'left' }}>
                 <li>
-                  <b>Filename:</b> blockbook-mainnet-01-21-20-618876.zip
+                  <b>Filename:</b> blockbook-bch-mainnet-v0.3.2-03-23-2020.zip
                 </li>
                 <li>
-                  <b>File size:</b> 111GB
+                  <b>File size:</b> 108GB
                 </li>
                 <li>
-                  <a href="magnet:?xt=urn:btih:554ea9fd2087bde3041cf54adcc37fcc881e8f5d&dn=blockbook-mainnet-01-21-20-618876.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
+                  <a href="magnet:?xt=urn:btih:a001bfe0884f518800a19f3e0ccaaba3d0c22652&dn=blockbook-bch-mainnet-v0.3.2-03-23-2020.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
                     Torrent magnet link
                   </a>
-                </li>
-                <li>
-                  IPFS hash: QmTZ8i4qQwy2PpSxLdjMjJ712Uv3yZsAzDbgt86s3UWJUm
                 </li>
               </ul>
 
               <h3>Testnet</h3>
               <ul style={{ textAlign: 'left' }}>
                 <li>
-                  <b>Filename:</b> blockbook-testnet-01-21-2020-1355060.zip
+                  <b>Filename:</b> blockbook-bch-testnet-v0.3.2-03-23-2020.zip
                 </li>
                 <li>
-                  <b>File size:</b> 26GB
+                  <b>File size:</b> 18GB
                 </li>
                 <li>
-                  <a href="magnet:?xt=urn:btih:7d687d5e66e5ce1c2e31a9b1ffc376dc1ef34a42&dn=blockbook-testnet-01-21-2020-1355060.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
+                  <a href="magnet:?xt=urn:btih:1919a670acb2dc5ff158a42021e17ec107d8ddac&dn=blockbook-bch-testnet-v0.3.2-03-23-2020.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
                     Torrent magnet link
                   </a>
-                </li>
-                <li>
-                  IPFS hash: QmX9AnTicGgVegudbf5rsZ3epRQDs1Gib3QbFnfvhjdcSY
                 </li>
               </ul>
             </div>
@@ -177,43 +166,51 @@ class Homepage extends React.Component {
               <span className="image fit">
                 <img src={slp} alt="" />
                 <h3>SLP Token Indexer</h3>
+                <p>
+                  <b>
+                    Use the files with{' '}
+                    <a
+                      href="https://github.com/christroutner/docker-slpdb"
+                      target="_blank"
+                    >
+                      this Docker container
+                    </a>
+                  </b>
+                </p>
               </span>
             </div>
             <div className="col-6" style={{ padding: '20px' }}>
-              <p>
-                <b>
-                  Use the files below with{' '}
-                  <a
-                    href="https://github.com/christroutner/docker-slpdb"
-                    target="_blank"
-                  >
-                    this Docker container
-                  </a>
-                </b>
-              </p>
 
               <h3>Mainnet</h3>
               <ul style={{ textAlign: 'left' }}>
                 <li>
                   <b>Filename:</b>{' '}
-                  slpdb-mainnet-01-14-2020-929f59a5550cf269bc49a2c7853fd0bf59ec894a-617806.zip
+                  slpdb-v1-mainnet-03-23-2020-0114e79ff77488c4b90e800638b61a5715230c05.zip
                 </li>
                 <li>
-                  <b>File size:</b> 1.1GB
+                  <b>File size:</b> 1.5GB
                 </li>
                 <li>
-                  <a href="magnet:?xt=urn:btih:f2bdbd40511a566998cb8fbbd9f828c3f997623e&dn=slpdb-mainnet-01-14-2020-929f59a5550cf269bc49a2c7853fd0bf59ec894a-617806.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
+                  <a href="magnet:?xt=urn:btih:f23837d1b0bebf7ec97a5c199c65924604027980&dn=slpdb-v1-mainnet-03-23-2020-0114e79ff77488c4b90e800638b61a5715230c05.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
                     Torrent magnet link
                   </a>
-                </li>
-                <li>
-                  IPFS hash: QmYEM9DMRyjktzYZ26Mj7knuAYpAeHYZjjPKbG51Br51zV
                 </li>
               </ul>
 
               <h3>Testnet</h3>
               <ul style={{ textAlign: 'left' }}>
-                <li>Coming soon!</li>
+              <li>
+                <b>Filename:</b>{' '}
+                slpdb-v1-testnet-03-24-2020-0114e79ff77488c4b90e800638b61a5715230c05.zip
+              </li>
+              <li>
+                <b>File size:</b> 0.2GB
+              </li>
+              <li>
+                <a href="magnet:?xt=urn:btih:d57e130d0ca947c4e2512f47f472e4c55a92208c&dn=slpdb-v1-testnet-03-24-2020-0114e79ff77488c4b90e800638b61a5715230c05.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
+                  Torrent magnet link
+                </a>
+              </li>
               </ul>
             </div>
           </div>
@@ -241,6 +238,8 @@ class Homepage extends React.Component {
             </ul>
           </div>
         </section>
+
+        <Footer />
       </Layout>
     )
   }
