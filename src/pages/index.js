@@ -58,10 +58,16 @@ class Homepage extends React.Component {
                 />
               </div>
 
-              <div><center><p>
-                <a href="https://troutsblog.com/research/bitcoin-cash/how-to-bch-full-stack-developer"
-                target="_blank">Check out the article mentioned in the video.</a>
-              </p></center></div>
+              <div><center>
+              <ul className="actions uniform" style={{padding: '15px'}}>
+                <li>
+                  <a href="https://troutsblog.com/research/bitcoin-cash/how-to-bch-full-stack-developer"
+                  className="button special" target="_blank">
+                    Read the Article
+                  </a>
+                </li>
+              </ul>
+              </center></div>
             </div>
           </div>
         </section>

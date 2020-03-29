@@ -29,22 +29,24 @@ class Homepage extends React.Component {
               <p>
                 Adapted from Mastering Bitcoin
                 by <a href="https://twitter.com/aantonop" target="_blank">Andreas Antonopolis</a>,
-                <a href="https://developer.bitcoin.com/mastering-bitcoin-cash/" target="_blank">Mastering Bitcoin Cash</a> is
+                {' '}<a href="https://developer.bitcoin.com/mastering-bitcoin-cash/" target="_blank">Mastering Bitcoin Cash</a> is
                 the most approachable technical reference
                 to working with the Bitcoin Cash protocol.
               </p>
-              <ul className="actions">
+              <center><ul className="actions">
                 <li>
                   <a href="https://developer.bitcoin.com/mastering-bitcoin-cash/" target="_blank" className="button">
                     More
                   </a>
                 </li>
-              </ul>
+              </ul></center>
             </div>
 
             <div className="col-6">
               <span className="image fit">
-                <img src={masteringBitcoinCash} alt="" />
+                <a href="https://developer.bitcoin.com/mastering-bitcoin-cash/" target="_blank">
+                  <img src={masteringBitcoinCash} alt="" />
+                </a>
               </span>
             </div>
           </div>
@@ -93,7 +95,7 @@ class Homepage extends React.Component {
               <span className="image fit">
                 <span className="icon style4 major fa-cog"></span>
               </span>
-              <h3>BCH Full Stack</h3>
+              <h3>The 'Cash Stack'</h3>
               <p>
                 Learn about the 'full stack' of software required for a modern
                 phone app or website to communicate directly with the blockchain.
