@@ -57,6 +57,11 @@ class Homepage extends React.Component {
                   allowFullScreen
                 />
               </div>
+
+              <div><center><p>
+                <a href="https://troutsblog.com/research/bitcoin-cash/how-to-bch-full-stack-developer"
+                target="_blank">Check out the article mentioned in the video.</a>
+              </p></center></div>
             </div>
           </div>
         </section>
