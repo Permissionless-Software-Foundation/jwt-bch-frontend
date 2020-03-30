@@ -25,9 +25,9 @@ class Homepage extends React.Component {
             <div className="col-6">
               <header className="major">
                 <h2>
-                  FullStack.Cash
-                  <br />
-                  BCH Blockchain As-A-Service
+                  <div>FullStack.Cash</div>
+
+                  <div>BCH Blockchain As-A-Service</div>
                 </h2>
               </header>
               <h3>
@@ -135,11 +135,7 @@ class Homepage extends React.Component {
               </p>
               <ul className="actions">
                 <li>
-                  <a
-                    href="https://github.com/Permissionless-Software-Foundation/bch-js-examples"
-                    target="_blank"
-                    className="button"
-                  >
+                  <a href="/examples" className="button">
                     More
                   </a>
                 </li>
@@ -154,10 +150,7 @@ class Homepage extends React.Component {
               </p>
               <ul className="actions">
                 <li>
-                  <a
-                    href="/documentation"
-                    className="button"
-                  >
+                  <a href="/documentation" className="button">
                     More
                   </a>
                 </li>

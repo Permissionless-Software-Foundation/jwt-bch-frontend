@@ -25,5 +25,3 @@ home page, and can not access the private _Profile_ page unless logged in.
 - You will be logged in and taken to the _Profile_ page.
 - Log Out. You will be redirected to the Homepage with the login screen.
 - Log In. You will be redirected to the _Profile_ page.
-
-minor change

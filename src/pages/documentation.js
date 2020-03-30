@@ -123,7 +123,7 @@ class Homepage extends React.Component {
                 </a>
               </li>
               <li>
-                <a href="https://github.com/Permissionless-Software-Foundation/bch-js-examples" target="_blank" className="button">
+                <a href="/examples" className="button">
                   Example Code
                 </a>
               </li>
