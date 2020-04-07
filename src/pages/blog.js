@@ -10,6 +10,7 @@ import PostLink from '../components/post-link'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
+import Footer from '../components/Footer'
 
 import pic11 from '../assets/images/blog.jpg'
 
@@ -36,11 +37,8 @@ const IndexPage = ({
         <section id="one">
           <div className="inner-blog">
             <header className="major">
-              <h1>Blog</h1>
+              <h1>PSF Blog</h1>
             </header>
-            <span className="image main">
-              <img src={pic11} alt="" />
-            </span>
 
             <p>
               This page displays all blog entries, sorted by date.
@@ -50,6 +48,8 @@ const IndexPage = ({
           </div>
         </section>
       </div>
+
+      <Footer />
     </Layout>
   )
 }
