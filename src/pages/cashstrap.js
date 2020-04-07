@@ -27,7 +27,7 @@ class Homepage extends React.Component {
                 <h1>Cashstrap - Bootstrap the Cash Stack</h1>
               </header>
               <p>
-                If you prefer the soverignty of running your own infrastructure,
+                If you prefer the sovereignty of running your own infrastructure,
                 and you're willing to accept the cost of managing your own{' '}
                 <a
                   href="https://troutsblog.com/research/bitcoin-cash/how-to-bch-full-stack-developer"

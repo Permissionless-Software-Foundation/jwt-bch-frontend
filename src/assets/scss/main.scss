@@ -1078,7 +1078,26 @@
 			}
 		}
 	}
-
+/* Blog */
+	.inner-blog{
+		padding: 3em;
+	}	
+	.inner-blog .major h1{
+		margin-bottom: 0px;
+		margin-top: 1em;
+		font-weight: bold;
+	}	
+	.inner-blog .major:after{
+		margin-top: 0px;
+		height: 2px;
+	
+	}	
+	.inner-blog .image {
+		padding-top: 0px;;
+	}
+	.blog-post{
+		margin-top: 2em;
+	}
 /* XLarge */
 
 	@include breakpoint(xlarge) {
@@ -1437,8 +1456,11 @@
 // Component.
 
 @import 'components/contact-method';
+@import 'components/image';
 
 // Layout
 @import 'layout/nav';
 @import 'layout/menu';
 @import 'layout/contact';
+@import 'layout/main';
+

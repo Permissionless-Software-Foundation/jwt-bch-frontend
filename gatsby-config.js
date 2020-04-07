@@ -3,7 +3,7 @@ module.exports = {
     title: 'Gatsby Starter - Photon',
     author: 'Hunter Chang',
     description: 'A Gatsby.js Starter based on Photon by HTML5 UP',
-  },
+  }, 
   plugins: [
     'gatsby-plugin-react-helmet',
     {
@@ -20,5 +20,40 @@ module.exports = {
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: './src/data/',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: './markdown',
+        name: 'markdown-pages',
+      },
+    },
+    'gatsby-transformer-json',
+    'gatsby-transformer-remark',
+    'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 800,
+              linkImagesToOriginal: true,
+              sizeByPixelDensity: true,
+              showCaptions: true,
+            },
+          },
+        ],
+      },
+    },
   ],
 }
