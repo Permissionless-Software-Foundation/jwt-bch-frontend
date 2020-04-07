@@ -48,6 +48,11 @@ const Menu = props => (
             Free Access
           </Link>
         </li>
+        <li>
+          <a onClick={props.onToggleMenu} href="http://explore.fullstack.cash/">
+            Explore
+          </a>
+        </li>
       </ul>
 
       <ul className="actions vertical">
