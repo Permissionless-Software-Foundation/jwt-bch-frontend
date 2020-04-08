@@ -1,0 +1,79 @@
+[
+    {
+      "name": "BlockBook",
+      "description": "Get data from the Blockbook indexer",
+      "docUrl": "https://api.fullstack.cash/docs/#api-Blockbook",
+      "endpoints": [
+        {
+          "type": "get",
+          "shortDescription": "Get balance for a single address.",
+          "detailedDescription": "Returns an object with balance and details about an address.",
+          "endpoint": "/v3/blockbook/balance/",
+          "parameters": "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf",
+          "parametersName": "Address",
+          "parameterDescription": "BCH Address"
+        },
+        {
+          "type": "post",
+          "shortDescription": "Get balance for an array of addresses.",
+          "detailedDescription": "Return balances and details for an array of addresses. Limited to 20 addresses per request.",
+          "endpoint": "/v3/blockbook/balance/",
+          "parametersName": "Address",
+          "parameterDescription": "Array of Addresses",
+          "body": {
+            "addresses": [
+              "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf",
+              "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf"
+            ]
+          }
+        },
+        {
+          "type": "get",
+          "shortDescription": "Get UTXOs for a single address.",
+          "detailedDescription": "Returns an object with UTXOs associated with an address.",
+          "endpoint": "/v3/blockbook/utxos/",
+          "parameters": "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf",
+          "parametersName": "Address",
+          "parameterDescription": "BCH address"
+        },
+        {
+          "type": "post",
+          "shortDescription": "Get UTXOs for an array of addresses",
+          "detailedDescription": "return utxos associate with an array of addresses. Limited to 20 addresses per request",
+          "endpoint": "/v3/blockbook/utxos/",
+          "parametersName": "Address",
+          "parameterDescription": "Array of Addresses",
+          "body": {
+            "addresses": [
+              "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf",
+              "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf"
+            ]
+          }
+        },
+        {
+          "type": "get",
+          "shortDescription": "Get details for a single transaction.",
+          "detailedDescription": "Returns an object with details for a single transaction.",
+          "endpoint": "/v3/blockbook/tx/",
+          "parameters": "40112ab9d2b5f98427839272d7a1e23dd2afc6c8355626f373e076c2ab5c2f72",
+          "parametersName": "Transaction ID",
+          "parameterDescription": "Transaction ID"
+        },
+        {
+          "type": "post",
+          "shortDescription": "Get details for an array of transactions.",
+          "detailedDescription": "Return details for an array of transactions. Limited to 20 transactions per request.",
+          "endpoint": "/v3/blockbook/tx",
+          "parametersName": "Transaction ID",
+          "parameterDescription": "Array of TXIDs",
+          "body": {
+            "txids": [
+              "40112ab9d2b5f98427839272d7a1e23dd2afc6c8355626f373e076c2ab5c2f72",
+              "40112ab9d2b5f98427839272d7a1e23dd2afc6c8355626f373e076c2ab5c2f72"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+  
