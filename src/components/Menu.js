@@ -53,6 +53,11 @@ const Menu = props => (
             Blog
           </Link>
         </li>
+        <li>
+          <Link onClick={props.onToggleMenu} to="/explore-mainnet">
+            Explore
+          </Link>
+        </li>
       </ul>
 
       <ul className="actions vertical">
