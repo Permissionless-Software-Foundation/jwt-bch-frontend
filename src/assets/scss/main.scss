@@ -1150,7 +1150,7 @@
 		
 	}
 	.route-container .route-name-container a{
-		font-size: 30px;
+		font-size: medium;
 		margin-right: 15px;
 	}
 	 .route-find-out-more , .route-name-container{
@@ -1165,6 +1165,7 @@
 		align-items: center;
 		cursor: pointer;
 		border-radius: 5px;	
+		word-break: break-all;
 		
 	}
 	.endpoint-container button{
@@ -1198,6 +1199,7 @@
 	}
 	.example-body{
 		margin-bottom: 1em;
+		overflow-x: auto;
 	}
 	.example-try-buttons button{
 		margin:1em
@@ -1224,6 +1226,9 @@
 		margin: 0 auto;
 		margin-bottom: 1em;
 		
+	}
+	.__json-pretty__{
+		text-align: initial;
 	}
 
 	
