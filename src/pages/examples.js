@@ -117,7 +117,7 @@ class Homepage extends React.Component {
               </p>
               <ul className="actions">
                 <li>
-                  <a href="https://developer.bitcoin.com/faucets/bch/"
+                  <a href="https://faucet.fullstack.cash/"
                   target="_blank" className="button">
                     More
                   </a>
