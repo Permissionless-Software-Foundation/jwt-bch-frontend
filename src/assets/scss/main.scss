@@ -1216,6 +1216,7 @@
 	}
 
 	.circular-progress-container{
+		margin-top: 10px;
 		text-align: center;
 	}
 	.explore-container{
@@ -1232,6 +1233,64 @@
 	}
 
 	
+
+/* FAUCET   */
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+}
+.faucet-container1{
+	padding-top: 55px;
+	text-align: center;
+}
+.faucet-container2 .container{
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	padding-right: 1em;
+	padding-left: 1em;
+}
+.well-lg {
+    padding: 24px;
+    border-radius: 6px;
+}
+.lead {
+    margin-bottom: 20px;
+    /* font-size: 16px; */
+    font-weight: 300;
+    line-height: 1.4;
+}
+.lead a{
+	margin-left: 3px;
+	margin-right: 3px;
+}
+.faucet-img{
+	width: 30%;
+	cursor: pointer;
+
+}
+#outWell p{
+	margin-bottom: 0px;
+	word-break: break-word;
+}
+.faucet-txid{
+	color: green;
+}
+
+.faucet-bchAddr-input{
+	width: 70%;
+	margin: 0 auto;
+
+}
+.fuacet-btn{
+	margin-bottom: 1em;
+}
 /* XLarge */
 
 	@include breakpoint(xlarge) {
