@@ -102,7 +102,7 @@ class Homepage extends React.Component {
                                     <b>bchtest:qqmd9unmhkpx4pkmr6fkrr8rm6y77vckjvqe8aey35</b>
                                 </p>
                                 <p>
-                                    Current Balance: <span id="balance">{_this.state.balance}</span> BCH
+                                    Current Balance: <span id="balance"><b>{_this.state.balance}</b></span> BCH
                                  </p>
                             </div>
                         </div>
@@ -119,9 +119,12 @@ class Homepage extends React.Component {
                     </div>
 
                 </section>
-                <Footer/>
+                <Footer />
             </Layout>
         )
+    }
+    componentDidMount() {
+        _this.getBalance()
     }
     goToUrl(url) {
         window.open(url)
@@ -163,8 +166,8 @@ class Homepage extends React.Component {
 
             if (bchAddr === "" || !bchAddr) {
                 _this.appendToWell(`Error: BCH Address can not be blank`)
-                _this.Notification.notify('Error', 'BCH Address cannot be blank', 'danger')
-               
+                _this.Notification.notify('Error', 'BCH Address can not be blank', 'danger')
+
                 _this.setState({
                     inFetch: false
                 })
@@ -190,7 +193,7 @@ class Homepage extends React.Component {
                         'Error',
                         'This BCH address has been used before, or you need to wait 24 hours to request from this IP address.',
                         'danger',
-                         5000)
+                        5000)
 
                 }
                 _this.setState({
@@ -208,14 +211,21 @@ class Homepage extends React.Component {
                 inFetch: false
             })
 
-
+            //Scroll To txId
             setTimeout(() => {
                 const outWellElmnt = document.getElementById("outWell");
                 outWellElmnt && outWellElmnt.scrollIntoView({
                     block: 'center',
                     behavior: 'smooth'
                 });
+
             }, 250);
+            
+            // Update balance
+            setTimeout(() => {
+                _this.getBalance()
+            }, 2000);
+
 
         } catch (err) {
             _this.setState({
