@@ -46,22 +46,22 @@ class Homepage extends React.Component {
             <div className="col-6">
               <ul className="major-icons">
                 <li>
-                  <span className="icon style1 major fa-code"></span>
+                  <span className="icon style1 major fas fa-code"></span>
                 </li>
                 <li>
-                  <span className="icon style2 major fa-bolt"></span>
+                  <span className="icon style2 major fas fa-bolt"></span>
                 </li>
                 <li>
-                  <span className="icon style3 major fa-camera-retro"></span>
+                  <span className="icon style3 major fas fa-camera-retro"></span>
                 </li>
                 <li>
-                  <span className="icon style4 major fa-cog"></span>
+                  <span className="icon style4 major fas fa-cog"></span>
                 </li>
                 <li>
-                  <span className="icon style5 major fa-desktop"></span>
+                  <span className="icon style5 major fas fa-desktop"></span>
                 </li>
                 <li>
-                  <span className="icon style6 major fa-calendar"></span>
+                  <span className="icon style6 major fas fa-calendar"></span>
                 </li>
               </ul>
             </div>

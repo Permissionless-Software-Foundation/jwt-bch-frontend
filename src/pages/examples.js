@@ -36,7 +36,7 @@ class Homepage extends React.Component {
             </div>
             <div className="col-6">
             <center>
-              <h2><span className="icon style1 major fa-code"></span></h2>
+              <h2><span className="icon style1 major fas fa-code"></span></h2>
               <ul className="actions uniform">
                 <li>
                   <a href="https://github.com/Permissionless-Software-Foundation/bch-js-examples"
@@ -66,7 +66,7 @@ class Homepage extends React.Component {
 
             <div className="col-4">
               <span className="image fit">
-                <span className="icon style2 major fa-gear"></span>
+                <span className="icon style2 major fas fa-cog"></span>
               </span>
               <h3>Automatic JWT Handling</h3>
               <p>
@@ -87,7 +87,7 @@ class Homepage extends React.Component {
             </div>
             <div className="col-4">
               <span className="image fit">
-                <span className="icon style3 major fa-book"></span>
+                <span className="icon style3 major fas fa-book"></span>
               </span>
               <h3>SLP Wallet Library</h3>
               <p>
@@ -106,7 +106,7 @@ class Homepage extends React.Component {
             </div>
             <div className="col-4">
               <span className="image fit">
-                <span className="icon style6 major fa-shower"></span>
+                <span className="icon style6 major fas fa-shower"></span>
               </span>
               <h3>Testnet Faucet</h3>
               <p>
