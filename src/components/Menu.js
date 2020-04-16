@@ -58,6 +58,11 @@ const Menu = props => (
             Explore
           </Link>
         </li>
+        <li>
+          <Link onClick={props.onToggleMenu} to="/faucet">
+            Faucet
+          </Link>
+        </li>
       </ul>
 
       <ul className="actions vertical">

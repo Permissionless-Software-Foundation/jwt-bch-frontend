@@ -10,7 +10,7 @@ class Notification extends React.Component {
     this.store =  store
   }
   
-  notify(title, msj, type) {
+  notify(title, msj, type ,time) {
     _this.store.addNotification({
       title: title,
       message: msj,
@@ -20,7 +20,7 @@ class Notification extends React.Component {
       animationIn: ['animated', 'fadeIn'],
       animationOut: ['animated', 'fadeOut'],
       dismiss: {
-        duration: 2500,
+        duration: time || 2500,
         onScreen: true,
       },
     })
