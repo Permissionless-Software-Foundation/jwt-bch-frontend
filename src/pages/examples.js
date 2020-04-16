@@ -106,7 +106,7 @@ class Homepage extends React.Component {
             </div>
             <div className="col-4">
               <span className="image fit">
-                <span className="icon style6 major fas fa-shower"></span>
+                <span className="icon style6 major fas fa-faucet"></span>
               </span>
               <h3>Testnet Faucet</h3>
               <p>
@@ -117,8 +117,7 @@ class Homepage extends React.Component {
               </p>
               <ul className="actions">
                 <li>
-                  <a href="https://faucet.fullstack.cash/"
-                  target="_blank" className="button">
+                  <a href="/faucet" className="button">
                     More
                   </a>
                 </li>
