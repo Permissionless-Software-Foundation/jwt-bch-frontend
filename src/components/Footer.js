@@ -6,7 +6,7 @@ class Footer extends React.Component {
       <section id="footer">
         <ul className="icons">
           <li>
-            <a href="https://t.me/permissionless_software" className="icon alt fa-telegram">
+            <a href="https://t.me/permissionless_software" className="icon alt fab fa-telegram">
               <span className="label">Telegram</span>
             </a>
           </li>
@@ -14,13 +14,13 @@ class Footer extends React.Component {
             <a
               href="https://github.com/Permissionless-Software-Foundation"
               target="_blank"
-              className="icon alt fa-github"
+              className="icon alt fab fa-github"
             >
               <span className="label">GitHub</span>
             </a>
           </li>
           <li>
-            <a href="/contact" className="icon alt fa-envelope">
+            <a href="/contact" className="icon alt fas fa-envelope">
               <span className="label">Email</span>
             </a>
           </li>

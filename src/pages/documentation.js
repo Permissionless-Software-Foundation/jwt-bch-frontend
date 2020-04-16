@@ -57,7 +57,7 @@ class Homepage extends React.Component {
 
             <div className="col-4">
               <span className="image fit">
-                <span className="icon style1 major fa-code"></span>
+                <span className="icon style1 major fas fa-code"></span>
               </span>
               <h3>bch-js</h3>
               <p>
@@ -75,7 +75,7 @@ class Homepage extends React.Component {
             </div>
             <div className="col-4">
               <span className="image fit">
-                <span className="icon style2 major fa-bolt"></span>
+                <span className="icon style2 major fas fa-bolt"></span>
               </span>
               <h3>bch-api</h3>
               <p>
@@ -93,7 +93,7 @@ class Homepage extends React.Component {
             </div>
             <div className="col-4">
               <span className="image fit">
-                <span className="icon style4 major fa-cog"></span>
+                <span className="icon style4 major fas fa-cog"></span>
               </span>
               <h3>The 'Cash Stack'</h3>
               <p>

@@ -127,7 +127,7 @@ class Homepage extends React.Component {
         <section id="three" className="main style1 special">
           <div className="grid-wrapper">
             <div className="col-4">
-              <span className="icon major fa-bolt"></span>
+              <span className="icon major fas fa-bolt"></span>
               <h3>Examples</h3>
               <p>
                 Get started quickly with code examples that cover most common
@@ -142,7 +142,7 @@ class Homepage extends React.Component {
               </ul>
             </div>
             <div className="col-4">
-              <span className="icon major fa-book"></span>
+              <span className="icon major fas fa-book"></span>
               <h3>Documentation</h3>
               <p>
                 Read the API documentation for bch-api, bch-js, and others parts
@@ -157,7 +157,7 @@ class Homepage extends React.Component {
               </ul>
             </div>
             <div className="col-4">
-              <span className="icon major fa-users"></span>
+              <span className="icon major fas fa-users"></span>
               <h3>Community</h3>
               <p>
                 FullStack.cash is an extension of the{' '}
