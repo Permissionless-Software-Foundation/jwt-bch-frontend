@@ -26,8 +26,9 @@ class Homepage extends React.Component {
         this.Notification = Notification
 
     }
+
     render() {
-        const siteTitle = 'Gatsby Starter - Photon'
+        const siteTitle = 'Testnet Faucet - FullStack.cash'
 
         return (
             <Layout>
@@ -220,7 +221,7 @@ class Homepage extends React.Component {
                 });
 
             }, 250);
-            
+
             // Update balance
             setTimeout(() => {
                 _this.getBalance()
@@ -265,7 +266,7 @@ class Homepage extends React.Component {
 
         //let wellText = $('#outWell').text()
 
-        // 
+        //
 
         //$('#outWell').text(wellText)
     }

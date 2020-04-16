@@ -959,7 +959,7 @@
 		}
 		&.style-dark {
 			background: _palette(bg-dark);
-		}		
+		}
 	}
 /* Header */
 
@@ -1083,17 +1083,17 @@
 /* Blog */
 	.inner-blog{
 		padding: 3em;
-	}	
+	}
 	.inner-blog .major h1{
 		margin-bottom: 0px;
 		margin-top: 1em;
 		font-weight: bold;
-	}	
+	}
 	.inner-blog .major:after{
 		margin-top: 0px;
 		height: 2px;
-	
-	}	
+
+	}
 	.inner-blog .image {
 		padding-top: 0px;;
 	}
@@ -1104,38 +1104,38 @@
    //Explore Page
 	.style-dark{
 		.explore-container {
-						
+
 			border-color: _palette(fg-strong);
-			color:_palette(fg-strong);	
-				
+			color:_palette(fg-strong);
+
 			h1,h2,h3,h4,h5,b  {
-				color:_palette(fg-strong);		
+				color:_palette(fg-strong);
 			}
 			button {
-				color:_palette(fg-strong)!important;		
+				color:_palette(fg-strong)!important;
 			}
 			.explore-select option{
-				color:_palette(bg-dark);	
+				color:_palette(bg-dark);
 			}
 		}
-		
+
 	}
 	.style1{
 		.explore-container ,
 		.endpoint-container ,
 		.endpoint-example-container,
 		.route-container {
-						
+
 			border-color: _palette(border)!important;
-			color:_palette(bg-dark)!important;	
-				
+			color:_palette(bg-dark)!important;
+
 			h1,h2,h3,h4,h5,b  {
-				color:_palette(bg-dark)!important;		
+				color:_palette(bg-dark)!important;
 			}
 			button {
-				color:_palette(bg-dark)!important;		
+				color:_palette(bg-dark)!important;
 			}
-			
+
 		}
 	}
 
@@ -1146,8 +1146,8 @@
 		border-bottom: 1px solid white ;
 		padding: 1em;
 		margin: 0 auto;
-		cursor: pointer;	
-		
+		cursor: pointer;
+
 	}
 	.route-container .route-name-container a{
 		font-size: medium;
@@ -1164,9 +1164,9 @@
 		padding: 10px;
 		align-items: center;
 		cursor: pointer;
-		border-radius: 5px;	
+		border-radius: 5px;
 		word-break: break-all;
-		
+
 	}
 	.endpoint-container button{
 		width: 10%;
@@ -1174,7 +1174,7 @@
 	.endpoint-container button ,.endpoint-container h3 ,.endpoint-container p{
 		margin-right: 1em;
 		margin-bottom: initial;
-		
+
 	}
 
 	.endpoint-example-container{
@@ -1182,7 +1182,7 @@
 		width: 90%;
 		border: 1px solid white;
 		padding: 1em;
-		border-radius: 5px;	
+		border-radius: 5px;
 	}
 	.endpoint-parameters{
 		width: 50%;
@@ -1195,7 +1195,7 @@
 	}
 	.endpoint-example-curl {
 		margin-top: 2em;
-	
+
 	}
 	.example-body{
 		margin-bottom: 1em;
@@ -1212,7 +1212,7 @@
 	}
 	.example-clear-button{
 		margin-top: 1em;
-		
+
 	}
 
 	.circular-progress-container{
@@ -1226,13 +1226,13 @@
 		width: calc(25% - 1em)!important;
 		margin: 0 auto;
 		margin-bottom: 1em;
-		
+
 	}
 	.__json-pretty__{
 		text-align: initial;
 	}
 
-	
+
 
 /* FAUCET   */
 .well {
@@ -1271,7 +1271,7 @@
 	margin-right: 3px;
 }
 .faucet-img{
-	width: 30%;
+	width: 10%;
 	cursor: pointer;
 
 }
@@ -1420,7 +1420,7 @@
 			#two {
 				text-align: center;
 			}
-		/*Explore page */	
+		/*Explore page */
 
 /* 		.endpoint-container p{
 			display: none!important;
@@ -1433,7 +1433,7 @@
 		}
 		.endpoint-container button{
 			font-size: xx-small;
-		
+
 		}
 
 	}
@@ -1527,8 +1527,8 @@
 			}
 
 
-		/*Explore page */	
-	
+		/*Explore page */
+
 		.route-container span{
 			display: none!important;
 		}
@@ -1629,15 +1629,15 @@
 				margin-top:(_size(element-margin) * 0.5) ;
 			}
 
-		/* Explore page*/	
+		/* Explore page*/
 		.endpoint-container p{
 			display: none;
-		
-		} 
+
+		}
  		.endpoint-container button{
 			font-size: xx-small;
 			min-width: 30%;
-		} 
+		}
 		.explore-select{
 			width: 100%!important;
 			margin-top: 2em;
@@ -1693,4 +1693,3 @@
 @import 'layout/menu';
 @import 'layout/contact';
 @import 'layout/main';
-
