@@ -221,18 +221,64 @@
     "endpoints": [
       {
         "type": "get",
+        "shortDescription": "Get balance for a single address",
+        "detailedDescription": "Returns an object with BCH balances for an address.",
+        "endpoint": "/v3/electrumx/balance/",
+        "parameters": "bitcoincash:qr69kyzha07dcecrsvjwsj4s6slnlq4r8c30lxnur3",
+        "parametersName": "address",
+        "parameterDescription": "BCH Cash Address"
+      },
+      {
+        "type": "post",
+        "shortDescription": "Get balances for an array of addresses",
+        "detailedDescription": "Returns an array of objects. Each object contains BCH balances for an address. Up to 20 addresses per request.",
+        "endpoint": "/v3/electrumx/balance",
+        "parametersName": "addresses",
+        "parameterDescription": "Array of addresses",
+        "body": {
+          "addresses": [
+            "bitcoincash:qr69kyzha07dcecrsvjwsj4s6slnlq4r8c30lxnur3",
+            "bitcoincash:qr69kyzha07dcecrsvjwsj4s6slnlq4r8c30lxnur3"
+          ]
+        }
+      },
+      {
+        "type": "get",
         "shortDescription": "Get utxos for a single address",
         "detailedDescription": "Returns an object with UTXOs associated with an address.",
         "endpoint": "/v3/electrumx/utxos/",
         "parameters": "bitcoincash:qr69kyzha07dcecrsvjwsj4s6slnlq4r8c30lxnur3",
         "parametersName": "address",
-        "parameterDescription": "BCH Address"
+        "parameterDescription": "BCH Cash Address"
       },
       {
         "type": "post",
         "shortDescription": "Get UTXOs for an array of addresses",
         "detailedDescription": "Returns an array of objects. Each object contains UTXOs for an address. Up to 20 addresses per request.",
         "endpoint": "/v3/electrumx/utxos",
+        "parametersName": "addresses",
+        "parameterDescription": "Array of addresses",
+        "body": {
+          "addresses": [
+            "bitcoincash:qr69kyzha07dcecrsvjwsj4s6slnlq4r8c30lxnur3",
+            "bitcoincash:qr69kyzha07dcecrsvjwsj4s6slnlq4r8c30lxnur3"
+          ]
+        }
+      },
+      {
+        "type": "get",
+        "shortDescription": "Get transaction history for a single address",
+        "detailedDescription": "Returns an object with transactions for an address.",
+        "endpoint": "/v3/electrumx/transactions/",
+        "parameters": "bitcoincash:qr69kyzha07dcecrsvjwsj4s6slnlq4r8c30lxnur3",
+        "parametersName": "address",
+        "parameterDescription": "BCH Cash Address"
+      },
+      {
+        "type": "post",
+        "shortDescription": "Get transaction history for an array of addresses",
+        "detailedDescription": "Returns an array of objects. Each object contains transaction history for an address. Up to 20 addresses per request.",
+        "endpoint": "/v3/electrumx/transactions",
         "parametersName": "addresses",
         "parameterDescription": "Array of addresses",
         "body": {
