@@ -11,6 +11,7 @@ import pic04 from '../assets/images/pic04.jpg'
 import bitcoinAbc from '../assets/images/bitcoinabc-368x240.jpg'
 import trezor from '../assets/images/trezor-368x240.jpg'
 import slp from '../assets/images/slp-368x240.jpg'
+import fulcrum from '../assets/images/fulcrum.png'
 
 class Homepage extends React.Component {
   render() {
@@ -151,6 +152,60 @@ class Homepage extends React.Component {
                 </li>
                 <li>
                   <a href="magnet:?xt=urn:btih:1919a670acb2dc5ff158a42021e17ec107d8ddac&dn=blockbook-bch-testnet-v0.3.2-03-23-2020.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
+                    Torrent magnet link
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            className="grid-wrapper"
+            style={{ border: 'solid 1px black', marginTop: '25px' }}
+          >
+            <div className="col-6" style={{ padding: '20px' }}>
+              <span className="image fit">
+                <center><img src={fulcrum} alt="fulcrum" style={{width: '50%'}} /></center>
+                <h3>Fulcrum ElectrumX Indexer</h3>
+                <p>
+                  <b>
+                    Use the files with{' '}
+                    <a
+                      href="https://github.com/christroutner/docker-fulcrum"
+                      target="_blank"
+                    >
+                      this Docker container
+                    </a>
+                  </b>
+                </p>
+              </span>
+            </div>
+            <div className="col-6" style={{ padding: '20px' }}>
+              <h3>Mainnet</h3>
+              <ul style={{ textAlign: 'left' }}>
+                <li>
+                  <b>Filename:</b> fulcrum-mainnet-04-12-2020.zip
+                </li>
+                <li>
+                  <b>File size:</b> 27GB
+                </li>
+                <li>
+                  <a href="magnet:?xt=urn:btih:0561e7fb66e09eadcc87485bb771ece3a44549fb&dn=fulcrum-mainnet-04-12-2020.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
+                    Torrent magnet link
+                  </a>
+                </li>
+              </ul>
+
+              <h3>Testnet</h3>
+              <ul style={{ textAlign: 'left' }}>
+                <li>
+                  <b>Filename:</b> fulcrum-testnet-04-12-2020.zip
+                </li>
+                <li>
+                  <b>File size:</b> 4.8GB
+                </li>
+                <li>
+                  <a href="magnet:?xt=urn:btih:0711604d1d4565dd3c1e6a6cb5477d78c66170ec&dn=fulcrum-testnet-04-12-2020.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
                     Torrent magnet link
                   </a>
                 </li>
