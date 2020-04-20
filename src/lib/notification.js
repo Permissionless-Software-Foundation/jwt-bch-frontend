@@ -9,8 +9,8 @@ class Notification extends React.Component {
     _this = this
     this.store =  store
   }
-  
-  notify(title, msj, type ,time) {
+
+  notify(title, msj, type, time) {
     _this.store.addNotification({
       title: title,
       message: msj,
