@@ -19,7 +19,7 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/assets/images/anarcho-capitalism.png', // This path is relative to the root of the site.
+        icon: 'src/assets/images/favicon2.png', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-sass',
