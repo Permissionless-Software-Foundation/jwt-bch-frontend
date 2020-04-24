@@ -15,9 +15,10 @@ class Header extends React.Component {
     return (
       <header id="nav" className="alt reveal">
         <nav>
-          <img
+          <a href="/"><img
             src={Logo}
-            className="fullstack-logo" />
+            className="fullstack-logo" /></a>
+            
           <a
             className="menu-link"
             onClick={this.props.onToggleMenu}
