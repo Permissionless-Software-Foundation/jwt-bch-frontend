@@ -19,7 +19,8 @@ class Homepage extends React.Component {
             bchAddr: '',
             outWell: '',
             succes: false,
-            inFetch: false
+            inFetch: false,
+            txId: ''
         }
 
         _this = this
@@ -112,7 +113,12 @@ class Homepage extends React.Component {
                                 <div className="col-sm-12 well">
                                     <div id="outWell" >
                                         <p>Success: tBCH are on their way!</p>
-                                        <p className="faucet-txid"><b>TXID:</b> {_this.state.outWell}</p>
+                                        <a
+                                            className="faucet-txid"
+                                            href={`https://explorer.bitcoin.com/tbch/tx/${_this.state.txId}`}
+                                            target="_blank">
+                                            <b>TXID: </b> <spn>{_this.state.txId}</spn>
+                                        </a>
                                     </div>
                                 </div>
                             </div>}
@@ -160,6 +166,7 @@ class Homepage extends React.Component {
         _this.setState({
             succes: false,
             inFetch: true,
+            txId: ''
         })
         try {
 
@@ -206,10 +213,11 @@ class Homepage extends React.Component {
             _this.Notification.notify('SUCCESS!', 'Success: tBCH are on their way!', 'success')
 
             // _this.appendToWell(`Success: tBCH are on their way!'`)
-            _this.writeToWell(` ${body.txid}`)
+            //_this.writeToWell(body.txid)
             _this.setState({
                 succes: true,
-                inFetch: false
+                inFetch: false,
+                txId: body.txid
             })
 
             //Scroll To txId
