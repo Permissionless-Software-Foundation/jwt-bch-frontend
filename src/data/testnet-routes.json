@@ -112,12 +112,25 @@
       },
       {
         "type": "get",
-        "shortDescription": "Get Tx Out.",
+        "shortDescription": "Get details on a TX output",
         "detailedDescription": "Returns details about an unspent transaction output.",
         "endpoint": "/v3/blockchain/getTxOut/",
         "parameters": "fe28050b93faea61fa88c4c630f0e1f0a1c24d0082dd0e10d369e13212128f33/0?mempool=false",
         "parametersName": "TXID",
         "parameterDescription": "Transaction ID"
+      },
+      {
+        "type": "post",
+        "shortDescription": "Get details on a TX output",
+        "detailedDescription": "Returns details about an unspent transaction output.",
+        "endpoint": "/v3/blockchain/getTxOut/",
+        "parametersName": "TXID",
+        "parameterDescription": "TX Output details",
+        "body": {
+          "txid": "a402836c7ced7d7ad2df26d7ee5235f2605d59d65c5c567a750f9eaf186ebb47",
+          "vout": 0,
+          "mempool": true
+        }
       },
       {
         "type": "get",

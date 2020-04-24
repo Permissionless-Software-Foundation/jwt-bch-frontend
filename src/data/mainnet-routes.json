@@ -120,6 +120,19 @@
         "parameterDescription": "Transaction ID"
       },
       {
+        "type": "post",
+        "shortDescription": "Get details on a TX output",
+        "detailedDescription": "Returns details about an unspent transaction output.",
+        "endpoint": "/v3/blockchain/getTxOut/",
+        "parametersName": "TXID",
+        "parameterDescription": "TX Output details",
+        "body": {
+          "txid": "d5228d2cdc77fbe5a9aa79f19b0933b6802f9f0067f42847fc4fe343664723e5",
+          "vout": 0,
+          "mempool": true
+        }
+      },
+      {
         "type": "get",
         "shortDescription": "Get best block hash.",
         "detailedDescription": "Returns the hash of the best (tip) block in the longest block chain.",
