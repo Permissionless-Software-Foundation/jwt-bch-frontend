@@ -270,8 +270,9 @@ header {
 }
 
 #nav nav {
-  background-color: _palette(bg-dark);
-
+  border-bottom: 1px solid #D3D3D3;
+  background-color: _palette(bg);
+  justify-content: space-between!important;
   a {
     color: _palette(fg-strong);
   }
@@ -279,7 +280,15 @@ header {
   :hover {
     color: _palette(highlight);
   }
+  .fullstack-logo{
+    background-color: _palette(bg);
+    height: 100%;
+    width: auto;
+    padding: 5px;
+    margin-left: 1em;
+  } 
 }
+
 
 #menu {
   color: _palette(fg-strong);
