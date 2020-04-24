@@ -1321,6 +1321,7 @@ button,
 
 /* FAUCET   */
 .well {
+  word-break: break-word;
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
@@ -1335,6 +1336,7 @@ button,
   text-align: center;
 }
 .faucet-container2 .container {
+  word-break: break-all;
   width: 100%;
   text-align: center;
   margin: 0 auto;
