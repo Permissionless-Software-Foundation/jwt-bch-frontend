@@ -16,18 +16,6 @@ const Menu = props => (
         </li>
 
         <li>
-          {isLoggedIn() ? (
-            <Link onClick={props.onToggleMenu} to="/profile">
-              Account
-            </Link>
-          ) : (
-            <Link onClick={props.onToggleMenu} to="/login">
-              Account
-            </Link>
-          )}
-        </li>
-
-        <li>
           <Link onClick={props.onToggleMenu} to="/pricing">
             Pricing
           </Link>
@@ -48,21 +36,7 @@ const Menu = props => (
             Free Access
           </Link>
         </li>
-        <li>
-          <Link onClick={props.onToggleMenu} to="/blog">
-            Blog
-          </Link>
-        </li>
-        <li>
-          <Link onClick={props.onToggleMenu} to="/explore-mainnet">
-            Explore
-          </Link>
-        </li>
-        <li>
-          <Link onClick={props.onToggleMenu} to="/faucet">
-            Faucet
-          </Link>
-        </li>
+
       </ul>
 
       <ul className="actions vertical">
