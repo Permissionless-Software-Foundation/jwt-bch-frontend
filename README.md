@@ -4,6 +4,8 @@ This is a front end user interface based on Gatsby and React. It is forked from
 [this template](https://github.com/christroutner/gatsby-login). It is intended
 to be run with [this back end](https://github.com/Permissionless-Software-Foundation/jwt-bch-api).
 
+It started out as a humble app, but grew to become the home page of [FullStack.cash](https://fullstack.cash).
+
 This single page app (SPA) allows users to:
 - Create an account.
 - Fund their account with BCH and receive credit.
