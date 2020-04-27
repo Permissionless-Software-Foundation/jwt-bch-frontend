@@ -64,47 +64,7 @@ class Homepage extends React.Component {
               </p>
             </div>
 
-            <div className="col-4">
-              <span className="image fit">
-                <span className="icon style2 major fas fa-cog"></span>
-              </span>
-              <h3>Automatic JWT Handling</h3>
-              <p>
-                This demo app shows how to integrate automatic JWT token
-                handling into your application. All you need to worry about is
-                topping up your account with BCH. This app will automatically
-                validate, retrieve, and renew the JWT access token for the
-                FullStack.cash API.
-              </p>
-              <ul className="actions">
-                <li>
-                  <a href="https://github.com/Permissionless-Software-Foundation/jwt-bch-demo"
-                  target="_blank" className="button">
-                    More
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="col-4">
-              <span className="image fit">
-                <span className="icon style3 major fas fa-book"></span>
-              </span>
-              <h3>SLP Wallet Library</h3>
-              <p>
-                This npm library can be added to your project to instantly give
-                it the ability to work with BCH and SLP tokens. It doubles as
-                a command line interface (CLI) wallet app.
-              </p>
-              <ul className="actions">
-                <li>
-                  <a href="https://github.com/christroutner/slp-cli-wallet"
-                  target="_blank" className="button">
-                    More
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="col-4">
+            <div className="col-6" style={{marginTop: '75px'}}>
               <span className="image fit">
                 <span className="icon style6 major fas fa-faucet"></span>
               </span>
@@ -123,6 +83,73 @@ class Homepage extends React.Component {
                 </li>
               </ul>
             </div>
+
+            <div className="col-6" style={{marginTop: '75px'}}>
+              <span className="image fit">
+                <span className="icon style1 major fas fa-binoculars"></span>
+              </span>
+              <h3>Explorer UI</h3>
+              <p>
+                Visually interact with the FullStack.cash REST API. Great for
+                debugging and exploring the potential of apps interacting
+                directly with the blockchain. Each endpoint is covered in more
+                detail by
+                the <a href="/documentation">bch-api documentation</a>.
+              </p>
+              <ul className="actions">
+                <li>
+                  <a href="/explore-mainnet" className="button">
+                    More
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+
+            <div className="col-6" style={{marginTop: '75px'}}>
+              <span className="image fit">
+                <span className="icon style2 major fas fa-cog"></span>
+              </span>
+              <h3>Automatic JWT Handling</h3>
+              <p>
+                This demo app shows how to integrate automatic JWT token
+                handling into your application. All you need to worry about is
+                topping up your FullStack.cash account with BCH. This app will
+                automatically validate, retrieve, and renew the JWT access token
+                for the our API.
+              </p>
+              <ul className="actions">
+                <li>
+                  <a href="https://github.com/Permissionless-Software-Foundation/jwt-bch-demo"
+                  target="_blank" className="button">
+                    More
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="col-6" style={{marginTop: '75px'}}>
+              <span className="image fit">
+                <span className="icon style3 major fas fa-wallet"></span>
+              </span>
+              <h3>SLP Wallet Library</h3>
+              <p>
+                This npm library can be added to your project to instantly give
+                it the ability to work with BCH and SLP tokens. It doubles as
+                a command line interface (CLI) wallet app. It's an HD wallet
+                with an emphasis on privacy best-practices.
+              </p>
+              <ul className="actions">
+                <li>
+                  <a href="https://github.com/christroutner/slp-cli-wallet"
+                  target="_blank" className="button">
+                    More
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+
           </div>
         </section>
 
