@@ -160,16 +160,14 @@ class Homepage extends React.Component {
               <span className="icon major fas fa-users"></span>
               <h3>Community</h3>
               <p>
-                FullStack.cash is an extension of the{' '}
-                <a href="https://psfoundation.cash" target="_blank">
-                  Permissionless Software Foundation
-                </a>{' '}
-                community.
+                Have questions? Need help? Just getting started? Say 'Hi!' in
+                our community support Telegram channel. Tap into the braintrust
+                of the rock-star Bitcoin Cash developer community.
               </p>
               <ul className="actions">
                 <li>
                   <a
-                    href="https://t.me/permissionless_software"
+                    href="https://t.me/bch_js_toolkit"
                     className="button"
                   >
                     More
