@@ -130,7 +130,7 @@ class Homepage extends React.Component {
 
             <div className="col-6" style={{marginTop: '75px'}}>
               <span className="image fit">
-                <span className="icon style3 major fas fa-book"></span>
+                <span className="icon style3 major fas fa-wallet"></span>
               </span>
               <h3>SLP Wallet Library</h3>
               <p>
