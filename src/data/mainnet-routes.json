@@ -5,20 +5,6 @@
     "docUrl": "https://api.fullstack.cash/docs/#api-Blockbook",
     "endpoints": [
       {
-        "type": "post",
-        "shortDescription": "Get Utxos for an array of addresses",
-        "detailedDescription": "return utxos associate with an array of addresses. Limited to 20 items per request",
-        "endpoint": "/v3/blockbook/utxos/",
-        "parametersName": "Address",
-        "parameterDescription": "Array of Addresses",
-        "body": {
-          "addresses": [
-            "bitcoincash:qzs02v05l7qs5s24srqju498qu55dwuj0cx5ehjm2c",
-            "bitcoincash:qrehqueqhw629p6e57994436w730t4rzasnly00ht0"
-          ]
-        }
-      },
-      {
         "type": "get",
         "shortDescription": "Get balance for a single address.",
         "detailedDescription": "Returns an object with balance and details about an address.",
@@ -32,6 +18,29 @@
         "shortDescription": "Get balance for an array of addresses.",
         "detailedDescription": "Return balances and details for an array of addresses. Limited to 20 items per request.",
         "endpoint": "/v3/blockbook/balance/",
+        "parametersName": "Address",
+        "parameterDescription": "Array of Addresses",
+        "body": {
+          "addresses": [
+            "bitcoincash:qzs02v05l7qs5s24srqju498qu55dwuj0cx5ehjm2c",
+            "bitcoincash:qrehqueqhw629p6e57994436w730t4rzasnly00ht0"
+          ]
+        }
+      },
+      {
+        "type": "get",
+        "shortDescription": "Get utxos for a single address.",
+        "detailedDescription": "Returns an object with UTXOs associated with an address.",
+        "endpoint": "/v3/blockbook/utxos/",
+        "parameters": "bitcoincash:qzs02v05l7qs5s24srqju498qu55dwuj0cx5ehjm2c",
+        "parametersName": "Address",
+        "parameterDescription": "BCH address"
+      },
+      {
+        "type": "post",
+        "shortDescription": "Get Utxos for an array of addresses",
+        "detailedDescription": "return utxos associate with an array of addresses. Limited to 20 items per request",
+        "endpoint": "/v3/blockbook/utxos/",
         "parametersName": "Address",
         "parameterDescription": "Array of Addresses",
         "body": {
@@ -63,15 +72,6 @@
             "a5f972572ee1753e2fd2457dd61ce5f40fa2f8a30173d417e49feef7542c96a1"
           ]
         }
-      },
-      {
-        "type": "get",
-        "shortDescription": "Get utxos for a single address.",
-        "detailedDescription": "Returns an object with UTXOs associated with an address.",
-        "endpoint": "/v3/blockbook/utxos/",
-        "parameters": "bitcoincash:qzs02v05l7qs5s24srqju498qu55dwuj0cx5ehjm2c",
-        "parametersName": "Address",
-        "parameterDescription": "BCH address"
       }
     ]
   },
@@ -300,6 +300,22 @@
             "bitcoincash:qr69kyzha07dcecrsvjwsj4s6slnlq4r8c30lxnur3"
           ]
         }
+      }
+    ]
+  },
+  {
+    "name": "Encryption",
+    "description": "Bitcoin-based Encryption Tools",
+    "docUrl": "https://api.fullstack.cash/docs/#api-Encryption",
+    "endpoints": [
+      {
+        "type": "get",
+        "shortDescription": "Get public key for a BCH address",
+        "detailedDescription": "Scans the blockchain and tries to find the public key associated with a BCH address.",
+        "endpoint": "/v3/encryption/publickey/",
+        "parameters": "bitcoincash:qrehqueqhw629p6e57994436w730t4rzasnly00ht0",
+        "parametersName": "address",
+        "parameterDescription": "BCH Cash Address"
       }
     ]
   },

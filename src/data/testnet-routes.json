@@ -304,6 +304,22 @@
     ]
   },
   {
+    "name": "Encryption",
+    "description": "Bitcoin-based Encryption Tools",
+    "docUrl": "https://api.fullstack.cash/docs/#api-Encryption",
+    "endpoints": [
+      {
+        "type": "get",
+        "shortDescription": "Get public key for a BCH address",
+        "detailedDescription": "Scans the blockchain and tries to find the public key associated with a BCH address.",
+        "endpoint": "/v3/encryption/publickey/",
+        "parameters": "bchtest:qzh8hucwtfakhxckgy6nrjq2896qky6s3grk9gctke",
+        "parametersName": "address",
+        "parameterDescription": "BCH Cash Address"
+      }
+    ]
+  },
+  {
     "name": "Mining",
     "description": " Get Mining Info",
     "docUrl": "https://api.fullstack.cash/docs/#api-Mining",
