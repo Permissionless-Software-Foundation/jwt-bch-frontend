@@ -209,8 +209,6 @@ class Homepage extends React.Component {
                   allowFullScreen
                 />
               </div>
-
-
             </div>
 
           </div>
