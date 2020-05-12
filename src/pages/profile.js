@@ -216,9 +216,7 @@ class Profile extends React.Component {
                     value={this.state.apiLevel}
                   >
                     <option defaultValue="10">Free ($0)</option>
-                    <option value="20">Full Node ($10/mo)</option>
-                    <option value="30">Indexer ($20/mo)</option>
-                    <option value="40">SLP tokens ($30/mo)</option>
+                    <option value="40">Full Stack ($30/mo)</option>
                   </select>
                 </div>
               </center>
@@ -239,29 +237,31 @@ class Profile extends React.Component {
             <br />
           </div>
 
-          <OutMsg>{this.state.message}</OutMsg> 
+          <OutMsg>{this.state.message}</OutMsg>
         </div>
 
         <br />
         <br />
-        <div className="your-profile">
+
+        <div className="grid-wrapper">
+          <div className="col-12" style={{border: 'solid black 1px', padding: '20px'}}>
           <h2>
             <u>How to use your JWT token</u>
-          </h2>
-          Your API JWT Token is used to unlock increased rate limits. Follow the
-          directions in the{' '}
-          <a
-            href="https://github.com/christroutner/bch-js#api-key"
-            target="_blank"
-          >
-            bch-js README
-          </a>
-          . Copy the text into the <code>BCHJSTOKEN</code> environment variable
-          to use it implicitly, or use it explictly by setting the{' '}
-          <code>apiToken</code>
-          property when instantiating the bch-js library.
+            </h2>
+            Your API JWT Token is used to unlock increased rate limits. Follow the
+            directions in the{' '}
+            <a
+              href="https://github.com/christroutner/bch-js#api-key"
+              target="_blank"
+            >
+              bch-js README
+            </a> or <a href="/examples">the video on the examples page</a>
+            . Copy the text into the <code>BCHJSTOKEN</code> environment variable
+            to use it <i>implicitly</i>, or use it <i>explictly</i> by setting the{' '}
+            <code>apiToken</code>
+            property when instantiating the bch-js library.
+          </div>
         </div>
-        <br />
 
         <div className="content-profile">
           <button

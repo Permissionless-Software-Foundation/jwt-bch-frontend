@@ -24,23 +24,37 @@ class Homepage extends React.Component {
                 <h2>How much does FullStack.cash cost?</h2>
               </header>
               <p>
-                It depends on the infrastructure requirements for your app. If
-                you need less, you pay less.
+                FullStack.cash maintains the software infrastructure that apps
+                need to interact with rapidly-changing Bitcoin Cash technology:
               </p>
+            </div>
+
+            <div className="col-3"></div>
+            <div className="col-6" style={{textAlign: 'left'}}>
+              <ul>
+                <li>Archival Full Node with a full copy of the blockchain and RPC interface.</li><br />
+                <li>Multiple indexers for accessing address balances and UTXO information.</li><br />
+                <li>SLPDB for working with SLP tokens</li><br />
+                <li>REST API providing a common interface for all the other infrastructure.</li><br />
+                <li>JavaScript npm libraries and <a href="/examples">quick start examples</a>.</li><br />
+              </ul>
+            </div>
+            <div className="col-3"></div>
+
+            <div className="col-12">
               <p>
-                The column on the left indicates infrastructure used. RPM stands
-                for 'requests per minute'. The row at the top indicates the tier
-                that your API key unlocks.
+                You can <b>get started for free</b>, and paid tiers are available
+                for businesses with greater resource needs.
               </p>
+
               <table style={{ border: '1px solid black' }}>
                 <thead>
                   <tr>
                     <th>Tiers:</th>
                     <th>Anonymous</th>
                     <th>Free</th>
-                    <th>Full-Node</th>
-                    <th>Indexer</th>
-                    <th>SLP</th>
+                    <th>Full-Stack</th>
+                    <th>Enterprise</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -48,36 +62,38 @@ class Homepage extends React.Component {
                     <td>Price per month:</td>
                     <td>$0</td>
                     <td>$0</td>
-                    <td>$10</td>
-                    <td>$20</td>
                     <td>$30</td>
+                    <td><a href="/contact">Contact Us</a></td>
                   </tr>
                   <tr>
                     <td>Full Node RPM:</td>
                     <td>3</td>
                     <td>10</td>
                     <td>100</td>
-                    <td>100</td>
-                    <td>100</td>
+                    <td><a href="/contact">Contact Us</a></td>
                   </tr>
                   <tr>
                     <td>Indexer RPM:</td>
                     <td>3</td>
                     <td>10</td>
-                    <td>10</td>
                     <td>100</td>
-                    <td>100</td>
+                    <td><a href="/contact">Contact Us</a></td>
                   </tr>
                   <tr>
                     <td>SLPDB RPM:</td>
                     <td>3</td>
                     <td>10</td>
-                    <td>10</td>
-                    <td>10</td>
                     <td>100</td>
+                    <td><a href="/contact">Contact Us</a></td>
                   </tr>
                 </tbody>
               </table>
+
+              <p>
+                RPM stands
+                for 'requests per minute'. The row at the top indicates the tier
+                that your API key unlocks.
+              </p>
             </div>
           </div>
         </section>

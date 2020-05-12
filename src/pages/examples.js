@@ -50,6 +50,41 @@ class Homepage extends React.Component {
           </div>
         </section>
 
+        <section id="four" className="main style1 special">
+          <div className="grid-wrapper">
+            <div className="col-6">
+              <header className="major">
+                <h2>Getting Started Tutorial</h2>
+              </header>
+              <div className="youtube-responsive-container">
+                <iframe
+                  title="Bitcoin Cash Full Stack Introduction"
+                  src="https://www.youtube.com/embed/GD2i1ZUiyrk"
+                  frameBorder="0"
+                  allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+
+            <div className="col-6">
+              <header className="major">
+                <h2>Increasing Rate Limits</h2>
+              </header>
+              <div className="youtube-responsive-container">
+                <iframe
+                  title="Bitcoin Cash Full Stack Introduction"
+                  src="https://www.youtube.com/embed/OdJOleHoSo8"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+
+          </div>
+        </section>
+
         <section id="three" className="main style2 special">
           <div className="grid-wrapper">
             <div className="col-12">
