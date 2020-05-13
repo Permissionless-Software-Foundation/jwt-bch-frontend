@@ -10,7 +10,7 @@ import pic03 from '../assets/images/pic03.jpg'
 import pic04 from '../assets/images/pic04.jpg'
 import bchApiStack from '../assets/images/bch-api-stack2.jpg'
 import cashstack from '../assets/images/cashstack.gif'
-import cashStackPoster from '../assets/images/cash-stack-poster.jpg'
+import cashStackPoster from '../assets/images/cash-stack-poster.png'
 
 import '../assets/css/main2.css'
 
@@ -62,68 +62,15 @@ class Homepage extends React.Component {
           </div>
         </section>
 
-        <section id="four" className="main style2 special">
+        <section id="six" className="main style2 special">
           <div className="grid-wrapper">
-            <div className="col-6">
-              <header className="major">
-                <h2>What is the 'Cash Stack'?</h2>
-              </header>
-              <h4>
-                It's the full stack of software allowing modern apps to talk to
-                the blockchain, <b>and use permissionless money.</b>
-              </h4>
-              <p>
-                For full-stack developers who want to run their own
-                infrastructure,{' '}
-                <a
-                  href="https://troutsblog.com/research/bitcoin-cash/how-to-bch-full-stack-developer"
-                  target="_blank"
-                >
-                  this articles shows you how
-                </a>
-                . But most front-end developers will want someone else to take
-                care of the back-end duties.{' '}
-                <b>That's what FullStack.cash does.</b>
-              </p>
-              <p>
-                Are you a developer? <a href="/login">Create an account</a> in
-                order to unlock increased rate-limits when using the{' '}
-                <a
-                  href="https://www.npmjs.com/package/@chris.troutner/bch-js"
-                  target="_blank"
-                >
-                  bch-js npm library
-                </a>{' '}
-                to call the{' '}
-                <a href="https://api.fullstack.cash">
-                  bch-api REST API at api.fullstack.cash
-                </a>
-                .
-              </p>
-            </div>
 
-            <div className="col-6">
-              <span className="image fit">
-                <a
-                  href="https://troutsblog.com/research/bitcoin-cash/how-to-bch-full-stack-developer"
-                  target="_blank"
-                >
-                  <img src={bchApiStack} alt="" />
-                </a>
-              </span>
-            </div>
-
-
-          </div>
-        </section>
-
-        <section id="three" className="main style1 special">
-          <div className="grid-wrapper">
             <div className="col-12">
               <span className="image fit">
                 <img src={cashStackPoster} alt="" />
               </span>
             </div>
+
           </div>
         </section>
 
