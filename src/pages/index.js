@@ -10,6 +10,7 @@ import pic03 from '../assets/images/pic03.jpg'
 import pic04 from '../assets/images/pic04.jpg'
 import bchApiStack from '../assets/images/bch-api-stack2.jpg'
 import cashstack from '../assets/images/cashstack.gif'
+import cashStackPoster from '../assets/images/cash-stack-poster.jpg'
 
 import '../assets/css/main2.css'
 
@@ -109,6 +110,18 @@ class Homepage extends React.Component {
                 >
                   <img src={bchApiStack} alt="" />
                 </a>
+              </span>
+            </div>
+
+
+          </div>
+        </section>
+
+        <section id="three" className="main style1 special">
+          <div className="grid-wrapper">
+            <div className="col-12">
+              <span className="image fit">
+                <img src={cashStackPoster} alt="" />
               </span>
             </div>
           </div>
