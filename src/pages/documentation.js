@@ -10,7 +10,7 @@ import pic03 from '../assets/images/pic03.jpg'
 import pic04 from '../assets/images/pic04.jpg'
 import masteringBitcoinCash from '../assets/images/mastering-bitcoin-cash.jpg'
 import slp from '../assets/images/slp-transparent.png'
-import tutorialCash from '../assets/images/tutorial-cash.webp'
+import tutorialCash from '../assets/images/tutorialcash.png'
 
 class Homepage extends React.Component {
   render() {
