@@ -9,6 +9,8 @@ import pic02 from '../assets/images/pic02.jpg'
 import pic03 from '../assets/images/pic03.jpg'
 import pic04 from '../assets/images/pic04.jpg'
 import masteringBitcoinCash from '../assets/images/mastering-bitcoin-cash.jpg'
+import slp from '../assets/images/slp-368x240.jpg'
+import tutorialCash from '../assets/images/tutorial-cash.webp'
 
 class Homepage extends React.Component {
   render() {
@@ -73,6 +75,7 @@ class Homepage extends React.Component {
                 </li>
               </ul>
             </div>
+
             <div className="col-4">
               <span className="image fit">
                 <span className="icon style2 major fas fa-bolt"></span>
@@ -91,6 +94,7 @@ class Homepage extends React.Component {
                 </li>
               </ul>
             </div>
+
             <div className="col-4">
               <span className="image fit">
                 <span className="icon style4 major fas fa-cog"></span>
@@ -108,6 +112,55 @@ class Homepage extends React.Component {
                 </li>
               </ul>
             </div>
+
+            <div className="col-12">
+              <br /><br />
+              <h2>Community Resources</h2>
+            </div>
+
+            <div className="col-6">
+              <span className="image fit">
+                <a href="https://slp.dev" target="_blank">
+                  <img src={tutorialCash} alt="" />
+                </a>
+              </span>
+              <h3>Tutorial.cash</h3>
+              <p>
+                Tutorial.cash is a website that currates tutorials from around
+                the Bitcoin Cash Community. Many are non-technical, which makes
+                for a great introduction to the space.
+              </p>
+              <ul className="actions">
+                <li>
+                  <a href="https://api.fullstack.cash/docs" target="_blank" className="button">
+                    More
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="col-6">
+              <span className="image fit">
+                <a href="https://slp.dev" target="_blank">
+                  <img src={slp} alt="" />
+                </a>
+              </span>
+              <h3>slp.dev</h3>
+              <p>
+                The cononical reference for everything to do with SLP (Simple
+                Ledger Protocol) tokens and all the tools available for developers
+                who want to work with them.
+              </p>
+              <ul className="actions">
+                <li>
+                  <a href="https://slp.dev" target="_blank" className="button">
+                    More
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+
           </div>
         </section>
 
