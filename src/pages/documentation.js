@@ -120,7 +120,7 @@ class Homepage extends React.Component {
 
             <div className="col-6">
               <span className="image fit">
-                <a href="https://slp.dev" target="_blank">
+                <a href="https://tutorial.cash" target="_blank">
                   <img src={tutorialCash} alt="" />
                 </a>
               </span>
@@ -132,7 +132,7 @@ class Homepage extends React.Component {
               </p>
               <ul className="actions">
                 <li>
-                  <a href="https://api.fullstack.cash/docs" target="_blank" className="button">
+                  <a href="https://tutorial.cash" target="_blank" className="button">
                     More
                   </a>
                 </li>
