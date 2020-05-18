@@ -30,7 +30,7 @@ class Homepage extends React.Component {
               </header>
               <p>
                 Adapted from Mastering Bitcoin
-                by <a href="https://twitter.com/aantonop" target="_blank">Andreas Antonopolis</a>,
+                by <a href="https://twitter.com/aantonop" target="_blank">Andreas Antonopoulos</a>,
                 {' '}<a href="https://developer.bitcoin.com/mastering-bitcoin-cash/" target="_blank">Mastering Bitcoin Cash</a> is
                 the most approachable technical reference
                 to working with the Bitcoin Cash protocol.
@@ -113,8 +113,13 @@ class Homepage extends React.Component {
               </ul>
             </div>
 
+          </div>
+        </section>
+
+        <section id="three" className="main style1 special">
+          <div className="grid-wrapper">
+
             <div className="col-12">
-              <br /><br />
               <h2>Community Resources</h2>
             </div>
 
