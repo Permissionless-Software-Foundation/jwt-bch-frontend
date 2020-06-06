@@ -10,6 +10,9 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import NOTIFICATION from '../lib/notification'
 const Notification = new NOTIFICATION()
 
+const SERVER = `https://faucet-api.fullstack.cash`
+// const SERVER = `http://localhost:7654`
+
 let _this
 class Homepage extends React.Component {
     constructor(props) {
@@ -117,7 +120,7 @@ class Homepage extends React.Component {
                                             className="faucet-txid"
                                             href={`https://explorer.bitcoin.com/tbch/tx/${_this.state.txId}`}
                                             target="_blank">
-                                            <b>TXID: </b> <spn>{_this.state.txId}</spn>
+                                            <b>TXID: </b> <span>{_this.state.txId}</span>
                                         </a>
                                     </div>
                                 </div>
@@ -143,8 +146,7 @@ class Homepage extends React.Component {
     }
     async  getBalance() {
         try {
-            // const resp = await fetch(`http://localhost:7654/coins`)
-            const resp = await fetch(`https://faucet-api.fullstack.cash/coins`)
+            const resp = await fetch(`${SERVER}/coins`)
             const body = await resp.json()
             console.log(`body: ${JSON.stringify(body, null, 2)}`)
             const balance = body.balance / 100000000
@@ -182,9 +184,9 @@ class Homepage extends React.Component {
                 return
             }
 
-            // const resp = await fetch(`http://localhost:7654/coins/${bchAddr}`)
-            const resp = await fetch(`https://faucet-api.fullstack.cash/coins/${bchAddr}`)
-            // const resp = await fetch(`/coins/${bchAddr}`)
+
+            const resp = await fetch(`${SERVER}/coins/${bchAddr}`)
+
             const body = await resp.json()
             console.log(`body: ${JSON.stringify(body, null, 2)}`)
 
