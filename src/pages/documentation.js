@@ -57,7 +57,25 @@ class Homepage extends React.Component {
         <section id="three" className="main style2 special">
           <div className="grid-wrapper">
 
-            <div className="col-4">
+            <div className="col-6">
+              <span className="image fit">
+                <span className="icon style4 major fas fa-cog"></span>
+              </span>
+              <h3>The 'Cash Stack'</h3>
+              <p>
+                Learn about the 'full stack' of software required for a modern
+                phone app or website to communicate directly with the blockchain.
+              </p>
+              <ul className="actions">
+                <li>
+                  <a href="https://troutsblog.com/research/bitcoin-cash/how-to-bch-full-stack-developer" target="_blank" className="button">
+                    More
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="col-6">
               <span className="image fit">
                 <span className="icon style1 major fas fa-code"></span>
               </span>
@@ -69,14 +87,14 @@ class Homepage extends React.Component {
               </p>
               <ul className="actions">
                 <li>
-                  <a href="https://bchjs.cash/bch-js/index.html" target="_blank" className="button">
+                  <a href="https://bchjs.fullstack.cash/" target="_blank" className="button">
                     More
                   </a>
                 </li>
               </ul>
             </div>
 
-            <div className="col-4">
+            <div className="col-6">
               <span className="image fit">
                 <span className="icon style2 major fas fa-bolt"></span>
               </span>
@@ -95,18 +113,21 @@ class Homepage extends React.Component {
               </ul>
             </div>
 
-            <div className="col-4">
+            <div className="col-6">
               <span className="image fit">
-                <span className="icon style4 major fas fa-cog"></span>
+                <span className="icon style4 major fas fa-compress-alt"></span>
               </span>
-              <h3>The 'Cash Stack'</h3>
+              <h3>jwt-bch-lib</h3>
               <p>
-                Learn about the 'full stack' of software required for a modern
-                phone app or website to communicate directly with the blockchain.
+                <a href="https://www.npmjs.com/package/jwt-bch-lib" target="_blank">An npm library</a> which
+                makes it easy for your app to easily use FullStack.cash JWT tokens.
+                Contains simple methods for retrieving, validating, and renewing
+                JWT tokens. Used in
+                the <a href="https://github.com/Permissionless-Software-Foundation/jwt-bch-demo" target="_blank">jwt-bch-demo</a> repository.
               </p>
               <ul className="actions">
                 <li>
-                  <a href="https://troutsblog.com/research/bitcoin-cash/how-to-bch-full-stack-developer" target="_blank" className="button">
+                  <a href="https://jwt-bch-lib.fullstack.cash/" className="button">
                     More
                   </a>
                 </li>
