@@ -28,11 +28,13 @@ const Generic = props => (
               <p>
                 <b>
                 Fill out the form below to send an email to the organization
-                running this website. You can also reach the community by
-                joining <a href="https://t.me/permissionless_software">this
-                Telegram channel</a>.
+                running this website.
                 </b>
               </p>
+
+              <h4><b>You can also reach the community by
+              joining <a href="https://t.me/permissionless_software">this
+              Telegram channel</a>.</b></h4>
           <ContactForm />
         </div>
       </section>

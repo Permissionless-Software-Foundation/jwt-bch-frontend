@@ -70,9 +70,8 @@ class Homepage extends React.Component {
                 </p>
               </span>
             </div>
+
             <div className="col-6" style={{ padding: '20px' }}>
-
-
               <h3>Mainnet</h3>
               <ul style={{ textAlign: 'left' }}>
                 <li>
