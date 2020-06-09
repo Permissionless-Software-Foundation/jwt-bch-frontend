@@ -82,7 +82,7 @@ class Homepage extends React.Component {
 
             <div className="col-12">
               <p>
-                FullStack.cash maintains the software infrastructure that apps
+                FullStack.cash maintains the <a href="/cashstrap">software infrastructure</a> that apps
                 need to interact with rapidly-changing Bitcoin Cash technology:
               </p>
             </div>
@@ -129,12 +129,14 @@ class Homepage extends React.Component {
                 for them. This is the same infrastructure listed on
                 the <a href="/cashstrap">CashStrap page</a>. Each instance is
                 isolated so that only the client and the client's users have access
-                to the resource.
+                to the resource. This is in contrast to the $30 per month tier,
+                which is a shared resource.
               </p>
               <p>
-                Maximum capacity for each instance below is 250,000 API requests
-                per day. Multiple instances can be connected in parallel to scale
-                infinately to higher loads. Prices are in USD.
+                Recommended maximum capacity is 250,000 API requests
+                per day per instance of infrastructure. Multiple instances can
+                be connected in parallel to scale infinately to higher loads.
+                Prices are in USD.
               </p>
 
               <table style={{ border: '1px solid black' }}>
