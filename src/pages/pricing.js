@@ -17,29 +17,13 @@ class Homepage extends React.Component {
       <Layout>
         <Helmet title={siteTitle} />
 
-        <section id="three" className="main style1 special">
+        <section id="three" className="main style1 special" style={{paddingBottom: '0px'}}>
           <div className="grid-wrapper">
             <div className="col-12">
               <header className="major">
                 <h2>How much does FullStack.cash cost?</h2>
               </header>
-              <p>
-                FullStack.cash maintains the software infrastructure that apps
-                need to interact with rapidly-changing Bitcoin Cash technology:
-              </p>
             </div>
-
-            <div className="col-3"></div>
-            <div className="col-6" style={{textAlign: 'left'}}>
-              <ul>
-                <li>Archival Full Node with a full copy of the blockchain and RPC interface.</li><br />
-                <li>Multiple indexers for accessing address balances and UTXO information.</li><br />
-                <li>SLPDB for working with SLP tokens</li><br />
-                <li>REST API providing a common interface for all the other infrastructure.</li><br />
-                <li>JavaScript npm libraries and <a href="/examples">quick start examples</a>.</li><br />
-              </ul>
-            </div>
-            <div className="col-3"></div>
 
             <div className="col-12">
               <p>
@@ -95,6 +79,25 @@ class Homepage extends React.Component {
                 that your API key unlocks.
               </p>
             </div>
+
+            <div className="col-12">
+              <p>
+                FullStack.cash maintains the software infrastructure that apps
+                need to interact with rapidly-changing Bitcoin Cash technology:
+              </p>
+            </div>
+
+            <div className="col-3"></div>
+            <div className="col-6" style={{textAlign: 'left'}}>
+              <ul>
+                <li>Archival Full Node with a full copy of the blockchain and RPC interface.</li><br />
+                <li>Multiple indexers for accessing address balances and UTXO information.</li><br />
+                <li>SLPDB for working with SLP tokens</li><br />
+                <li>REST API providing a common interface for all the other infrastructure.</li><br />
+                <li>JavaScript npm libraries and <a href="/examples">quick start examples</a>.</li><br />
+              </ul>
+            </div>
+            <div className="col-3"></div>
           </div>
         </section>
 
@@ -112,6 +115,55 @@ class Homepage extends React.Component {
                 </a>
               </li>
             </ul>
+          </div>
+        </section>
+
+        <section id="five" className="main style1 special">
+          <div className="grid-wrapper">
+            <div className="col-12">
+              <header className="major">
+                <h2>Private Infrastructure</h2>
+              </header>
+              <p>
+                Our larger clients have us host private, customized infrastructure
+                for them. This is the same infrastructure listed on
+                the <a href="/cashstrap">CashStrap page</a>. Each instance is
+                isolated so that only the client and the client's users have access
+                to the resource.
+              </p>
+              <p>
+                Maximum capacity for each instance below is 250,000 API requests
+                per day. Multiple instances can be connected in parallel to scale
+                infinately to higher loads. Prices are in USD.
+              </p>
+
+              <table style={{ border: '1px solid black' }}>
+                <thead>
+                  <tr>
+                    <th>Infrastructure</th>
+                    <th>Price per Month</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Full Node</td>
+                    <td>$150</td>
+                  </tr>
+                  <tr>
+                    <td>SLPDB</td>
+                    <td>$250</td>
+                  </tr>
+                  <tr>
+                    <td>ElectrumX Indexer</td>
+                    <td>$100</td>
+                  </tr>
+                  <tr>
+                    <td>Blockbook Indexer</td>
+                    <td>$175</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </section>
 
