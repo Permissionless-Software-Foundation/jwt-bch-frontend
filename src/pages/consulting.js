@@ -98,23 +98,6 @@ class Homepage extends React.Component {
           </div>
         </section>
 
-        <section id="four" className="main style2 special">
-          <div className="container">
-            <ul className="actions uniform">
-              <li>
-                <a href="/profile" className="button special">
-                  Sign Up
-                </a>
-              </li>
-              <li>
-                <a href="/" className="button">
-                  Learn More
-                </a>
-              </li>
-            </ul>
-          </div>
-        </section>
-
         <Footer />
       </Layout>
     )
