@@ -4,11 +4,6 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Footer from '../components/Footer'
 
-import pic01 from '../assets/images/pic01.jpg'
-import pic02 from '../assets/images/pic02.jpg'
-import pic03 from '../assets/images/pic03.jpg'
-import pic04 from '../assets/images/pic04.jpg'
-import bitcoinAbc from '../assets/images/bitcoinabc-368x240.jpg'
 import telegram from '../assets/images/telegram-200px.png'
 import fullstackLogo from '../assets/images/fullstackcash-Grey.png'
 
