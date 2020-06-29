@@ -82,7 +82,7 @@ class Homepage extends React.Component {
                                             id="bchAddr"
                                             name="bchAddr"
                                             size="60"
-                                            placeholder="bchtest:qqmd9unmhkpx4pkmr6fkrr8rm6y77vckjvqe8aey35"
+                                            placeholder="bchtest:qzt6sz836wdwscld0pgq2prcpck2pssmwge9q87pe9"
                                             onChange={_this.handleUpdate} />
                                     </div>
                                 </form>
@@ -104,7 +104,7 @@ class Homepage extends React.Component {
                             <div className="col-sm-12">
                                 <p>
                                     Please send tBCH back to this faucet at this address:<br />
-                                    <b>bchtest:qqmd9unmhkpx4pkmr6fkrr8rm6y77vckjvqe8aey35</b>
+                                    <b>bchtest:qzt6sz836wdwscld0pgq2prcpck2pssmwge9q87pe9</b>
                                 </p>
                                 <p>
                                     Current Balance: <span id="balance"><b>{_this.state.balance}</b></span> BCH
