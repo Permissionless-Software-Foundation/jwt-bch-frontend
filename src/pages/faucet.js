@@ -5,9 +5,11 @@ import Footer from '../components/Footer'
 
 import Layout from '../components/layout'
 import PSFIMG from '../assets/images/favicon.png'
-import CircularProgress from '@material-ui/core/CircularProgress';
+import CircularProgress from '@material-ui/core/CircularProgress'
 
 import NOTIFICATION from '../lib/notification'
+import Captcha from '../components/captcha'
+
 const Notification = new NOTIFICATION()
 
 const SERVER = `https://faucet-api.fullstack.cash`
@@ -15,271 +17,306 @@ const SERVER = `https://faucet-api.fullstack.cash`
 
 let _this
 class Homepage extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            balance: '0.00',
-            bchAddr: '',
-            outWell: '',
-            succes: false,
-            inFetch: false,
-            txId: ''
-        }
-
-        _this = this
-        this.Notification = Notification
-
+  constructor(props) {
+    super(props)
+    this.state = {
+      balance: '0.00',
+      bchAddr: '',
+      outWell: '',
+      succes: false,
+      inFetch: false,
+      txId: '',
+      captchaIsValid: false,
     }
 
-    render() {
-        const siteTitle = 'Testnet Faucet - FullStack.cash'
+    _this = this
+    this.Notification = Notification
+  }
 
-        return (
-            <Layout>
-                <Helmet title={siteTitle} />
-                <section className="faucet-container1">
-                    <div className='container'>
-                        <div className='row well well-lg'>
-                            <div className='col-md-10'>
-                                <h2>
-                                    BCH Testnet Faucet brought to you by <a href="https://FullStack.cash">FullStack.cash</a>
-                                </h2>
-                                <h3 className='lead'>
-                                    This is a testnet faucet built with
-                                     <a href="https://www.npmjs.com/package/@chris.troutner/bch-js">bch-js</a>
-                                      JavaScript SDK for Bitcoin Cash! It currently gives
-                                      out 0.1 BCH.
-                                </h3>
-                                <p>
-                                    <a href="https://github.com/christroutner/testnet-faucet2" target="_blank">Fork this demo on GitHub!</a>
-                                </p>
-                            </div>
+  render() {
+    const siteTitle = 'Testnet Faucet - FullStack.cash'
 
-                            <div className='col-md-2'>
-                                <img
-                                    src={PSFIMG}
-                                    className="faucet-img"
-                                    alt='Permissionless Software Foundation'
-                                    onClick={() => { _this.goToUrl("https://psfoundation.cash/") }}
-                                />
-                            </div>
-                        </div>
+    return (
+      <Layout>
+        <Helmet title={siteTitle} />
+        <section className="faucet-container1">
+          <div className="container">
+            <div className="row well well-lg">
+              <div className="col-md-10">
+                <h2>
+                  BCH Testnet Faucet brought to you by{' '}
+                  <a href="https://FullStack.cash">FullStack.cash</a>
+                </h2>
+                <h3 className="lead">
+                  This is a testnet faucet built with
+                  <a href="https://www.npmjs.com/package/@chris.troutner/bch-js">
+                    bch-js
+                  </a>
+                  JavaScript SDK for Bitcoin Cash! It currently gives out 0.1
+                  BCH.
+                </h3>
+                <p>
+                  <a
+                    href="https://github.com/christroutner/testnet-faucet2"
+                    target="_blank"
+                  >
+                    Fork this demo on GitHub!
+                  </a>
+                </p>
+              </div>
 
-                    </div>
-                </section>
-                <section className="faucet-container2">
+              <div className="col-md-2">
+                <img
+                  src={PSFIMG}
+                  className="faucet-img"
+                  alt="Permissionless Software Foundation"
+                  onClick={() => {
+                    _this.goToUrl('https://psfoundation.cash/')
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="faucet-container2">
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-12">
+                <form className="form-inline">
+                  <div className="form-group faucet-bchAddr-input">
+                    <label htmlFor="peerId">BCH Testnet Address: </label>
+                    <input
+                      type="text"
+                      className="form-control "
+                      id="bchAddr"
+                      name="bchAddr"
+                      size="60"
+                      placeholder="bchtest:qzt6sz836wdwscld0pgq2prcpck2pssmwge9q87pe9"
+                      onChange={_this.handleUpdate}
+                    />
+                  </div>
+                  <br />
+                  <div className="flex justify-center">
+                    <Captcha callback={_this.captchaState} />
+                  </div>
+                  <br />
+                </form>
+                <button
+                  type="button"
+                  className="btn btn-default fuacet-btn"
+                  onClick={_this.requestBCH}
+                >
+                  Get tBCH!
+                </button>
+                {_this.state.inFetch && (
+                  <div className="circular-progress-container">
+                    <CircularProgress />
+                  </div>
+                )}
+              </div>
+            </div>
 
-                    <div className="container">
+            <div className="row">
+              <div className="col-sm-12">
+                <p>
+                  Please send tBCH back to this faucet at this address:
+                  <br />
+                  <b>bchtest:qzt6sz836wdwscld0pgq2prcpck2pssmwge9q87pe9</b>
+                </p>
+                <p>
+                  Current Balance:{' '}
+                  <span id="balance">
+                    <b>{_this.state.balance}</b>
+                  </span>{' '}
+                  BCH
+                </p>
+              </div>
+            </div>
+            {_this.state.succes && (
+              <div className="row">
+                <div className="col-sm-12 well">
+                  <div id="outWell">
+                    <p>Success: tBCH are on their way!</p>
+                    <a
+                      className="faucet-txid"
+                      href={`https://explorer.bitcoin.com/tbch/tx/${_this.state.txId}`}
+                      target="_blank"
+                    >
+                      <b>TXID: </b> <span>{_this.state.txId}</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+        <Footer />
+      </Layout>
+    )
+  }
+  componentDidMount() {
+    _this.getBalance()
+  }
+  goToUrl(url) {
+    window.open(url)
+  }
+  handleUpdate(event) {
+    _this.setState({
+      [event.target.name]: event.target.value,
+    })
+  }
+  async getBalance() {
+    try {
+      const resp = await fetch(`${SERVER}/coins`)
+      const body = await resp.json()
+      console.log(`body: ${JSON.stringify(body, null, 2)}`)
+      const balance = body.balance / 100000000
 
-                        <div className="row">
-                            <div className="col-sm-12">
-                                <form className="form-inline">
-                                    <div className="form-group faucet-bchAddr-input">
-                                        <label htmlFor="peerId">BCH Testnet Address: </label>
-                                        <input
-                                            type="text"
-                                            className="form-control "
-                                            id="bchAddr"
-                                            name="bchAddr"
-                                            size="60"
-                                            placeholder="bchtest:qzt6sz836wdwscld0pgq2prcpck2pssmwge9q87pe9"
-                                            onChange={_this.handleUpdate} />
-                                    </div>
-                                </form>
-                                <button
-                                    type="button"
-                                    className="btn btn-default fuacet-btn"
-                                    onClick={_this.requestBCH}>Get tBCH!
-                                  </button>
-                                {
-                                    _this.state.inFetch &&
-                                    <div className="circular-progress-container">
-                                        <CircularProgress />
-                                    </div>
-                                }
-                            </div>
-                        </div>
+      _this.setState({
+        balance: balance,
+      })
 
-                        <div className="row">
-                            <div className="col-sm-12">
-                                <p>
-                                    Please send tBCH back to this faucet at this address:<br />
-                                    <b>bchtest:qzt6sz836wdwscld0pgq2prcpck2pssmwge9q87pe9</b>
-                                </p>
-                                <p>
-                                    Current Balance: <span id="balance"><b>{_this.state.balance}</b></span> BCH
-                                 </p>
-                            </div>
-                        </div>
-                        {_this.state.succes &&
-                            <div className="row">
-                                <div className="col-sm-12 well">
-                                    <div id="outWell" >
-                                        <p>Success: tBCH are on their way!</p>
-                                        <a
-                                            className="faucet-txid"
-                                            href={`https://explorer.bitcoin.com/tbch/tx/${_this.state.txId}`}
-                                            target="_blank">
-                                            <b>TXID: </b> <span>{_this.state.txId}</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>}
+      // $('#balance').text(balance)
+    } catch (err) {
+      console.error(`Error in getBalance(): `, err)
+      _this.Notification.notify('Error', err.message, 'danger')
+    }
+  }
 
-                    </div>
+  async requestBCH() {
+    console.log('request')
+    _this.setState({
+      succes: false,
+      inFetch: true,
+      txId: '',
+    })
+    try {
+      if (!_this.state.captchaIsValid) {
+        throw new Error(`Catpcha is Invalid`)
+      }
 
-                </section>
-                <Footer />
-            </Layout>
+      const bchAddr = _this.state.bchAddr //$('#bchAddr').val()
+
+      if (bchAddr === '' || !bchAddr) {
+        _this.appendToWell(`Error: BCH Address can not be blank`)
+        _this.Notification.notify(
+          'Error',
+          'BCH Address can not be blank',
+          'danger'
         )
-    }
-    componentDidMount() {
+
+        _this.setState({
+          inFetch: false,
+        })
+        return
+      }
+
+      const resp = await fetch(`${SERVER}/coins/${bchAddr}`)
+
+      const body = await resp.json()
+      console.log(`body: ${JSON.stringify(body, null, 2)}`)
+
+      if (!body.success) {
+        const message = body.message
+
+        if (message === `Invalid BCH cash address.`) {
+          _this.appendToWell(`Error: Invalid BCH testnet address`)
+          _this.Notification.notify(
+            'Error',
+            'Invalid BCH testnet address',
+            'danger'
+          )
+        } else {
+          _this.appendToWell(
+            `Error: This BCH address has been used before, or you need to wait 24 hours to request from this IP address.`
+          )
+          _this.Notification.notify(
+            'Error',
+            'This BCH address has been used before, or you need to wait 24 hours to request from this IP address.',
+            'danger',
+            5000
+          )
+        }
+        _this.setState({
+          inFetch: false,
+        })
+        return
+      }
+
+      _this.Notification.notify(
+        'SUCCESS!',
+        'Success: tBCH are on their way!',
+        'success'
+      )
+
+      // _this.appendToWell(`Success: tBCH are on their way!'`)
+      //_this.writeToWell(body.txid)
+      _this.setState({
+        succes: true,
+        inFetch: false,
+        txId: body.txid,
+      })
+
+      //Scroll To txId
+      setTimeout(() => {
+        const outWellElmnt = document.getElementById('outWell')
+        outWellElmnt &&
+          outWellElmnt.scrollIntoView({
+            block: 'center',
+            behavior: 'smooth',
+          })
+      }, 250)
+
+      // Update balance
+      setTimeout(() => {
         _this.getBalance()
+      }, 2000)
+    } catch (err) {
+      _this.setState({
+        inFetch: false,
+      })
+      console.log(`Error in requestBCH: `, err)
+      _this.Notification.notify('Error', err.message, 'danger')
     }
-    goToUrl(url) {
-        window.open(url)
-    }
-    handleUpdate(event) {
-        _this.setState({
-            [event.target.name]: event.target.value,
-        })
-    }
-    async  getBalance() {
-        try {
-            const resp = await fetch(`${SERVER}/coins`)
-            const body = await resp.json()
-            console.log(`body: ${JSON.stringify(body, null, 2)}`)
-            const balance = body.balance / 100000000
+  }
 
-            _this.setState({
-                balance: balance
-            })
+  // Gets the current text in the output well.
+  getWellText() {
+    console.log(_this.state.outWell)
+    return _this.state.outWell
+    //return $('#outWell').text()
+  }
 
-            // $('#balance').text(balance)
-        } catch (err) {
-            console.error(`Error in getBalance(): `, err)
-            _this.Notification.notify('Error', err, 'danger')
+  // Overwrites any content in the output well.
+  writeToWell(str) {
+    //$('#outWell').text(str)
+    _this.setState({
+      outWell: str,
+    })
+    console.log(str)
+  }
 
-        }
-    }
+  // Appends a string as a new line to the output well.
+  appendToWell(str) {
+    let wellText = _this.state.outWell
+    wellText = wellText + '\n' + str
+    _this.setState({
+      outWell: wellText,
+    })
+    console.log(wellText)
 
-    async  requestBCH() {
-        console.log("request")
-        _this.setState({
-            succes: false,
-            inFetch: true,
-            txId: ''
-        })
-        try {
+    //let wellText = $('#outWell').text()
 
-            const bchAddr = _this.state.bchAddr //$('#bchAddr').val()
+    //
 
-            if (bchAddr === "" || !bchAddr) {
-                _this.appendToWell(`Error: BCH Address can not be blank`)
-                _this.Notification.notify('Error', 'BCH Address can not be blank', 'danger')
-
-                _this.setState({
-                    inFetch: false
-                })
-                return
-            }
-
-
-            const resp = await fetch(`${SERVER}/coins/${bchAddr}`)
-
-            const body = await resp.json()
-            console.log(`body: ${JSON.stringify(body, null, 2)}`)
-
-            if (!body.success) {
-                const message = body.message
-
-                if (message === `Invalid BCH cash address.`) {
-                    _this.appendToWell(`Error: Invalid BCH testnet address`)
-                    _this.Notification.notify('Error', 'Invalid BCH testnet address', 'danger')
-                }
-                else {
-                    _this.appendToWell(`Error: This BCH address has been used before, or you need to wait 24 hours to request from this IP address.`)
-                    _this.Notification.notify(
-                        'Error',
-                        'This BCH address has been used before, or you need to wait 24 hours to request from this IP address.',
-                        'danger',
-                        5000)
-
-                }
-                _this.setState({
-                    inFetch: false
-                })
-                return
-            }
-
-            _this.Notification.notify('SUCCESS!', 'Success: tBCH are on their way!', 'success')
-
-            // _this.appendToWell(`Success: tBCH are on their way!'`)
-            //_this.writeToWell(body.txid)
-            _this.setState({
-                succes: true,
-                inFetch: false,
-                txId: body.txid
-            })
-
-            //Scroll To txId
-            setTimeout(() => {
-                const outWellElmnt = document.getElementById("outWell");
-                outWellElmnt && outWellElmnt.scrollIntoView({
-                    block: 'center',
-                    behavior: 'smooth'
-                });
-
-            }, 250);
-
-            // Update balance
-            setTimeout(() => {
-                _this.getBalance()
-            }, 2000);
-
-
-        } catch (err) {
-            _this.setState({
-                inFetch: false
-            })
-            console.log(`Error in requestBCH: `, err)
-            _this.Notification.notify('Error', err, 'danger')
-
-        }
-    }
-
-    // Gets the current text in the output well.
-    getWellText() {
-        console.log(_this.state.outWell)
-        return _this.state.outWell
-        //return $('#outWell').text()
-    }
-
-    // Overwrites any content in the output well.
-    writeToWell(str) {
-        //$('#outWell').text(str)
-        _this.setState({
-            outWell: str
-        })
-        console.log(str)
-
-    }
-
-    // Appends a string as a new line to the output well.
-    appendToWell(str) {
-        let wellText = _this.state.outWell
-        wellText = wellText + '\n' + str
-        _this.setState({
-            outWell: wellText
-        })
-        console.log(wellText)
-
-        //let wellText = $('#outWell').text()
-
-        //
-
-        //$('#outWell').text(wellText)
-    }
+    //$('#outWell').text(wellText)
+  }
+  captchaState(isValid) {
+    console.log('Catpcha State', isValid)
+    _this.setState({
+      captchaIsValid: isValid,
+    })
+  }
 }
 
 export default Homepage
