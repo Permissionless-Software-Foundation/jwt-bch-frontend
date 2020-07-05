@@ -52,7 +52,7 @@ class Homepage extends React.Component {
                   <a href="https://www.npmjs.com/package/@chris.troutner/bch-js">
                     bch-js
                   </a>
-                  JavaScript SDK for Bitcoin Cash! It currently gives out 0.1
+                  JavaScript SDK for Bitcoin Cash! It currently gives out 0.01
                   BCH.
                 </h3>
                 <p>
