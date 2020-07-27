@@ -81,10 +81,10 @@ class Homepage extends React.Component {
               </p>
               <p>
                 If you have an app idea and would like help from FullStack.cash,
-                we are available for 6-month development contracts, starting at
+                we are available for 3-month development contracts, starting at
                 $2,000 USD per month. Typically, the scope of a project is broken
-                up in three stages: 2 months for R&D, 2 months for development,
-                and 2 months to make it ready for production.
+                up in three stages: 1 month for R&D, 1 month for development,
+                and 1 month to make it ready for production.
               </p>
 
               <ul className="actions">
