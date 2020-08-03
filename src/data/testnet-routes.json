@@ -300,6 +300,29 @@
             "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf"
           ]
         }
+      },
+      {
+        "type": "get",
+        "shortDescription": "Get unconfirmed UTXOs (mempool) for a single address",
+        "detailedDescription": "Returns an object with unconfirmed UTXOs associated with an address.",
+        "endpoint": "/v3/electrumx/unconfirmed/",
+        "parameters": "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf",
+        "parametersName": "address",
+        "parameterDescription": "BCH Cash Address"
+      },
+      {
+        "type": "post",
+        "shortDescription": "Get unconfirmed UTXOs (mempool) for an array of addresses",
+        "detailedDescription": "Returns an array of objects. Each object contains unconfirmed UTXOs for an address. Up to 20 addresses per request.",
+        "endpoint": "/v3/electrumx/unconfirmed",
+        "parametersName": "addresses",
+        "parameterDescription": "Array of addresses",
+        "body": {
+          "addresses": [
+            "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf",
+            "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf"
+          ]
+        }
       }
     ]
   },
