@@ -575,6 +575,24 @@
         "parameters": "f7e5199ef6669ad4d078093b3ad56e355b6ab84567e59ad0f08a5ad0244f783a",
         "parametersName": "TXID",
         "parameterDescription": "TXID"
+      },
+      {
+        "type": "post",
+        "shortDescription": "Generate SLP OP_RETURN.",
+        "detailedDescription": "Returns OP_RETURN script and outputs",
+        "endpoint": "/v3/slp/generateSendOpReturn/",
+        "parametersName": "tokenUtxos , sendQty",
+        "parameterDescription": "Array of Token Utxos , Token Quantity ",
+        "body": {
+          "tokenUtxos": [
+            {
+              "tokenId": "7380843cd1089a1a01783f86af37734dc99667a1cdc577391b5f6ea42fc1bfb4",
+              "decimals": 0,
+              "tokenQty": 2
+            }
+          ],
+          "sendQty": 1.5
+        }
       }
     ]
   }

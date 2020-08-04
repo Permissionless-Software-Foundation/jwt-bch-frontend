@@ -534,6 +534,24 @@
             "fb0eeaa501a6e1acb721669c62a3f70741f48ae0fd7f4b8e1d72088785c51952"
           ]
         }
+      },
+      {
+        "type": "post",
+        "shortDescription": "Generate SLP OP_RETURN.",
+        "detailedDescription": "Returns OP_RETURN script and outputs",
+        "endpoint": "/v3/slp/generateSendOpReturn/",
+        "parametersName": "tokenUtxos , sendQty",
+        "parameterDescription": "Array of Token Utxos , Token Quantity ",
+        "body": {
+          "tokenUtxos": [
+            {
+              "tokenId": "7380843cd1089a1a01783f86af37734dc99667a1cdc577391b5f6ea42fc1bfb4",
+              "decimals": 0,
+              "tokenQty": 2
+            }
+          ],
+          "sendQty": 1.5
+        }
       }
     ]
   }
