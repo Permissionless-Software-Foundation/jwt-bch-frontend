@@ -239,13 +239,13 @@ class Homepage extends React.Component {
               <ul style={{ textAlign: 'left' }}>
                 <li>
                   <b>Filename:</b>{' '}
-                  slpdb-v1-mainnet-07-13-2020-643744-54714dfec7f82487d6d08dca19ae88918e7f8eef.zip
+                  slpdb-mainnet-08-06-2020-647202-2f23af5122f11c24fb86026bea2b198a024c8f9b.zip
                 </li>
                 <li>
                   <b>File size:</b> 1.9GB
                 </li>
                 <li>
-                  <a href="magnet:?xt=urn:btih:03c5d6c72ff44d9e48ac291ee702d5806f5a0166&dn=slpdb-v1-mainnet-07-13-2020-643744-54714dfec7f82487d6d08dca19ae88918e7f8eef.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
+                  <a href="magnet:?xt=urn:btih:7fde5fd132282d94910a1ec5bbae9d6327fa9746&dn=slpdb-mainnet-08-06-2020-647202-2f23af5122f11c24fb86026bea2b198a024c8f9b.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
                     Torrent magnet link
                   </a>
                 </li>
@@ -255,13 +255,13 @@ class Homepage extends React.Component {
               <ul style={{ textAlign: 'left' }}>
               <li>
                 <b>Filename:</b>{' '}
-                slpdb-v1-testnet-07-13-2020-1394061-54714dfec7f82487d6d08dca19ae88918e7f8eef.zip
+                slpdb-testnet-08-06-2020-1399300-2f23af5122f11c24fb86026bea2b198a024c8f9b.zip
               </li>
               <li>
                 <b>File size:</b> 0.02GB
               </li>
               <li>
-                <a href="magnet:?xt=urn:btih:5154ab7a331aaf2d4bfb0bc3f00ede46f57b2d52&dn=slpdb-v1-testnet-07-13-2020-1394061-54714dfec7f82487d6d08dca19ae88918e7f8eef.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
+                <a href="magnet:?xt=urn:btih:8856712e0809c6d4d5d89ad03ad10379a1d7ccd9&dn=slpdb-testnet-08-06-2020-1399300-2f23af5122f11c24fb86026bea2b198a024c8f9b.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
                   Torrent magnet link
                 </a>
               </li>
