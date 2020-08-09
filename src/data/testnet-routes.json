@@ -1,5 +1,104 @@
 [
   {
+    "name": "ElectrumX / Fulcrum",
+    "description": "Query ElectrumX Indexer Network",
+    "docUrl": "https://api.fullstack.cash/docs/#api-ElectrumX_/_Fulcrum",
+    "endpoints": [
+      {
+        "type": "get",
+        "shortDescription": "Get balance for a single address",
+        "detailedDescription": "Returns an object with BCH balances for an address.",
+        "endpoint": "/v3/electrumx/balance/",
+        "parameters": "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf",
+        "parametersName": "address",
+        "parameterDescription": "BCH Cash Address"
+      },
+      {
+        "type": "post",
+        "shortDescription": "Get balances for an array of addresses",
+        "detailedDescription": "Returns an array of objects. Each object contains BCH balances for an address. Up to 20 addresses per request.",
+        "endpoint": "/v3/electrumx/balance",
+        "parametersName": "addresses",
+        "parameterDescription": "Array of addresses",
+        "body": {
+          "addresses": [
+            "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf",
+            "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf"
+          ]
+        }
+      },
+      {
+        "type": "get",
+        "shortDescription": "Get utxos for a single address",
+        "detailedDescription": "Returns an object with UTXOs associated with an address.",
+        "endpoint": "/v3/electrumx/utxos/",
+        "parameters": "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf",
+        "parametersName": "address",
+        "parameterDescription": "BCH Cash Address"
+      },
+      {
+        "type": "post",
+        "shortDescription": "Get UTXOs for an array of addresses",
+        "detailedDescription": "Returns an array of objects. Each object contains UTXOs for an address. Up to 20 addresses per request.",
+        "endpoint": "/v3/electrumx/utxos",
+        "parametersName": "addresses",
+        "parameterDescription": "Array of addresses",
+        "body": {
+          "addresses": [
+            "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf",
+            "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf"
+          ]
+        }
+      },
+      {
+        "type": "get",
+        "shortDescription": "Get transaction history for a single address",
+        "detailedDescription": "Returns an object with transactions for an address.",
+        "endpoint": "/v3/electrumx/transactions/",
+        "parameters": "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf",
+        "parametersName": "address",
+        "parameterDescription": "BCH Cash Address"
+      },
+      {
+        "type": "post",
+        "shortDescription": "Get transaction history for an array of addresses",
+        "detailedDescription": "Returns an array of objects. Each object contains transaction history for an address. Up to 20 addresses per request.",
+        "endpoint": "/v3/electrumx/transactions",
+        "parametersName": "addresses",
+        "parameterDescription": "Array of addresses",
+        "body": {
+          "addresses": [
+            "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf",
+            "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf"
+          ]
+        }
+      },
+      {
+        "type": "get",
+        "shortDescription": "Get unconfirmed UTXOs (mempool) for a single address",
+        "detailedDescription": "Returns an object with unconfirmed UTXOs associated with an address.",
+        "endpoint": "/v3/electrumx/unconfirmed/",
+        "parameters": "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf",
+        "parametersName": "address",
+        "parameterDescription": "BCH Cash Address"
+      },
+      {
+        "type": "post",
+        "shortDescription": "Get unconfirmed UTXOs (mempool) for an array of addresses",
+        "detailedDescription": "Returns an array of objects. Each object contains unconfirmed UTXOs for an address. Up to 20 addresses per request.",
+        "endpoint": "/v3/electrumx/unconfirmed",
+        "parametersName": "addresses",
+        "parameterDescription": "Array of addresses",
+        "body": {
+          "addresses": [
+            "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf",
+            "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf"
+          ]
+        }
+      }
+    ]
+  },
+  {
     "name": "BlockBook",
     "description": "Get Blockbook Info",
     "docUrl": "https://api.fullstack.cash/docs/#api-Blockbook",
@@ -224,105 +323,6 @@
         "shortDescription": "Get Network Info.",
         "detailedDescription": "RPC call which gets basic full node information.",
         "endpoint": "/v3/control/getnetworkinfo"
-      }
-    ]
-  },
-  {
-    "name": "ElectrumX / Fulcrum",
-    "description": "Query ElectrumX Indexer Network",
-    "docUrl": "https://api.fullstack.cash/docs/#api-ElectrumX_/_Fulcrum",
-    "endpoints": [
-      {
-        "type": "get",
-        "shortDescription": "Get balance for a single address",
-        "detailedDescription": "Returns an object with BCH balances for an address.",
-        "endpoint": "/v3/electrumx/balance/",
-        "parameters": "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf",
-        "parametersName": "address",
-        "parameterDescription": "BCH Cash Address"
-      },
-      {
-        "type": "post",
-        "shortDescription": "Get balances for an array of addresses",
-        "detailedDescription": "Returns an array of objects. Each object contains BCH balances for an address. Up to 20 addresses per request.",
-        "endpoint": "/v3/electrumx/balance",
-        "parametersName": "addresses",
-        "parameterDescription": "Array of addresses",
-        "body": {
-          "addresses": [
-            "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf",
-            "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf"
-          ]
-        }
-      },
-      {
-        "type": "get",
-        "shortDescription": "Get utxos for a single address",
-        "detailedDescription": "Returns an object with UTXOs associated with an address.",
-        "endpoint": "/v3/electrumx/utxos/",
-        "parameters": "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf",
-        "parametersName": "address",
-        "parameterDescription": "BCH Cash Address"
-      },
-      {
-        "type": "post",
-        "shortDescription": "Get UTXOs for an array of addresses",
-        "detailedDescription": "Returns an array of objects. Each object contains UTXOs for an address. Up to 20 addresses per request.",
-        "endpoint": "/v3/electrumx/utxos",
-        "parametersName": "addresses",
-        "parameterDescription": "Array of addresses",
-        "body": {
-          "addresses": [
-            "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf",
-            "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf"
-          ]
-        }
-      },
-      {
-        "type": "get",
-        "shortDescription": "Get transaction history for a single address",
-        "detailedDescription": "Returns an object with transactions for an address.",
-        "endpoint": "/v3/electrumx/transactions/",
-        "parameters": "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf",
-        "parametersName": "address",
-        "parameterDescription": "BCH Cash Address"
-      },
-      {
-        "type": "post",
-        "shortDescription": "Get transaction history for an array of addresses",
-        "detailedDescription": "Returns an array of objects. Each object contains transaction history for an address. Up to 20 addresses per request.",
-        "endpoint": "/v3/electrumx/transactions",
-        "parametersName": "addresses",
-        "parameterDescription": "Array of addresses",
-        "body": {
-          "addresses": [
-            "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf",
-            "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf"
-          ]
-        }
-      },
-      {
-        "type": "get",
-        "shortDescription": "Get unconfirmed UTXOs (mempool) for a single address",
-        "detailedDescription": "Returns an object with unconfirmed UTXOs associated with an address.",
-        "endpoint": "/v3/electrumx/unconfirmed/",
-        "parameters": "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf",
-        "parametersName": "address",
-        "parameterDescription": "BCH Cash Address"
-      },
-      {
-        "type": "post",
-        "shortDescription": "Get unconfirmed UTXOs (mempool) for an array of addresses",
-        "detailedDescription": "Returns an array of objects. Each object contains unconfirmed UTXOs for an address. Up to 20 addresses per request.",
-        "endpoint": "/v3/electrumx/unconfirmed",
-        "parametersName": "addresses",
-        "parameterDescription": "Array of addresses",
-        "body": {
-          "addresses": [
-            "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf",
-            "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf"
-          ]
-        }
       }
     ]
   },
