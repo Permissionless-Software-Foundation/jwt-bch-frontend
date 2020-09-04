@@ -31,13 +31,13 @@ class Homepage extends React.Component {
               <p>
                 Adapted from Mastering Bitcoin
                 by <a href="https://twitter.com/aantonop" target="_blank">Andreas Antonopoulos</a>,
-                {' '}<a href="https://developer.bitcoin.com/mastering-bitcoin-cash/" target="_blank">Mastering Bitcoin Cash</a> is
+                {' '}<a href="http://zh.thedev.id/mastering-bitcoin-cash/" target="_blank">Mastering Bitcoin Cash</a> is
                 the most approachable technical reference
                 to working with the Bitcoin Cash protocol.
               </p>
               <center><ul className="actions">
                 <li>
-                  <a href="https://developer.bitcoin.com/mastering-bitcoin-cash/" target="_blank" className="button">
+                  <a href="http://zh.thedev.id/mastering-bitcoin-cash/" target="_blank" className="button">
                     More
                   </a>
                 </li>
@@ -46,7 +46,7 @@ class Homepage extends React.Component {
 
             <div className="col-6">
               <span className="image fit">
-                <a href="https://developer.bitcoin.com/mastering-bitcoin-cash/" target="_blank">
+                <a href="http://zh.thedev.id/mastering-bitcoin-cash/" target="_blank">
                   <img src={masteringBitcoinCash} alt="" />
                 </a>
               </span>
