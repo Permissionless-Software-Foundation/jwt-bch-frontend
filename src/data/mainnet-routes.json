@@ -95,6 +95,29 @@
             "bitcoincash:qr69kyzha07dcecrsvjwsj4s6slnlq4r8c30lxnur3"
           ]
         }
+      },
+      {
+        "type": "get",
+        "shortDescription": "Get transaction details for a TXID",
+        "detailedDescription": "Returns an object with details for the transaction - inputs, outputs etc.",
+        "endpoint": "/v3/electrumx/tx/data/",
+        "parameters": "4db095f34d632a4daf942142c291f1f2abb5ba2e1ccac919d85bdc2f671fb251",
+        "parametersName": "TXID",
+        "parameterDescription": "Transaction ID"
+      },
+      {
+        "type": "post",
+        "shortDescription": "Get transaction details for an array of TXIDs",
+        "detailedDescription": "Returns an array of objects. Each object contains transaction details for one TXID. Up to 20 TXIDs per request.",
+        "endpoint": "/v3/electrumx/tx/data",
+        "parametersName": "TXIDs",
+        "parameterDescription": "Array of transaction IDs",
+        "body": {
+          "txids": [
+            "4db095f34d632a4daf942142c291f1f2abb5ba2e1ccac919d85bdc2f671fb251",
+            "4db095f34d632a4daf942142c291f1f2abb5ba2e1ccac919d85bdc2f671fb251"
+          ]
+        }
       }
     ]
   },
