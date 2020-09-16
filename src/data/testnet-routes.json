@@ -118,6 +118,15 @@
             "76d2ee0ebd8b978742f6478ff9a12f478c34e4cee0a2b919059101d961bd01ee"
           ]
         }
+      },
+      {
+        "type": "get",
+        "shortDescription": "Get 'count' block headers starting at a height",
+        "detailedDescription": "Returns an array with block headers starting at the block height",
+        "endpoint": "/v3/electrumx/block/headers/",
+        "parameters": "42?count=2",
+        "parametersName": "Height and count",
+        "parameterDescription": "count blocks, starting at height"
       }
     ]
   },
