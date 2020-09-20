@@ -95,6 +95,38 @@
             "bchtest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2svtllzmlf"
           ]
         }
+      },
+      {
+        "type": "get",
+        "shortDescription": "Get transaction details for a TXID",
+        "detailedDescription": "Returns an object with details for the transaction - inputs, outputs etc.",
+        "endpoint": "/v3/electrumx/tx/data/",
+        "parameters": "76d2ee0ebd8b978742f6478ff9a12f478c34e4cee0a2b919059101d961bd01ee",
+        "parametersName": "TXID",
+        "parameterDescription": "Transaction ID"
+      },
+      {
+        "type": "post",
+        "shortDescription": "Get transaction details for an array of TXIDs",
+        "detailedDescription": "Returns an array of objects. Each object contains transaction details for one TXID. Up to 20 TXIDs per request.",
+        "endpoint": "/v3/electrumx/tx/data",
+        "parametersName": "TXIDs",
+        "parameterDescription": "Array of transaction IDs",
+        "body": {
+          "txids": [
+            "76d2ee0ebd8b978742f6478ff9a12f478c34e4cee0a2b919059101d961bd01ee",
+            "76d2ee0ebd8b978742f6478ff9a12f478c34e4cee0a2b919059101d961bd01ee"
+          ]
+        }
+      },
+      {
+        "type": "get",
+        "shortDescription": "Get 'count' block headers starting at a height",
+        "detailedDescription": "Returns an array with block headers starting at the block height",
+        "endpoint": "/v3/electrumx/block/headers/",
+        "parameters": "42?count=2",
+        "parametersName": "Height and count",
+        "parameterDescription": "count blocks, starting at height"
       }
     ]
   },
