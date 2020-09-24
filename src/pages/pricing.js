@@ -148,7 +148,11 @@ class Homepage extends React.Component {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Full Node</td>
+                    <td>ABC Full Node</td>
+                    <td>$150</td>
+                  </tr>
+                  <tr>
+                    <td>BCHN Full Node</td>
                     <td>$150</td>
                   </tr>
                   <tr>
