@@ -2,7 +2,7 @@
   {
     "name": "ElectrumX / Fulcrum",
     "description": "Query ElectrumX Indexer Network",
-    "docUrl": "https://api.fullstack.cash/docs/#api-ElectrumX_/_Fulcrum",
+    "docUrl": "https://free-main.fullstack.cash/docs/#api-ElectrumX_/_Fulcrum",
     "endpoints": [
       {
         "type": "get",
@@ -133,7 +133,7 @@
   {
     "name": "BlockBook",
     "description": "Get BlockBook info",
-    "docUrl": "https://api.fullstack.cash/docs/#api-Blockbook",
+    "docUrl": "https://free-main.fullstack.cash/docs/#api-Blockbook",
     "endpoints": [
       {
         "type": "get",
@@ -209,7 +209,7 @@
   {
     "name": "Blockchain",
     "description": "Get Blockchain info",
-    "docUrl": "https://api.fullstack.cash/docs/#api-Blockchain",
+    "docUrl": "https://free-main.fullstack.cash/docs/#api-Blockchain",
     "endpoints": [
       {
         "type": "get",
@@ -348,7 +348,7 @@
   {
     "name": "Control",
     "description": "Get Control info",
-    "docUrl": "https://api.fullstack.cash/docs/#api-Control",
+    "docUrl": "https://free-main.fullstack.cash/docs/#api-Control",
     "endpoints": [
       {
         "type": "get",
@@ -361,7 +361,7 @@
   {
     "name": "Encryption",
     "description": "Bitcoin-based Encryption Tools",
-    "docUrl": "https://api.fullstack.cash/docs/#api-Encryption",
+    "docUrl": "https://free-main.fullstack.cash/docs/#api-Encryption",
     "endpoints": [
       {
         "type": "get",
@@ -377,7 +377,7 @@
   {
     "name": "Mining",
     "description": "Get Mining Info",
-    "docUrl": "https://api.fullstack.cash/docs/#api-Mining",
+    "docUrl": "https://free-main.fullstack.cash/docs/#api-Mining",
     "endpoints": [
       {
         "type": "get",
@@ -399,7 +399,7 @@
   {
     "name": "Raw Transaction",
     "description": "Get Raw Transaction Info",
-    "docUrl": "https://api.fullstack.cash/docs/#api-Raw_Transaction",
+    "docUrl": "https://free-main.fullstack.cash/docs/#api-Raw_Transaction",
     "endpoints": [
       {
         "type": "post",
@@ -498,7 +498,7 @@
   {
     "name": "SLP",
     "description": "Get SLP info",
-    "docUrl": "https://api.fullstack.cash/docs/#api-SLP",
+    "docUrl": "https://free-main.fullstack.cash/docs/#api-SLP",
     "endpoints": [
       {
         "type": "get",
