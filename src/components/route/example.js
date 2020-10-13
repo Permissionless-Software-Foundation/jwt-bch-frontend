@@ -26,7 +26,6 @@ class Example extends React.Component {
       detailedDescription: '',
       parameterDescription: '',
       requestBody: {} || '',
-      requestTextBody: '',
       endpoint: '',
       tryItOut: false,
       requestResult: '',
@@ -49,7 +48,6 @@ class Example extends React.Component {
     let detailedDescription = ''
     let parameterDescription = ''
     let requestBody = ''
-    let requestTextBody = ''
     let endpoint = ''
     if (_this.props.data.type) {
       endpointType = _this.props.data.type
@@ -64,9 +62,6 @@ class Example extends React.Component {
     }
     if (_this.props.data.body) {
       requestBody = _this.props.data.body
-    }
-    if (_this.props.data.textbody) {
-      requestTextBody = _this.props.data.textbody
     }
     if (_this.props.data.detailedDescription) {
       detailedDescription = _this.props.data.detailedDescription
@@ -85,7 +80,6 @@ class Example extends React.Component {
       detailedDescription: detailedDescription,
       parameterDescription: parameterDescription,
       requestBody: requestBody,
-      requestTextBody: requestTextBody,
       endpoint: endpoint,
     })
   }
@@ -109,7 +103,7 @@ class Example extends React.Component {
               <p>{_this.state.parameterDescription}</p>
             </div>
           </div>
-          {!_this.state.requestBody && !_this.state.requestTextBody ? (
+          {!_this.state.requestBody ? (
             ''
           ) : (
               <div className="example-body">
@@ -117,14 +111,14 @@ class Example extends React.Component {
                   <b>Example Body:</b>
                 </p>
                 {!_this.state.isTrayIt ? (
-                  <JSONPretty id="json-pretty" data={_this.state.requestTextBody || _this.state.requestBody} />
+                  <JSONPretty id="json-pretty" data={_this.state.requestBody} />
                 ) : (
                     <textarea
                       name="requestBody"
                       id="requestBody"
                       placeholder="Enter your data"
                       rows="4"
-                      defaultValue={_this.state.requestTextBody || JSON.stringify(_this.state.requestBody)}
+                      defaultValue={JSON.stringify(_this.state.requestBody)}
                       onChange={_this.handleUpdate}
                     />
                   )}
@@ -263,7 +257,6 @@ class Example extends React.Component {
     const endpoint = `${SERVER}${_this.state.endpoint}`
 
     let body = _this.state.requestBody
-    let textbody = _this.state.requestTextBody
     // If the user edits the body, its necessary
     // To parse the body to a json object
     try {
@@ -272,20 +265,14 @@ class Example extends React.Component {
     // POST request
     try {
       let code = ''
-      let fixedBody = JSON.stringify(body)
-      let contentType = 'application/json'
-      if (textbody !== '') {
-        fixedBody = textbody
-        contentType = 'text/plain'
-      }
 
       const options = {
         method: 'POST',
         headers: {
           accept: 'application/json',
-          'Content-Type': contentType,
+          'Content-Type': 'application/json',
         },
-        body: fixedBody,
+        body: JSON.stringify(body),
       }
       console.log('options: ', options)
       const result = await fetch(endpoint, options)
