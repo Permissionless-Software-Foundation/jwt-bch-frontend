@@ -279,6 +279,8 @@ class Homepage extends React.Component {
               </header>
               <p>
                 FullStack.cash also maintains infrastructure on the BCHN chain.
+                More infrastructure links will appear here after the chain split
+                on November 15th, 2020.
               </p>
             </div>
           </div>
