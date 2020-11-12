@@ -6,7 +6,7 @@ import { navigate } from 'gatsby'
 import ChangePassword from '../components/change-password'
 import '../components/profile.css'
 
-import { getUser, setUser, isLoggedIn, logout } from '../services/auth'
+import { getUser, setUser, isLoggedIn, logout, getExpirationDate } from '../services/auth'
 import { updateUser } from '../services/users'
 
 import NOTIFICATION from '../lib/notification'
@@ -53,12 +53,38 @@ class Profile extends React.Component {
 
   }
 
+  async  verifyTokenExpiration() {
+    const result = await getExpirationDate()
+
+
+    // If the expiration data are not found returns -1 
+    // indicating that should redirect to login
+    if (!result || !result.now || !result.exp) {
+      return -1
+    }
+
+    // Dates in ISO format, example --> '2020-10-22T23:27:11.000Z'
+    // Testing purposes 
+    // const now = new Date('2020-10-23T21:27:11.000')
+    // const exp = new Date('2020-10-23T22:26:11.000Z')
+
+    const now =  new Date(result.now)
+    const exp =  new Date(result.exp)
+
+    const dateDiff = exp.getTime() - now.getTime()
+    const hourDiff = Math.floor(dateDiff / 1000 / 60 / 60)
+    // console.log('hourDiff',hourDiff)
+
+    return hourDiff
+  }
   async componentDidMount() {
     const userData = await getUser()
     console.log(`userData.userdata: ${JSON.stringify(userData.userdata, null, 2)}`)
+    const hourDiff = await _this.verifyTokenExpiration()
 
     // If the user is not logged in, send them back to the home page.
-    if (!userData.userdata) {
+    // Redirects to login page if the token expires in less than an hour
+    if (!userData.userdata || hourDiff < 1) {
       // navigate(`/`)
       logout(() => navigate(`/`))
       return
