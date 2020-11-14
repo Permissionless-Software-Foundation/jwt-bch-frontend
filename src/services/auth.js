@@ -59,3 +59,27 @@ export const logout = callback => {
   setUser({})
   callback()
 }
+
+export const getExpirationDate = async () => {
+  const userData = await getUser()
+  const token = userData.userdata.token ? userData.userdata.token : ''
+
+  // Try to get  metadata by id
+  try {
+    const options = {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`
+      }
+    }
+    const resp = await fetch(`${SERVER}/auth/expiration`, options)
+    if (resp.ok) {
+      return resp.json()
+    } else {
+      return false
+    }
+  } catch (e) {
+    return false
+  }
+}
