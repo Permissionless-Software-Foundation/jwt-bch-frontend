@@ -1,16 +1,16 @@
 import React from 'react'
 import Layout from '../components/layout'
 
-import routes from '../data/testnet-routes.json'
+import routes from '../data/mainnet-routes.json'
 import Endpoint from '../components/route/endpoint'
 import Footer from '../components/Footer'
 import { navigate } from 'gatsby'
 
 let _this
 
-const SERVER = `${process.env.TESTNETSERVER}`
+const SERVER = `${process.env.ABCSERVER}`
 
-class ExploreTestnet extends React.Component {
+class ExploreMainnet extends React.Component {
   constructor(props) {
     super(props)
     _this = this
@@ -33,9 +33,9 @@ class ExploreTestnet extends React.Component {
         <section id="one" className="main style1">
           <div className="explore-container">
             <select className="explore-select" onChange={_this.changeServer}>
-              <option value="">Testnet</option>
-              <option value="">BCHN</option>
               <option value="">ABC</option>
+              <option value="">BCHN</option>
+              <option value="">Testnet</option>
             </select>
             {_this.state.routesData.map((val, i) => {
               return (
@@ -75,10 +75,10 @@ class ExploreTestnet extends React.Component {
       endpointIndex: _i,
     })
   }
-
+  
   changeServer() {
-    navigate(`/explore-bchn`)
+    navigate(`/explore-testnet`)
   }
 }
 
-export default ExploreTestnet
+export default ExploreMainnet

@@ -133,7 +133,7 @@ class Homepage extends React.Component {
               </p>
               <ul className="actions">
                 <li>
-                  <a href="/explore-mainnet" className="button">
+                  <a href="/explore-bchn" className="button">
                     More
                   </a>
                 </li>
