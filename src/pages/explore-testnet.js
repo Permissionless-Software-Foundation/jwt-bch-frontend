@@ -32,10 +32,10 @@ class ExploreTestnet extends React.Component {
       <Layout>
         <section id="one" className="main style1">
           <div className="explore-container">
-            <select className="explore-select" onChange={_this.changeServer}>
-              <option value="">Testnet</option>
-              <option value="">BCHN</option>
-              <option value="">ABC</option>
+            <select className="explore-select" defaultValue='Testnet' onChange={_this.changeServer}>
+              <option value="Testnet"  >Testnet</option>
+              <option value="BCHN">BCHN</option>
+              <option value="ABC">ABC</option>
             </select>
             {_this.state.routesData.map((val, i) => {
               return (
@@ -57,8 +57,8 @@ class ExploreTestnet extends React.Component {
                   {_this.state.endpointIndex === i ? (
                     <Endpoint endpoints={val.endpoints} SERVER={SERVER} />
                   ) : (
-                    ''
-                  )}
+                      ''
+                    )}
                 </div>
               )
             })}
@@ -76,8 +76,16 @@ class ExploreTestnet extends React.Component {
     })
   }
 
-  changeServer() {
-    navigate(`/explore-bchn`)
+  changeServer(event) {
+    const value = event.target.value
+    if (value === 'ABC') {
+      navigate(`/explore-abc`)
+
+    }
+    if (value === 'BCHN') {
+      navigate(`/explore-bchn`)
+
+    }
   }
 }
 
