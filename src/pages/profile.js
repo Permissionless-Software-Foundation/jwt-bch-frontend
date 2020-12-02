@@ -34,7 +34,7 @@ class Profile extends React.Component {
     this.state = {
       bchAddr: '',
       credit: 0,
-      apiLevel: 0,
+      apiLevel: 40,
       apiToken: '',
       apiTokenExp: '',
       username: '',
@@ -57,14 +57,14 @@ class Profile extends React.Component {
     const result = await getExpirationDate()
 
 
-    // If the expiration data are not found returns -1 
+    // If the expiration data are not found returns -1
     // indicating that should redirect to login
     if (!result || !result.now || !result.exp) {
       return -1
     }
 
     // Dates in ISO format, example --> '2020-10-22T23:27:11.000Z'
-    // Testing purposes 
+    // Testing purposes
     // const now = new Date('2020-10-23T21:27:11.000')
     // const exp = new Date('2020-10-23T22:26:11.000Z')
 
@@ -77,6 +77,7 @@ class Profile extends React.Component {
 
     return hourDiff
   }
+
   async componentDidMount() {
     const userData = await getUser()
     console.log(`userData.userdata: ${JSON.stringify(userData.userdata, null, 2)}`)
@@ -241,8 +242,7 @@ class Profile extends React.Component {
                     onChange={this.handleDropDown}
                     value={this.state.apiLevel}
                   >
-                    <option defaultValue="10">Free ($0)</option>
-                    <option value="40">Full Stack ($30/mo)</option>
+                    <option defaultValue="40">100 RPM ($14.99/mo)</option>
                   </select>
                 </div>
               </center>
@@ -481,12 +481,18 @@ class Profile extends React.Component {
         message: 'Requesting new API JWT token...',
       }))
 
+      // deprecated
       // Fix weird default-value bug.
-      console.log(`_this.state.apiLevel: ${_this.state.apiLevel}`)
-      if (typeof _this.state.apiLevel === 'string') {
-        if (_this.state.apiLevel.indexOf('Free') > -1)
-          _this.state.apiLevel = 10
-      }
+      // console.log(`_this.state.apiLevel: ${_this.state.apiLevel}`)
+      // if (typeof _this.state.apiLevel === 'string') {
+      //   if (_this.state.apiLevel.indexOf('Free') > -1)
+      //     _this.state.apiLevel = 10
+      // }
+
+      // Force the API level to be 40, since we only have one paid tier now.
+      await _this.setState(prevState => ({
+        apiLevel: 40
+      }))
 
       console.log(`Requestion token for API level: ${_this.state.apiLevel}`)
 
@@ -510,6 +516,7 @@ class Profile extends React.Component {
       console.log(`apiToken: ${data2.apiToken}`)
       console.log(`apiLevel: ${data2.apiLevel}`)
       console.log(`apiTokenExp: ${data2.apiTokenExp}`)
+      console.log(`new credit: ${data2.credit}`)
 
       let apiTokenExp = ''
       if (data2.apiTokenExp) {
@@ -522,6 +529,7 @@ class Profile extends React.Component {
         apiLevel: data2.apiLevel,
         apiTokenExp: apiTokenExp,
         message: 'API JWT Token updated.',
+        credit: data2.credit
       }))
 
       // Update user in localSotrage
@@ -576,3 +584,10 @@ class Profile extends React.Component {
 }
 
 export default Profile
+
+/*
+// Old code that I might want later. Feel free to delete this section in the future.
+
+<option defaultValue="10">Free ($0)</option>
+<option value="40">Full Stack ($30/mo)</option>
+*/
