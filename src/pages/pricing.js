@@ -46,7 +46,7 @@ class Homepage extends React.Component {
                     <td>Price per month:</td>
                     <td>$0</td>
                     <td>$0</td>
-                    <td>$30</td>
+                    <td>$14.99</td>
                     <td><a href="/contact">Contact Us</a></td>
                   </tr>
                   <tr>
@@ -129,7 +129,7 @@ class Homepage extends React.Component {
                 for them. This is the same infrastructure listed on
                 the <a href="/cashstrap">CashStrap page</a>. Each instance is
                 isolated so that only the client and the client's users have access
-                to the resource. This is in contrast to the $30 per month tier,
+                to the resource. This is in contrast to the $14.99 per month tier,
                 which is a shared resource.
               </p>
               <p>
