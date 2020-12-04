@@ -35,7 +35,6 @@ class Homepage extends React.Component {
                 <thead>
                   <tr>
                     <th>Tiers:</th>
-                    <th>Anonymous</th>
                     <th>Free</th>
                     <th>Full-Stack</th>
                     <th>Enterprise</th>
@@ -45,28 +44,24 @@ class Homepage extends React.Component {
                   <tr>
                     <td>Price per month:</td>
                     <td>$0</td>
-                    <td>$0</td>
                     <td>$14.99</td>
                     <td><a href="/contact">Contact Us</a></td>
                   </tr>
                   <tr>
                     <td>Full Node RPM:</td>
-                    <td>3</td>
-                    <td>10</td>
+                    <td>20</td>
                     <td>100</td>
                     <td><a href="/contact">Contact Us</a></td>
                   </tr>
                   <tr>
                     <td>Indexer RPM:</td>
-                    <td>3</td>
-                    <td>10</td>
+                    <td>20</td>
                     <td>100</td>
                     <td><a href="/contact">Contact Us</a></td>
                   </tr>
                   <tr>
                     <td>SLPDB RPM:</td>
-                    <td>3</td>
-                    <td>10</td>
+                    <td>20</td>
                     <td>100</td>
                     <td><a href="/contact">Contact Us</a></td>
                   </tr>
