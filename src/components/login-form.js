@@ -169,7 +169,8 @@ class LoginForm extends React.Component {
 
   async loginClick(event) {
     event.preventDefault()
-    const isEmail = _this.validateEmail(_this.state.email)
+    // const isEmail = _this.validateEmail(_this.state.email)
+    const isEmail = true
     if (!isEmail) {
       _this.setState(prevState => ({
         message: 'Error:  Must be Email Format',
