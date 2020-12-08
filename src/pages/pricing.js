@@ -151,8 +151,12 @@ class Homepage extends React.Component {
                     <td>$150</td>
                   </tr>
                   <tr>
-                    <td>SLPDB</td>
-                    <td>$250</td>
+                    <td>SLPDB (general)</td>
+                    <td>$300</td>
+                  </tr>
+                  <tr>
+                    <td>SLPDB (filtered)</td>
+                    <td>$150</td>
                   </tr>
                   <tr>
                     <td>ElectrumX Indexer</td>
