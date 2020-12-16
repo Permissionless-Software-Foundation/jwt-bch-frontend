@@ -35,10 +35,10 @@ class Endpoint extends React.Component {
                 className="endpoint-container"
               >
                 <button>{val.type}</button>
-                <h3>{val.endpoint}</h3>
+                <h3>{_this.props.VERSION}{val.endpoint}</h3>
                 <p>{val.shortDescription}</p>
               </div>
-              {_this.state._index === i + 1 ? <Example data={val} SERVER={_this.props.SERVER}/> : ''}
+              {_this.state._index === i + 1 ? <Example data={val} SERVER={_this.props.SERVER} VERSION={_this.props.VERSION}/> : ''}
             </div>
           )
         })}
@@ -56,7 +56,8 @@ class Endpoint extends React.Component {
 
 Endpoint.propTypes = {
   endpoints: PropTypes.array,
-  SERVER: PropTypes.string
+  SERVER: PropTypes.string,
+  VERSION: PropTypes.string
 }
 
 export default Endpoint

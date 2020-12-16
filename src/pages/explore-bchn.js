@@ -7,7 +7,7 @@ import Footer from '../components/Footer'
 import { navigate } from 'gatsby'
 
 let _this
-
+const VERSION = '/v4'
 const SERVER = `${process.env.BCHNSERVER}`
 
 class ExploreMainnet extends React.Component {
@@ -55,7 +55,7 @@ class ExploreMainnet extends React.Component {
                     </div>
                   </div>
                   {_this.state.endpointIndex === i ? (
-                    <Endpoint endpoints={val.endpoints} SERVER={SERVER} />
+                    <Endpoint endpoints={val.endpoints} SERVER={SERVER} VERSION={VERSION} />
                   ) : (
                       ''
                     )}
