@@ -254,7 +254,9 @@ class Example extends React.Component {
   // POST Request
   async requestPOST() {
     const SERVER =  _this.props.SERVER
-    const endpoint = `${SERVER}${_this.state.endpoint}`
+    const VERSION =  _this.props.VERSION
+
+    const endpoint = `${SERVER}${VERSION}${_this.state.endpoint}`
 
     let body = _this.state.requestBody
     // If the user edits the body, its necessary
@@ -301,8 +303,8 @@ class Example extends React.Component {
   // GET Request
   async requestGET() {
     const SERVER =  _this.props.SERVER
-
-    const endpoint = `${SERVER}${_this.state.endpoint}${_this.state.parameters}`
+    const VERSION =  _this.props.VERSION
+    const endpoint = `${SERVER}${VERSION}${_this.state.endpoint}${_this.state.parameters}`
     try {
       let code = ''
 
@@ -362,6 +364,7 @@ class Example extends React.Component {
 
 Example.propTypes = {
   data: PropTypes.object,
+  VERSION: PropTypes.string
 }
 
 export default Example

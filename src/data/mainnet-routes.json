@@ -8,7 +8,7 @@
         "type": "get",
         "shortDescription": "Get balance for a single address",
         "detailedDescription": "Returns an object with BCH balances for an address.",
-        "endpoint": "/v3/electrumx/balance/",
+        "endpoint": "/electrumx/balance/",
         "parameters": "bitcoincash:qr69kyzha07dcecrsvjwsj4s6slnlq4r8c30lxnur3",
         "parametersName": "address",
         "parameterDescription": "BCH Cash Address"
@@ -17,7 +17,7 @@
         "type": "post",
         "shortDescription": "Get balances for an array of addresses",
         "detailedDescription": "Returns an array of objects. Each object contains BCH balances for an address. Up to 20 addresses per request.",
-        "endpoint": "/v3/electrumx/balance",
+        "endpoint": "/electrumx/balance",
         "parametersName": "addresses",
         "parameterDescription": "Array of addresses",
         "body": {
@@ -31,7 +31,7 @@
         "type": "get",
         "shortDescription": "Get utxos for a single address",
         "detailedDescription": "Returns an object with UTXOs associated with an address.",
-        "endpoint": "/v3/electrumx/utxos/",
+        "endpoint": "/electrumx/utxos/",
         "parameters": "bitcoincash:qr69kyzha07dcecrsvjwsj4s6slnlq4r8c30lxnur3",
         "parametersName": "address",
         "parameterDescription": "BCH Cash Address"
@@ -40,7 +40,7 @@
         "type": "post",
         "shortDescription": "Get UTXOs for an array of addresses",
         "detailedDescription": "Returns an array of objects. Each object contains UTXOs for an address. Up to 20 addresses per request.",
-        "endpoint": "/v3/electrumx/utxos",
+        "endpoint": "/electrumx/utxos",
         "parametersName": "addresses",
         "parameterDescription": "Array of addresses",
         "body": {
@@ -54,7 +54,7 @@
         "type": "get",
         "shortDescription": "Get transaction history for a single address",
         "detailedDescription": "Returns an object with transactions for an address.",
-        "endpoint": "/v3/electrumx/transactions/",
+        "endpoint": "/electrumx/transactions/",
         "parameters": "bitcoincash:qr69kyzha07dcecrsvjwsj4s6slnlq4r8c30lxnur3",
         "parametersName": "address",
         "parameterDescription": "BCH Cash Address"
@@ -63,7 +63,7 @@
         "type": "post",
         "shortDescription": "Get transaction history for an array of addresses",
         "detailedDescription": "Returns an array of objects. Each object contains transaction history for an address. Up to 20 addresses per request.",
-        "endpoint": "/v3/electrumx/transactions",
+        "endpoint": "/electrumx/transactions",
         "parametersName": "addresses",
         "parameterDescription": "Array of addresses",
         "body": {
@@ -77,7 +77,7 @@
         "type": "get",
         "shortDescription": "Get unconfirmed UTXOs (mempool) for a single address",
         "detailedDescription": "Returns an object with unconfirmed UTXOs associated with an address.",
-        "endpoint": "/v3/electrumx/unconfirmed/",
+        "endpoint": "/electrumx/unconfirmed/",
         "parameters": "bitcoincash:qr69kyzha07dcecrsvjwsj4s6slnlq4r8c30lxnur3",
         "parametersName": "address",
         "parameterDescription": "BCH Cash Address"
@@ -86,7 +86,7 @@
         "type": "post",
         "shortDescription": "Get unconfirmed UTXOs (mempool) for an array of addresses",
         "detailedDescription": "Returns an array of objects. Each object contains unconfirmed UTXOs for an address. Up to 20 addresses per request.",
-        "endpoint": "/v3/electrumx/unconfirmed",
+        "endpoint": "/electrumx/unconfirmed",
         "parametersName": "addresses",
         "parameterDescription": "Array of addresses",
         "body": {
@@ -100,7 +100,7 @@
         "type": "get",
         "shortDescription": "Get transaction details for a TXID",
         "detailedDescription": "Returns an object with details for the transaction - inputs, outputs etc.",
-        "endpoint": "/v3/electrumx/tx/data/",
+        "endpoint": "/electrumx/tx/data/",
         "parameters": "4db095f34d632a4daf942142c291f1f2abb5ba2e1ccac919d85bdc2f671fb251",
         "parametersName": "TXID",
         "parameterDescription": "Transaction ID"
@@ -109,7 +109,7 @@
         "type": "post",
         "shortDescription": "Get transaction details for an array of TXIDs",
         "detailedDescription": "Returns an array of objects. Each object contains transaction details for one TXID. Up to 20 TXIDs per request.",
-        "endpoint": "/v3/electrumx/tx/data",
+        "endpoint": "/electrumx/tx/data",
         "parametersName": "TXIDs",
         "parameterDescription": "Array of transaction IDs",
         "body": {
@@ -123,7 +123,7 @@
         "type": "get",
         "shortDescription": "Get 'count' block headers starting at a height",
         "detailedDescription": "Returns an array with block headers starting at the block height",
-        "endpoint": "/v3/electrumx/block/headers/",
+        "endpoint": "/electrumx/block/headers/",
         "parameters": "42?count=2",
         "parametersName": "Height and count",
         "parameterDescription": "count blocks, starting at height"
@@ -132,7 +132,7 @@
         "type": "post",
         "shortDescription": "Broadcast a single raw transaction.",
         "detailedDescription": "Broadcast a raw transaction and return the transaction ID on success or error on failure.",
-        "endpoint": "/v3/electrumx/tx/broadcast",
+        "endpoint": "/electrumx/tx/broadcast",
         "parametersName": "txHex",
         "parameterDescription": "hex-encoded",
         "body": {
@@ -150,7 +150,7 @@
         "type": "get",
         "shortDescription": "Get balance for a single address.",
         "detailedDescription": "Returns an object with balance and details about an address.",
-        "endpoint": "/v3/blockbook/balance/",
+        "endpoint": "/blockbook/balance/",
         "parameters": "bitcoincash:qrehqueqhw629p6e57994436w730t4rzasnly00ht0",
         "parametersName": "Address",
         "parameterDescription": "BCH Address"
@@ -159,7 +159,7 @@
         "type": "post",
         "shortDescription": "Get balance for an array of addresses.",
         "detailedDescription": "Return balances and details for an array of addresses. Limited to 20 items per request.",
-        "endpoint": "/v3/blockbook/balance/",
+        "endpoint": "/blockbook/balance/",
         "parametersName": "Address",
         "parameterDescription": "Array of Addresses",
         "body": {
@@ -173,7 +173,7 @@
         "type": "get",
         "shortDescription": "Get utxos for a single address.",
         "detailedDescription": "Returns an object with UTXOs associated with an address.",
-        "endpoint": "/v3/blockbook/utxos/",
+        "endpoint": "/blockbook/utxos/",
         "parameters": "bitcoincash:qzs02v05l7qs5s24srqju498qu55dwuj0cx5ehjm2c",
         "parametersName": "Address",
         "parameterDescription": "BCH address"
@@ -182,7 +182,7 @@
         "type": "post",
         "shortDescription": "Get Utxos for an array of addresses",
         "detailedDescription": "return utxos associate with an array of addresses. Limited to 20 items per request",
-        "endpoint": "/v3/blockbook/utxos/",
+        "endpoint": "/blockbook/utxos/",
         "parametersName": "Address",
         "parameterDescription": "Array of Addresses",
         "body": {
@@ -196,7 +196,7 @@
         "type": "get",
         "shortDescription": "Get details for a single transaction.",
         "detailedDescription": "Returns an object with details for a single transaction.",
-        "endpoint": "/v3/blockbook/tx/",
+        "endpoint": "/blockbook/tx/",
         "parameters": "6181c669614fa18039a19b23eb06806bfece1f7514ab457c3bb82a40fe171a6d",
         "parametersName": "Address",
         "parameterDescription": "Transaction ID"
@@ -205,7 +205,7 @@
         "type": "post",
         "shortDescription": "Get details for an array of transactions.",
         "detailedDescription": "Return details for an array of transactions. Limited to 20 items per request.",
-        "endpoint": "/v3/blockbook/tx/",
+        "endpoint": "/blockbook/tx/",
         "parametersName": "Address",
         "parameterDescription": "Array of TXIDs",
         "body": {
@@ -226,19 +226,19 @@
         "type": "get",
         "shortDescription": "Get Block Count.",
         "detailedDescription": "Returns the number of blocks in the longest blockchain.",
-        "endpoint": "/v3/blockchain/getBlockCount/"
+        "endpoint": "/blockchain/getBlockCount/"
       },
       {
         "type": "get",
         "shortDescription": "Get Chain Tips.",
         "detailedDescription": "Return information about all known tips in the block tree, including the main chain as well as orphaned branches.",
-        "endpoint": "/v3/blockchain/getChainTips/"
+        "endpoint": "/blockchain/getChainTips/"
       },
       {
         "type": "get",
         "shortDescription": "Get Mempool Ancestors.",
         "detailedDescription": "Returns mempool ancestors data for given TXID. It must be in mempool (unconfirmed). This call is handy to tell if a UTXO is bumping up against the 25 ancestor chain-limit.",
-        "endpoint": "/v3/blockchain/getMempoolAncestors/",
+        "endpoint": "/blockchain/getMempoolAncestors/",
         "parameters": "bbda45af0ba57e28866995c67a53c225336fddd14eb3dc87f2f3500fd61c8585",
         "parametersName": "TXID",
         "parameterDescription": "Transaction ID"
@@ -247,7 +247,7 @@
         "type": "get",
         "shortDescription": "Get Tx Out Proof.",
         "detailedDescription": "Returns a hex-encoded proof that 'txid' was included in a block.",
-        "endpoint": "/v3/blockchain/getTxOutProofSingle/",
+        "endpoint": "/blockchain/getTxOutProofSingle/",
         "parameters": "bbda45af0ba57e28866995c67a53c225336fddd14eb3dc87f2f3500fd61c8585",
         "parametersName": "TXID",
         "parameterDescription": "Transaction ID"
@@ -256,7 +256,7 @@
         "type": "get",
         "shortDescription": "Get Tx Out.",
         "detailedDescription": "Returns details about an unspent transaction output.",
-        "endpoint": "/v3/blockchain/getTxOut/",
+        "endpoint": "/blockchain/getTxOut/",
         "parameters": "fe28050b93faea61fa88c4c630f0e1f0a1c24d0082dd0e10d369e13212128f33/0?mempool=false",
         "parametersName": "TXID",
         "parameterDescription": "Transaction ID"
@@ -265,7 +265,7 @@
         "type": "post",
         "shortDescription": "Get details on a TX output",
         "detailedDescription": "Returns details about an unspent transaction output.",
-        "endpoint": "/v3/blockchain/getTxOut/",
+        "endpoint": "/blockchain/getTxOut/",
         "parametersName": "TXID",
         "parameterDescription": "TX Output details",
         "body": {
@@ -278,19 +278,19 @@
         "type": "get",
         "shortDescription": "Get best block hash.",
         "detailedDescription": "Returns the hash of the best (tip) block in the longest block chain.",
-        "endpoint": "/v3/blockchain/getBestBlockHash"
+        "endpoint": "/blockchain/getBestBlockHash"
       },
       {
         "type": "get",
         "shortDescription": "Get blockchain info",
         "detailedDescription": "Returns an object containing various state info regarding blockchain processing.",
-        "endpoint": "/v3/blockchain/getBlockchainInfo"
+        "endpoint": "/blockchain/getBlockchainInfo"
       },
       {
         "type": "post",
         "shortDescription": "Get bulk mempool entry",
         "detailedDescription": "Returns mempool data for multiple transactions.",
-        "endpoint": "/v3/blockchain/getMempoolEntry",
+        "endpoint": "/blockchain/getMempoolEntry",
         "parametersName": "TXID",
         "parameterDescription": "Array of TXIDs",
         "body": {
@@ -304,19 +304,19 @@
         "type": "get",
         "shortDescription": "Get difficulty.",
         "detailedDescription": "Get the current difficulty value, used to regulate mining power on the network.",
-        "endpoint": "/v3/blockchain/getDifficulty"
+        "endpoint": "/blockchain/getDifficulty"
       },
       {
         "type": "get",
         "shortDescription": "Get mempool info.",
         "detailedDescription": "Returns details on the active state of the TX memory pool.",
-        "endpoint": "/v3/getMempoolInfo"
+        "endpoint": "/getMempoolInfo"
       },
       {
         "type": "post",
         "shortDescription": "Get multiple block headers.",
         "detailedDescription": "If verbose is false (default), returns a string that is serialized, hex-encoded data for blockheader 'hash'. If verbose is true, returns an Object with information about blockheader hash.",
-        "endpoint": "/v3/blockchain/getBlockHeader",
+        "endpoint": "/blockchain/getBlockHeader",
         "parametersName": "hashes",
         "parameterDescription": "Array of hashes",
         "body": {
@@ -331,7 +331,7 @@
         "type": "get",
         "shortDescription": "Get raw mempool.",
         "detailedDescription": "Returns all transaction ids in memory pool as a json array of string transaction ids.",
-        "endpoint": "/v3/getRawMempool/",
+        "endpoint": "/getRawMempool/",
         "parameters": "?verbose=true",
         "parametersName": "Verbose",
         "parameterDescription": "Return verbose data"
@@ -340,7 +340,7 @@
         "type": "get",
         "shortDescription": "Get single block header.",
         "detailedDescription": "If verbose is false (default), returns a string that is serialized, hex-encoded data for blockheader 'hash'. If verbose is true, returns an Object with information about blockheader hash.",
-        "endpoint": "/v3/blockchain/getBlockHeader/",
+        "endpoint": "/blockchain/getBlockHeader/",
         "parameters": "000000000000000005e14d3f9fdfb70745308706615cfa9edca4f4558332b201?verbose=true",
         "parametersName": "Hash & verbose",
         "parameterDescription": "block hash and verbose data"
@@ -349,7 +349,7 @@
         "type": "get",
         "shortDescription": "Get single mempool entry.",
         "detailedDescription": "Returns mempool data for given transaction. TXID must be in mempool (unconfirmed)",
-        "endpoint": "/v3/blockchain/getMempoolEntry/",
+        "endpoint": "/blockchain/getMempoolEntry/",
         "parameters": "fe28050b93faea61fa88c4c630f0e1f0a1c24d0082dd0e10d369e13212128f33",
         "parametersName": "TXID",
         "parameterDescription": "Transaction ID"
@@ -365,7 +365,7 @@
         "type": "get",
         "shortDescription": "Get Network Info.",
         "detailedDescription": "RPC call which gets basic full node information.",
-        "endpoint": "/v3/control/getnetworkinfo"
+        "endpoint": "/control/getnetworkinfo"
       }
     ]
   },
@@ -378,7 +378,7 @@
         "type": "get",
         "shortDescription": "Get public key for a BCH address",
         "detailedDescription": "Scans the blockchain and tries to find the public key associated with a BCH address.",
-        "endpoint": "/v3/encryption/publickey/",
+        "endpoint": "/encryption/publickey/",
         "parameters": "bitcoincash:qrehqueqhw629p6e57994436w730t4rzasnly00ht0",
         "parametersName": "address",
         "parameterDescription": "BCH Cash Address"
@@ -394,7 +394,7 @@
         "type": "get",
         "shortDescription": "Returns network hashes",
         "detailedDescription": "Returns the estimated network hashes per second based on the last n blocks",
-        "endpoint": "/v3/mining/getNetworkHashps?",
+        "endpoint": "/mining/getNetworkHashps?",
         "parameters": "nblocks=120&height=-1",
         "parametersName": "N-Blocks , Height",
         "parameterDescription": ""
@@ -403,7 +403,7 @@
         "type": "get",
         "shortDescription": "Get Mining Info.",
         "detailedDescription": "Returns a json object containing mining-related information.        ",
-        "endpoint": "/v3/mining/getMiningInfo"
+        "endpoint": "/mining/getMiningInfo"
       }
     ]
   },
@@ -416,7 +416,7 @@
         "type": "post",
         "shortDescription": "Bulk Decode Script.",
         "detailedDescription": "Decode multiple hex-encoded scripts.",
-        "endpoint": "/v3/rawtransactions/decodeScript",
+        "endpoint": "/rawtransactions/decodeScript",
         "parametersName": "hexes",
         "parameterDescription": "Array of hexes",
         "body": {
@@ -430,7 +430,7 @@
         "type": "post",
         "shortDescription": "Decode Bulk Raw Transactions",
         "detailedDescription": "Return bulk hex encoded transaction.",
-        "endpoint": "/v3/rawtransactions/decodeRawTransaction",
+        "endpoint": "/rawtransactions/decodeRawTransaction",
         "parametersName": "hexes",
         "parameterDescription": "Array of hexes",
         "body": {
@@ -444,7 +444,7 @@
         "type": "get",
         "shortDescription": "Decode Single Raw Transaction.",
         "detailedDescription": "Return a JSON object representing the serialized, hex-encoded transaction.",
-        "endpoint": "/v3/rawtransactions/decodeRawTransaction/",
+        "endpoint": "/rawtransactions/decodeRawTransaction/",
         "parameters": "02000000010e991f7ccec410f27d333f737f149b5d3be6728687da81072e638aed0063a176010000006b483045022100cd20443b0af090053450bc4ab00d563d4ac5955bb36e0135b00b8a96a19f233302205047f2c70a08c6ef4b76f2d198b33a31d17edfaa7e1e9e865894da0d396009354121024d4e7f522f67105b7bf5f9dbe557e7b2244613fdfcd6fe09304f93877328f6beffffffff02a0860100000000001976a9140ee020c07f39526ac5505c54fa1ab98490979b8388acb5f0f70b000000001976a9143a9b2b0c12fe722fcf653b6ef5dcc38732d6ff5188ac00000000",
         "parametersName": "Hex",
         "parameterDescription": "Hex-Encoded"
@@ -453,7 +453,7 @@
         "type": "get",
         "shortDescription": "Decode Single Script.",
         "detailedDescription": "Decode a hex-encoded script.",
-        "endpoint": "/v3/rawtransactions/decodeScript/",
+        "endpoint": "/rawtransactions/decodeScript/",
         "parameters": "4830450221009a51e00ec3524a7389592bc27bea4af5104a59510f5f0cfafa64bbd5c164ca2e02206c2a8bbb47eabdeed52f17d7df668d521600286406930426e3a9415fe10ed592012102e6e1423f7abde8b70bca3e78a7d030e5efabd3eb35c19302542b5fe7879c1a16",
         "parametersName": "Hex",
         "parameterDescription": "Hex-Encoded"
@@ -462,7 +462,7 @@
         "type": "post",
         "shortDescription": " Get Bulk Raw Transactions.",
         "detailedDescription": "Return the raw transaction data for multiple transactions. If verbose is 'true', returns an Object with information about 'txid'. If verbose is 'false' or omitted, returns a string that is serialized, hex-encoded data for 'txid'.",
-        "endpoint": "/v3/rawtransactions/getRawTransaction",
+        "endpoint": "/rawtransactions/getRawTransaction",
         "parametersName": "txid",
         "parameterDescription": "Array of txids",
         "body": {
@@ -476,7 +476,7 @@
         "type": "get",
         "shortDescription": "Return the raw transaction data.",
         "detailedDescription": "return the raw transaction data. If verbose is 'true', returns an Object with information about 'txid'. If verbose is 'false' or omitted, returns a string that is serialized, hex-encoded data for 'txid'.",
-        "endpoint": "/v3/rawtransactions/getRawTransaction/",
+        "endpoint": "/rawtransactions/getRawTransaction/",
         "parameters": "fe28050b93faea61fa88c4c630f0e1f0a1c24d0082dd0e10d369e13212128f33?verbose=true",
         "parametersName": "txid",
         "parameterDescription": "txid"
@@ -485,7 +485,7 @@
         "type": "post",
         "shortDescription": "Send Bulk Raw Transactions.",
         "detailedDescription": "Submits multiple raw transaction (serialized, hex-encoded) to local node and network.",
-        "endpoint": "/v3/rawtransactions/sendRawTransaction",
+        "endpoint": "/rawtransactions/sendRawTransaction",
         "parametersName": "hexes",
         "parameterDescription": "Array of hexes",
         "body": {
@@ -499,7 +499,7 @@
         "type": "get",
         "shortDescription": "Send Single Raw Transaction.",
         "detailedDescription": "Submits single raw transaction (serialized, hex-encoded) to local node and network.",
-        "endpoint": "/v3/rawtransactions/sendRawTransaction/",
+        "endpoint": "/rawtransactions/sendRawTransaction/",
         "parameters": "01000000013ba3edfd7a7b12b27ac72c3e67768f617fc81bc3888a51323a9fb8aa4b1e5e4a000000006a4730440220540986d1c58d6e76f8f05501c520c38ce55393d0ed7ed3c3a82c69af04221232022058ea43ed6c05fec0eccce749a63332ed4525460105346f11108b9c26df93cd72012103083dfc5a0254613941ddc91af39ff90cd711cdcde03a87b144b883b524660c39ffffffff01807c814a000000001976a914d7e7c4e0b70eaa67ceff9d2823d1bbb9f6df9a5188ac00000000",
         "parametersName": "hex",
         "parameterDescription": "hex-encoded"
@@ -515,7 +515,7 @@
         "type": "get",
         "shortDescription": "Convert address to slpAddr, cashAddr and legacy",
         "detailedDescription": "Convert address to slpAddr, cashAddr and legacy",
-        "endpoint": "/v3/slp/convert/",
+        "endpoint": "/slp/convert/",
         "parameters": "simpleledger:qz9tzs6d5097ejpg279rg0rnlhz546q4fsnck9wh5m",
         "parametersName": "Address",
         "parameterDescription": "SLP Address"
@@ -524,7 +524,7 @@
         "type": "get",
         "shortDescription": "List SLP balance for address.",
         "detailedDescription": "List SLP balance for address.",
-        "endpoint": "/v3/slp/balancesForAddress/",
+        "endpoint": "/slp/balancesForAddress/",
         "parameters": "simpleledger:qz9tzs6d5097ejpg279rg0rnlhz546q4fsnck9wh5m",
         "parametersName": "Address",
         "parameterDescription": "SLP Address"
@@ -533,7 +533,7 @@
         "type": "post",
         "shortDescription": "List SLP balances for an array of addresses.",
         "detailedDescription": "Returns SLP balances for an array of addresses.",
-        "endpoint": "/v3/slp/balancesForAddress/",
+        "endpoint": "/slp/balancesForAddress/",
         "parametersName": "SLP address",
         "parameterDescription": "Array of SLP addresses",
         "body": {
@@ -546,7 +546,7 @@
         "type": "get",
         "shortDescription": "List stats for a single slp token.",
         "detailedDescription": "Return list stats for a single slp token.",
-        "endpoint": "/v3/slp/tokenStats/",
+        "endpoint": "/slp/tokenStats/",
         "parameters": "9ba379fe8171176d4e7e6771d9a24cd0e044c7b788d5f86a3fdf80904832b2c0",
         "parametersName": "tokenId",
         "parameterDescription": "tokenId"
@@ -555,7 +555,7 @@
         "type": "get",
         "shortDescription": "List SLP addresses and balances for tokenId.",
         "detailedDescription": "Returns List SLP addresses and balances for tokenId.",
-        "endpoint": "/v3/slp/balancesForToken/",
+        "endpoint": "/slp/balancesForToken/",
         "parameters": "9ba379fe8171176d4e7e6771d9a24cd0e044c7b788d5f86a3fdf80904832b2c0",
         "parametersName": "tokenId",
         "parameterDescription": "tokenId"
@@ -564,7 +564,7 @@
         "type": "get",
         "shortDescription": "SLP transaction details.",
         "detailedDescription": "Transaction details on a token transfer.",
-        "endpoint": "/v3/slp/txDetails/",
+        "endpoint": "/slp/txDetails/",
         "parameters": "8ab4ac5dea3f9024e3954ee5b61452955d659a34561f79ef62ac44e133d0980e",
         "parametersName": "TXID",
         "parameterDescription": "TXID"
@@ -573,7 +573,7 @@
         "type": "get",
         "shortDescription": "SLP transactions by tokenId and address.",
         "detailedDescription": "Transactions by tokenId and address.",
-        "endpoint": "/v3/slp/transactions/",
+        "endpoint": "/slp/transactions/",
         "parameters": "9ba379fe8171176d4e7e6771d9a24cd0e044c7b788d5f86a3fdf80904832b2c0/simpleledger:qrxa0unrn67rtn85v7asfddhhth43ecnxua0antk2l",
         "parametersName": "TXID",
         "parameterDescription": "TXID"
@@ -582,7 +582,7 @@
         "type": "get",
         "shortDescription": "Validate single SLP transaction by txid.",
         "detailedDescription": "Validate single SLP transaction by txid.",
-        "endpoint": "/v3/slp/validateTxid/",
+        "endpoint": "/slp/validateTxid/",
         "parameters": "f7e5199ef6669ad4d078093b3ad56e355b6ab84567e59ad0f08a5ad0244f783a",
         "parametersName": "TXID",
         "parameterDescription": "TXID"
@@ -591,7 +591,7 @@
         "type": "post",
         "shortDescription": "Validate multiple SLP transactions by txid.",
         "detailedDescription": "Validate multiple SLP transactions by txid.",
-        "endpoint": "/v3/slp/validateTxid/",
+        "endpoint": "/slp/validateTxid/",
         "parametersName": "TXIDs",
         "parameterDescription": "Array of TXIDs",
         "body": {
@@ -605,7 +605,7 @@
         "type": "post",
         "shortDescription": "Generate SLP OP_RETURN.",
         "detailedDescription": "Returns OP_RETURN script and outputs",
-        "endpoint": "/v3/slp/generateSendOpReturn/",
+        "endpoint": "/slp/generateSendOpReturn/",
         "parametersName": "tokenUtxos , sendQty",
         "parameterDescription": "Array of Token Utxos , Token Quantity ",
         "body": {
@@ -617,6 +617,38 @@
             }
           ],
           "sendQty": 1.5
+        }
+      },
+      {
+        "type": "post",
+        "shortDescription": "Hydrate UTXO data with SLP information.",
+        "detailedDescription": "Expects an array of UTXO objects as input. Returns an array of equal size. Returns UTXO data hydrated with token information. If the UTXO does not belong to a SLP transaction, it will return an isValid property set to false. If the UTXO is part of an SLP transaction, it will return the UTXO object with additional SLP information attached. An isValid property will be included. If its value is true, the UTXO is a valid SLP UTXO. If the value is null, then SLPDB has not yet processed that txid and validity has not been confirmed.",
+        "endpoint": "/slp/hydrateUtxos/",
+        "parametersName": "utxos",
+        "parameterDescription": "Array of Token Utxos",
+        "body": {
+          "utxos": [
+            {
+              "utxos": [
+                {
+                  "txid": "d56a2b446d8149c39ca7e06163fe8097168c3604915f631bc58777d669135a56",
+                  "vout": 3,
+                  "value": "6816",
+                  "height": 606848,
+                  "confirmations": 13,
+                  "satoshis": 6816
+                },
+                {
+                  "txid": "d56a2b446d8149c39ca7e06163fe8097168c3604915f631bc58777d669135a56",
+                  "vout": 2,
+                  "value": "546",
+                  "height": 606848,
+                  "confirmations": 13,
+                  "satoshis": 546
+                }
+              ]
+            }
+          ]
         }
       }
     ]
