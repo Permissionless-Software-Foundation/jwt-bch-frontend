@@ -695,6 +695,12 @@
             }
           ]
         }
+      },
+      {
+        "type": "get",
+        "shortDescription": "Get the health status of SLPDB",
+        "detailedDescription": "Get the health status of SLPDB",
+        "endpoint": "/slp/status"
       }
     ]
   }
