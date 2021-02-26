@@ -45,7 +45,7 @@ class Homepage extends React.Component {
   }
 
   render() {
-    const siteTitle = 'API Keys for api.bchjs.cash'
+    const siteTitle = 'API Keys for api.fullstack.cash'
 
     return (
       <Layout loading="loading">
@@ -60,8 +60,8 @@ class Homepage extends React.Component {
                   <h2>Get Your API Key</h2>
                   <p>
                     This site distributes API keys for the{' '}
-                    <a href="https://api.bchjs.cash" target="_blank">
-                      api.bchjs.cash
+                    <a href="https://api.fullstack.cash" target="_blank">
+                      api.fullstack.cash
                     </a>{' '}
                     REST API. Enter your email and password below to create an
                     account or login.
