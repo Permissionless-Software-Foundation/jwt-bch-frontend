@@ -36,6 +36,7 @@ class LoginForm extends React.Component {
     _this = this
 
     this.state = {
+      inFetch: false,
       message: '',
       email: '',
       password: '',
@@ -64,24 +65,35 @@ class LoginForm extends React.Component {
           onKeyDown={_this.handleKeyDown}
         />
         <br></br>
-        <StyledButton
-          href="#"
-          className="button special"
-          id="createBtn"
-          onClick={this.createClick}
-          data-to="bitcoincash:qzl6k0wvdd5ky99hewghqdgfj2jhcpqnfq8xtct0al"
-        >
-          Create
-        </StyledButton>
-        <StyledButton
-          href="#"
-          className="button special"
-          id="loginBtn"
-          onClick={this.loginClick}
-          data-to="bitcoincash:qzl6k0wvdd5ky99hewghqdgfj2jhcpqnfq8xtct0al"
-        >
-          Login
-        </StyledButton>
+        {!_this.state.inFetch && (
+          <>
+            <StyledButton
+              href="#"
+              className="button special"
+              id="createBtn"
+              onClick={this.createClick}
+              data-to="bitcoincash:qzl6k0wvdd5ky99hewghqdgfj2jhcpqnfq8xtct0al"
+            >
+              Create
+            </StyledButton>
+            <StyledButton
+              href="#"
+              className="button special"
+              id="loginBtn"
+              onClick={this.loginClick}
+              data-to="bitcoincash:qzl6k0wvdd5ky99hewghqdgfj2jhcpqnfq8xtct0al"
+            >
+              Login
+            </StyledButton>
+          </>
+        )}
+        {_this.state.inFetch && (
+          <img
+            width="100"
+            src="https://i.imgur.com/8n8PYAi.gif"
+            alt="Loading..."
+          ></img>
+        )}
         <br />
         <OutMsg>{this.state.message}</OutMsg>
       </form>
@@ -120,6 +132,9 @@ class LoginForm extends React.Component {
 
       return
     }
+    _this.setState({
+      inFetch: true,
+    })
     try {
       const options = {
         method: 'POST',
@@ -151,7 +166,9 @@ class LoginForm extends React.Component {
       })
 
       _this.Notification.notify('LogIn', 'Success!!', 'success')
-
+      _this.setState({
+        inFetch: false,
+      })
       setTimeout(() => {
         navigate(`/profile`)
       }, 1500)
@@ -163,7 +180,6 @@ class LoginForm extends React.Component {
       }))
 
       _this.Notification.notify('Error', err.message, 'danger')
-
     }
   }
 
@@ -194,13 +210,16 @@ class LoginForm extends React.Component {
         message: 'Username or password does not match.',
       }))
 
-      _this.Notification.notify('Error', 'Email or password does not match.','danger')
-
+      _this.Notification.notify(
+        'Error',
+        'Email or password does not match.',
+        'danger'
+      )
     } else {
       _this.Notification.notify('LogIn', 'Success!!', 'success')
       setTimeout(() => {
         navigate(`/profile`)
-      }, 1500);
+      }, 1500)
     }
   }
 }
