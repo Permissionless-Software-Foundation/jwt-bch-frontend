@@ -6,7 +6,13 @@ import { navigate } from 'gatsby'
 import ChangePassword from '../components/change-password'
 import '../components/profile.css'
 
-import { getUser, setUser, isLoggedIn, logout, getExpirationDate } from '../services/auth'
+import {
+  getUser,
+  setUser,
+  isLoggedIn,
+  logout,
+  getExpirationDate,
+} from '../services/auth'
 import { updateUser } from '../services/users'
 
 import NOTIFICATION from '../lib/notification'
@@ -50,12 +56,10 @@ class Profile extends React.Component {
 
     _this = this
     this.Notification = Notification
-
   }
 
-  async  verifyTokenExpiration() {
+  async verifyTokenExpiration() {
     const result = await getExpirationDate()
-
 
     // If the expiration data are not found returns -1
     // indicating that should redirect to login
@@ -68,8 +72,8 @@ class Profile extends React.Component {
     // const now = new Date('2020-10-23T21:27:11.000')
     // const exp = new Date('2020-10-23T22:26:11.000Z')
 
-    const now =  new Date(result.now)
-    const exp =  new Date(result.exp)
+    const now = new Date(result.now)
+    const exp = new Date(result.exp)
 
     const dateDiff = exp.getTime() - now.getTime()
     const hourDiff = Math.floor(dateDiff / 1000 / 60 / 60)
@@ -80,7 +84,9 @@ class Profile extends React.Component {
 
   async componentDidMount() {
     const userData = await getUser()
-    console.log(`userData.userdata: ${JSON.stringify(userData.userdata, null, 2)}`)
+    console.log(
+      `userData.userdata: ${JSON.stringify(userData.userdata, null, 2)}`
+    )
     const hourDiff = await _this.verifyTokenExpiration()
 
     // If the user is not logged in, send them back to the home page.
@@ -99,7 +105,6 @@ class Profile extends React.Component {
     if (userData.userdata.user.apiTokenExp) {
       const expDate = new Date(userData.userdata.user.apiTokenExp)
       apiTokenExp = expDate.toString()
-
     }
     //
     // this.data.credit = userData.userdata.user.credit
@@ -137,51 +142,51 @@ class Profile extends React.Component {
                 {!_this.state.editField_email && _this.state.email ? (
                   <strong>{this.state.email}</strong>
                 ) : (
-                    <input
-                      id="editField_email"
-                      name="email"
-                      type="text "
-                      defaultValue={_this.state.editField_email}
-                      onChange={_this.handleUpdate}
-                      onBlur={_this.resetFieldToEdit}
-                      onKeyDown={_this.handleKeyDown}
-                      placeholder="Enter Email"
-                    ></input>
-                  )}
+                  <input
+                    id="editField_email"
+                    name="email"
+                    type="text "
+                    defaultValue={_this.state.editField_email}
+                    onChange={_this.handleUpdate}
+                    onBlur={_this.resetFieldToEdit}
+                    onKeyDown={_this.handleKeyDown}
+                    placeholder="Enter Email"
+                  ></input>
+                )}
               </li>
               <li onClick={() => _this.editField('username')}>
                 UserName:
                 {!_this.state.editField_username && _this.state.username ? (
                   <strong>{_this.state.username}</strong>
                 ) : (
-                    <input
-                      id="editField_username"
-                      name="username"
-                      type="text "
-                      defaultValue={_this.state.editField_username}
-                      onChange={_this.handleUpdate}
-                      onBlur={_this.resetFieldToEdit}
-                      onKeyDown={_this.handleKeyDown}
-                      placeholder="Enter username"
-                    ></input>
-                  )}
+                  <input
+                    id="editField_username"
+                    name="username"
+                    type="text "
+                    defaultValue={_this.state.editField_username}
+                    onChange={_this.handleUpdate}
+                    onBlur={_this.resetFieldToEdit}
+                    onKeyDown={_this.handleKeyDown}
+                    placeholder="Enter username"
+                  ></input>
+                )}
               </li>
               <li onClick={() => _this.editField('name')}>
                 Name:
                 {!_this.state.editField_name && _this.state.name ? (
                   <strong>{_this.state.name}</strong>
                 ) : (
-                    <input
-                      id="editField_name"
-                      name="name"
-                      type="text "
-                      defaultValue={_this.state.editField_name}
-                      onChange={_this.handleUpdate}
-                      onBlur={_this.resetFieldToEdit}
-                      onKeyDown={_this.handleKeyDown}
-                      placeholder="Enter name"
-                    ></input>
-                  )}
+                  <input
+                    id="editField_name"
+                    name="name"
+                    type="text "
+                    defaultValue={_this.state.editField_name}
+                    onChange={_this.handleUpdate}
+                    onBlur={_this.resetFieldToEdit}
+                    onKeyDown={_this.handleKeyDown}
+                    placeholder="Enter name"
+                  ></input>
+                )}
               </li>
               <li>
                 API Level: <strong>{this.state.apiLevel}</strong>
@@ -192,7 +197,7 @@ class Profile extends React.Component {
               </li>
               <li>
                 JWT Token Expiration:
-                {<strong>  {_this.state.apiTokenExp}</strong>}
+                {<strong> {_this.state.apiTokenExp}</strong>}
               </li>
               <li>
                 Credit:
@@ -240,9 +245,10 @@ class Profile extends React.Component {
                   <select
                     id="selectTier"
                     onChange={this.handleDropDown}
-                    value={this.state.apiLevel}
                   >
-                    <option defaultValue="40">100 RPM ($14.99/mo)</option>
+                    <option>100 RPM ($9.99/mo)</option>
+                    <option>250 RPM ($19.99/mo)</option>
+                    <option>600 RPM ($29.99/mo)</option>
                   </select>
                 </div>
               </center>
@@ -270,20 +276,24 @@ class Profile extends React.Component {
         <br />
 
         <div className="grid-wrapper">
-          <div className="col-12" style={{border: 'solid black 1px', padding: '20px'}}>
-          <h2>
-            <u>How to use your JWT token</u>
+          <div
+            className="col-12"
+            style={{ border: 'solid black 1px', padding: '20px' }}
+          >
+            <h2>
+              <u>How to use your JWT token</u>
             </h2>
-            Your API JWT Token is used to unlock increased rate limits. Follow the
-            directions in the{' '}
+            Your API JWT Token is used to unlock increased rate limits. Follow
+            the directions in the{' '}
             <a
               href="https://github.com/christroutner/bch-js#api-key"
               target="_blank"
             >
               bch-js README
-            </a> or <a href="/examples">the video on the examples page</a>
-            . Copy the text into the <code>BCHJSTOKEN</code> environment variable
-            to use it <i>implicitly</i>, or use it <i>explictly</i> by setting the{' '}
+            </a>{' '}
+            or <a href="/examples">the video on the examples page</a>. Copy the
+            text into the <code>BCHJSTOKEN</code> environment variable to use it{' '}
+            <i>implicitly</i>, or use it <i>explictly</i> by setting the{' '}
             <code>apiToken</code>
             property when instantiating the bch-js library.
           </div>
@@ -351,7 +361,11 @@ class Profile extends React.Component {
           [name]: updateResult['user'][name],
         })
       } catch (error) {
-        _this.Notification.notify('Error', 'This email already exists', 'danger')
+        _this.Notification.notify(
+          'Error',
+          'This email already exists',
+          'danger'
+        )
       }
     }
   }
@@ -365,6 +379,7 @@ class Profile extends React.Component {
       [fieldName]: event.target.value,
     })
   }
+
   // Reset input values and state values
   resetFieldToEdit() {
     const doc_A = document.getElementById('editField_email')
@@ -380,6 +395,7 @@ class Profile extends React.Component {
       editField_username: '',
     }))
   }
+
   // Edit field to update
   editField(field) {
     const fieldName = `editField_${field}`
@@ -429,7 +445,10 @@ class Profile extends React.Component {
       let credit = 0
       let data = {}
 
-      data = await fetch(`${SERVER}/apitoken/update-credit/${_this.state.id}`, options)
+      data = await fetch(
+        `${SERVER}/apitoken/update-credit/${_this.state.id}`,
+        options
+      )
 
       credit = await data.json()
       console.log(`credit: ${credit}`)
@@ -440,7 +459,6 @@ class Profile extends React.Component {
       }))
 
       notificationType = 'success'
-
     } catch (err) {
       // console.log(`fetchData: `, fetchData)
       // console.log(`fetchData.status: ${fetchData.status}`)
@@ -455,11 +473,11 @@ class Profile extends React.Component {
       console.error(`Error in getCredit(): `, err)
       _this.setState(prevState => ({
         // message: err.message,
-        message: 'Error trying to get balance. Wait a minute for the indexer to update.',
+        message:
+          'Error trying to get balance. Wait a minute for the indexer to update.',
       }))
 
       notificationType = 'danger'
-
     }
 
     // Throw Notification
@@ -490,11 +508,28 @@ class Profile extends React.Component {
       // }
 
       // Force the API level to be 40, since we only have one paid tier now.
-      await _this.setState(prevState => ({
-        apiLevel: 40
-      }))
+      // await _this.setState(prevState => ({
+      //   apiLevel: 40
+      // }))
 
-      console.log(`Requestion token for API level: ${_this.state.apiLevel}`)
+      console.log(`Requesting token for API level: ${_this.state.apiLevel}`)
+
+      const apiLevel = _this.state.apiLevel
+      let pointsToConsume = 100
+
+      switch(apiLevel) {
+        case 40:
+          pointsToConsume = 100
+          break
+        case 50:
+          pointsToConsume = 40
+          break
+        case 60:
+          pointsToConsume = 16
+          break
+        default:
+          pointsToConsume = 500
+      }
 
       const options = {
         method: 'POST',
@@ -503,7 +538,8 @@ class Profile extends React.Component {
           Authorization: `Bearer ${_this.state.userJwt}`,
         },
         body: JSON.stringify({
-          apiLevel: _this.state.apiLevel,
+          apiLevel,
+          pointsToConsume
         }),
       }
       fetchData = await fetch(`${SERVER}/apitoken/new`, options)
@@ -529,7 +565,7 @@ class Profile extends React.Component {
         apiLevel: data2.apiLevel,
         apiTokenExp: apiTokenExp,
         message: 'API JWT Token updated.',
-        credit: data2.credit
+        credit: data2.credit,
       }))
 
       // Update user in localSotrage
@@ -539,7 +575,6 @@ class Profile extends React.Component {
       await setUser(userData)
 
       notificationType = 'success'
-
     } catch (err) {
       if (fetchData && fetchData.status === 402) {
         _this.setState(prevState => ({
@@ -556,7 +591,6 @@ class Profile extends React.Component {
         message: err.message,
       }))
       notificationType = 'danger'
-
     }
 
     // Throw Notification
@@ -565,17 +599,29 @@ class Profile extends React.Component {
     } else {
       _this.Notification.notify('SUCCESS!', _this.state.message, 'success')
     }
-
   }
 
   // Change handler for the tier-select drop-down menu.
   handleDropDown(event) {
     try {
+      // console.log(`old apiLevel: ${_this.state.apiLevel}`)
+
       // console.log(`value: ${event.target.value}`)
       const newValue = event.target.value
 
+      let apiLevel = 40
+      if (newValue.includes('100 RPM')) {
+        apiLevel = 40
+      } else if (newValue.includes('250 RPM')) {
+        apiLevel = 50
+      } else if (newValue.includes('600 RPM')) {
+        apiLevel = 60
+      }
+
+      // console.log('apiLevel: ', apiLevel)
+
       _this.setState(prevState => ({
-        apiLevel: newValue,
+        apiLevel
       }))
     } catch (err) {
       console.error(`Error in handleDropDown(): `, err)

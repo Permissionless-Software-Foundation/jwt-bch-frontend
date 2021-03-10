@@ -40,7 +40,9 @@ class Homepage extends React.Component {
                   <tr>
                     <th>Tiers:</th>
                     <th>Free</th>
-                    <th>Full-Stack</th>
+                    <th>Tier 1</th>
+                    <th>Tier 2</th>
+                    <th>Tier 3</th>
                     <th>Enterprise</th>
                   </tr>
                 </thead>
@@ -48,7 +50,9 @@ class Homepage extends React.Component {
                   <tr>
                     <td>Price per month:</td>
                     <td>$0</td>
-                    <td>$14.99</td>
+                    <td>$9.99</td>
+                    <td>$19.99</td>
+                    <td>$29.99</td>
                     <td>
                       <a href="/contact">Contact Us</a>
                     </td>
@@ -57,6 +61,8 @@ class Homepage extends React.Component {
                     <td>Full Node RPM:</td>
                     <td>20</td>
                     <td>100</td>
+                    <td>250</td>
+                    <td>600</td>
                     <td>
                       <a href="/contact">Contact Us</a>
                     </td>
@@ -65,6 +71,8 @@ class Homepage extends React.Component {
                     <td>Indexer RPM:</td>
                     <td>20</td>
                     <td>100</td>
+                    <td>250</td>
+                    <td>600</td>
                     <td>
                       <a href="/contact">Contact Us</a>
                     </td>
@@ -73,6 +81,8 @@ class Homepage extends React.Component {
                     <td>SLPDB RPM:</td>
                     <td>20</td>
                     <td>100</td>
+                    <td>250</td>
+                    <td>600</td>
                     <td>
                       <a href="/contact">Contact Us</a>
                     </td>
