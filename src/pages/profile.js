@@ -219,7 +219,15 @@ class Profile extends React.Component {
             </div>
             <div>
               <center>
-                <QRCode value={this.state.bchAddr} />
+                {this.state.bchAddr ? (
+                  <QRCode value={this.state.bchAddr} />
+                ) : (
+                  <img
+                    width="100"
+                    src="https://i.imgur.com/8n8PYAi.gif"
+                    alt="Loading..."
+                  ></img>
+                )}
               </center>
               <div className="footer">
                 <center>
@@ -242,10 +250,7 @@ class Profile extends React.Component {
             <div className="body">
               <center className="select-token">
                 <div>
-                  <select
-                    id="selectTier"
-                    onChange={this.handleDropDown}
-                  >
+                  <select id="selectTier" onChange={this.handleDropDown}>
                     <option>100 RPM ($9.99/mo)</option>
                     <option>250 RPM ($19.99/mo)</option>
                     <option>600 RPM ($29.99/mo)</option>
@@ -517,7 +522,7 @@ class Profile extends React.Component {
       const apiLevel = _this.state.apiLevel
       let pointsToConsume = 100
 
-      switch(apiLevel) {
+      switch (apiLevel) {
         case 40:
           pointsToConsume = 100
           break
@@ -539,7 +544,7 @@ class Profile extends React.Component {
         },
         body: JSON.stringify({
           apiLevel,
-          pointsToConsume
+          pointsToConsume,
         }),
       }
       fetchData = await fetch(`${SERVER}/apitoken/new`, options)
@@ -621,7 +626,7 @@ class Profile extends React.Component {
       // console.log('apiLevel: ', apiLevel)
 
       _this.setState(prevState => ({
-        apiLevel
+        apiLevel,
       }))
     } catch (err) {
       console.error(`Error in handleDropDown(): `, err)
