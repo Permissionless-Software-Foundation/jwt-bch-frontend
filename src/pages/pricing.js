@@ -186,6 +186,10 @@ class Homepage extends React.Component {
                 </thead>
                 <tbody>
                   <tr>
+                    <td>bch-api REST API</td>
+                    <td>$60</td>
+                  </tr>
+                  <tr>
                     <td>ABC Full Node</td>
                     <td>$150</td>
                   </tr>
