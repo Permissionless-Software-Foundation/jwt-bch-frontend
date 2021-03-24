@@ -139,9 +139,9 @@ class Homepage extends React.Component {
                 .
               </p>
               <p>
-                The Cash Stack is a core idea in building scaleable apps with a
-                cash-like experience. The button below will take you to an
-                introduction to the Cash Stack. The video to the right will
+                The <b>Cash Stack</b> is a core idea in building scaleable apps
+                with a cash-like experience. The button below will take you to
+                an introduction to the Cash Stack. The video to the right will
                 discuss the differences between Bitcoin.com and FullStack.cash,
                 with regard to the Cash Stack infrastructure.
               </p>
@@ -163,15 +163,20 @@ class Homepage extends React.Component {
             </div>
 
             <div className="col-6">
+              <br />
+              <br />
+              <br />
               <div className="youtube-responsive-container">
                 <iframe
-                  title="Bitcoin Cash Full Stack Introduction"
-                  src="https://www.youtube.com/embed/ZwK0SHVxhE0"
+                  title="Transitioning from Bitcoin.com to FullStack.cash"
+                  src="https://www.youtube.com/embed/FWzTBOgwy-s"
                   frameBorder="0"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 />
               </div>
+              <br />
+              <br />
             </div>
           </div>
         </section>
