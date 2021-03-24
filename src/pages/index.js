@@ -24,7 +24,6 @@ class Homepage extends React.Component {
 
         <section id="one" className="main style1">
           <div className="grid-wrapper">
-
             <div className="col-6">
               <span className="image fit">
                 <img src={cashstack} alt="" />
@@ -33,13 +32,11 @@ class Homepage extends React.Component {
 
             <div className="col-6">
               <header className="major">
-                <br /><br /><br />
-                <h2>
-                  FullStack.Cash
-                </h2>
-                <h3>
-                  BCH Blockchain As-A-Service
-                </h3>
+                <br />
+                <br />
+                <br />
+                <h2>FullStack.Cash</h2>
+                <h3>BCH Blockchain As-A-Service</h3>
               </header>
               <h4>
                 The open source 'Cash Stack' allows phone and web apps to
@@ -58,19 +55,16 @@ class Homepage extends React.Component {
                 </li>
               </ul>
             </div>
-
           </div>
         </section>
 
         <section id="six" className="main style2 special">
           <div className="grid-wrapper">
-
             <div className="col-12">
               <span className="image fit">
                 <img src={cashStackPoster} alt="" />
               </span>
             </div>
-
           </div>
         </section>
 
@@ -116,10 +110,7 @@ class Homepage extends React.Component {
               </p>
               <ul className="actions">
                 <li>
-                  <a
-                    href="https://t.me/bch_js_toolkit"
-                    className="button"
-                  >
+                  <a href="https://t.me/bch_js_toolkit" className="button">
                     More
                   </a>
                 </li>
@@ -132,31 +123,43 @@ class Homepage extends React.Component {
           <div className="grid-wrapper">
             <div className="col-6">
               <header className="major">
-                <h2>Become a Full Stack Developer</h2>
+                <h2>Coming From Bitcoin.com?</h2>
               </header>
               <p>
-                FullStack.cash has roots
-                from <a href="https://developer.bitcoin.com" target="_blank">
-                developer.bitcoin.com</a>. The open source software
-                started by Bitcoin.com was forked and modified to work with
-                the decentralized infrastructure listed
-                on the <a href="/cashstrap">CashStrap page</a>. Anyone is free
-                to download and run their own infrastructure to work with our
-                software.
+                FullStack.cash has roots from{' '}
+                <a href="https://developer.bitcoin.com" target="_blank">
+                  developer.bitcoin.com
+                </a>
+                . The open source software started by Bitcoin.com was forked in
+                March 2020. It recieved several upgrades, and was modified to
+                work with the decentralized infrastructure listed on the{' '}
+                <a href="/cashstrap" target="_blank">
+                  CashStrap page
+                </a>
+                .
               </p>
               <p>
-                FullStack.cash was born from this original article and video.
+                The Cash Stack is a core idea in building scaleable apps with a
+                cash-like experience. The button below will take you to an
+                introduction to the Cash Stack. The video to the right will
+                discuss the differences between Bitcoin.com and FullStack.cash,
+                with regard to the Cash Stack infrastructure.
               </p>
-              <div><center>
-              <ul className="actions uniform" style={{padding: '15px'}}>
-                <li>
-                  <a href="https://troutsblog.com/research/bitcoin-cash/how-to-bch-full-stack-developer"
-                  className="button special" target="_blank">
-                    Read the Article
-                  </a>
-                </li>
-              </ul>
-              </center></div>
+              <div>
+                <center>
+                  <ul className="actions uniform" style={{ padding: '15px' }}>
+                    <li>
+                      <a
+                        href="https://psfoundation.cash/blog/cash-stack"
+                        className="button special"
+                        target="_blank"
+                      >
+                        The Cash Stack
+                      </a>
+                    </li>
+                  </ul>
+                </center>
+              </div>
             </div>
 
             <div className="col-6">
@@ -170,7 +173,6 @@ class Homepage extends React.Component {
                 />
               </div>
             </div>
-
           </div>
         </section>
 
@@ -181,3 +183,54 @@ class Homepage extends React.Component {
 }
 
 export default Homepage
+
+// CT 4/24/21 - Delete after 6/1/21
+/*
+
+
+<section id="four" className="main style2 special">
+  <div className="grid-wrapper">
+    <div className="col-6">
+      <header className="major">
+        <h2>Become a Full Stack Developer</h2>
+      </header>
+      <p>
+        FullStack.cash has roots
+        from <a href="https://developer.bitcoin.com" target="_blank">
+        developer.bitcoin.com</a>. The open source software
+        started by Bitcoin.com was forked and modified to work with
+        the decentralized infrastructure listed
+        on the <a href="/cashstrap">CashStrap page</a>. Anyone is free
+        to download and run their own infrastructure to work with our
+        software.
+      </p>
+      <p>
+        FullStack.cash was born from this original article and video.
+      </p>
+      <div><center>
+      <ul className="actions uniform" style={{padding: '15px'}}>
+        <li>
+          <a href="https://troutsblog.com/research/bitcoin-cash/how-to-bch-full-stack-developer"
+          className="button special" target="_blank">
+            Read the Article
+          </a>
+        </li>
+      </ul>
+      </center></div>
+    </div>
+
+    <div className="col-6">
+      <div className="youtube-responsive-container">
+        <iframe
+          title="Bitcoin Cash Full Stack Introduction"
+          src="https://www.youtube.com/embed/ZwK0SHVxhE0"
+          frameBorder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+    </div>
+
+  </div>
+</section>
+  */
