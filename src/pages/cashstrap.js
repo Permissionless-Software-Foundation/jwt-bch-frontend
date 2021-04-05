@@ -111,60 +111,6 @@ class Homepage extends React.Component {
           >
             <div className="col-6" style={{ padding: '20px' }}>
               <span className="image fit">
-                <img src={trezor} alt="" />
-                <h3>Blockbook Indexer</h3>
-                <p>
-                  <b>
-                    Use the files with{' '}
-                    <a
-                      href="https://github.com/christroutner/docker-ubuntu-blockbook"
-                      target="_blank"
-                    >
-                      this Docker container
-                    </a>
-                  </b>
-                </p>
-              </span>
-            </div>
-            <div className="col-6" style={{ padding: '20px' }}>
-              <h3>Mainnet</h3>
-              <ul style={{ textAlign: 'left' }}>
-                <li>
-                  <b>Filename:</b> blockbook-bch-mainnet-v0.3.2-10-28-2020.zip
-                </li>
-                <li>
-                  <b>File size:</b> 108GB
-                </li>
-                <li>
-                  <a href="magnet:?xt=urn:btih:ca760753e556781bc531957af6693cf221ab45da&dn=blockbook-bch-mainnet-v0.3.2-10-28-2020.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
-                    Torrent magnet link
-                  </a>
-                </li>
-              </ul>
-
-              <h3>Testnet</h3>
-              <ul style={{ textAlign: 'left' }}>
-                <li>
-                  <b>Filename:</b> blockbook-bch-testnet-v0.3.2-10-28-2020.zip
-                </li>
-                <li>
-                  <b>File size:</b> 24GB
-                </li>
-                <li>
-                  <a href="magnet:?xt=urn:btih:64d895e5a02cacbd81c74f7750c71adc326c04e3&dn=blockbook-bch-testnet-v0.3.2-10-28-2020.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
-                    Torrent magnet link
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div
-            className="grid-wrapper"
-            style={{ border: 'solid 1px black', marginTop: '25px' }}
-          >
-            <div className="col-6" style={{ padding: '20px' }}>
-              <span className="image fit">
                 <center><img src={fulcrum} alt="fulcrum" style={{width: '50%'}} /></center>
                 <h3>Fulcrum ElectrumX Indexer</h3>
                 <p>
@@ -256,13 +202,13 @@ class Homepage extends React.Component {
               <ul style={{ textAlign: 'left' }}>
               <li>
                 <b>Filename:</b>{' '}
-                slpdb-testnet-08-06-2020-1399300-2f23af5122f11c24fb86026bea2b198a024c8f9b.zip
+                slpdb-testnet-bchn-01-20-21-f1f48a3b7a852e24fd26b3baf6df65b47de6d89e-1431114.zip
               </li>
               <li>
                 <b>File size:</b> 0.02GB
               </li>
               <li>
-                <a href="magnet:?xt=urn:btih:8856712e0809c6d4d5d89ad03ad10379a1d7ccd9&dn=slpdb-testnet-08-06-2020-1399300-2f23af5122f11c24fb86026bea2b198a024c8f9b.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
+                <a href="magnet:?xt=urn:btih:24c16cc4902721d77e8a709c559f0d27e7e79e5f&dn=slpdb-testnet-bchn-01-20-21-f1f48a3b7a852e24fd26b3baf6df65b47de6d89e-1431114.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
                   Torrent magnet link
                 </a>
               </li>
