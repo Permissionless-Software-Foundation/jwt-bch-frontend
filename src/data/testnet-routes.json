@@ -265,7 +265,7 @@
         "shortDescription": "Get single block header.",
         "detailedDescription": "If verbose is false (default), returns a string that is serialized, hex-encoded data for blockheader 'hash'. If verbose is true, returns an Object with information about blockheader hash.",
         "endpoint": "/blockchain/getBlockHeader/",
-        "parameters": "000000000000000005e14d3f9fdfb70745308706615cfa9edca4f4558332b201?verbose=true",
+        "parameters": "0000000000593546efcd4a1843be8bcb5edd04f049a48d48a2fe4232144e514d?verbose=true",
         "parametersName": "Hash & verbose",
         "parameterDescription": "block hash and verbose data"
       },
@@ -277,6 +277,18 @@
         "parameters": "fe28050b93faea61fa88c4c630f0e1f0a1c24d0082dd0e10d369e13212128f33",
         "parametersName": "TXID",
         "parameterDescription": "Transaction ID"
+      },
+      {
+        "type": "post",
+        "shortDescription": "Get Block",
+        "detailedDescription": "Returns data from the block hash.",
+        "endpoint": "/blockchain/getBlock/",
+        "parametersName": "Hash & verbose",
+        "parameterDescription": "block hash and verbose. default verbosity 1. verbosity 0 (hex-encoded) . verbosity 1 (object). verbosity 2 (object with transaction info)",
+        "body": {
+          "blockhash": "0000000000593546efcd4a1843be8bcb5edd04f049a48d48a2fe4232144e514d",
+          "verbosity": 1
+        }
       }
     ]
   },
