@@ -277,6 +277,18 @@
         "parameters": "fe28050b93faea61fa88c4c630f0e1f0a1c24d0082dd0e10d369e13212128f33",
         "parametersName": "TXID",
         "parameterDescription": "Transaction ID"
+      },
+      {
+        "type": "post",
+        "shortDescription": "Get Block",
+        "detailedDescription": "Returns data from the block hash.",
+        "endpoint": "/blockchain/getBlock/",
+        "parametersName": "Hash & verbose",
+        "parameterDescription": "block hash and verbose. default verbosity 1. verbosity 0 (hex-encoded) . verbosity 1 (object). verbosity 2 (object with transaction info)",
+        "body": {
+          "blockhash": "0000000000000000008e8d83cba6d45a9314bc2ef4538d4e0577c6bed8593536",
+          "verbosity": 1
+        }
       }
     ]
   },
