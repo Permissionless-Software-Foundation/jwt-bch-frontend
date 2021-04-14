@@ -121,6 +121,61 @@ class Homepage extends React.Component {
 
         <section id="four" className="main style2 special">
           <div className="grid-wrapper">
+            <div className="col-12">
+              <h2>What type of developer are you?</h2>
+            </div>
+
+            <div className="col-4">
+              <span className="icon major fas fa-map"></span>
+              <h3>Front End</h3>
+              <p>
+                You focus on user interfaces (UI) and UX inside a phone app
+                or a web browser.
+              </p>
+              <ul className="actions">
+                <li>
+                  <a href="/front-end" className="button">
+                    More
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="col-4">
+              <span className="icon major fas fa-server"></span>
+              <h3>Back End</h3>
+              <p>
+                You focus on databases, server-side software like a REST API,
+                or the dev-ops of running full nodes and indexers.
+              </p>
+              <ul className="actions">
+                <li>
+                  <a href="/back-end" className="button">
+                    More
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="col-4">
+              <span className="icon major fas fa-layer-group"></span>
+              <h3>Full Stack</h3>
+              <p>
+                You play with middleware for connecting front and back
+                ends, including software libraries for rapid prototyping.
+              </p>
+              <ul className="actions">
+                <li>
+                  <a href="/full-stack" className="button">
+                    More
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </section>
+
+        <section id="five" className="main style1 special">
+          <div className="grid-wrapper">
             <div className="col-6">
               <header className="major">
                 <h2>Coming From Bitcoin.com?</h2>
