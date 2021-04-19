@@ -84,13 +84,13 @@ class Homepage extends React.Component {
               <h3>BCH</h3>
               <ul style={{ textAlign: 'left' }}>
                 <li>
-                  <b>Filename:</b> bchn-mainnet-655089-09-30-2020.zip
+                  <b>Filename:</b> bchn-mainnet-04-15-21-683465-v23.0.0.zip
                 </li>
                 <li>
-                  <b>File size:</b> 137GB
+                  <b>File size:</b> 148GB
                 </li>
                 <li>
-                  <a href="magnet:?xt=urn:btih:4b1a95bf1c765e4c5050883cae051e35076c8205&dn=bchn-mainnet-655089-09-30-2020.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
+                  <a href="magnet:?xt=urn:btih:0a90ee904f27d5464ca2e897df0323d6bbc3f02c&dn=bchn-mainnet-04-15-21-683465-v23.0.0.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
                     Torrent magnet link
                   </a>
                 </li>
@@ -126,13 +126,13 @@ class Homepage extends React.Component {
               <h3>BCH</h3>
               <ul style={{ textAlign: 'left' }}>
                 <li>
-                  <b>Filename:</b> fulcrum-mainnet-10-28-2020.zip
+                  <b>Filename:</b> fulcrum-v1.2.3-bch-683578-04-15-21.zip
                 </li>
                 <li>
-                  <b>File size:</b> 27GB
+                  <b>File size:</b> 30GB
                 </li>
                 <li>
-                  <a href="magnet:?xt=urn:btih:7d563f88de6c29948362ac4c226756b5cc631067&dn=fulcrum-mainnet-10-28-2020.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
+                  <a href="magnet:?xt=urn:btih:935b8ac7c9e6d016140e95b23956012a465e01f1&dn=fulcrum-v1.2.3-bch-683578-04-15-21.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
                     Torrent magnet link
                   </a>
                 </li>
@@ -169,13 +169,13 @@ class Homepage extends React.Component {
                 <li>
                   <b>Filename:</b>
                   <br />
-                  slpdb-mainnet-08-06-2020-647202-2f23af5122f11c24fb86026bea2b198a024c8f9b.zip
+                  slpdb-bchn-main-2021-03-24-680164-f1f48a3b7a852e24fd26b3baf6df65b47de6d89e.zip
                 </li>
                 <li>
-                  <b>File size:</b> 1.9GB
+                  <b>File size:</b> 4GB
                 </li>
                 <li>
-                  <a href="magnet:?xt=urn:btih:7fde5fd132282d94910a1ec5bbae9d6327fa9746&dn=slpdb-mainnet-08-06-2020-647202-2f23af5122f11c24fb86026bea2b198a024c8f9b.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
+                  <a href="magnet:?xt=urn:btih:8e9ff6ac2868d98b37cfb02cef3eafe113e29dc8&dn=slpdb-bchn-main-2021-03-24-680164-f1f48a3b7a852e24fd26b3baf6df65b47de6d89e.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
                     Torrent magnet link
                   </a>
                 </li>
@@ -226,13 +226,13 @@ class Homepage extends React.Component {
               <h3>eCash</h3>
               <ul style={{ textAlign: 'left' }}>
                 <li>
-                  <b>Filename:</b> abc-mainnet-658958-v0.22.4-10-27-2020.zip
+                  <b>Filename:</b> abc-mainnet-04-18-21-682645-0.23.1.zip
                 </li>
                 <li>
-                  <b>File size:</b> 137GB
+                  <b>File size:</b> 139GB
                 </li>
                 <li>
-                  <a href="magnet:?xt=urn:btih:de4df604efefe16e7bc4efd8f33f73de7ac539a5&dn=abc-mainnet-658958-v0.22.4-10-27-2020.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
+                  <a href="magnet:?xt=urn:btih:b9d7e9b7cbaacdff3d5225772df06cc652a0f1af&dn=abc-mainnet-04-18-21-682645-0.23.1.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
                     Torrent magnet link
                   </a>
                 </li>
@@ -268,13 +268,13 @@ class Homepage extends React.Component {
               <h3>eCash</h3>
               <ul style={{ textAlign: 'left' }}>
                 <li>
-                  <b>Filename:</b> fulcrum-mainnet-10-28-2020.zip
+                  <b>Filename:</b> fulcrum-abc-mainnet-04-18-21-682669-v1.2.3.zip
                 </li>
                 <li>
                   <b>File size:</b> 27GB
                 </li>
                 <li>
-                  <a href="magnet:?xt=urn:btih:7d563f88de6c29948362ac4c226756b5cc631067&dn=fulcrum-mainnet-10-28-2020.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
+                  <a href="magnet:?xt=urn:btih:272c50040eee9e5d8feec26c3ab40ad6600f3b8f&dn=fulcrum-abc-mainnet-04-18-21-682669-v1.2.3.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
                     Torrent magnet link
                   </a>
                 </li>
@@ -311,13 +311,13 @@ class Homepage extends React.Component {
                 <li>
                   <b>Filename:</b>
                   <br />
-                  slpdb-mainnet-08-06-2020-647202-2f23af5122f11c24fb86026bea2b198a024c8f9b.zip
+                  slpdb-abc-v1-f1f48a3b7a852e24fd26b3baf6df65b47de6d89e-01-19-21-669672.zip
                 </li>
                 <li>
-                  <b>File size:</b> 1.9GB
+                  <b>File size:</b> 2.8GB
                 </li>
                 <li>
-                  <a href="magnet:?xt=urn:btih:7fde5fd132282d94910a1ec5bbae9d6327fa9746&dn=slpdb-mainnet-08-06-2020-647202-2f23af5122f11c24fb86026bea2b198a024c8f9b.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
+                  <a href="magnet:?xt=urn:btih:a92e16de81da8e0172e922df8fc8f832d66332b1&dn=slpdb-abc-v1-f1f48a3b7a852e24fd26b3baf6df65b47de6d89e-01-19-21-669672.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
                     Torrent magnet link
                   </a>
                 </li>
@@ -364,13 +364,13 @@ class Homepage extends React.Component {
               <h3>Testnet3</h3>
               <ul style={{ textAlign: 'left' }}>
                 <li>
-                  <b>Filename:</b> abc-testnet-1417941-v0.22.5-10-27-2020.zip
+                  <b>Filename:</b> bchn-testnet3-04-12-2021-1442953.zip
                 </li>
                 <li>
                   <b>File size:</b> 23GB
                 </li>
                 <li>
-                  <a href="magnet:?xt=urn:btih:b8bf1d4c663d97c0ecc1c6ef2a5089b3ec5585e2&dn=abc-testnet-1417941-v0.22.5-10-27-2020.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
+                  <a href="magnet:?xt=urn:btih:6ce49c33334e1f5990a804f10892f5b707c5ae93&dn=bchn-testnet3-04-12-2021-1442953.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
                     Torrent magnet link
                   </a>
                 </li>
@@ -406,13 +406,13 @@ class Homepage extends React.Component {
               <h3>Testnet3</h3>
               <ul style={{ textAlign: 'left' }}>
                 <li>
-                  <b>Filename:</b> fulcrum-testnet-10-29-2020.zip
+                  <b>Filename:</b> fulcrum-bchn-testnet3-04-12-21-1442953.zip
                 </li>
                 <li>
                   <b>File size:</b> 4.6GB
                 </li>
                 <li>
-                  <a href="magnet:?xt=urn:btih:2014c560e4550d9306f9f8dc54e3c3c2fba350b1&dn=fulcrum-testnet-10-29-2020.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
+                  <a href="magnet:?xt=urn:btih:bad9a76bec309428efd3580b54ca4e7bed791cff&dn=fulcrum-bchn-testnet3-04-12-21-1442953.zip&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com">
                     Torrent magnet link
                   </a>
                 </li>
