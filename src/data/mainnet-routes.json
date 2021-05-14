@@ -592,6 +592,24 @@
         "shortDescription": "Get the health status of SLPDB",
         "detailedDescription": "Get the health status of SLPDB",
         "endpoint": "/slp/status"
+      },
+      {
+        "type": "get",
+        "shortDescription": "Get all NFT children for a given NFT group",
+        "detailedDescription": "Get all NFT children for a given NFT group",
+        "endpoint": "/slp/nftChildren/",
+        "parameters": "8a197b149db1375556b02001fd3b6a21b314d893086cec6cecf83a39f64b0a98",
+        "parametersName": "tokenID",
+        "parameterDescription": "Token ID"
+      },
+      {
+        "type": "get",
+        "shortDescription": "Get the NFT group for a given NFT child token",
+        "detailedDescription": "Get the NFT group for a given NFT child token",
+        "endpoint": "/slp/nftGroup/",
+        "parameters": "0c6ab064f2b898a5fab3310d4a3185c12bab25402a5165a5348d472e2429e2eb",
+        "parametersName": "tokenID",
+        "parameterDescription": "Token ID"
       }
     ]
   }
