@@ -120,106 +120,114 @@ class LoginForm extends React.Component {
   }
 
   async createClick(event) {
-    event.preventDefault()
-    // const isEmail = _this.validateEmail(_this.state.email)
-
-    if (!_this.state.email) {
-      _this.setState(prevState => ({
-        message: 'Error:  Must be Email Format',
-      }))
-
-      _this.Notification.notify('Email', 'Must be Email Format', 'danger')
-
-      return
-    }
-    _this.setState({
-      inFetch: true,
-    })
     try {
-      const options = {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          user: {
-            email: _this.state.email,
-            password: _this.state.password,
-          },
-        }),
+      event.preventDefault()
+      // const isEmail = _this.validateEmail(_this.state.email)
+
+      if (!_this.state.email) {
+        _this.setState(prevState => ({
+          message: 'Error:  Must be Email Format',
+        }))
+
+        _this.Notification.notify('Email', 'Must be Email Format', 'danger')
+
+        return
       }
-
-      // console.log(`options.body: ${JSON.stringify(options.body,null,2)}`)
-
-      const data = await fetch(`${SERVER}/users/`, options)
-      const users = await data.json()
-      console.log(`users: ${JSON.stringify(users, null, 2)}`)
-
-      //console.log(`name: ${users.user.username}`)
-      //console.log(`token: ${users.token}`)
-
-      setUser({
-        email: users.user.email,
-        username: users.user.username,
-        jwt: users.token,
-        userdata: users,
-      })
-
-      _this.Notification.notify('LogIn', 'Success!!', 'success')
       _this.setState({
-        inFetch: false,
+        inFetch: true,
       })
-      setTimeout(() => {
-        navigate(`/profile`)
-      }, 1500)
-    } catch (err) {
-      // If something goes wrong with auth, return false.
-      //return false;
-      _this.setState(prevState => ({
-        message: err.message,
-      }))
+      try {
+        const options = {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            user: {
+              email: _this.state.email,
+              password: _this.state.password,
+            },
+          }),
+        }
 
+        // console.log(`options.body: ${JSON.stringify(options.body,null,2)}`)
+
+        const data = await fetch(`${SERVER}/users/`, options)
+        const users = await data.json()
+        console.log(`users: ${JSON.stringify(users, null, 2)}`)
+
+        //console.log(`name: ${users.user.username}`)
+        //console.log(`token: ${users.token}`)
+
+        setUser({
+          email: users.user.email,
+          username: users.user.username,
+          jwt: users.token,
+          userdata: users,
+        })
+
+        _this.Notification.notify('LogIn', 'Success!!', 'success')
+        _this.setState({
+          inFetch: false,
+        })
+        setTimeout(() => {
+          navigate(`/profile`)
+        }, 1500)
+      } catch (err) {
+        // If something goes wrong with auth, return false.
+        //return false;
+        _this.setState(prevState => ({
+          message: err.message,
+        }))
+
+        _this.Notification.notify('Error', err.message, 'danger')
+      }
+    } catch (err) {
       _this.Notification.notify('Error', err.message, 'danger')
     }
   }
 
   async loginClick(event) {
-    event.preventDefault()
-    // const isEmail = _this.validateEmail(_this.state.email)
-    const isEmail = true
-    if (!isEmail) {
-      _this.setState(prevState => ({
-        message: 'Error:  Must be Email Format',
-      }))
+    try {
+      event.preventDefault()
+      // const isEmail = _this.validateEmail(_this.state.email)
+      const isEmail = true
+      if (!isEmail) {
+        _this.setState(prevState => ({
+          message: 'Error:  Must be Email Format',
+        }))
 
-      _this.Notification.notify('Email', 'Must be Email Format', 'danger')
+        _this.Notification.notify('Email', 'Must be Email Format', 'danger')
 
-      return
-    }
+        return
+      }
 
-    //_this.setState(prevState => ({
-    //  message: "You clicked the Login button."
-    //}))
+      //_this.setState(prevState => ({
+      //  message: "You clicked the Login button."
+      //}))
 
-    //console.log(`state: ${JSON.stringify(_this.state,null,2)}`)
+      //console.log(`state: ${JSON.stringify(_this.state,null,2)}`)
 
-    const handleSuccess = await handleLogin(_this.state)
+      const handleSuccess = await handleLogin(_this.state)
 
-    if (!handleSuccess) {
-      _this.setState(prevState => ({
-        message: 'Username or password does not match.',
-      }))
+      if (!handleSuccess) {
+        _this.setState(prevState => ({
+          message: 'Username or password does not match.',
+        }))
 
-      _this.Notification.notify(
-        'Error',
-        'Email or password does not match.',
-        'danger'
-      )
-    } else {
-      _this.Notification.notify('LogIn', 'Success!!', 'success')
-      setTimeout(() => {
-        navigate(`/profile`)
-      }, 1500)
+        _this.Notification.notify(
+          'Error',
+          'Email or password does not match.',
+          'danger'
+        )
+      } else {
+        _this.Notification.notify('LogIn', 'Success!!', 'success')
+        setTimeout(() => {
+          navigate(`/profile`)
+        }, 1500)
+      }
+    } catch (err) {
+      _this.Notification.notify('Error', err.message, 'danger')
     }
   }
 }
