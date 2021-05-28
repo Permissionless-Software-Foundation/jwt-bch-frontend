@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
+import Footer from '../components/Footer'
 
 import pic01 from '../assets/images/pic01.jpg'
 import pic02 from '../assets/images/pic02.jpg'
@@ -20,142 +21,171 @@ class Homepage extends React.Component {
           <div className="grid-wrapper">
             <div className="col-6">
               <header className="major">
-                <h2>
-                  Front End: Coming Soon
-                  <br />
-                  amet dolor consequat
-                </h2>
+                <h2>Front End: Web & Phone Apps</h2>
               </header>
               <p>
-                Adipiscing a commodo ante nunc accumsan et interdum mi ante
-                adipiscing. A nunc lobortis non nisl amet vis sed volutpat
-                aclacus nascetur ac non. Lorem curae et ante amet sapien sed
-                tempus adipiscing id accumsan.
+                Learn how to fork{' '}
+                <a href="wallet.fullstack.cash" target="_blank">
+                  wallet.fullstack.cash
+                </a>{' '}
+                to build your own custom web or phone app that can interact with
+                the BCH or eCash blockchains.
+              </p>
+              <p>
+                The web wallet is based on the{' '}
+                <a href="https://www.gatsbyjs.com/" target="_blank">
+                  Gatsby
+                </a>{' '}
+                framework using React components. We provide Starts, Themes, and
+                Plugins, and the app can be compiled into native iOS and Android
+                apps using{' '}
+                <a href="https://capacitorjs.com/" target="_blank">
+                  Capacitor
+                </a>
+                .
               </p>
             </div>
             <div className="col-6">
-              <span className="image fit">
-                <img src={pic01} alt="" />
-              </span>
+              <div className="youtube-responsive-container">
+                <iframe
+                  title="Create Your Own BCH or eCash Web Wallet"
+                  src="https://www.youtube.com/embed/G7ptg7VIRnk"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
             </div>
           </div>
         </section>
 
-        <section id="two" className="main style2">
-          <div className="grid-wrapper">
-            <div className="col-6">
-              <ul className="major-icons">
-                <li>
-                  <span className="icon style1 major fas fa-code"></span>
-                </li>
-                <li>
-                  <span className="icon style2 major fas fa-bolt"></span>
-                </li>
-                <li>
-                  <span className="icon style3 major fas fa-camera-retro"></span>
-                </li>
-                <li>
-                  <span className="icon style4 major fas fa-cog"></span>
-                </li>
-                <li>
-                  <span className="icon style5 major fas fa-desktop"></span>
-                </li>
-                <li>
-                  <span className="icon style6 major fas fa-calendar"></span>
-                </li>
-              </ul>
-            </div>
-            <div className="col-6">
-              <header className="major">
-                <h2>
-                  Lorem ipsum dolor adipiscing
-                  <br />
-                  amet dolor consequat
-                </h2>
-              </header>
-              <p>
-                Adipiscing a commodo ante nunc accumsan interdum mi ante
-                adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus
-                nascetur ac non. Lorem curae eu ante amet sapien in tempus ac.
-                Adipiscing id accumsan adipiscing ipsum.
-              </p>
-              <p>
-                Blandit faucibus proin. Ac aliquam integer adipiscing enim non
-                praesent vis commodo nunc phasellus cubilia ac risus accumsan.
-                Accumsan blandit. Lobortis phasellus non lobortis dit varius mi
-                varius accumsan lobortis. Blandit ante aliquam lacinia lorem
-                lobortis semper morbi col faucibus vitae integer placerat
-                accumsan orci eu mi odio tempus adipiscing adipiscing adipiscing
-                curae consequat feugiat etiam dolore.
-              </p>
-              <p>
-                Adipiscing a commodo ante nunc accumsan interdum mi ante
-                adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus
-                nascetur ac non. Lorem curae eu ante amet sapien in tempus ac.
-                Adipiscing id accumsan adipiscing ipsum.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section id="three" className="main style1 special">
+        <section id="three" className="main style2 special">
           <div className="grid-wrapper">
             <div className="col-12">
               <header className="major">
-                <h2>Adipiscing amet consequat</h2>
+                <h2>Gatsby Starters, Themes, and Plugins</h2>
               </header>
               <p>
-                Ante nunc accumsan et aclacus nascetur ac ante amet sapien sed.
+                Armed with a firm understanding of Gatsby{' '}
+                <a
+                  href="https://www.gatsbyjs.com/docs/starters/"
+                  target="_blank"
+                >
+                  Starters
+                </a>
+                ,{' '}
+                <a href="https://www.gatsbyjs.com/docs/themes/" target="_blank">
+                  Themes
+                </a>
+                , and{' '}
+                <a
+                  href="https://www.gatsbyjs.com/docs/plugins/"
+                  target="_blank"
+                >
+                  Plugins
+                </a>
+                , you'll be ready to leverage the code repositories below. For
+                building Plugins, you'll also need to have a firm grasp of{' '}
+                <a
+                  href="https://www.gatsbyjs.com/blog/2019-04-29-component-shadowing/"
+                  target="_blank"
+                >
+                  Component Shadowing
+                </a>{' '}
+                and{' '}
+                <a
+                  href="https://www.gatsbyjs.com/blog/2019-07-02-extending-components/"
+                  target="_blank"
+                >
+                  Extending shadowed components
+                </a>
+                .
               </p>
             </div>
 
             <div className="col-4">
-              <span className="image fit">
-                <img src={pic02} alt="" />
-              </span>
-              <h3>Magna feugiat lorem</h3>
+              <h3>
+                <b>bch-wallet-starter</b>
+              </h3>
               <p>
-                Adipiscing a commodo ante nunc magna lorem et interdum mi ante
-                nunc lobortis non amet vis sed volutpat et nascetur.
+                A Gatsby Starter for quickly customizing your own web wallet
+                app.
               </p>
               <ul className="actions">
                 <li>
-                  <a href="#" className="button">
-                    More
+                  <a
+                    href="https://demo-wallet.fullstack.cash/"
+                    className="button"
+                    target="_blank"
+                  >
+                    Live Demo
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/Permissionless-Software-Foundation/bch-wallet-starter"
+                    className="button"
+                    target="_blank"
+                  >
+                    Code
                   </a>
                 </li>
               </ul>
             </div>
             <div className="col-4">
-              <span className="image fit">
-                <img src={pic03} alt="" />
-              </span>
-              <h3>Magna feugiat lorem</h3>
+              <h3>
+                <b>gatsby-ipfs-web-wallet</b>
+              </h3>
               <p>
-                Adipiscing a commodo ante nunc magna lorem et interdum mi ante
-                nunc lobortis non amet vis sed volutpat et nascetur.
+                The heart of the web wallet. All other parts are built around
+                this Gatsby Theme.
               </p>
               <ul className="actions">
                 <li>
-                  <a href="#" className="button">
-                    More
+                  <a
+                    href="https://demo-wallet.fullstack.cash/"
+                    className="button"
+                    target="_blank"
+                  >
+                    Live Demo
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/Permissionless-Software-Foundation/gatsby-ipfs-web-wallet"
+                    className="button"
+                    target="_blank"
+                  >
+                    Code
                   </a>
                 </li>
               </ul>
             </div>
             <div className="col-4">
-              <span className="image fit">
-                <img src={pic04} alt="" />
-              </span>
-              <h3>Magna feugiat lorem</h3>
+              <h3>
+                <b>Wallet Plugins</b>
+              </h3>
               <p>
-                Adipiscing a commodo ante nunc magna lorem et interdum mi ante
-                nunc lobortis non amet vis sed volutpat et nascetur.
+                "Anything that can be a plugin, should be a plugin." Boilerplate
+                code and video.
               </p>
               <ul className="actions">
                 <li>
-                  <a href="#" className="button">
-                    More
+                  <a
+                    href="https://youtu.be/NGnuwLJWqZ4"
+                    className="button"
+                    target="_blank"
+                  >
+                    Video
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/Permissionless-Software-Foundation/bch-wallet-plugin-boilerplate"
+                    className="button"
+                    target="_blank"
+                  >
+                    Code
                   </a>
                 </li>
               </ul>
@@ -163,26 +193,27 @@ class Homepage extends React.Component {
           </div>
         </section>
 
-        <section id="four" className="main style2 special">
+        <section id="four" className="main style3 special">
           <div className="container">
             <header className="major">
-              <h2>Ipsum feugiat consequat?</h2>
+              <h2>Ready to get started?</h2>
             </header>
-            <p>Sed lacus nascetur ac ante amet sapien.</p>
             <ul className="actions uniform">
               <li>
-                <a href="#" className="button special">
+                <a href="/profile" className="button special">
                   Sign Up
                 </a>
               </li>
               <li>
-                <a href="#" className="button">
-                  Learn More
+                <a href="/examples" className="button">
+                  Example Code
                 </a>
               </li>
             </ul>
           </div>
         </section>
+
+        <Footer />
       </Layout>
     )
   }
