@@ -36,9 +36,9 @@ class Homepage extends React.Component {
                 <a href="https://www.gatsbyjs.com/" target="_blank">
                   Gatsby
                 </a>{' '}
-                framework using React components. We provide Starts, Themes, and
-                Plugins, and the app can be compiled into native iOS and Android
-                apps using{' '}
+                framework using React components. We provide Starters, Themes,
+                and Plugins, and the app can be compiled into native iOS and
+                Android apps using{' '}
                 <a href="https://capacitorjs.com/" target="_blank">
                   Capacitor
                 </a>
