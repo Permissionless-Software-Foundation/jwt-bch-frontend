@@ -86,7 +86,7 @@ class Homepage extends React.Component {
               </ul>
             </div>
             <div className="col-4">
-              <span className="icon major fas fa-book"></span>
+              <span className="icon major fas fa-book-open"></span>
               <h3>Documentation</h3>
               <p>
                 Read the API documentation for bch-api, bch-js, and others parts
@@ -129,8 +129,8 @@ class Homepage extends React.Component {
               <span className="icon major fas fa-map"></span>
               <h3>Front End</h3>
               <p>
-                You focus on user interfaces (UI) and UX inside a phone app
-                or a web browser.
+                You focus on user interfaces (UI) and UX inside a phone app or a
+                web browser.
               </p>
               <ul className="actions">
                 <li>
@@ -143,10 +143,7 @@ class Homepage extends React.Component {
             <div className="col-4">
               <span className="icon major fas fa-server"></span>
               <h3>Back End</h3>
-              <p>
-                You focus on databases, server-side software like a REST API,
-                or the dev-ops of running full nodes and indexers.
-              </p>
+              <p>You focus on databases, full nodes, REST APIs, and dev-ops.</p>
               <ul className="actions">
                 <li>
                   <a href="/back-end" className="button">
@@ -156,11 +153,11 @@ class Homepage extends React.Component {
               </ul>
             </div>
             <div className="col-4">
-              <span className="icon major fas fa-layer-group"></span>
-              <h3>Full Stack</h3>
+              <span className="icon major fas fa-book"></span>
+              <h3>Library</h3>
               <p>
-                You play with middleware for connecting front and back
-                ends, including software libraries for rapid prototyping.
+                You build middleware libraries for connecting front and back
+                ends.
               </p>
               <ul className="actions">
                 <li>
@@ -170,7 +167,6 @@ class Homepage extends React.Component {
                 </li>
               </ul>
             </div>
-
           </div>
         </section>
 
