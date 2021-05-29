@@ -2,15 +2,17 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
+import Footer from '../components/Footer'
 
 import pic01 from '../assets/images/pic01.jpg'
 import pic02 from '../assets/images/pic02.jpg'
 import pic03 from '../assets/images/pic03.jpg'
 import pic04 from '../assets/images/pic04.jpg'
+import backend from '../assets/images/back-end.jpg'
 
 class Homepage extends React.Component {
   render() {
-    const siteTitle = 'Gatsby Starter - Photon'
+    const siteTitle = 'Back End Dev | FullStack.cash'
 
     return (
       <Layout>
@@ -21,141 +23,160 @@ class Homepage extends React.Component {
             <div className="col-6">
               <header className="major">
                 <h2>
-                  Back End: Coming Soon
-                  <br />
-                  amet dolor consequat
+                  Back End: Docker Containers
+                  <br /> and DevOps
                 </h2>
               </header>
               <p>
-                Adipiscing a commodo ante nunc accumsan et interdum mi ante
-                adipiscing. A nunc lobortis non nisl amet vis sed volutpat
-                aclacus nascetur ac non. Lorem curae et ante amet sapien sed
-                tempus adipiscing id accumsan.
+                The 'Back End' of the Cash Stack is concerned with the REST API
+                layer and all the layers below it. This software has been
+                conveniently packaged in Docker containers that can mount
+                pre-synced databases. The pre-synced databases can be downloaded
+                over IPFS from from the <a href="/cashstrap">Cash Strap page</a>
+                .
               </p>
+              <center>
+                <a href="/cashstrap" className="button">
+                  CashStrap
+                </a>
+              </center>
             </div>
             <div className="col-6">
               <span className="image fit">
-                <img src={pic01} alt="" />
+                <img src={backend} alt="" />
               </span>
             </div>
           </div>
         </section>
 
-        <section id="two" className="main style2">
-          <div className="grid-wrapper">
-            <div className="col-6">
-              <ul className="major-icons">
-                <li>
-                  <span className="icon style1 major fas fa-code"></span>
-                </li>
-                <li>
-                  <span className="icon style2 major fas fa-bolt"></span>
-                </li>
-                <li>
-                  <span className="icon style3 major fas fa-camera-retro"></span>
-                </li>
-                <li>
-                  <span className="icon style4 major fas fa-cog"></span>
-                </li>
-                <li>
-                  <span className="icon style5 major fas fa-desktop"></span>
-                </li>
-                <li>
-                  <span className="icon style6 major fas fa-calendar"></span>
-                </li>
-              </ul>
-            </div>
-            <div className="col-6">
-              <header className="major">
-                <h2>
-                  Lorem ipsum dolor adipiscing
-                  <br />
-                  amet dolor consequat
-                </h2>
-              </header>
-              <p>
-                Adipiscing a commodo ante nunc accumsan interdum mi ante
-                adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus
-                nascetur ac non. Lorem curae eu ante amet sapien in tempus ac.
-                Adipiscing id accumsan adipiscing ipsum.
-              </p>
-              <p>
-                Blandit faucibus proin. Ac aliquam integer adipiscing enim non
-                praesent vis commodo nunc phasellus cubilia ac risus accumsan.
-                Accumsan blandit. Lobortis phasellus non lobortis dit varius mi
-                varius accumsan lobortis. Blandit ante aliquam lacinia lorem
-                lobortis semper morbi col faucibus vitae integer placerat
-                accumsan orci eu mi odio tempus adipiscing adipiscing adipiscing
-                curae consequat feugiat etiam dolore.
-              </p>
-              <p>
-                Adipiscing a commodo ante nunc accumsan interdum mi ante
-                adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus
-                nascetur ac non. Lorem curae eu ante amet sapien in tempus ac.
-                Adipiscing id accumsan adipiscing ipsum.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section id="three" className="main style1 special">
+        <section id="three" className="main style2 special">
           <div className="grid-wrapper">
             <div className="col-12">
               <header className="major">
-                <h2>Adipiscing amet consequat</h2>
+                <h2>Back End Software</h2>
               </header>
               <p>
-                Ante nunc accumsan et aclacus nascetur ac ante amet sapien sed.
+                The software repositories below are used to create Docker
+                containers for running the back end infrastructure of the Cash
+                Stack. They can be used to mount the pre-synced databases,
+                downloadable from IPFS via the{' '}
+                <a href="/cashstrap">Cash Strap page</a>.
+              </p>
+              <p>
+                The software below is complex. We try to simplify it by using
+                Docker containers, but the learning curve can be rough.{' '}
+                <a href="/pricing">
+                  FullStack.cash offers access to hosted infrastructure
+                </a>
+                , but the software below is available for anyone who wants to
+                run their own infrastructure.
               </p>
             </div>
 
-            <div className="col-4">
-              <span className="image fit">
-                <img src={pic02} alt="" />
-              </span>
-              <h3>Magna feugiat lorem</h3>
+            <div className="col-6">
+              <h3>
+                <b>bch-api REST API</b>
+              </h3>
               <p>
-                Adipiscing a commodo ante nunc magna lorem et interdum mi ante
-                nunc lobortis non amet vis sed volutpat et nascetur.
+                A REST API based on node.js and the Express.js framework. It
+                abstracts the full node and indexer layers into a single common
+                REST interface.
               </p>
               <ul className="actions">
                 <li>
-                  <a href="#" className="button">
-                    More
+                  <a
+                    href="https://github.com/Permissionless-Software-Foundation/bch-api"
+                    className="button"
+                    target="_blank"
+                  >
+                    Code
                   </a>
                 </li>
               </ul>
             </div>
-            <div className="col-4">
-              <span className="image fit">
-                <img src={pic03} alt="" />
-              </span>
-              <h3>Magna feugiat lorem</h3>
+            <div className="col-6">
+              <h3>
+                <b>Full Nodes</b>
+              </h3>
               <p>
-                Adipiscing a commodo ante nunc magna lorem et interdum mi ante
-                nunc lobortis non amet vis sed volutpat et nascetur.
+                Full nodes are the most basic piece of infrastructure for
+                interacting with a blockchain. We maintain Docker containers for{' '}
+                <a
+                  href="https://github.com/Permissionless-Software-Foundation/docker-bchn"
+                  target="_blank"
+                >
+                  BCHN
+                </a>
+                ,{' '}
+                <a
+                  href="https://github.com/Permissionless-Software-Foundation/docker-bchd"
+                  target="_blank"
+                >
+                  BCHD
+                </a>
+                ,{' '}
+                <a
+                  href="https://github.com/Permissionless-Software-Foundation/docker-abc"
+                  target="_blank"
+                >
+                  ABC
+                </a>{' '}
+                full nodes.
               </p>
               <ul className="actions">
                 <li>
-                  <a href="#" className="button">
-                    More
+                  <a
+                    href="https://github.com/Permissionless-Software-Foundation/docker-bchn"
+                    className="button"
+                    target="_blank"
+                  >
+                    BCHN Full Node
                   </a>
                 </li>
               </ul>
             </div>
-            <div className="col-4">
-              <span className="image fit">
-                <img src={pic04} alt="" />
-              </span>
-              <h3>Magna feugiat lorem</h3>
+
+            <div className="col-6">
+              <h3>
+                <b>Fulcrum</b>
+              </h3>
               <p>
-                Adipiscing a commodo ante nunc magna lorem et interdum mi ante
-                nunc lobortis non amet vis sed volutpat et nascetur.
+                Fulcrum is the most performant indexer available for BTC, BCH,
+                and eCash (BCHA) blockchains. It implements the Electrumx
+                protocol used by the Electrum series of wallet software. This
+                indexer provides UTXO, address balance, and transaction history
+                needed by any wallet app.
               </p>
               <ul className="actions">
                 <li>
-                  <a href="#" className="button">
-                    More
+                  <a
+                    href="https://github.com/Permissionless-Software-Foundation/docker-fulcrum"
+                    className="button"
+                    target="_blank"
+                  >
+                    Docker Container
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="col-6">
+              <h3>
+                <b>SLPDB</b>
+              </h3>
+              <p>
+                SLPDB populates a Mongo database with blockchain data about SLP
+                tokens. Expressive queries can be executed against this database
+                to get all kinds of statistics about SLP and NFT tokens.
+              </p>
+              <ul className="actions">
+                <li>
+                  <a
+                    href="https://github.com/Permissionless-Software-Foundation/docker-slpdb"
+                    className="button"
+                    target="_blank"
+                  >
+                    Docker Container
                   </a>
                 </li>
               </ul>
@@ -163,26 +184,27 @@ class Homepage extends React.Component {
           </div>
         </section>
 
-        <section id="four" className="main style2 special">
+        <section id="four" className="main style3 special">
           <div className="container">
             <header className="major">
-              <h2>Ipsum feugiat consequat?</h2>
+              <h2>Ready to get started?</h2>
             </header>
-            <p>Sed lacus nascetur ac ante amet sapien.</p>
             <ul className="actions uniform">
               <li>
-                <a href="#" className="button special">
+                <a href="/profile" className="button special">
                   Sign Up
                 </a>
               </li>
               <li>
-                <a href="#" className="button">
-                  Learn More
+                <a href="/examples" className="button">
+                  Example Code
                 </a>
               </li>
             </ul>
           </div>
         </section>
+
+        <Footer />
       </Layout>
     )
   }
