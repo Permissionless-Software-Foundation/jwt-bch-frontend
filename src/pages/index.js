@@ -161,7 +161,7 @@ class Homepage extends React.Component {
               </p>
               <ul className="actions">
                 <li>
-                  <a href="/full-stack" className="button">
+                  <a href="/libraries" className="button">
                     More
                   </a>
                 </li>
