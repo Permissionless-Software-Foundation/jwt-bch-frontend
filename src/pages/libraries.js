@@ -72,11 +72,41 @@ class Homepage extends React.Component {
               <ul className="actions">
                 <li>
                   <a
-                    href="https://github.com/Permissionless-Software-Foundation/bch-js"
+                    href="https://www.npmjs.com/package/@psf/bch-js"
                     className="button"
                     target="_blank"
                   >
-                    Code
+                    Library
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="col-6">
+              <h3>
+                <b>jwt-bch-lib</b>
+              </h3>
+              <p>
+                A library for handling FullStack.cash JWT tokens. This library
+                enables your app to automatically renew JWT tokens as-needed.
+                This allows your app to 'just work', so long as your account has
+                credit to pay for new JWT tokens.
+              </p>
+              <p>
+                Watch{' '}
+                <a href="https://youtu.be/27h-KiS-dPg" target="_blank">
+                  this video
+                </a>{' '}
+                for more information.
+              </p>
+              <ul className="actions">
+                <li>
+                  <a
+                    href="https://www.npmjs.com/package/jwt-bch-lib"
+                    className="button"
+                    target="_blank"
+                  >
+                    Library
                   </a>
                 </li>
               </ul>
@@ -89,7 +119,8 @@ class Homepage extends React.Component {
               <p>
                 This command-line wallet is a handy tool for rapidly prototyping
                 ideas. Because there is no graphical user interface, the burden
-                for trying new ideas is greatly reduced.
+                for trying new ideas is greatly reduced. It works on both the
+                BCH and eCash blockchains.
               </p>
               <p>
                 This is a HD wallet with full support for SLP and NFT tokens.
@@ -104,6 +135,87 @@ class Homepage extends React.Component {
                     target="_blank"
                   >
                     Code
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="col-6">
+              <h3>
+                <b>avax-cli-wallet</b>
+              </h3>
+              <p>
+                This is a fork of slp-cli-wallet, but modified to work with the{' '}
+                <a href="https://avax.network" target="_blank">
+                  Avalanche blockchain
+                </a>
+                . It contains many of the same commands for sending AVAX and
+                tokens (ANTs) on their X-chain. It includes HD wallet
+                functionality.
+              </p>
+              <ul className="actions">
+                <li>
+                  <a
+                    href="https://github.com/Permissionless-Software-Foundation/avax-cli-wallet"
+                    className="button"
+                    target="_blank"
+                  >
+                    Code
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="col-6">
+              <h3>
+                <b>bch-message-lib</b>
+              </h3>
+              <p>
+                A utility library encomposing much of the functionality provided
+                by{' '}
+                <a href="https://message.fullstack.cash" target="_blank">
+                  message.FullStack.cash
+                </a>
+                . It can detect and read blockchain messages utilizing the{' '}
+                <a
+                  href="https://github.com/Permissionless-Software-Foundation/specifications/blob/master/ps001-media-sharing.md"
+                  target="_blank"
+                >
+                  PS001
+                </a>{' '}
+                spec. This library is also used for calculating merit for
+                'staking' token.
+              </p>
+              <ul className="actions">
+                <li>
+                  <a
+                    href="https://www.npmjs.com/package/bch-message-lib"
+                    className="button"
+                    target="_blank"
+                  >
+                    Library
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="col-6">
+              <h3>
+                <b>bch-encrypt-lib</b>
+              </h3>
+              <p>
+                A small utility library for encrypting and decrypting data,
+                using the same eliptic curve cryptography used by the Bitcoin
+                protocol.
+              </p>
+              <ul className="actions">
+                <li>
+                  <a
+                    href="https://www.npmjs.com/package/bch-encrypt-lib"
+                    className="button"
+                    target="_blank"
+                  >
+                    Library
                   </a>
                 </li>
               </ul>

@@ -68,8 +68,9 @@ class Homepage extends React.Component {
                 <a href="/pricing">
                   FullStack.cash offers access to hosted infrastructure
                 </a>
-                , but the software below is available for anyone who wants to
-                run their own infrastructure.
+                , but FullStack.cash is not a 'walled garden'. We offer the
+                software below for anyone who wants to run their own
+                infrastructure.
               </p>
             </div>
 
