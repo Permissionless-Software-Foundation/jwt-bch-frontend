@@ -29,8 +29,8 @@ class Homepage extends React.Component {
                 <a href="https://npmjs.com" target="_blank">
                   npm libraries
                 </a>{' '}
-                act as middleware 'glue' to tie the front end application to the
-                back end infrastructure. They also allow developers to
+                act as middleware 'glue' to tie the front-end application to the
+                back-end infrastructure. They also allow developers to
                 supercharge their applications with new featuers, and then share
                 those features with other devlepers and applications.
               </p>

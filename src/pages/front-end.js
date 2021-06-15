@@ -11,7 +11,7 @@ import pic04 from '../assets/images/pic04.jpg'
 
 class Homepage extends React.Component {
   render() {
-    const siteTitle = 'Front End Dev | FullStack.cash'
+    const siteTitle = 'Front-End Dev | FullStack.cash'
 
     return (
       <Layout>
@@ -21,7 +21,7 @@ class Homepage extends React.Component {
           <div className="grid-wrapper">
             <div className="col-6">
               <header className="major">
-                <h2>Front End: Web & Phone Apps</h2>
+                <h2>Front-End: Web & Phone Apps</h2>
               </header>
               <p>
                 Learn how to fork{' '}
@@ -419,7 +419,7 @@ class Homepage extends React.Component {
                 <b>bch-wallet-plugin-postoffice</b>
               </h3>
               <p>
-                The front end component for communitcating with the{' '}
+                The front-end component for communitcating with the{' '}
                 <a
                   href="https://github.com/Permissionless-Software-Foundation/postoffice.fullstack.cash"
                   target="_blank"
