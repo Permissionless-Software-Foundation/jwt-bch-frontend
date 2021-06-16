@@ -220,6 +220,32 @@ class Homepage extends React.Component {
                 </li>
               </ul>
             </div>
+
+            <div className="col-6">
+              <h3>
+                <b>minimal-slp-wallet</b>
+              </h3>
+              <p>
+                A lightweight, single-address wallet library for Bitcoin Cash.
+                Optimized for front-end (web browser) use. This is the BCH
+                wallet 'engine' used in the Gatsby Theme behind{' '}
+                <a href="https://wallet.fullstack.cash" target="_blank">
+                  wallet.fullstack.cash
+                </a>{' '}
+                and our <a href="/front-end">front-end software</a>.
+              </p>
+              <ul className="actions">
+                <li>
+                  <a
+                    href="https://www.npmjs.com/package/minimal-slp-wallet"
+                    className="button"
+                    target="_blank"
+                  >
+                    Library
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
 
