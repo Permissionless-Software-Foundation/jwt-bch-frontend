@@ -261,7 +261,7 @@ class Homepage extends React.Component {
               <ul className="actions">
                 <li>
                   <a
-                    href="chat.fullstack.cash"
+                    href="https://chat.fullstack.cash"
                     className="button"
                     target="_blank"
                   >
