@@ -612,5 +612,21 @@
         "parameterDescription": "Token ID"
       }
     ]
+  },
+  {
+    "name": "DSProof",
+    "description": "Get Double Spend info",
+    "docUrl": "https://bchn.fullstack.cash/docs/",
+    "endpoints": [
+      {
+        "type": "get",
+        "shortDescription": "Get information for a double-spend proof.",
+        "detailedDescription": "Get information for a double-spend proof.",
+        "endpoint": "/dsproof/getdsproof/",
+        "parameters": "ee0df780b58f6f24467605b2589c44c3a50fc849fb8f91b89669a4ae0d86bc7e",
+        "parametersName": "txid",
+        "parameterDescription": "Transaction id"
+      }
+    ]
   }
 ]

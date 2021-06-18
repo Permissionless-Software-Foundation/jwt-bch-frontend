@@ -1,13 +1,13 @@
 import React from 'react'
 import Layout from '../components/layout'
 
-import routes from '../data/mainnet-routes.json'
+import routes from '../data/bchn-routes.json'
 import Endpoint from '../components/route/endpoint'
 import Footer from '../components/Footer'
 import { navigate } from 'gatsby'
 
 let _this
-const VERSION = '/v4'
+const VERSION = '/v5'
 const SERVER = `${process.env.BCHNSERVER}`
 
 class ExploreMainnet extends React.Component {
@@ -32,9 +32,13 @@ class ExploreMainnet extends React.Component {
       <Layout>
         <section id="one" className="main style1">
           <div className="explore-container">
-            <select className="explore-select" defaultValue='BCHN' onChange={_this.changeServer}>
+            <select
+              className="explore-select"
+              defaultValue="BCHN"
+              onChange={_this.changeServer}
+            >
               <option value="Testnet">Testnet</option>
-              <option value="BCHN"  >BCHN</option>
+              <option value="BCHN">BCHN</option>
               <option value="ABC">ABC</option>
             </select>
             {_this.state.routesData.map((val, i) => {
@@ -55,10 +59,14 @@ class ExploreMainnet extends React.Component {
                     </div>
                   </div>
                   {_this.state.endpointIndex === i ? (
-                    <Endpoint endpoints={val.endpoints} SERVER={SERVER} VERSION={VERSION} />
+                    <Endpoint
+                      endpoints={val.endpoints}
+                      SERVER={SERVER}
+                      VERSION={VERSION}
+                    />
                   ) : (
-                      ''
-                    )}
+                    ''
+                  )}
                 </div>
               )
             })}
@@ -80,11 +88,9 @@ class ExploreMainnet extends React.Component {
     const value = event.target.value
     if (value === 'ABC') {
       navigate(`/explore-abc`)
-
     }
     if (value === 'Testnet') {
       navigate(`/explore-testnet`)
-
     }
   }
 }

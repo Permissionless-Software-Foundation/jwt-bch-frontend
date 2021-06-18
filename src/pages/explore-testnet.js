@@ -8,7 +8,7 @@ import { navigate } from 'gatsby'
 
 let _this
 
-const VERSION = '/v4'
+const VERSION = '/v5'
 const SERVER = `${process.env.TESTNETSERVER}`
 
 class ExploreTestnet extends React.Component {
@@ -33,8 +33,12 @@ class ExploreTestnet extends React.Component {
       <Layout>
         <section id="one" className="main style1">
           <div className="explore-container">
-            <select className="explore-select" defaultValue='Testnet' onChange={_this.changeServer}>
-              <option value="Testnet"  >Testnet</option>
+            <select
+              className="explore-select"
+              defaultValue="Testnet"
+              onChange={_this.changeServer}
+            >
+              <option value="Testnet">Testnet</option>
               <option value="BCHN">BCHN</option>
               <option value="ABC">ABC</option>
             </select>
@@ -56,10 +60,14 @@ class ExploreTestnet extends React.Component {
                     </div>
                   </div>
                   {_this.state.endpointIndex === i ? (
-                    <Endpoint endpoints={val.endpoints} SERVER={SERVER} VERSION={VERSION}/>
+                    <Endpoint
+                      endpoints={val.endpoints}
+                      SERVER={SERVER}
+                      VERSION={VERSION}
+                    />
                   ) : (
-                      ''
-                    )}
+                    ''
+                  )}
                 </div>
               )
             })}
@@ -81,11 +89,9 @@ class ExploreTestnet extends React.Component {
     const value = event.target.value
     if (value === 'ABC') {
       navigate(`/explore-abc`)
-
     }
     if (value === 'BCHN') {
       navigate(`/explore-bchn`)
-
     }
   }
 }
