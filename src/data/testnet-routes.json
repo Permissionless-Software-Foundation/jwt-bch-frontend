@@ -653,5 +653,23 @@
         "parameterDescription": "Token ID"
       }
     ]
-  }
+  },
+    {
+      "name": "JWT",
+      "description": "Get JWT Info",
+      "docUrl": "https://bchn.fullstack.cash/docs/#api-JWT-GetJWTInfo",
+      "endpoints": [
+        {
+          "type": "post",
+          "shortDescription": "Get info on your JWT token.",
+          "detailedDescription": "Get info on your JWT token. Useful for debugging rate limit issues with your JWT token.",
+          "endpoint": "/jwt/info",
+          "parametersName": "JWT",
+          "parameterDescription": "Json Web Token",
+          "body": {
+            "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlODk3YWJhMDIyMWMxMDAxMmFkOTQwNCIsImVtYWlsIjoiZGFuaWVsaHVtZ29uQGdtYWlsLmNvbSIsImFwaUxldmVsIjo2MCwicmF0ZUxpbWl0IjozLCJwb2ludHNUb0NvbnN1bWUiOjE2LCJkdXJhdGlvbiI6MzAsImlhdCI6MTYyMDY4MzYxNSwiZXhwIjoxNjIzMjc1NjE1fQ.vb3DzOtRf0LGaRB4fJ0e9SKv3-1dKhDIhWl5tYYxgiU"
+          }
+        }
+      ]
+    }
 ]
