@@ -60,6 +60,11 @@ class Homepage extends React.Component {
                 </a>{' '}
                 the files below!
               </p>
+              <p>
+                If your IPFS node has trouble finding the files, you can connect
+                directly to our file server with this command:<br />
+                <code>ipfs swarm connect /ip4/64.180.67.103/tcp/36681/p2p/12D3KooWDCgi55dV1z5QiU2jQk8xDjDVzRtBG7jT7FVamz8cToce</code>
+              </p>
             </div>
           </div>
         </section>
