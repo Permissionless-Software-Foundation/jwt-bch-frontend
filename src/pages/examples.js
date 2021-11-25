@@ -104,18 +104,23 @@ class Homepage extends React.Component {
 
             <div className="col-6" style={{ marginTop: '75px' }}>
               <span className="image fit">
-                <span className="icon style6 major fas fa-faucet"></span>
+                <span className="icon style6 major fas fa-telescope fa-code-branch"></span>
               </span>
-              <h3>Testnet Faucet</h3>
+              <h3>Code Examples</h3>
               <p>
-                Try out the examples above with free testnet coins, available
-                from this faucet. Most developers will prefer to work direclty
-                on mainnet, but when starting out, it's sometimes easier to
-                start by working on the testnet.
+                These bite-sized example applications show you how to create a
+                wallet, send BCH, create SLP tokens, read and write text to the
+                blockchain, and more. Each example acts like a lego block,
+                showing you how to build your way towards common business
+                solutions.
               </p>
               <ul className="actions">
                 <li>
-                  <a href="/faucet" className="button">
+                  <a
+                    href="https://github.com/Permissionless-Software-Foundation/bch-js-examples"
+                    className="button"
+                    target="_blank"
+                  >
                     More
                   </a>
                 </li>
