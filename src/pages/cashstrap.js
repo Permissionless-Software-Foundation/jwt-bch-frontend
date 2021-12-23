@@ -42,8 +42,8 @@ class Homepage extends React.Component {
               </p>
               <p>
                 You do not need to download all the files. The files below are
-                split between <i>BCH</i>, <i>eCash</i>, and <i>testnet3</i>.
-                Because the files are so large, they are shared via the{' '}
+                split between <i>BCH</i> and <i>eCash</i>. Because the files are
+                so large, they are shared via the{' '}
                 <a href="https://ipfs.io" target="_blank">
                   IPFS
                 </a>{' '}
@@ -62,8 +62,17 @@ class Homepage extends React.Component {
               </p>
               <p>
                 If your IPFS node has trouble finding the files, you can connect
-                directly to our file server with this command:<br />
-                <code>ipfs swarm connect /ip4/64.180.67.103/tcp/36681/p2p/12D3KooWDCgi55dV1z5QiU2jQk8xDjDVzRtBG7jT7FVamz8cToce</code>
+                directly to our file servers with these commands:
+                <br />
+                <code>
+                  ipfs swarm connect
+                  /ip4/64.180.64.155/tcp/49941/p2p/12D3KooWPV76jhoVWpo9xUDreRjPeMb36m1HUwcKeLqajdXhLfYR
+                </code>
+                <br />
+                <code>
+                  ipfs swarm connect
+                  /ip4/173.241.171.151/tcp/33940/p2p/12D3KooWBctKyD8p9vmfPEcztrqLoQKa7zCEJga8PRoA1nMHfz4M
+                </code>
               </p>
             </div>
           </div>
@@ -94,13 +103,14 @@ class Homepage extends React.Component {
               <h3>BCH</h3>
               <ul style={{ textAlign: 'left' }}>
                 <li>
-                  <b>Filename:</b> bchn-mainnet-04-15-21-683465-v23.0.0.zip
+                  <b>Filename:</b> bchn-12-19-2021-719113.zip
                 </li>
                 <li>
-                  <b>File size:</b> 148GB
+                  <b>File size:</b> 161GB
                 </li>
                 <li>
-                  <b>IPFS Hash:</b> QmdkahGkktLHEWzsfXG84cRAAa3rFR6tae2RxZVoPdKCwC
+                  <b>IPFS Hash:</b>{' '}
+                  QmXKdvTxMboAGanMsYhzjiM8rj9cviLNJ9sqnG5CPLEmfN
                 </li>
               </ul>
 
@@ -134,13 +144,14 @@ class Homepage extends React.Component {
               <h3>BCH</h3>
               <ul style={{ textAlign: 'left' }}>
                 <li>
-                  <b>Filename:</b> fulcrum-v1.2.3-bch-683578-04-15-21.zip
+                  <b>Filename:</b> fulcrum-v1.2.3-bchn-12-19-21.zip
                 </li>
                 <li>
-                  <b>File size:</b> 30GB
+                  <b>File size:</b> 31GB
                 </li>
                 <li>
-                  <b>IPFS Hash:</b> QmdwU1b8bKsZL2fG7gU9piWoTrSxY8urPxXr3W2vnf2skP
+                  <b>IPFS Hash:</b>{' '}
+                  QmZkqQGqWfzvX6qPHDzrtoALkUU9N8PTqH8PaL8ZVogvMq
                 </li>
               </ul>
 
@@ -175,13 +186,14 @@ class Homepage extends React.Component {
                 <li>
                   <b>Filename:</b>
                   <br />
-                  slpdb-bchn-main-2021-03-24-680164-f1f48a3b7a852e24fd26b3baf6df65b47de6d89e.zip
+                  slpdb-bchn-12-20-2021.zip
                 </li>
                 <li>
-                  <b>File size:</b> 4GB
+                  <b>File size:</b> 7.7GB
                 </li>
                 <li>
-                  <b>IPFS Hash:</b> QmbeJxmYiLF3YZiV7jMfSt8oxAxiAq93vkXau5Q8ezRBi4
+                  <b>IPFS Hash:</b>{' '}
+                  QmUDA8V6Tp8V4ZM63oduxr5RLZYBHfooEUtdVQnFZkHY65
                 </li>
               </ul>
 
@@ -229,13 +241,14 @@ class Homepage extends React.Component {
               <h3>eCash</h3>
               <ul style={{ textAlign: 'left' }}>
                 <li>
-                  <b>Filename:</b> abc-mainnet-04-18-21-682645-0.23.1.zip
+                  <b>Filename:</b> ecash-mainnet-11-09-21.zip
                 </li>
                 <li>
                   <b>File size:</b> 139GB
                 </li>
                 <li>
-                  <b>IPFS Hash:</b> QmUZ2juKHnYqXkxZe6ipnKfwZJhfLsG1ZVjKb2gjtWiXrX
+                  <b>IPFS Hash:</b>{' '}
+                  Qmb72EehbMJJhWDSsFE7uswu7M41YL3ttfQtyWtqKKXXig
                 </li>
               </ul>
 
@@ -269,14 +282,14 @@ class Homepage extends React.Component {
               <h3>eCash</h3>
               <ul style={{ textAlign: 'left' }}>
                 <li>
-                  <b>Filename:</b>{' '}
-                  fulcrum-abc-mainnet-04-18-21-682669-v1.2.3.zip
+                  <b>Filename:</b> fulcrum-abc-11-09-21.zip
                 </li>
                 <li>
                   <b>File size:</b> 27GB
                 </li>
                 <li>
-                  <b>IPFS Hash:</b> QmeVMBg2nwhZt5Rt3QonupH5pBem1K7guLqUVzSW2PmBAR
+                  <b>IPFS Hash:</b>{' '}
+                  Qmc2uEiPGbQLAdY9V41gG5i75TARLRVwcB5wHe2Lyack7B
                 </li>
               </ul>
 
@@ -311,144 +324,14 @@ class Homepage extends React.Component {
                 <li>
                   <b>Filename:</b>
                   <br />
-                  slpdb-abc-v1-f1f48a3b7a852e24fd26b3baf6df65b47de6d89e-01-19-21-669672.zip
+                  slpdb-ecash-11-09-21-9a85b1bd381a82e6d2094d6936774ee5a4503de3.zip
                 </li>
                 <li>
-                  <b>File size:</b> 2.8GB
+                  <b>File size:</b> 3GB
                 </li>
                 <li>
-                  <b>IPFS Hash:</b> QmVsjNK7sTEGHmUyZKYseH4VyEv82sn3iuUxPqpTzSE1Qr
-                </li>
-              </ul>
-
-              <p>
-                <b>
-                  Use the files with{' '}
-                  <a
-                    href="https://github.com/Permissionless-Software-Foundation/docker-slpdb"
-                    target="_blank"
-                  >
-                    this Docker container
-                  </a>
-                </b>
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section id="three" className="main style1 special">
-          <div className="grid-wrapper">
-            <div className="col-12">
-              <header className="major">
-                <h1>Testnet3</h1>
-              </header>
-              <p>
-                We also provide infrastructure for testnet3, based on the BCHN
-                full node.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid-wrapper" style={{ border: 'solid 1px black' }}>
-            <div className="col-6" style={{ padding: '20px' }}>
-              <span className="image fit">
-                <img src={bchn} alt="" />
-                <h3>Full Node Blockchain</h3>
-              </span>
-            </div>
-
-            <div className="col-6" style={{ padding: '20px' }}>
-              <h3>Testnet3</h3>
-              <ul style={{ textAlign: 'left' }}>
-                <li>
-                  <b>Filename:</b> bchn-testnet3-04-12-2021-1442953.zip
-                </li>
-                <li>
-                  <b>File size:</b> 23GB
-                </li>
-                <li>
-                  <b>IPFS Hash:</b> QmV6CZYjiKiXNFKpnyMJx65dDxkfVsxhH75gbNLK5UaFSG
-                </li>
-              </ul>
-
-              <p>
-                <b>
-                  Use the files with{' '}
-                  <a
-                    href="https://github.com/Permissionless-Software-Foundation/docker-bchn"
-                    target="_blank"
-                  >
-                    this Docker container
-                  </a>
-                </b>
-              </p>
-            </div>
-          </div>
-
-          <div
-            className="grid-wrapper"
-            style={{ border: 'solid 1px black', marginTop: '25px' }}
-          >
-            <div className="col-6" style={{ padding: '20px' }}>
-              <span className="image fit">
-                <center>
-                  <img src={fulcrum} alt="fulcrum" style={{ width: '50%' }} />
-                </center>
-                <h3>Fulcrum ElectrumX Indexer</h3>
-              </span>
-            </div>
-            <div className="col-6" style={{ padding: '20px' }}>
-              <h3>Testnet3</h3>
-              <ul style={{ textAlign: 'left' }}>
-                <li>
-                  <b>Filename:</b> fulcrum-bchn-testnet3-04-12-21-1442953.zip
-                </li>
-                <li>
-                  <b>File size:</b> 4.6GB
-                </li>
-                <li>
-                  <b>IPFS Hash:</b> QmUmigPuXo3sbvzx4nXLURWt14qm27PMHhnxWY1frKkL2R
-                </li>
-              </ul>
-
-              <p>
-                <b>
-                  Use the files with{' '}
-                  <a
-                    href="https://github.com/Permissionless-Software-Foundation/docker-fulcrum"
-                    target="_blank"
-                  >
-                    this Docker container
-                  </a>
-                </b>
-              </p>
-            </div>
-          </div>
-
-          <div
-            className="grid-wrapper"
-            style={{ border: 'solid 1px black', marginTop: '25px' }}
-          >
-            <div className="col-6" style={{ padding: '20px' }}>
-              <span className="image fit">
-                <img src={slp} alt="" />
-                <h3>SLP Token Indexer</h3>
-              </span>
-            </div>
-
-            <div className="col-6" style={{ padding: '20px' }}>
-              <h3>Testnet3</h3>
-              <ul style={{ textAlign: 'left' }}>
-                <li>
-                  <b>Filename:</b>
-                  <br />
-                  slpdb-testnet-bchn-01-20-21-f1f48a3b7a852e24fd26b3baf6df65b47de6d89e-1431114.zip
-                </li>
-                <li>
-                  <b>File size:</b> 0.02GB
-                </li>
-                <li>
-                  <b>IPFS Hash:</b> QmaZozQdbZ483r7cDEbRoeAtpBEemKLHMjgKvYYAT19tZB
+                  <b>IPFS Hash:</b>{' '}
+                  QmYEJS9ngiceLuTH4EWXKx19wgwSkapU5kYwNA3wgVP7pK
                 </li>
               </ul>
 
