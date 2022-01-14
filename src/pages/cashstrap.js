@@ -13,6 +13,7 @@ import trezor from '../assets/images/trezor-368x240.jpg'
 import slp from '../assets/images/slp-368x240.jpg'
 import fulcrum from '../assets/images/fulcrum.png'
 import bchn from '../assets/images/bchn.png'
+import psf from '../assets/images/psf-logo.png'
 
 class Homepage extends React.Component {
   render() {
@@ -175,8 +176,8 @@ class Homepage extends React.Component {
           >
             <div className="col-6" style={{ padding: '20px' }}>
               <span className="image fit">
-                <img src={slp} alt="" />
-                <h3>SLP Token Indexer</h3>
+                <img src={psf} alt="" />
+                <h3>PSF SLP Token Indexer</h3>
               </span>
             </div>
 
@@ -186,14 +187,14 @@ class Homepage extends React.Component {
                 <li>
                   <b>Filename:</b>
                   <br />
-                  slpdb-bchn-12-20-2021.zip
+                  slp-indexer-722612.zip
                 </li>
                 <li>
-                  <b>File size:</b> 7.7GB
+                  <b>File size:</b> 2.6GB
                 </li>
                 <li>
                   <b>IPFS Hash:</b>{' '}
-                  QmUDA8V6Tp8V4ZM63oduxr5RLZYBHfooEUtdVQnFZkHY65
+                  QmXVYddcAPa6BtzMDcnqE1Ro9XLTriTJKt1tAjXUxogVgh
                 </li>
               </ul>
 
@@ -201,7 +202,7 @@ class Homepage extends React.Component {
                 <b>
                   Use the files with{' '}
                   <a
-                    href="https://github.com/Permissionless-Software-Foundation/docker-slpdb"
+                    href="https://github.com/Permissionless-Software-Foundation/psf-slp-indexer"
                     target="_blank"
                   >
                     this Docker container
