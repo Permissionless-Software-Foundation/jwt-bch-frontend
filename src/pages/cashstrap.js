@@ -67,12 +67,12 @@ class Homepage extends React.Component {
                 <br />
                 <code>
                   ipfs swarm connect
-                  /ip4/5.161.42.62/tcp/4001/p2p/12D3KooWJ783xCDYqkKQccULru5cMNn4SfYAXUto6DivKNkyUn7H/p2p-circuit/12D3KooWPV76jhoVWpo9xUDreRjPeMb36m1HUwcKeLqajdXhLfYR
+                  /ip4/5.161.42.62/tcp/4001/p2p/12D3KooWPRRyk3rh7dHTY4tQsRM3UEUK7uo5ZAqqxwTT3iSBTu6K/p2p-circuit/p2p/12D3KooWAcUCtTPJ87obGinW4jxWqmR1EbxADji6wfmRzYTyfqwm
                 </code>
                 <br />
                 <code>
                   ipfs swarm connect
-                  /ip4/5.161.42.62/tcp/4001/p2p/12D3KooWJ783xCDYqkKQccULru5cMNn4SfYAXUto6DivKNkyUn7H/p2p-circuit/12D3KooWBctKyD8p9vmfPEcztrqLoQKa7zCEJga8PRoA1nMHfz4M
+                  /ip4/5.161.42.62/tcp/4001/p2p/12D3KooWPRRyk3rh7dHTY4tQsRM3UEUK7uo5ZAqqxwTT3iSBTu6K/p2p-circuit/p2p/12D3KooWNYcNyB1ACYiDfGG6QZYrq72GQJA1WMpUeCSY5z14vcDV
                 </code>
               </p>
             </div>
