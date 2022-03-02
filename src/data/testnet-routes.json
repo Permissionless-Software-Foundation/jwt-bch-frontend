@@ -671,5 +671,54 @@
           }
         }
       ]
+    },
+    {
+      "name": "PSF SLP",
+      "description": "PSF SLP",
+      "docUrl": "https://api.fullstack.cash/docs/#api-PSF_SLP",
+      "endpoints": [
+        {
+          "type": "get",
+          "shortDescription": "PSF SLP - Indexer Status.",
+          "detailedDescription": "Get psf slp indexer status.",
+          "endpoint": "/psf/slp/status/",
+          "parameters": "",
+          "parametersName": "",
+          "parameterDescription": ""
+        },
+        {
+          "type": "post",
+          "shortDescription": "List stats for a single slp token.",
+          "detailedDescription": "Return list stats for a single slp token.",
+          "endpoint": "/psf/slp/token",
+          "parametersName": "tokenId",
+          "parameterDescription": "Token Id",
+          "body": {
+            "tokenId": "a4fb5c2da1aa064e25018a43f9165040071d9e984ba190c222a7f59053af84b2"
+          }
+        },
+        {
+          "type": "post",
+          "shortDescription": "SLP balance for address.",
+          "detailedDescription": "Return SLP balance for address.",
+          "endpoint": "/psf/slp/address/",
+          "parametersName": "address",
+          "parameterDescription": "BCH Address",
+          "body": {
+            "address": "slptest:qz35h5mfa8w2pqma2jq06lp7dnv5fxkp2shlcycvd5"
+          }
+        },
+        {
+          "type": "post",
+          "shortDescription": "SLP transaction data.",
+          "detailedDescription": "Return slp transaction data.",
+          "endpoint": "/psf/slp/txid/",
+          "parametersName": "txid",
+          "parameterDescription": "Transaction Id",
+          "body": {
+            "txid": "f3e14cd871402a766e85045dc552f2c1e87857dd3ea1b15efab6334ccef5e315"
+          }
+        }
+      ]
     }
 ]
