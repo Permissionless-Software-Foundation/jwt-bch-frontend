@@ -504,18 +504,8 @@ class Profile extends React.Component {
         message: 'Requesting new API JWT token...',
       }))
 
-      // deprecated
-      // Fix weird default-value bug.
-      // console.log(`_this.state.apiLevel: ${_this.state.apiLevel}`)
-      // if (typeof _this.state.apiLevel === 'string') {
-      //   if (_this.state.apiLevel.indexOf('Free') > -1)
-      //     _this.state.apiLevel = 10
-      // }
-
-      // Force the API level to be 40, since we only have one paid tier now.
-      // await _this.setState(prevState => ({
-      //   apiLevel: 40
-      // }))
+      // If the API level is 0, then force it to be a minimum of 40.
+      if(_this.state.apiLevel === 0) _this.state.apiLevel = 40
 
       console.log(`Requesting token for API level: ${_this.state.apiLevel}`)
 
