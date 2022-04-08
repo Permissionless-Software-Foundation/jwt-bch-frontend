@@ -122,14 +122,14 @@ class Homepage extends React.Component {
               <ul style={{ textAlign: 'left' }}>
                 <li>
                   <b>Filename:</b>
-                  <br /> slp-indexer-730332.zip
+                  <br /> slp-indexer-733200.zip
                 </li>
                 <li>
-                  <b>File size:</b> 4.9GB
+                  <b>File size:</b> 5.2GB
                 </li>
                 <li>
                   <b>IPFS Hash:</b>
-                  {' '} QmRkAVPRXJAgfaDv5YyDoEid3Bd9AEucLc96F9Hfw4SbXD
+                  {' '} QmZ63yiFRQpLp1itMuAzcXQfjosTeLQxCWmtTGdYcV1u5S
                 </li>
               </ul>
               <p>
@@ -138,6 +138,7 @@ class Homepage extends React.Component {
             </div>
           </div>
         </section>
+
         <section id='three' className='main style1 special'>
           <div className='grid-wrapper'>
             <div className='col-12'>
@@ -199,21 +200,21 @@ class Homepage extends React.Component {
           </div>
           <div className='grid-wrapper' style={{ border: 'solid 1px black', marginTop: '25px' }}>
             <div className='col-6' style={{ padding: '20px' }}>
-              <span className='image fit'><img src={slp} alt='' /> <h3>SLP Token Indexer</h3></span>
+              <span className='image fit'><img src={psf} alt='' /> <h3>PSF SLP Token Indexer</h3></span>
             </div>
             <div className='col-6' style={{ padding: '20px' }}>
               <h3>eCash</h3>
               <ul style={{ textAlign: 'left' }}>
                 <li>
                   <b>Filename:</b>
-                  <br /> slpdb-ecash-11-09-21-9a85b1bd381a82e6d2094d6936774ee5a4503de3.zip
+                  <br /> slp-indexer-732000-ecash.zip
                 </li>
                 <li>
-                  <b>File size:</b> 3GB
+                  <b>File size:</b> 1.8GB
                 </li>
                 <li>
                   <b>IPFS Hash:</b>
-                  {' '} QmYEJS9ngiceLuTH4EWXKx19wgwSkapU5kYwNA3wgVP7pK
+                  {' '} QmTEh9UWmLJGrEiM9tjQGHiNFTxqawmD23LFutBf9X44WY
                 </li>
               </ul>
               <p>

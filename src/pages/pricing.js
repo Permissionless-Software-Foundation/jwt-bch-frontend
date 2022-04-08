@@ -198,67 +198,16 @@ class Homepage extends React.Component {
                     <td>$150</td>
                   </tr>
                   <tr>
-                    <td>ElectrumX Indexer</td>
+                    <td>Fulcrum ElectrumX Indexer</td>
                     <td>$100</td>
                   </tr>
                   <tr>
-                    <td>Blockbook Indexer</td>
-                    <td>$175</td>
-                  </tr>
-                  <tr>
-                    <td>SLPDB (private, general purpose)</td>
-                    <td>$350</td>
-                  </tr>
-                  <tr>
-                    <td>SLPDB (pooled, general purpose)</td>
-                    <td>$250</td>
-                  </tr>
-                  <tr>
-                    <td>SLPDB (filtered)</td>
-                    <td>$150</td>
+                    <td>SLP Indexer</td>
+                    <td>$200</td>
                   </tr>
                 </tbody>
               </table>
 
-              <p>
-                SLP Tokens are very popular on the BCH and ABC blockchains, but
-                the technology is not as mature as other full nodes and
-                indexers. As more tokens are created and token use increases, it
-                is becoming increasingly more expensive to run general-purpose
-                SLP indexers. All of the SLPDB tiers above provide access to an
-                SLPDB instance without rate limits, but the appropriate tier
-                will depend on your specific use case.
-              </p>
-              <ul style={{ textAlign: 'left' }}>
-                <li>
-                  General Purpose SLPDBs are the most flexible, but are
-                  increasingly more expensive to operate and more susceptible to
-                  disruption by network activity. If you need an SLPDB to make
-                  arbitrary jq database queries, or you want your own dedicated
-                  instance that is isolated from any other user, then a private
-                  instance is the most appropriate tier for your business.
-                </li>
-                <br />
-                <li>
-                  In order to more efficiently and reliably run general purpose
-                  SLPDBs, we have a pool of SLPDBs that are load balanced. We
-                  will add or remove machines to this pool depending on network
-                  conditions. Arbitrary jq queries are not allowed, but no rate
-                  limits are imposed on bch-api instances that connect to this
-                  pool.
-                </li>
-                <br />
-                <li>
-                  Filtered SLPDBs are the least expensive and most reliable way
-                  to run token infrastructure. These machines run a 'whitelist',
-                  and will ignore any tokens not on this list. Restricting the
-                  number of tokens makes SLPDB run much faster, with a much
-                  smaller footprint, and much less likely to be disrupted by
-                  malicious behavior on the blockchain. If your use case can
-                  operate with a filtered SLPDB, you can save money and achieve
-                  greater reliablity.
-                </li>
-              </ul>
             </div>
           </div>
         </section>
