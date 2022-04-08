@@ -171,7 +171,7 @@ class Homepage extends React.Component {
                 month tier, which is a shared resource.
               </p>
               <p>
-                Recommended maximum capacity is 250,000 API requests per day per
+                Recommended maximum capacity is 4 million API requests per day per
                 instance of infrastructure. Multiple instances can be connected
                 in parallel to scale infinately to higher loads. Prices are in
                 USD.
