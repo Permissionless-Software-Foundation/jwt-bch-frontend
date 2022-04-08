@@ -34,6 +34,11 @@ class Homepage extends React.Component {
                 You can <b>get started for free</b>, and paid tiers are
                 available for businesses with greater resource needs.
               </p>
+              <p>
+                Note: Free access is artifically delayed, to prevent freeloaders
+                from overloading the system. These delays are removed for paid
+                tiers.
+              </p>
 
               <table style={{ border: '1px solid black' }}>
                 <thead>
