@@ -1,4 +1,4 @@
 #!/bin/bash
-rm -rf /var/www/html/production/*
-cp -r public/* /var/www/html/production/
+sudo rm -rf /var/www/html/production/*
+sudo cp -r public/* /var/www/html/production/
 
