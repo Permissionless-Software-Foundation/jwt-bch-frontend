@@ -99,10 +99,6 @@ class Homepage extends React.Component {
                 RPM stands for 'requests per minute'. The row at the top
                 indicates the tier that your API key unlocks.
               </p>
-              <p>
-                Note: The free tier also adds a three-second delay to all API calls,
-                in order to reduce freeloaders negatively impacting paying users.
-              </p>
             </div>
 
             <div className="col-12">
