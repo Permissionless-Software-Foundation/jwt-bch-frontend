@@ -64,7 +64,7 @@ class Homepage extends React.Component {
                   </tr>
                   <tr>
                     <td>Full Node RPM:</td>
-                    <td>20</td>
+                    <td>10</td>
                     <td>100</td>
                     <td>250</td>
                     <td>600</td>
@@ -73,8 +73,8 @@ class Homepage extends React.Component {
                     </td>
                   </tr>
                   <tr>
-                    <td>Indexer RPM:</td>
-                    <td>20</td>
+                    <td>Fulcrum Indexer RPM:</td>
+                    <td>10</td>
                     <td>100</td>
                     <td>250</td>
                     <td>600</td>
@@ -83,8 +83,8 @@ class Homepage extends React.Component {
                     </td>
                   </tr>
                   <tr>
-                    <td>SLPDB RPM:</td>
-                    <td>20</td>
+                    <td>SLP Indexer RPM:</td>
+                    <td>10</td>
                     <td>100</td>
                     <td>250</td>
                     <td>600</td>
@@ -98,6 +98,10 @@ class Homepage extends React.Component {
               <p>
                 RPM stands for 'requests per minute'. The row at the top
                 indicates the tier that your API key unlocks.
+              </p>
+              <p>
+                Note: The free tier also adds a three-second delay to all API calls,
+                in order to reduce freeloaders negatively impacting paying users.
               </p>
             </div>
 
@@ -122,7 +126,7 @@ class Homepage extends React.Component {
                   information.
                 </li>
                 <br />
-                <li>SLPDB for working with SLP tokens</li>
+                <li>SLP indexer for working with SLP tokens</li>
                 <br />
                 <li>
                   REST API providing a common interface for all the other
