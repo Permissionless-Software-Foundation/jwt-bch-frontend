@@ -122,14 +122,14 @@ class Homepage extends React.Component {
               <ul style={{ textAlign: 'left' }}>
                 <li>
                   <b>Filename:</b>
-                  <br /> slp-indexer-733200.zip
+                  <br /> slp-indexer-740000.zip
                 </li>
                 <li>
-                  <b>File size:</b> 5.2GB
+                  <b>File size:</b> 5.8GB
                 </li>
                 <li>
                   <b>IPFS Hash:</b>
-                  {' '} QmZ63yiFRQpLp1itMuAzcXQfjosTeLQxCWmtTGdYcV1u5S
+                  {' '} QmYt2KqP5MBZVmk9g3v7sseacbsHWgSy9e9iqWgeMkQzWk
                 </li>
               </ul>
               <p>
