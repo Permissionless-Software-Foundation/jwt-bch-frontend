@@ -122,14 +122,14 @@ class Homepage extends React.Component {
               <ul style={{ textAlign: 'left' }}>
                 <li>
                   <b>Filename:</b>
-                  <br /> slp-indexer-740000.zip
+                  <br /> slp-indexer-742800.zip
                 </li>
                 <li>
-                  <b>File size:</b> 5.8GB
+                  <b>File size:</b> 6.0GB
                 </li>
                 <li>
                   <b>IPFS Hash:</b>
-                  {' '} QmYt2KqP5MBZVmk9g3v7sseacbsHWgSy9e9iqWgeMkQzWk
+                  {' '} QmZgVkerRGb933CcwJs5oKcVBCva8FtsfXTkmpa324CaPY
                 </li>
               </ul>
               <p>
@@ -207,14 +207,14 @@ class Homepage extends React.Component {
               <ul style={{ textAlign: 'left' }}>
                 <li>
                   <b>Filename:</b>
-                  <br /> slp-indexer-732000-ecash.zip
+                  <br /> slp-indexer-741200-ecash.zip
                 </li>
                 <li>
                   <b>File size:</b> 1.8GB
                 </li>
                 <li>
                   <b>IPFS Hash:</b>
-                  {' '} QmTEh9UWmLJGrEiM9tjQGHiNFTxqawmD23LFutBf9X44WY
+                  {' '} Qmd4m1ikxy5EeFGQcuPuUpGE45rsjo6DcXaLkXxSEUZ2dE
                 </li>
               </ul>
               <p>
