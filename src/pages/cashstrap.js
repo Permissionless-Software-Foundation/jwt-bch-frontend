@@ -48,10 +48,11 @@ class Homepage extends React.Component {
               </p>
               <p>
                 If your IPFS node has trouble finding the files, you can connect directly to our file servers with these commands:
-                <br />
-                <code>ipfs swarm connect /ip4/5.161.42.62/tcp/4001/p2p/12D3KooWPRRyk3rh7dHTY4tQsRM3UEUK7uo5ZAqqxwTT3iSBTu6K/p2p-circuit/p2p/12D3KooWAcUCtTPJ87obGinW4jxWqmR1EbxADji6wfmRzYTyfqwm</code>
-                <br />
-                <code>ipfs swarm connect /ip4/5.161.42.62/tcp/4001/p2p/12D3KooWPRRyk3rh7dHTY4tQsRM3UEUK7uo5ZAqqxwTT3iSBTu6K/p2p-circuit/p2p/12D3KooWNYcNyB1ACYiDfGG6QZYrq72GQJA1WMpUeCSY5z14vcDV</code>
+                <ul>
+                  <li><code>ipfs swarm connect /ip4/5.161.42.62/tcp/4001/p2p/12D3KooWPRRyk3rh7dHTY4tQsRM3UEUK7uo5ZAqqxwTT3iSBTu6K</code></li>
+                  <li><code>ipfs swarm connect /ip4/5.161.42.62/tcp/4001/p2p/12D3KooWPRRyk3rh7dHTY4tQsRM3UEUK7uo5ZAqqxwTT3iSBTu6K/p2p-circuit/p2p/12D3KooWAcUCtTPJ87obGinW4jxWqmR1EbxADji6wfmRzYTyfqwm</code></li>
+                  <li><code>ipfs swarm connect /ip4/5.161.42.62/tcp/4001/p2p/12D3KooWPRRyk3rh7dHTY4tQsRM3UEUK7uo5ZAqqxwTT3iSBTu6K/p2p-circuit/p2p/12D3KooWNYcNyB1ACYiDfGG6QZYrq72GQJA1WMpUeCSY5z14vcDV</code></li>
+                </ul>
               </p>
             </div>
           </div>
