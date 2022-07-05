@@ -77,12 +77,12 @@ class Homepage extends React.Component {
                 FullStack.cash can provide the developer talent to help you
                 achieve your business goals. We specialize in
                 developing <a href="https://cashstack.info" target="_blank">infrastructure</a> and
-                <a href="https://psfoundation.info" target="_blank">software maintained by the PSF</a>.
+                the <a href="https://psfoundation.info" target="_blank">software maintained by the PSF</a>.
               </p>
               <p>
                 If you have an app idea and would like help from FullStack.cash,
                 we are available for at a rate of $100 per hour for long-term
-                contracts (30+ days), or $150 per hour for short-term tasks.
+                contracts (a month or longer), or $150 per hour for short-term tasks.
               </p>
 
               <ul className="actions">
