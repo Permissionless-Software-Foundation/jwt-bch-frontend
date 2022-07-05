@@ -68,7 +68,7 @@ class Homepage extends React.Component {
               </p>
               <ul className="actions">
                 <li>
-                  <a href="https://troutsblog.com/research/bitcoin-cash/how-to-bch-full-stack-developer" target="_blank" className="button">
+                  <a href="https://cashstack.info" target="_blank" className="button">
                     More
                   </a>
                 </li>
@@ -127,7 +127,7 @@ class Homepage extends React.Component {
               </p>
               <ul className="actions">
                 <li>
-                  <a href="https://jwt-bch-lib.fullstack.cash/" className="button">
+                  <a href="https://jwt-bch-lib.fullstack.cash/" target="_blank" className="button">
                     More
                   </a>
                 </li>

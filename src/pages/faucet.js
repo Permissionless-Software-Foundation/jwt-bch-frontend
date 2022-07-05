@@ -44,112 +44,21 @@ class Homepage extends React.Component {
             <div className="row well well-lg">
               <div className="col-md-10">
                 <h2>
-                  BCH Testnet Faucet brought to you by{' '}
-                  <a href="https://FullStack.cash">FullStack.cash</a>
+                  This Faucet is no longer available.
                 </h2>
                 <h3 className="lead">
-                  This is a testnet faucet built with
-                  <a href="https://www.npmjs.com/package/@chris.troutner/bch-js">
-                    bch-js
+                  A new faucet can be found at
+                  <a href="https://tbch.googol.cash/">
+                    https://tbch.googol.cash/
                   </a>
-                  JavaScript SDK for Bitcoin Cash! It currently gives out 0.01
-                  BCH.
                 </h3>
-                <p>
-                  <a
-                    href="https://github.com/christroutner/testnet-faucet2"
-                    target="_blank"
-                  >
-                    Fork this demo on GitHub!
-                  </a>
-                </p>
               </div>
 
-              <div className="col-md-2">
-                <img
-                  src={PSFIMG}
-                  className="faucet-img"
-                  alt="Permissionless Software Foundation"
-                  onClick={() => {
-                    _this.goToUrl('https://psfoundation.cash/')
-                  }}
-                />
-              </div>
+
             </div>
           </div>
         </section>
-        <section className="faucet-container2">
-          <div className="container">
-            <div className="row">
-              <div className="col-sm-12">
-                <form className="form-inline">
-                  <div className="form-group faucet-bchAddr-input">
-                    <label htmlFor="peerId">BCH Testnet Address: </label>
-                    <input
-                      type="text"
-                      className="form-control "
-                      id="bchAddr"
-                      name="bchAddr"
-                      size="60"
-                      placeholder="bchtest:qzt6sz836wdwscld0pgq2prcpck2pssmwge9q87pe9"
-                      onChange={_this.handleUpdate}
-                    />
-                  </div>
-                  <br />
-                  <div className="flex justify-center">
-                    <Captcha callback={_this.captchaState} />
-                  </div>
-                  <br />
-                </form>
-                <button
-                  type="button"
-                  className="btn btn-default fuacet-btn"
-                  onClick={_this.requestBCH}
-                >
-                  Get tBCH!
-                </button>
-                {_this.state.inFetch && (
-                  <div className="circular-progress-container">
-                    <CircularProgress />
-                  </div>
-                )}
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="col-sm-12">
-                <p>
-                  Please send tBCH back to this faucet at this address:
-                  <br />
-                  <b>bchtest:qzt6sz836wdwscld0pgq2prcpck2pssmwge9q87pe9</b>
-                </p>
-                <p>
-                  Current Balance:{' '}
-                  <span id="balance">
-                    <b>{_this.state.balance}</b>
-                  </span>{' '}
-                  BCH
-                </p>
-              </div>
-            </div>
-            {_this.state.succes && (
-              <div className="row">
-                <div className="col-sm-12 well">
-                  <div id="outWell">
-                    <p>Success: tBCH are on their way!</p>
-                    <a
-                      className="faucet-txid"
-                      href={`https://explorer.bitcoin.com/tbch/tx/${_this.state.txId}`}
-                      target="_blank"
-                    >
-                      <b>TXID: </b> <span>{_this.state.txId}</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
-        </section>
+        
         <Footer />
       </Layout>
     )
