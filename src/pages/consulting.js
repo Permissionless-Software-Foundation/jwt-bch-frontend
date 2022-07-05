@@ -76,15 +76,13 @@ class Homepage extends React.Component {
               <p>
                 FullStack.cash can provide the developer talent to help you
                 achieve your business goals. We specialize in
-                developing <a href="/cashstrap">infrastructure</a> and
-                software base on our <a href="https://wallet.fullstack.cash">web wallet</a>.
+                developing <a href="https://cashstack.info" target="_blank">infrastructure</a> and
+                <a href="https://psfoundation.info" target="_blank">software maintained by the PSF</a>.
               </p>
               <p>
                 If you have an app idea and would like help from FullStack.cash,
-                we are available for 3-month development contracts, starting at
-                $2,000 USD per month. Typically, the scope of a project is broken
-                up in three stages: 1 month for R&D, 1 month for development,
-                and 1 month to make it ready for production.
+                we are available for at a rate of $100 per hour for long-term
+                contracts (30+ days), or $150 per hour for short-term tasks.
               </p>
 
               <ul className="actions">
