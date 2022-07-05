@@ -47,7 +47,6 @@ class Homepage extends React.Component {
                     <th>Free</th>
                     <th>Tier 1</th>
                     <th>Tier 2</th>
-                    <th>Tier 3</th>
                     <th>Enterprise</th>
                   </tr>
                 </thead>
@@ -57,7 +56,6 @@ class Homepage extends React.Component {
                     <td>$0</td>
                     <td>$9.99</td>
                     <td>$19.99</td>
-                    <td>$29.99</td>
                     <td>
                       <a href="/contact">Contact Us</a>
                     </td>
@@ -67,7 +65,6 @@ class Homepage extends React.Component {
                     <td>10</td>
                     <td>100</td>
                     <td>250</td>
-                    <td>600</td>
                     <td>
                       <a href="/contact">Contact Us</a>
                     </td>
@@ -77,7 +74,6 @@ class Homepage extends React.Component {
                     <td>10</td>
                     <td>100</td>
                     <td>250</td>
-                    <td>600</td>
                     <td>
                       <a href="/contact">Contact Us</a>
                     </td>
@@ -87,7 +83,6 @@ class Homepage extends React.Component {
                     <td>10</td>
                     <td>100</td>
                     <td>250</td>
-                    <td>600</td>
                     <td>
                       <a href="/contact">Contact Us</a>
                     </td>
