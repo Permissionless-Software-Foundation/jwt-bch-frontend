@@ -166,7 +166,8 @@ class ContactForm extends React.Component {
         name: _this.state.name,
         email: _this.state.email,
         formMessage: _this.state.formMessage,
-        subject: 'Contact form from FullStack.cash'
+        subject: 'Contact form from FullStack.cash',
+        emailList: ['test@bchtest.net']
       }
 
       const resp = await fetch(`${SERVER}/contact/email`, {
