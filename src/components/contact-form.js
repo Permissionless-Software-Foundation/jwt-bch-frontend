@@ -12,8 +12,9 @@ import Captcha from './captcha'
 import NOTIFICATION from '../lib/notification'
 const Notification = new NOTIFICATION()
 
-const SERVER = `https://bchjs.cash/api`
+// const SERVER = `https://bchjs.cash/api`
 //const SERVER = `http://localhost:5001`
+const SERVER = 'https://auth.fullstack.cash'
 
 const StyledButton = styled.a`
   margin: 10px;
@@ -165,6 +166,7 @@ class ContactForm extends React.Component {
         name: _this.state.name,
         email: _this.state.email,
         formMessage: _this.state.formMessage,
+        subject: 'Contact form from FullStack.cash'
       }
 
       const resp = await fetch(`${SERVER}/contact/email`, {
