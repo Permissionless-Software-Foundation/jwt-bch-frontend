@@ -201,7 +201,7 @@ class Homepage extends React.Component {
                   <ul className="actions uniform" style={{ padding: '15px' }}>
                     <li>
                       <a
-                        href="https://psfoundation.cash/blog/cash-stack"
+                        href="https://cashstack.info"
                         className="button special"
                         target="_blank"
                       >
