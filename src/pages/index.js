@@ -16,6 +16,8 @@ import '../assets/css/main2.css'
 
 // Company Logos
 import logoBitfinex from '../assets/images/bitfinex-logo.png'
+import logoSweet from '../assets/images/sweet.png'
+import logoSideshift from '../assets/images/sideshift.png'
 
 class Homepage extends React.Component {
   render() {
@@ -238,7 +240,7 @@ class Homepage extends React.Component {
         <section id="six" className="main style2 special">
           <div className="grid-wrapper">
             <div className="col-12">
-              <h2>Clients of FullStack.cash</h2>
+              <h2>Organizations Using FullStack.cash Infrastructure</h2>
             </div>
 
             <div className="col-4">
@@ -250,18 +252,18 @@ class Homepage extends React.Component {
               </a>
             </div>
             <div className="col-4">
-            <h3>Bitfinex</h3>
-            <a href="https://bitfinex.com" target="_blank">
+            <h3>Sweet</h3>
+            <a href="https://sweet.io" target="_blank">
               <span className="image fit">
-                <img src={logoBitfinex} alt="" />
+                <img src={logoSweet} alt="" />
               </span>
             </a>
             </div>
             <div className="col-4">
-              <h3>Bitfinex</h3>
-              <a href="https://bitfinex.com" target="_blank">
+              <h3>SideShift.ai</h3>
+              <a href="https://sideshift.ai" target="_blank">
                 <span className="image fit">
-                  <img src={logoBitfinex} alt="" />
+                  <img src={logoSideshift} alt="" />
                 </span>
               </a>
             </div>
