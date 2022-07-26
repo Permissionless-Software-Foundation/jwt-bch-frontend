@@ -21,6 +21,9 @@ import logoSideshift from '../assets/images/sideshift.png'
 import logoLaunchpad from '../assets/images/launchpad.png'
 import logoBitcoincom from '../assets/images/bitcoin.com.png'
 import logoEcash from '../assets/images/ecash2.png'
+import logoAvalabs from '../assets/images/ava-labs.png'
+import logoOwnrare from '../assets/images/ownrare-logo.png'
+import logoShoemaker from '../assets/images/shoemaker360-logo.png'
 
 class Homepage extends React.Component {
   render() {
@@ -296,6 +299,33 @@ class Homepage extends React.Component {
               <a href="https://e.cash" target="_blank">
                 <span className="image fit">
                   <img src={logoEcash} alt="" />
+                </span>
+              </a>
+            </div>
+
+            <div className="col-4">
+              <h3>Ava Labs</h3>
+              <a href="https://www.avalabs.org/" target="_blank">
+                <span className="image fit">
+                  <img src={logoAvalabs} alt="" />
+                </span>
+              </a>
+            </div>
+
+            <div className="col-4">
+              <h3>OwnRare.Art</h3>
+              <a href="https://ownrare.art" target="_blank">
+                <span className="image fit">
+                  <img src={logoOwnrare} alt="" />
+                </span>
+              </a>
+            </div>
+
+            <div className="col-4">
+              <h3>Shoemaker360</h3>
+              <a href="https://shoemaker360.com" target="_blank">
+                <span className="image fit">
+                  <img src={logoShoemaker} alt="" />
                 </span>
               </a>
             </div>
