@@ -18,6 +18,9 @@ import '../assets/css/main2.css'
 import logoBitfinex from '../assets/images/bitfinex-logo.png'
 import logoSweet from '../assets/images/sweet.png'
 import logoSideshift from '../assets/images/sideshift.png'
+import logoLaunchpad from '../assets/images/launchpad.png'
+import logoBitcoincom from '../assets/images/bitcoin.com.png'
+import logoEcash from '../assets/images/ecash2.png'
 
 class Homepage extends React.Component {
   render() {
@@ -244,13 +247,14 @@ class Homepage extends React.Component {
             </div>
 
             <div className="col-4">
-              <h3>Bitfinex</h3>
+              <h3>Bitfinex & Tether</h3>
               <a href="https://bitfinex.com" target="_blank">
                 <span className="image fit">
                   <img src={logoBitfinex} alt="" />
                 </span>
               </a>
             </div>
+
             <div className="col-4">
             <h3>Sweet</h3>
             <a href="https://sweet.io" target="_blank">
@@ -259,11 +263,39 @@ class Homepage extends React.Component {
               </span>
             </a>
             </div>
+
             <div className="col-4">
               <h3>SideShift.ai</h3>
               <a href="https://sideshift.ai" target="_blank">
                 <span className="image fit">
                   <img src={logoSideshift} alt="" />
+                </span>
+              </a>
+            </div>
+
+            <div className="col-4">
+              <h3>Launchpad IP</h3>
+              <a href="https://launchpadip.com" target="_blank">
+                <span className="image fit">
+                  <img src={logoLaunchpad} alt="" />
+                </span>
+              </a>
+            </div>
+
+            <div className="col-4">
+              <h3>Bitcoin.com</h3>
+              <a href="https://bitcoin.com" target="_blank">
+                <span className="image fit">
+                  <img src={logoBitcoincom} alt="" />
+                </span>
+              </a>
+            </div>
+
+            <div className="col-4">
+              <h3>eCash GNC</h3>
+              <a href="https://e.cash" target="_blank">
+                <span className="image fit">
+                  <img src={logoEcash} alt="" />
                 </span>
               </a>
             </div>
