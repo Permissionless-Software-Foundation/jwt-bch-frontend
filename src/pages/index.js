@@ -14,6 +14,9 @@ import cashStackPoster from '../assets/images/cash-stack-poster.png'
 
 import '../assets/css/main2.css'
 
+// Company Logos
+import logoBitfinex from '../assets/images/bitfinex-logo.png'
+
 class Homepage extends React.Component {
   render() {
     const siteTitle = 'BCH Blockchain As-A-Service SaaS'
@@ -228,6 +231,39 @@ class Homepage extends React.Component {
               </div>
               <br />
               <br />
+            </div>
+          </div>
+        </section>
+
+        <section id="six" className="main style2 special">
+          <div className="grid-wrapper">
+            <div className="col-12">
+              <h2>Clients of FullStack.cash</h2>
+            </div>
+
+            <div className="col-4">
+              <h3>Bitfinex</h3>
+              <a href="https://bitfinex.com" target="_blank">
+                <span className="image fit">
+                  <img src={logoBitfinex} alt="" />
+                </span>
+              </a>
+            </div>
+            <div className="col-4">
+            <h3>Bitfinex</h3>
+            <a href="https://bitfinex.com" target="_blank">
+              <span className="image fit">
+                <img src={logoBitfinex} alt="" />
+              </span>
+            </a>
+            </div>
+            <div className="col-4">
+              <h3>Bitfinex</h3>
+              <a href="https://bitfinex.com" target="_blank">
+                <span className="image fit">
+                  <img src={logoBitfinex} alt="" />
+                </span>
+              </a>
             </div>
           </div>
         </section>
