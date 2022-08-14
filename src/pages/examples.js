@@ -179,15 +179,17 @@ class Homepage extends React.Component {
               </span>
               <h3>SLP Wallet Library</h3>
               <p>
-                This npm library can be added to your project to instantly give
-                it the ability to work with BCH and SLP tokens. It doubles as a
-                command line interface (CLI) wallet app. It's an HD wallet with
-                an emphasis on privacy best-practices.
+                This powerful command-line wallet handles BCH and SLP tokens,
+                it contains commands for creating all different kinds of tokens,
+                sending encrypted messages, and many other useful features. Because
+                there is no graphical user interface (GUI), its a great platform
+                for rapid prototying. The code behind each command is self-contained,
+                and makes for advanced code examples.
               </p>
               <ul className="actions">
                 <li>
                   <a
-                    href="https://github.com/christroutner/slp-cli-wallet"
+                    href="https://github.com/Permissionless-Software-Foundation/psf-bch-wallet"
                     target="_blank"
                     className="button"
                   >
