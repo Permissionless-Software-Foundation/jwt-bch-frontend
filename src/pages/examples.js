@@ -177,7 +177,7 @@ class Homepage extends React.Component {
               <span className="image fit">
                 <span className="icon style3 major fas fa-wallet"></span>
               </span>
-              <h3>SLP Wallet Library</h3>
+              <h3>PSF BCH Wallet</h3>
               <p>
                 This powerful command-line wallet handles BCH and SLP tokens,
                 it contains commands for creating all different kinds of tokens,
