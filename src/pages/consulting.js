@@ -34,33 +34,6 @@ class Homepage extends React.Component {
             </div>
           </div>
 
-          <div className="grid-wrapper" style={{ border: 'solid 1px black' }}>
-            <div className="col-6" style={{ padding: '20px' }}>
-              <a href="https://t.me/slp_devs_for_hire" style={{borderBottom: 'none'}}>
-                <span className="image">
-                  <img src={telegram} alt="" />
-                </span>
-                <h3>SLP Token Devs for Hire</h3>
-              </a>
-            </div>
-
-            <div className="col-6" style={{ padding: '20px' }}>
-              <p>
-                This Telegram channel is moderated by staff from FullStack.cash.
-                It was created for entrepreneurs to find developers who have
-                experience with SLP tokens and Bitcoin Cash. It's a simple, free
-                way for you to find an independent developer or your next employee.
-              </p>
-
-              <ul className="actions">
-                <li>
-                  <a href="https://t.me/slp_devs_for_hire" className="button">
-                    Join
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
 
           <div className="grid-wrapper" style={{ border: 'solid 1px black', marginTop: '25px' }}>
             <div className="col-6" style={{ padding: '20px' }}>
@@ -94,6 +67,115 @@ class Homepage extends React.Component {
               </ul>
             </div>
           </div>
+	  <br />
+
+	  <div className="grid-wrapper" style={{ border: 'solid 1px black' }}>
+            <div className="col-6" style={{ padding: '20px' }}>
+              <a href="https://t.me/slp_devs_for_hire" style={{borderBottom: 'none'}}>
+                <span className="image">
+                  <img src={telegram} alt="" />
+                </span>
+                <h3>SLP Token Devs for Hire</h3>
+              </a>
+            </div>
+
+            <div className="col-6" style={{ padding: '20px' }}>
+              <p>
+                This Telegram channel is moderated by staff from FullStack.cash.
+                It was created for entrepreneurs to find developers who have
+                experience with SLP tokens and Bitcoin Cash. It's a simple, free
+                way for you to find an independent developer or your next employee.
+              </p>
+
+              <ul className="actions">
+                <li>
+                  <a href="https://t.me/slp_devs_for_hire" className="button">
+                    Join
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+	  <br />
+	  <hr />
+	  <br />
+
+	  <div className="grid-wrapper">
+            <div className="col-12">
+              <header className="major">
+                <h3>Need an Online Store? We've got you covered.</h3>
+              </header>
+            </div>
+
+            <div className="col-12">
+              <p>
+                Many business owners simply need an online shopping cart where customers can
+		purchase goods for Bitcoin Cash. We can install a simple Wordpress store that
+		allows you to display goods, and allows customers to pay in Bitcion Cash.
+              </p>
+	      <br />
+	      <a href="https://bchstore.com" className="button">See Demo</a>
+            </div>
+          </div>
+
+	  <br />
+	  <hr />
+	  <br />
+
+	  <div className="grid-wrapper">
+            <div className="col-12">
+              <header className="major">
+                <h3>Need Something More Advanced? We've got that too.</h3>
+              </header>
+            </div>
+
+            <div className="col-12">
+              <p>
+                We can build custom crypto apps for your business too. We generally build web-apps first, 
+                and then compile them into Android and iOS apps. Here are a couple examples:
+              </p>
+
+              <ul>
+               <li>
+                 <a href="https://bchn-wallet.fullstack.cash" target="_blank">BCH and SLP token wallet</a>
+               </li>
+               <li>
+                 <a href="https://dex-demo.fullstack.cash" target="_blank">Decentralized Exchange</a>
+               </li>
+              </ul>
+
+              <p>
+                Here is a list of custom services that FullStack.cash offers:
+              </p>
+              <ul style={{textAlign: 'left'}}>
+                <li>Architecture: Designing the infrastructure and communication flow for a custom app for your business</li>
+                <li>App development: Building custom apps for your business</li>
+                <li>Infrastructure: Setup and management of infrastructure for your business</li>
+                <li>Developer recruitment: We can help you find developers for hire</li>
+                <li>Developer screening: Testing the skills of potential hires</li>
+                <li>Developer management: Project management and coordinating work among a team</li>
+              </ul>
+
+              <p>
+                But we can't do it all. Some skills are outside our expertise. When these are needed,
+                we can help you find additional resources for your project, but FullStack.cash can not
+                take responsiblity for the execution:
+              </p>
+              <ul style={{textAlign: 'left'}}>
+                <li>Design: color pallets, graphics, and aesthetics</li>
+                <li>Native apps: We can build an app for iOS and Android, but not with native features like the camera or NFC.</li>
+                <li>Website development: We focus on crypto apps, not on websites. A lot of other contractors can do this.</li>
+                <li>General apps: We focus on crypto apps. If the app doesn't involve cryptocurrency, we'll help you partner with a general app design company.</li>
+              </ul>
+
+              <p>
+                Read more about our <a href="https://christroutner.github.io/trouts-blog/blog/software-development-process" target="_blank">Software
+                Development Process</a>.
+              </p>
+            </div>
+          </div>
+
         </section>
 
         <Footer />
