@@ -141,7 +141,7 @@ class Homepage extends React.Component {
                  <a href="https://bchn-wallet.fullstack.cash" target="_blank">BCH and SLP token wallet</a>
                </li>
                <li>
-                 <a href="https://dex-demo.fullstack.cash" target="_blank">Decentralized Exchange</a>
+                 <a href="https://dex-demo.fullstack.cash" target="_blank">Decentralized Exchange (DEX) for tokens</a>
                </li>
               </ul>
 
