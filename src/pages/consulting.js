@@ -132,7 +132,7 @@ class Homepage extends React.Component {
 
             <div className="col-12">
               <p>
-                We can build custom crypto apps for your business too. We generally build web-apps first, 
+                We can build custom crypto apps for your business too. We generally build web-apps first,
                 and then compile them into Android and iOS apps. Here are a couple examples:
               </p>
 
@@ -167,6 +167,7 @@ class Homepage extends React.Component {
                 <li>Native apps: We can build an app for iOS and Android, but not with native features like the camera or NFC.</li>
                 <li>Website development: We focus on crypto apps, not on websites. A lot of other contractors can do this.</li>
                 <li>General apps: We focus on crypto apps. If the app doesn't involve cryptocurrency, we'll help you partner with a general app design company.</li>
+                <li>App stores: We can not help you get your app into the iOS or Google app stores. That is often a full-time job in an of itself.</li>
               </ul>
 
               <p>
