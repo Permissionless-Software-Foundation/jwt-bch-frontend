@@ -149,12 +149,12 @@ class Homepage extends React.Component {
                 Here is a list of custom services that FullStack.cash offers:
               </p>
               <ul style={{textAlign: 'left'}}>
-                <li>Architecture: Designing the infrastructure and communication flow for a custom app for your business</li>
-                <li>App development: Building custom apps for your business</li>
-                <li>Infrastructure: Setup and management of infrastructure for your business</li>
-                <li>Developer recruitment: We can help you find developers for hire</li>
-                <li>Developer screening: Testing the skills of potential hires</li>
-                <li>Developer management: Project management and coordinating work among a team</li>
+                <li><b>Architecture</b>: Designing the infrastructure and communication flow for a custom app for your business</li>
+                <li><b>App development</b>: Building custom apps for your business</li>
+                <li><b>Infrastructure</b>: Setup and management of infrastructure for your business</li>
+                <li><b>Developer recruitment</b>: We can help you find developers for hire</li>
+                <li><b>Developer screening</b>: Testing the skills of potential hires</li>
+                <li><b>Developer management</b>: Project management and coordinating work among a team</li>
               </ul>
 
               <p>
@@ -163,11 +163,11 @@ class Homepage extends React.Component {
                 take responsiblity for the execution:
               </p>
               <ul style={{textAlign: 'left'}}>
-                <li>Design: color pallets, graphics, and aesthetics</li>
-                <li>Native apps: We can build an app for iOS and Android, but not with native features like the camera or NFC.</li>
-                <li>Website development: We focus on crypto apps, not on websites. A lot of other contractors can do this.</li>
-                <li>General apps: We focus on crypto apps. If the app doesn't involve cryptocurrency, we'll help you partner with a general app design company.</li>
-                <li>App stores: We can not help you get your app into the iOS or Google app stores. That is often a full-time job in itself.</li>
+                <li><b>Design</b>: color pallets, graphics, and aesthetics</li>
+                <li><b>Native apps</b>: We can build an app for iOS and Android, but not with native features like the camera or NFC.</li>
+                <li><b>Website development</b>: We focus on crypto apps, not on websites. A lot of other contractors can do this.</li>
+                <li><b>General apps</b>: We focus on crypto apps. If the app doesn't involve cryptocurrency, we'll help you partner with a general app design company.</li>
+                <li><b>App stores</b>: We can not help you get your app into the iOS or Google app stores. That is often a full-time job in itself.</li>
               </ul>
 
               <p>
