@@ -151,11 +151,16 @@ class Homepage extends React.Component {
               <ul style={{textAlign: 'left'}}>
                 <li><b>Architecture</b>: Designing the infrastructure and communication flow for a custom app for your business</li>
                 <li><b>App development</b>: Building custom apps for your business</li>
-                <li><b>Infrastructure</b>: Setup and management of infrastructure for your business</li>
+                <li><b>Infrastructure</b>: Setup and management of crypto infrastructure for your business</li>
                 <li><b>Developer recruitment</b>: We can help you find developers for hire</li>
                 <li><b>Developer screening</b>: Testing the skills of potential hires</li>
                 <li><b>Developer management</b>: Project management and coordinating work among a team</li>
               </ul>
+
+              <p>
+                Read more about our <a href="https://christroutner.github.io/trouts-blog/blog/software-development-process" target="_blank">Software
+                Development Process</a>.
+              </p>
 
               <p>
                 But we can't do it all. Some skills are outside our expertise. When these are needed,
@@ -170,10 +175,7 @@ class Homepage extends React.Component {
                 <li><b>App stores</b>: We can not help you get your app into the iOS or Google app stores. That is often a full-time job in itself.</li>
               </ul>
 
-              <p>
-                Read more about our <a href="https://christroutner.github.io/trouts-blog/blog/software-development-process" target="_blank">Software
-                Development Process</a>.
-              </p>
+
             </div>
           </div>
 
