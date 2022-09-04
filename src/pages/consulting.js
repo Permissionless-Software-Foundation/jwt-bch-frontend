@@ -152,7 +152,7 @@ class Homepage extends React.Component {
                 <li><b>Architecture</b>: Designing the infrastructure and communication flow for a custom app for your business</li>
                 <li><b>App development</b>: Building custom apps for your business</li>
                 <li><b>Infrastructure</b>: Setup and management of crypto infrastructure for your business</li>
-                <li><b>Developer recruitment</b>: We can help you find developers for hire</li>
+                <li><b>Developer recruitment</b>: We can help you find developers to hire</li>
                 <li><b>Developer screening</b>: Testing the skills of potential hires</li>
                 <li><b>Developer management</b>: Project management and coordinating work among a team</li>
               </ul>
