@@ -158,9 +158,20 @@ class Homepage extends React.Component {
               </ul>
 
               <p>
-                Read more about our <a href="https://christroutner.github.io/trouts-blog/blog/software-development-process" target="_blank">Software
-                Development Process</a>.
+                Read more about our management and development practices in these blog posts:
               </p>
+              <ul>
+                <li>
+                  <a href="https://christroutner.github.io/trouts-blog/blog/managing-app-development/" target="_blank">
+                    Managing App Development
+                  </a>.
+                </li>
+                <li>
+                  <a href="https://christroutner.github.io/trouts-blog/blog/software-development-process" target="_blank">
+                    Our Software Development Process
+                  </a>.
+                </li>
+              </ul>
 
               <p>
                 But we can't do it all. Some skills are outside our expertise. When these are needed,
