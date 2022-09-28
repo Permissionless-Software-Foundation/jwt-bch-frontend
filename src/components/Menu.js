@@ -40,6 +40,12 @@ const Menu = props => (
         </li>
 
         <li>
+          <Link onClick={props.onToggleMenu} to="/portfolio">
+            Portfolio
+          </Link>
+        </li>
+
+        <li>
           <Link onClick={props.onToggleMenu} to="/cashstrap">
             CashStrap
           </Link>
