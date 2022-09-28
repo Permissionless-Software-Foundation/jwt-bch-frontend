@@ -7,6 +7,7 @@ import Footer from '../components/Footer'
 import telegram from '../assets/images/telegram-200px.png'
 import fullstackLogo from '../assets/images/fullstackcash-Grey.png'
 import walletThumbnail from '../assets/images/wallet-fullstack-thumbnail.png'
+import nftCreatorThumbnail from '../assets/images/nft-creator-thumbnail.png'
 
 class Portfolio extends React.Component {
   render () {
@@ -40,7 +41,9 @@ class Portfolio extends React.Component {
           >
             <div className='col-6' style={{ padding: '20px' }}>
               <span className='image'>
-                <img style={{ maxWidth: '600px' }} src={walletThumbnail} alt='' />
+                <a href="http://bchn-wallet.fullstack.cash" target="_blank">
+                  <img style={{ maxWidth: '600px' }} src={walletThumbnail} alt='' />
+                </a>
               </span>
             </div>
 
@@ -77,30 +80,30 @@ class Portfolio extends React.Component {
 
           <div className='grid-wrapper' style={{ border: 'solid 1px black' }}>
             <div className='col-6' style={{ padding: '20px' }}>
-              <a
-                href='https://t.me/slp_devs_for_hire'
-                style={{ borderBottom: 'none' }}
-              >
-                <span className='image'>
-                  <img src={telegram} alt='' />
-                </span>
-                <h3>SLP Token Devs for Hire</h3>
-              </a>
+              <span className='image'>
+                <a href="https://nft-creator.fullstack.cash/" target="_blank">
+                  <img style={{ maxWidth: '600px' }} src={nftCreatorThumbnail} alt='' />
+                </a>
+              </span>
             </div>
 
             <div className='col-6' style={{ padding: '20px' }}>
+              <h3>NFT Creator</h3>
               <p>
-                This Telegram channel is moderated by staff from FullStack.cash.
-                It was created for entrepreneurs to find developers who have
-                experience with SLP tokens and Bitcoin Cash. It's a simple, free
-                way for you to find an independent developer or your next
-                employee.
+                NFTs are the future of digital assets. They can represent anything
+                from concert tickets, to works of art, to news items, to membership
+                in a club, to just about anything you can imagine. Creating NFTs
+                needs to be cheap and easy. This app let's you create an NFT
+                in a few seconds for only a few cents of BCH.
               </p>
-
               <ul className='actions'>
                 <li>
-                  <a href='https://t.me/slp_devs_for_hire' className='button'>
-                    Join
+                  <a
+                    href='https://nft-creator.fullstack.cash/'
+                    target='_blank'
+                    className='button'
+                  >
+                    Live Demo
                   </a>
                 </li>
               </ul>
