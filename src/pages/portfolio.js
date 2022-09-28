@@ -39,8 +39,8 @@ class Portfolio extends React.Component {
             style={{ border: 'solid 1px black', marginTop: '25px' }}
           >
             <div className='col-6' style={{ padding: '20px' }}>
-              <span className='image' style={{ maxWidth: '600px' }}>
-                <img src={walletThumbnail} alt='' />
+              <span className='image'>
+                <img style={{ maxWidth: '600px' }} src={walletThumbnail} alt='' />
               </span>
             </div>
 
