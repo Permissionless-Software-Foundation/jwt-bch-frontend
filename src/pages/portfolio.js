@@ -8,6 +8,9 @@ import telegram from '../assets/images/telegram-200px.png'
 import fullstackLogo from '../assets/images/fullstackcash-Grey.png'
 import walletThumbnail from '../assets/images/wallet-fullstack-thumbnail.png'
 import nftCreatorThumbnail from '../assets/images/nft-creator-thumbnail.png'
+import nftCollectorThumbnail from '../assets/images/nft-collector-thumbnail.png'
+import bchDexThumbnail from '../assets/images/bch-dex-thumbnail.png'
+
 
 class Portfolio extends React.Component {
   render () {
@@ -100,6 +103,79 @@ class Portfolio extends React.Component {
                 <li>
                   <a
                     href='https://nft-creator.fullstack.cash/'
+                    target='_blank'
+                    className='button'
+                  >
+                    Live Demo
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <br />
+
+          <div className='grid-wrapper' style={{ border: 'solid 1px black' }}>
+            <div className='col-6' style={{ padding: '20px' }}>
+              <span className='image'>
+                <a href="https://nft-collector.fullstack.cash/?addr=bitcoincash:qzsgnyd826c6xw5y3y4ct6q2gvf3r8fmkqfvtzn6ef" target="_blank">
+                  <img style={{ maxWidth: '600px' }} src={nftCollectorThumbnail} alt='' />
+                </a>
+              </span>
+            </div>
+
+            <div className='col-6' style={{ padding: '20px' }}>
+              <h3>NFT Collector</h3>
+              <p>
+                What good is it to create NFTs if you can't show them off?!
+              </p>
+              <p>
+                The NFT Collector app will display any NFTs held by a Bitcoin
+                Cash address. The address can be passed as part of the URL, which
+                makes it easy to share on social media.
+              </p>
+              <ul className='actions'>
+                <li>
+                  <a
+                    href='https://nft-collector.fullstack.cash/?addr=bitcoincash:qzsgnyd826c6xw5y3y4ct6q2gvf3r8fmkqfvtzn6ef'
+                    target='_blank'
+                    className='button'
+                  >
+                    Live Demo
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <br />
+
+          <div className='grid-wrapper' style={{ border: 'solid 1px black' }}>
+            <div className='col-6' style={{ padding: '20px' }}>
+              <span className='image'>
+                <a href="https://dex.fullstack.cash/" target="_blank">
+                  <img style={{ maxWidth: '600px' }} src={bchDexThumbnail} alt='' />
+                </a>
+              </span>
+            </div>
+
+            <div className='col-6' style={{ padding: '20px' }}>
+              <h3>Decentralized Exchange (DEX)</h3>
+              <p>
+                FullStack.cash and the PSF are in the process of building out a
+                decentralized exchange (DEX) for trading tokens on the BCH, eCash,
+                and AVAX blockchains. These DEX's can be used by buy and sell
+                fungible tokens and NFTs.
+
+              </p>
+              <p>
+                The protocol we've developed
+                is <i>trustless</i>, <i>atomic</i>, <i>non-custodial</i>, and <i>peer-to-peer</i>. These
+                are important qualities that distinguish it from other DEXs in
+                the industry. Learn more by visiting the demo.
+              </p>
+              <ul className='actions'>
+                <li>
+                  <a
+                    href='https://dex.fullstack.cash/'
                     target='_blank'
                     className='button'
                   >
