@@ -185,7 +185,7 @@ class Portfolio extends React.Component {
               <p>
                 FullStack.cash and the PSF are in the process of building out a
                 decentralized exchange (DEX) for trading tokens on the BCH,
-                eCash, and AVAX blockchains. These DEX's can be used by buy and
+                eCash, and AVAX blockchains. These DEX's can be used to buy and
                 sell fungible tokens and NFTs.
               </p>
               <p>
