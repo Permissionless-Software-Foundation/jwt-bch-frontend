@@ -39,7 +39,8 @@ class Portfolio extends React.Component {
                 >
                   our code
                 </a>
-                .
+                . We <a href='/consulting'>can be hired</a> to build apps for
+                you too.
               </p>
             </div>
           </div>
@@ -63,10 +64,10 @@ class Portfolio extends React.Component {
             <div className='col-6' style={{ padding: '20px' }}>
               <h3>Wallet.FullStack.cash</h3>
               <p>
-                Our open source, white-label wallet. It provides a
-                foundation upon which to build additional functionality. We
-                encourage developers and businesses to fork this code base and
-                customize it for their own needs.
+                Our open source, white-label wallet. It provides a foundation
+                upon which to build additional functionality. We encourage
+                developers and businesses to fork this code base and customize
+                it for their own needs.
               </p>
               <p>This wallet app provides the following basic functionality:</p>
               <ul style={{ textAlign: 'left' }}>
@@ -211,6 +212,24 @@ class Portfolio extends React.Component {
           <br />
           <hr />
           <br />
+
+          <div className='grid-wrapper'>
+            <div className='col-12'>
+              <p>
+                This page is a collection of apps built by FullStack.cash. These
+                are examples of the kinds of apps we build for clients. All apps
+                on this page are open source, and we encourage companies to copy{' '}
+                <a
+                  href='https://github.com/Permissionless-Software-Foundation'
+                  target='_blank'
+                >
+                  our code
+                </a>
+                . We <a href='/consulting'>can be hired</a> to build apps for
+                you too.
+              </p>
+            </div>
+          </div>
         </section>
 
         <Footer />
