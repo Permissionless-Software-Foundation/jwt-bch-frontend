@@ -50,7 +50,7 @@ class Portfolio extends React.Component {
             style={{ border: 'solid 1px black', marginTop: '25px' }}
           >
             <div className='col-6' style={{ padding: '20px' }}>
-              <span className='image'>
+              <span className='image fit'>
                 <a href='http://bchn-wallet.fullstack.cash' target='_blank'>
                   <img
                     style={{ maxWidth: '600px' }}
@@ -94,7 +94,7 @@ class Portfolio extends React.Component {
 
           <div className='grid-wrapper' style={{ border: 'solid 1px black' }}>
             <div className='col-6' style={{ padding: '20px' }}>
-              <span className='image'>
+              <span className='image fit'>
                 <a href='https://nft-creator.fullstack.cash/' target='_blank'>
                   <img
                     style={{ maxWidth: '600px' }}
@@ -170,7 +170,7 @@ class Portfolio extends React.Component {
 
           <div className='grid-wrapper' style={{ border: 'solid 1px black' }}>
             <div className='col-6' style={{ padding: '20px' }}>
-              <span className='image'>
+              <span className='image fit'>
                 <a href='https://dex.fullstack.cash/' target='_blank'>
                   <img
                     style={{ maxWidth: '600px' }}
