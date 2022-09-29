@@ -133,20 +133,10 @@ class Homepage extends React.Component {
             <div className="col-12">
               <p>
                 We can build custom crypto apps for your business too. We generally build web-apps first,
-                and then compile them into Android and iOS apps. Here are a few examples:
+                and then compile them into Android and iOS apps. See examples in our portfolio:
               </p>
 
-              <ul>
-               <li>
-                 <a href="https://bchn-wallet.fullstack.cash" target="_blank">BCH and SLP token wallet</a>
-               </li>
-               <li>
-                 <a href="https://nft-creator.fullstack.cash/" target="_blank">NFT Creator</a>
-               </li>
-               <li>
-                 <a href="https://dex-demo.fullstack.cash" target="_blank">Decentralized Exchange (DEX) for tokens</a>
-               </li>
-              </ul>
+              <a href="/portfolio" className="button">See Our Portfolio</a>
 
               <p>
                 Here is a list of custom services that FullStack.cash offers:
