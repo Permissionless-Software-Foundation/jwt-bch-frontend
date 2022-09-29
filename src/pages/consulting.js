@@ -137,6 +137,7 @@ class Homepage extends React.Component {
               </p>
 
               <a href="/portfolio" className="button">See Our Portfolio</a>
+              <br />
 
               <p>
                 Here is a list of custom services that FullStack.cash offers:
