@@ -14,7 +14,7 @@ import bchDexThumbnail from '../assets/images/bch-dex-thumbnail.png'
 
 class Portfolio extends React.Component {
   render () {
-    const siteTitle = 'Consulting'
+    const siteTitle = 'Portfolio'
 
     return (
       <Layout>
