@@ -131,7 +131,7 @@ class Portfolio extends React.Component {
 
           <div className='grid-wrapper' style={{ border: 'solid 1px black' }}>
             <div className='col-6' style={{ padding: '20px' }}>
-              <span className='image'>
+              <span className='image fit'>
                 <a
                   href='https://nft-collector.fullstack.cash/?addr=bitcoincash:qzsgnyd826c6xw5y3y4ct6q2gvf3r8fmkqfvtzn6ef'
                   target='_blank'
