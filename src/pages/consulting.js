@@ -161,6 +161,11 @@ class Homepage extends React.Component {
                   </a>.
                 </li>
                 <li>
+                  <a href="https://christroutner.github.io/trouts-blog/blog/product-owner-roles" target="_blank">
+                    Product Owner: Roles & Responsibilities
+                  </a>.
+                </li>
+                <li>
                   <a href="https://christroutner.github.io/trouts-blog/blog/software-development-process" target="_blank">
                     Our Software Development Process
                   </a>.
