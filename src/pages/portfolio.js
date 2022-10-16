@@ -11,6 +11,7 @@ import nftCreatorThumbnail from '../assets/images/nft-creator-thumbnail.png'
 // import nftCollectorThumbnail from '../assets/images/nft-collector-thumbnail.png'
 import nftCollectorThumbnail from '../assets/images/nft-collector.gif'
 import bchDexThumbnail from '../assets/images/bch-dex-thumbnail.png'
+import wordpressStoreScreenshot from '../assets/images/wordpress-store-screenshot.png'
 
 class Portfolio extends React.Component {
   render () {
@@ -199,6 +200,43 @@ class Portfolio extends React.Component {
                 <li>
                   <a
                     href='https://dex.fullstack.cash/'
+                    target='_blank'
+                    className='button'
+                  >
+                    Live Demo
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className='grid-wrapper' style={{ border: 'solid 1px black' }}>
+            <div className='col-6' style={{ padding: '20px' }}>
+              <span className='image fit'>
+                <a href='https://bchstore.com/' target='_blank'>
+                  <img
+                    style={{ maxWidth: '600px' }}
+                    src={wordpressStoreScreenshot}
+                    alt=''
+                  />
+                </a>
+              </span>
+            </div>
+
+            <div className='col-6' style={{ padding: '20px' }}>
+              <h3>Sell Products for BCH</h3>
+              <p>
+                Many clients want a simple store where they can sell products
+                for Bitcoin Cash or tokens. For this specific use case, we can
+                set up a Wordpress website running a WooCommerce plugin that
+                supports sales in BCH. This provides an industry-standard user
+                interface for creating an online store, managing inventory, and
+                accepting BCH for payment.
+              </p>
+              <ul className='actions'>
+                <li>
+                  <a
+                    href='https://bchstore.com/'
                     target='_blank'
                     className='button'
                   >
