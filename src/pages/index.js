@@ -65,6 +65,18 @@ class Homepage extends React.Component {
                   </a>
                 </li>
               </ul>
+              <ul className="actions uniform">
+                <li>
+                  <a href="/consulting" className="button">
+                    Consulting
+                  </a>
+                </li>
+                <li>
+                  <a href="/portfolio" className="button">
+                    Portfolio
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </section>
