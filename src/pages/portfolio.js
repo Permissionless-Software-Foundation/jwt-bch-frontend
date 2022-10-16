@@ -209,6 +209,7 @@ class Portfolio extends React.Component {
               </ul>
             </div>
           </div>
+          <br />
 
           <div className='grid-wrapper' style={{ border: 'solid 1px black' }}>
             <div className='col-6' style={{ padding: '20px' }}>
