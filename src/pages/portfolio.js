@@ -249,6 +249,7 @@ class Portfolio extends React.Component {
               </ul>
             </div>
           </div>
+          <br />
 
           <div className='grid-wrapper' style={{ border: 'solid 1px black' }}>
             <div className='col-6' style={{ padding: '20px' }}>
@@ -268,11 +269,12 @@ class Portfolio extends React.Component {
               <p>
                 Crypto is all about community. But in order to communicate with
                 your community, you must be able to filter out noise makers and
-                spam bots. FullStack.cash can create a custom chat bot to amply
-                the signal and reduce the noise.
+                spam bots.
               </p>
               <p>
-                We can produce a custom bot for you that silences all newcomers
+                FullStack.cash can create a custom chat bot to amply
+                the signal and reduce the noise. We can produce a custom bot
+                for you that silences all newcomers
                 by default. They can gain the ability to speak in your Telegram
                 or Discord channel by completing a challenge, such as signing
                 a message or claiming a token.
