@@ -12,6 +12,8 @@ import nftCreatorThumbnail from '../assets/images/nft-creator-thumbnail.png'
 import nftCollectorThumbnail from '../assets/images/nft-collector.gif'
 import bchDexThumbnail from '../assets/images/bch-dex-thumbnail.png'
 import wordpressStoreScreenshot from '../assets/images/wordpress-store-screenshot.png'
+import chatBotScreenshot from '../assets/images/chat-bot.png'
+
 
 class Portfolio extends React.Component {
   render () {
@@ -238,6 +240,51 @@ class Portfolio extends React.Component {
                 <li>
                   <a
                     href='https://bchstore.com/'
+                    target='_blank'
+                    className='button'
+                  >
+                    Live Demo
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className='grid-wrapper' style={{ border: 'solid 1px black' }}>
+            <div className='col-6' style={{ padding: '20px' }}>
+              <span className='image fit'>
+                <a href='https://t.me/permissionless_software' target='_blank'>
+                  <img
+                    style={{ maxWidth: '600px' }}
+                    src={chatBotScreenshot}
+                    alt=''
+                  />
+                </a>
+              </span>
+            </div>
+
+            <div className='col-6' style={{ padding: '20px' }}>
+              <h3>Telegram and Discord Bots</h3>
+              <p>
+                Crypto is all about community. But in order to communicate with
+                your community, you must be able to filter out noise makers and
+                spam bots. FullStack.cash can create a custom chat bot to amply
+                the signal and reduce the noise.
+              </p>
+              <p>
+                We can produce a custom bot for you that silences all newcomers
+                by default. They can gain the ability to speak in your Telegram
+                or Discord channel by completing a challenge, such as signing
+                a message or claiming a token.
+              </p>
+              <p>
+                Click the button below to join the PSF Telegram channel and
+                try it out for yourself.
+              </p>
+              <ul className='actions'>
+                <li>
+                  <a
+                    href='https://t.me/permissionless_software'
                     target='_blank'
                     className='button'
                   >
