@@ -31,7 +31,7 @@ const xData1 = [
   17500,
   18500,
   19500,
-  20000,
+  20000
 ]
 
 const xData2 = [
@@ -62,7 +62,7 @@ const xData2 = [
   2500,
   3500,
   4500,
-  5000,
+  5000
 ]
 
 // BCH/Token balance
@@ -94,7 +94,7 @@ const yData1 = [
   112.042226758452,
   136.84868479318,
   167.147361056982,
-  184.726402473266,
+  184.726402473266
 ]
 
 // $ / token balance
@@ -126,14 +126,14 @@ const yData2 = [
   4.48168907033808,
   5.4739473917272,
   6.68589444227928,
-  7.38905609893064,
+  7.38905609893064
 ]
 
 const initChartData = {
   xData1,
   xData2,
   yData1,
-  yData2,
+  yData2
 }
 
 export default initChartData

@@ -14,7 +14,6 @@ import bchDexThumbnail from '../assets/images/bch-dex-thumbnail.png'
 import wordpressStoreScreenshot from '../assets/images/wordpress-store-screenshot.png'
 import chatBotScreenshot from '../assets/images/chat-bot.png'
 
-
 class Portfolio extends React.Component {
   render () {
     const siteTitle = 'Portfolio'
@@ -38,7 +37,7 @@ class Portfolio extends React.Component {
                 on this page are open source, and we encourage companies to copy{' '}
                 <a
                   href='https://github.com/Permissionless-Software-Foundation'
-                  target='_blank'
+                  target='_blank' rel='noreferrer'
                 >
                   our code
                 </a>
@@ -54,7 +53,7 @@ class Portfolio extends React.Component {
           >
             <div className='col-6' style={{ padding: '20px' }}>
               <span className='image fit'>
-                <a href='http://bchn-wallet.fullstack.cash' target='_blank'>
+                <a href='http://bchn-wallet.fullstack.cash' target='_blank' rel='noreferrer'>
                   <img
                     style={{ maxWidth: '600px' }}
                     src={walletThumbnail}
@@ -85,7 +84,7 @@ class Portfolio extends React.Component {
                   <a
                     href='https://bchn-wallet.fullstack.cash'
                     target='_blank'
-                    className='button'
+                    className='button' rel='noreferrer'
                   >
                     Live Demo
                   </a>
@@ -98,7 +97,7 @@ class Portfolio extends React.Component {
           <div className='grid-wrapper' style={{ border: 'solid 1px black' }}>
             <div className='col-6' style={{ padding: '20px' }}>
               <span className='image fit'>
-                <a href='https://nft-creator.fullstack.cash/' target='_blank'>
+                <a href='https://nft-creator.fullstack.cash/' target='_blank' rel='noreferrer'>
                   <img
                     style={{ maxWidth: '600px' }}
                     src={nftCreatorThumbnail}
@@ -122,7 +121,7 @@ class Portfolio extends React.Component {
                   <a
                     href='https://nft-creator.fullstack.cash/'
                     target='_blank'
-                    className='button'
+                    className='button' rel='noreferrer'
                   >
                     Live Demo
                   </a>
@@ -137,7 +136,7 @@ class Portfolio extends React.Component {
               <span className='image fit'>
                 <a
                   href='https://nft-collector.fullstack.cash/?addr=bitcoincash:qzsgnyd826c6xw5y3y4ct6q2gvf3r8fmkqfvtzn6ef'
-                  target='_blank'
+                  target='_blank' rel='noreferrer'
                 >
                   <img
                     style={{ maxWidth: '600px' }}
@@ -161,7 +160,7 @@ class Portfolio extends React.Component {
                   <a
                     href='https://nft-collector.fullstack.cash/?addr=bitcoincash:qzsgnyd826c6xw5y3y4ct6q2gvf3r8fmkqfvtzn6ef'
                     target='_blank'
-                    className='button'
+                    className='button' rel='noreferrer'
                   >
                     Live Demo
                   </a>
@@ -174,7 +173,7 @@ class Portfolio extends React.Component {
           <div className='grid-wrapper' style={{ border: 'solid 1px black' }}>
             <div className='col-6' style={{ padding: '20px' }}>
               <span className='image fit'>
-                <a href='https://dex.fullstack.cash/' target='_blank'>
+                <a href='https://dex.fullstack.cash/' target='_blank' rel='noreferrer'>
                   <img
                     style={{ maxWidth: '600px' }}
                     src={bchDexThumbnail}
@@ -203,7 +202,7 @@ class Portfolio extends React.Component {
                   <a
                     href='https://dex.fullstack.cash/'
                     target='_blank'
-                    className='button'
+                    className='button' rel='noreferrer'
                   >
                     Live Demo
                   </a>
@@ -216,7 +215,7 @@ class Portfolio extends React.Component {
           <div className='grid-wrapper' style={{ border: 'solid 1px black' }}>
             <div className='col-6' style={{ padding: '20px' }}>
               <span className='image fit'>
-                <a href='https://bchstore.com/' target='_blank'>
+                <a href='https://bchstore.com/' target='_blank' rel='noreferrer'>
                   <img
                     style={{ maxWidth: '600px' }}
                     src={wordpressStoreScreenshot}
@@ -241,7 +240,7 @@ class Portfolio extends React.Component {
                   <a
                     href='https://bchstore.com/'
                     target='_blank'
-                    className='button'
+                    className='button' rel='noreferrer'
                   >
                     Live Demo
                   </a>
@@ -254,7 +253,7 @@ class Portfolio extends React.Component {
           <div className='grid-wrapper' style={{ border: 'solid 1px black' }}>
             <div className='col-6' style={{ padding: '20px' }}>
               <span className='image fit'>
-                <a href='https://t.me/permissionless_software' target='_blank'>
+                <a href='https://t.me/permissionless_software' target='_blank' rel='noreferrer'>
                   <img
                     style={{ maxWidth: '600px' }}
                     src={chatBotScreenshot}
@@ -288,7 +287,7 @@ class Portfolio extends React.Component {
                   <a
                     href='https://t.me/permissionless_software'
                     target='_blank'
-                    className='button'
+                    className='button' rel='noreferrer'
                   >
                     Live Demo
                   </a>
@@ -309,7 +308,7 @@ class Portfolio extends React.Component {
                 on this page are open source, and we encourage companies to copy{' '}
                 <a
                   href='https://github.com/Permissionless-Software-Foundation'
-                  target='_blank'
+                  target='_blank' rel='noreferrer'
                 >
                   our code
                 </a>

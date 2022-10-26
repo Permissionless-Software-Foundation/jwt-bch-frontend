@@ -26,23 +26,23 @@ import logoOwnrare from '../assets/images/ownrare-logo.png'
 import logoShoemaker from '../assets/images/shoemaker360-logo.png'
 
 class Homepage extends React.Component {
-  render() {
+  render () {
     const siteTitle = 'BCH Blockchain As-A-Service SaaS'
 
     return (
       <Layout>
         <Helmet title={siteTitle} />
 
-        <section id="one" className="main style1">
-          <div className="grid-wrapper">
-            <div className="col-6">
-              <span className="image fit">
-                <img src={cashstack} alt="" />
+        <section id='one' className='main style1'>
+          <div className='grid-wrapper'>
+            <div className='col-6'>
+              <span className='image fit'>
+                <img src={cashstack} alt='' />
               </span>
             </div>
 
-            <div className="col-6">
-              <header className="major">
+            <div className='col-6'>
+              <header className='major'>
                 <br />
                 <br />
                 <br />
@@ -53,26 +53,26 @@ class Homepage extends React.Component {
                 The open source 'Cash Stack' allows phone and web apps to
                 interact with the Bitcoin Cash blockchain.
               </h4>
-              <ul className="actions uniform">
+              <ul className='actions uniform'>
                 <li>
-                  <a href="/login" className="button special">
+                  <a href='/login' className='button special'>
                     Sign Up
                   </a>
                 </li>
                 <li>
-                  <a href="/pricing" className="button">
+                  <a href='/pricing' className='button'>
                     Pricing
                   </a>
                 </li>
               </ul>
-              <ul className="actions uniform">
+              <ul className='actions uniform'>
                 <li>
-                  <a href="/consulting" className="button">
+                  <a href='/consulting' className='button'>
                     Consulting
                   </a>
                 </li>
                 <li>
-                  <a href="/portfolio" className="button">
+                  <a href='/portfolio' className='button'>
                     Portfolio
                   </a>
                 </li>
@@ -81,59 +81,59 @@ class Homepage extends React.Component {
           </div>
         </section>
 
-        <section id="six" className="main style2 special">
-          <div className="grid-wrapper">
-            <div className="col-12">
-              <span className="image fit">
-                <img src={cashStackPoster} alt="" />
+        <section id='six' className='main style2 special'>
+          <div className='grid-wrapper'>
+            <div className='col-12'>
+              <span className='image fit'>
+                <img src={cashStackPoster} alt='' />
               </span>
             </div>
           </div>
         </section>
 
-        <section id="three" className="main style1 special">
-          <div className="grid-wrapper">
-            <div className="col-4">
-              <span className="icon major fas fa-bolt"></span>
+        <section id='three' className='main style1 special'>
+          <div className='grid-wrapper'>
+            <div className='col-4'>
+              <span className='icon major fas fa-bolt' />
               <h3>Examples</h3>
               <p>
                 Get started quickly with code examples that cover most common
                 use-cases.
               </p>
-              <ul className="actions">
+              <ul className='actions'>
                 <li>
-                  <a href="/examples" className="button">
+                  <a href='/examples' className='button'>
                     More
                   </a>
                 </li>
               </ul>
             </div>
-            <div className="col-4">
-              <span className="icon major fas fa-book-open"></span>
+            <div className='col-4'>
+              <span className='icon major fas fa-book-open' />
               <h3>Documentation</h3>
               <p>
                 Read the API documentation for bch-api, bch-js, and others parts
                 of the stack.
               </p>
-              <ul className="actions">
+              <ul className='actions'>
                 <li>
-                  <a href="/documentation" className="button">
+                  <a href='/documentation' className='button'>
                     More
                   </a>
                 </li>
               </ul>
             </div>
-            <div className="col-4">
-              <span className="icon major fas fa-users"></span>
+            <div className='col-4'>
+              <span className='icon major fas fa-users' />
               <h3>Community</h3>
               <p>
                 Have questions? Need help? Just getting started? Say 'Hi!' in
                 our community support Telegram channel. Tap into the braintrust
                 of the rock-star Bitcoin Cash developer community.
               </p>
-              <ul className="actions">
+              <ul className='actions'>
                 <li>
-                  <a href="https://t.me/bch_js_toolkit" className="button">
+                  <a href='https://t.me/bch_js_toolkit' className='button'>
                     More
                   </a>
                 </li>
@@ -142,49 +142,49 @@ class Homepage extends React.Component {
           </div>
         </section>
 
-        <section id="four" className="main style2 special">
-          <div className="grid-wrapper">
-            <div className="col-12">
+        <section id='four' className='main style2 special'>
+          <div className='grid-wrapper'>
+            <div className='col-12'>
               <h2>What type of developer are you?</h2>
             </div>
 
-            <div className="col-4">
-              <span className="icon major fas fa-map"></span>
+            <div className='col-4'>
+              <span className='icon major fas fa-map' />
               <h3>Front End</h3>
               <p>
                 You focus on user interfaces (UI) and UX inside a phone app or a
                 web browser.
               </p>
-              <ul className="actions">
+              <ul className='actions'>
                 <li>
-                  <a href="/front-end" className="button">
+                  <a href='/front-end' className='button'>
                     More
                   </a>
                 </li>
               </ul>
             </div>
-            <div className="col-4">
-              <span className="icon major fas fa-server"></span>
+            <div className='col-4'>
+              <span className='icon major fas fa-server' />
               <h3>Back End</h3>
               <p>You focus on databases, full nodes, REST APIs, and dev-ops.</p>
-              <ul className="actions">
+              <ul className='actions'>
                 <li>
-                  <a href="/back-end" className="button">
+                  <a href='/back-end' className='button'>
                     More
                   </a>
                 </li>
               </ul>
             </div>
-            <div className="col-4">
-              <span className="icon major fas fa-book"></span>
+            <div className='col-4'>
+              <span className='icon major fas fa-book' />
               <h3>Library</h3>
               <p>
                 You build middleware libraries for connecting front and back
                 ends.
               </p>
-              <ul className="actions">
+              <ul className='actions'>
                 <li>
-                  <a href="/libraries" className="button">
+                  <a href='/libraries' className='button'>
                     More
                   </a>
                 </li>
@@ -193,21 +193,21 @@ class Homepage extends React.Component {
           </div>
         </section>
 
-        <section id="five" className="main style1 special">
-          <div className="grid-wrapper">
-            <div className="col-6">
-              <header className="major">
+        <section id='five' className='main style1 special'>
+          <div className='grid-wrapper'>
+            <div className='col-6'>
+              <header className='major'>
                 <h2>Coming From Bitcoin.com?</h2>
               </header>
               <p>
                 FullStack.cash has roots from{' '}
-                <a href="https://developer.bitcoin.com" target="_blank">
+                <a href='https://developer.bitcoin.com' target='_blank' rel='noreferrer'>
                   developer.bitcoin.com
                 </a>
                 . The open source software started by Bitcoin.com was forked in
                 March 2020. It recieved several upgrades, and was modified to
                 work with the decentralized infrastructure listed on the{' '}
-                <a href="/cashstrap" target="_blank">
+                <a href='/cashstrap' target='_blank'>
                   CashStrap page
                 </a>
                 .
@@ -221,12 +221,12 @@ class Homepage extends React.Component {
               </p>
               <div>
                 <center>
-                  <ul className="actions uniform" style={{ padding: '15px' }}>
+                  <ul className='actions uniform' style={{ padding: '15px' }}>
                     <li>
                       <a
-                        href="https://cashstack.info"
-                        className="button special"
-                        target="_blank"
+                        href='https://cashstack.info'
+                        className='button special'
+                        target='_blank' rel='noreferrer'
                       >
                         The Cash Stack
                       </a>
@@ -236,16 +236,16 @@ class Homepage extends React.Component {
               </div>
             </div>
 
-            <div className="col-6">
+            <div className='col-6'>
               <br />
               <br />
               <br />
-              <div className="youtube-responsive-container">
+              <div className='youtube-responsive-container'>
                 <iframe
-                  title="Transitioning from Bitcoin.com to FullStack.cash"
-                  src="https://www.youtube.com/embed/FWzTBOgwy-s"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  title='Transitioning from Bitcoin.com to FullStack.cash'
+                  src='https://www.youtube.com/embed/FWzTBOgwy-s'
+                  frameBorder='0'
+                  allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
                   allowFullScreen
                 />
               </div>
@@ -255,89 +255,89 @@ class Homepage extends React.Component {
           </div>
         </section>
 
-        <section id="six" className="main style2 special">
-          <div className="grid-wrapper">
-            <div className="col-12">
+        <section id='six' className='main style2 special'>
+          <div className='grid-wrapper'>
+            <div className='col-12'>
               <h2>Organizations Using FullStack.cash Infrastructure</h2>
             </div>
 
-            <div className="col-4">
+            <div className='col-4'>
               <h3>Bitfinex & Tether</h3>
-              <a href="https://bitfinex.com" target="_blank">
-                <span className="image fit">
-                  <img src={logoBitfinex} alt="" />
+              <a href='https://bitfinex.com' target='_blank' rel='noreferrer'>
+                <span className='image fit'>
+                  <img src={logoBitfinex} alt='' />
                 </span>
               </a>
             </div>
 
-            <div className="col-4">
-            <h3>Sweet</h3>
-            <a href="https://sweet.io" target="_blank">
-              <span className="image fit">
-                <img src={logoSweet} alt="" />
-              </span>
-            </a>
+            <div className='col-4'>
+              <h3>Sweet</h3>
+              <a href='https://sweet.io' target='_blank' rel='noreferrer'>
+                <span className='image fit'>
+                  <img src={logoSweet} alt='' />
+                </span>
+              </a>
             </div>
 
-            <div className="col-4">
+            <div className='col-4'>
               <h3>SideShift.ai</h3>
-              <a href="https://sideshift.ai" target="_blank">
-                <span className="image fit">
-                  <img src={logoSideshift} alt="" />
+              <a href='https://sideshift.ai' target='_blank' rel='noreferrer'>
+                <span className='image fit'>
+                  <img src={logoSideshift} alt='' />
                 </span>
               </a>
             </div>
 
-            <div className="col-4">
+            <div className='col-4'>
               <h3>Launchpad IP</h3>
-              <a href="https://launchpadip.com" target="_blank">
-                <span className="image fit">
-                  <img src={logoLaunchpad} alt="" />
+              <a href='https://launchpadip.com' target='_blank' rel='noreferrer'>
+                <span className='image fit'>
+                  <img src={logoLaunchpad} alt='' />
                 </span>
               </a>
             </div>
 
-            <div className="col-4">
+            <div className='col-4'>
               <h3>Bitcoin.com</h3>
-              <a href="https://bitcoin.com" target="_blank">
-                <span className="image fit">
-                  <img src={logoBitcoincom} alt="" />
+              <a href='https://bitcoin.com' target='_blank' rel='noreferrer'>
+                <span className='image fit'>
+                  <img src={logoBitcoincom} alt='' />
                 </span>
               </a>
             </div>
 
-            <div className="col-4">
+            <div className='col-4'>
               <h3>eCash GNC</h3>
-              <a href="https://e.cash" target="_blank">
-                <span className="image fit">
-                  <img src={logoEcash} alt="" />
+              <a href='https://e.cash' target='_blank' rel='noreferrer'>
+                <span className='image fit'>
+                  <img src={logoEcash} alt='' />
                 </span>
               </a>
             </div>
 
-            <div className="col-4">
+            <div className='col-4'>
               <h3>Ava Labs</h3>
-              <a href="https://www.avalabs.org/" target="_blank">
-                <span className="image fit">
-                  <img src={logoAvalabs} alt="" />
+              <a href='https://www.avalabs.org/' target='_blank' rel='noreferrer'>
+                <span className='image fit'>
+                  <img src={logoAvalabs} alt='' />
                 </span>
               </a>
             </div>
 
-            <div className="col-4">
+            <div className='col-4'>
               <h3>OwnRare.Art</h3>
-              <a href="https://ownrare.art" target="_blank">
-                <span className="image fit">
-                  <img src={logoOwnrare} alt="" />
+              <a href='https://ownrare.art' target='_blank' rel='noreferrer'>
+                <span className='image fit'>
+                  <img src={logoOwnrare} alt='' />
                 </span>
               </a>
             </div>
 
-            <div className="col-4">
+            <div className='col-4'>
               <h3>Shoemaker360</h3>
-              <a href="https://shoemaker360.com" target="_blank">
-                <span className="image fit">
-                  <img src={logoShoemaker} alt="" />
+              <a href='https://shoemaker360.com' target='_blank' rel='noreferrer'>
+                <span className='image fit'>
+                  <img src={logoShoemaker} alt='' />
                 </span>
               </a>
             </div>
@@ -354,7 +354,6 @@ export default Homepage
 
 // CT 4/24/21 - Delete after 6/1/21
 /*
-
 
 <section id="four" className="main style2 special">
   <div className="grid-wrapper">

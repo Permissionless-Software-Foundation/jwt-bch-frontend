@@ -11,17 +11,17 @@ import pic04 from '../assets/images/pic04.jpg'
 import backend from '../assets/images/back-end.jpg'
 
 class Homepage extends React.Component {
-  render() {
+  render () {
     const siteTitle = 'Back-End Dev | FullStack.cash'
 
     return (
       <Layout>
         <Helmet title={siteTitle} />
 
-        <section id="one" className="main style1">
-          <div className="grid-wrapper">
-            <div className="col-6">
-              <header className="major">
+        <section id='one' className='main style1'>
+          <div className='grid-wrapper'>
+            <div className='col-6'>
+              <header className='major'>
                 <h2>
                   Back-End: Docker Containers
                   <br /> and DevOps
@@ -32,27 +32,27 @@ class Homepage extends React.Component {
                 layer and all the layers below it. This software has been
                 conveniently packaged in Docker containers that can mount
                 pre-synced databases. The pre-synced databases can be downloaded
-                over IPFS from from the <a href="/cashstrap">Cash Strap page</a>
+                over IPFS from from the <a href='/cashstrap'>Cash Strap page</a>
                 .
               </p>
               <center>
-                <a href="/cashstrap" className="button">
+                <a href='/cashstrap' className='button'>
                   CashStrap
                 </a>
               </center>
             </div>
-            <div className="col-6">
-              <span className="image fit">
-                <img src={backend} alt="" />
+            <div className='col-6'>
+              <span className='image fit'>
+                <img src={backend} alt='' />
               </span>
             </div>
           </div>
         </section>
 
-        <section id="three" className="main style2 special">
-          <div className="grid-wrapper">
-            <div className="col-12">
-              <header className="major">
+        <section id='three' className='main style2 special'>
+          <div className='grid-wrapper'>
+            <div className='col-12'>
+              <header className='major'>
                 <h2>back-end Software</h2>
               </header>
               <p>
@@ -60,12 +60,12 @@ class Homepage extends React.Component {
                 containers for running the back-end infrastructure of the Cash
                 Stack. They can be used to mount the pre-synced databases,
                 downloadable from IPFS via the{' '}
-                <a href="/cashstrap">Cash Strap page</a>.
+                <a href='/cashstrap'>Cash Strap page</a>.
               </p>
               <p>
                 The software below is complex. We try to simplify it by using
                 Docker containers, but the learning curve can be rough.{' '}
-                <a href="/pricing">
+                <a href='/pricing'>
                   FullStack.cash offers access to hosted infrastructure
                 </a>
                 , but FullStack.cash is not a 'walled garden'. We offer the
@@ -74,7 +74,7 @@ class Homepage extends React.Component {
               </p>
             </div>
 
-            <div className="col-6">
+            <div className='col-6'>
               <h3>
                 <b>bch-api REST API</b>
               </h3>
@@ -83,19 +83,19 @@ class Homepage extends React.Component {
                 abstracts the full node and indexer layers into a single common
                 REST interface.
               </p>
-              <ul className="actions">
+              <ul className='actions'>
                 <li>
                   <a
-                    href="https://github.com/Permissionless-Software-Foundation/bch-api"
-                    className="button"
-                    target="_blank"
+                    href='https://github.com/Permissionless-Software-Foundation/bch-api'
+                    className='button'
+                    target='_blank' rel='noreferrer'
                   >
                     Code
                   </a>
                 </li>
               </ul>
             </div>
-            <div className="col-6">
+            <div className='col-6'>
               <h3>
                 <b>Full Nodes</b>
               </h3>
@@ -103,33 +103,33 @@ class Homepage extends React.Component {
                 Full nodes are the most basic piece of infrastructure for
                 interacting with a blockchain. We maintain Docker containers for{' '}
                 <a
-                  href="https://github.com/Permissionless-Software-Foundation/docker-bchn"
-                  target="_blank"
+                  href='https://github.com/Permissionless-Software-Foundation/docker-bchn'
+                  target='_blank' rel='noreferrer'
                 >
                   BCHN
                 </a>
                 ,{' '}
                 <a
-                  href="https://github.com/Permissionless-Software-Foundation/docker-bchd"
-                  target="_blank"
+                  href='https://github.com/Permissionless-Software-Foundation/docker-bchd'
+                  target='_blank' rel='noreferrer'
                 >
                   BCHD
                 </a>
                 ,{' '}
                 <a
-                  href="https://github.com/Permissionless-Software-Foundation/docker-abc"
-                  target="_blank"
+                  href='https://github.com/Permissionless-Software-Foundation/docker-abc'
+                  target='_blank' rel='noreferrer'
                 >
                   ABC
                 </a>{' '}
                 full nodes.
               </p>
-              <ul className="actions">
+              <ul className='actions'>
                 <li>
                   <a
-                    href="https://github.com/Permissionless-Software-Foundation/docker-bchn"
-                    className="button"
-                    target="_blank"
+                    href='https://github.com/Permissionless-Software-Foundation/docker-bchn'
+                    className='button'
+                    target='_blank' rel='noreferrer'
                   >
                     BCHN Full Node
                   </a>
@@ -137,7 +137,7 @@ class Homepage extends React.Component {
               </ul>
             </div>
 
-            <div className="col-6">
+            <div className='col-6'>
               <h3>
                 <b>Fulcrum</b>
               </h3>
@@ -148,12 +148,12 @@ class Homepage extends React.Component {
                 indexer provides UTXO, address balance, and transaction history
                 needed by any wallet app.
               </p>
-              <ul className="actions">
+              <ul className='actions'>
                 <li>
                   <a
-                    href="https://github.com/Permissionless-Software-Foundation/docker-fulcrum"
-                    className="button"
-                    target="_blank"
+                    href='https://github.com/Permissionless-Software-Foundation/docker-fulcrum'
+                    className='button'
+                    target='_blank' rel='noreferrer'
                   >
                     Docker Container
                   </a>
@@ -161,7 +161,7 @@ class Homepage extends React.Component {
               </ul>
             </div>
 
-            <div className="col-6">
+            <div className='col-6'>
               <h3>
                 <b>SLPDB</b>
               </h3>
@@ -170,12 +170,12 @@ class Homepage extends React.Component {
                 tokens. Expressive queries can be executed against this database
                 to get all kinds of statistics about SLP and NFT tokens.
               </p>
-              <ul className="actions">
+              <ul className='actions'>
                 <li>
                   <a
-                    href="https://github.com/Permissionless-Software-Foundation/docker-slpdb"
-                    className="button"
-                    target="_blank"
+                    href='https://github.com/Permissionless-Software-Foundation/docker-slpdb'
+                    className='button'
+                    target='_blank' rel='noreferrer'
                   >
                     Docker Container
                   </a>
@@ -185,16 +185,16 @@ class Homepage extends React.Component {
           </div>
         </section>
 
-        <section id="four" className="main style3 special">
-          <div className="grid-wrapper">
-            <div className="col-12">
-              <header className="major">
+        <section id='four' className='main style3 special'>
+          <div className='grid-wrapper'>
+            <div className='col-12'>
+              <header className='major'>
                 <h2>Software As A Service</h2>
               </header>
               <p>
                 Just as FullStack.cash offers blockchain infrastructure access
                 as-a-service,{' '}
-                <a href="https://psfoundation.cash" target="_blank">
+                <a href='https://psfoundation.cash' target='_blank' rel='noreferrer'>
                   the PSF
                 </a>{' '}
                 also offers back-end code to help other developers sell back-end
@@ -204,7 +204,7 @@ class Homepage extends React.Component {
               </p>
             </div>
 
-            <div className="col-6">
+            <div className='col-6'>
               <h3>
                 <b>Earn Cryptocurrency from an API</b>
               </h3>
@@ -213,12 +213,12 @@ class Homepage extends React.Component {
                 entreprenurialy minded developers can earn cryptocurrency by
                 running infrastructure services like FullStack.cash.
               </p>
-              <div className="youtube-responsive-container">
+              <div className='youtube-responsive-container'>
                 <iframe
-                  title="Create Your Own BCH or eCash Web Wallet"
-                  src="https://www.youtube.com/embed/oFa8Q2OCSaw"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  title='Create Your Own BCH or eCash Web Wallet'
+                  src='https://www.youtube.com/embed/oFa8Q2OCSaw'
+                  frameBorder='0'
+                  allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
                   allowFullScreen
                 />
               </div>
@@ -226,7 +226,7 @@ class Homepage extends React.Component {
               <br />
             </div>
 
-            <div className="col-6">
+            <div className='col-6'>
               <h3>
                 <b>ipfs-service-provider</b>
               </h3>
@@ -240,17 +240,17 @@ class Homepage extends React.Component {
                 <li>REST API over HTTP</li>
                 <li>
                   JSON RCP over{' '}
-                  <a href="https://ipfs.io" target="_blank">
+                  <a href='https://ipfs.io' target='_blank' rel='noreferrer'>
                     IPFS
                   </a>
                 </li>
               </ul>
-              <ul className="actions">
+              <ul className='actions'>
                 <li>
                   <a
-                    href="https://github.com/Permissionless-Software-Foundation/ipfs-service-provider"
-                    className="button"
-                    target="_blank"
+                    href='https://github.com/Permissionless-Software-Foundation/ipfs-service-provider'
+                    className='button'
+                    target='_blank' rel='noreferrer'
                   >
                     Code
                   </a>
@@ -258,7 +258,7 @@ class Homepage extends React.Component {
               </ul>
             </div>
 
-            <div className="col-6">
+            <div className='col-6'>
               <h3>
                 <b>docker-gatsby-web-server</b>
               </h3>
@@ -269,12 +269,12 @@ class Homepage extends React.Component {
                 provides a number of options for privacy, performance, and
                 censorship resistance for web app builders.
               </p>
-              <ul className="actions">
+              <ul className='actions'>
                 <li>
                   <a
-                    href="https://github.com/Permissionless-Software-Foundation/docker-gatsby-webserver"
-                    className="button"
-                    target="_blank"
+                    href='https://github.com/Permissionless-Software-Foundation/docker-gatsby-webserver'
+                    className='button'
+                    target='_blank' rel='noreferrer'
                   >
                     Code
                   </a>
@@ -282,7 +282,7 @@ class Homepage extends React.Component {
               </ul>
             </div>
 
-            <div className="col-6">
+            <div className='col-6'>
               <h3>
                 <b>ipfs-p2wdb-service</b>
               </h3>
@@ -298,12 +298,12 @@ class Homepage extends React.Component {
                 Warning: This software is open for Alpha testing, and not ready
                 for production.
               </p>
-              <ul className="actions">
+              <ul className='actions'>
                 <li>
                   <a
-                    href="https://github.com/Permissionless-Software-Foundation/ipfs-p2wdb-service"
-                    className="button"
-                    target="_blank"
+                    href='https://github.com/Permissionless-Software-Foundation/ipfs-p2wdb-service'
+                    className='button'
+                    target='_blank' rel='noreferrer'
                   >
                     Code
                   </a>
@@ -313,19 +313,19 @@ class Homepage extends React.Component {
           </div>
         </section>
 
-        <section id="five" className="main style3 special">
-          <div className="container">
-            <header className="major">
+        <section id='five' className='main style3 special'>
+          <div className='container'>
+            <header className='major'>
               <h2>Ready to get started?</h2>
             </header>
-            <ul className="actions uniform">
+            <ul className='actions uniform'>
               <li>
-                <a href="/profile" className="button special">
+                <a href='/profile' className='button special'>
                   Sign Up
                 </a>
               </li>
               <li>
-                <a href="/examples" className="button">
+                <a href='/examples' className='button'>
                   Example Code
                 </a>
               </li>

@@ -15,10 +15,10 @@ const TextArea = styled.textarea`
 let renderCnt = 0
 
 class Logs extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
-      logStr: 'Loading logs...',
+      logStr: 'Loading logs...'
     }
 
     // Update the logs periodically.
@@ -30,15 +30,15 @@ class Logs extends React.Component {
     this.getLogs()
   }
 
-  render() {
+  render () {
     renderCnt++
     return (
-      <TextArea id="logTextArea" readOnly value={this.state.logStr}></TextArea>
+      <TextArea id='logTextArea' readOnly value={this.state.logStr} />
     )
   }
 
   // Retrieves logs from the server and updates the state.
-  async getLogs() {
+  async getLogs () {
     try {
       const resp = await fetch(`${SERVER}/logs`)
       const body = await resp.json()
@@ -60,17 +60,17 @@ class Logs extends React.Component {
 
       // Update the state which displays new logs.
       this.setState(prevState => ({
-        logStr: logStr,
+        logStr
       }))
 
       if (renderCnt < 3) this.scrollToBottom()
     } catch (err) {
-      console.log(`Error in getLogs: `, err)
+      console.log('Error in getLogs: ', err)
     }
   }
 
   // Scrolls the textarea to the bottom, most recent logs.
-  scrollToBottom() {
+  scrollToBottom () {
     const textarea = document.getElementById('logTextArea')
     textarea.scrollTop = textarea.scrollHeight
   }

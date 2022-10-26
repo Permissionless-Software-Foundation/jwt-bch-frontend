@@ -31,19 +31,19 @@ class Homepage extends React.Component {
               <p>
                 If you prefer the sovereignty of running your own infrastructure, and you're willing to accept the cost of managing your own
                 {' '}
-                <a href='https://psfoundation.cash/blog/cash-stack' target='_blank'>full stack of software</a> , then the files below will help you bootstrap it.
+                <a href='https://psfoundation.cash/blog/cash-stack' target='_blank' rel='noreferrer'>full stack of software</a> , then the files below will help you bootstrap it.
               </p>
               <p>
                 You do not need to download all the files. The files below are split between <i>BCH</i> and <i>eCash</i>. Because the files are so large, they are shared
                 via the
                 {' '}
-                <a href='https://ipfs.io' target='_blank'>IPFS</a>
+                <a href='https://ipfs.io' target='_blank' rel='noreferrer'>IPFS</a>
                 {' '} file-sharing protocol. They are not available for direct download.
               </p>
               <p>
                 Please help the Bitcoin Cash developer community by
                 {' '}
-                <a href='https://docs.ipfs.io/concepts/persistence/#persistence-versus-permanence' target='_blank'>pinning</a>
+                <a href='https://docs.ipfs.io/concepts/persistence/#persistence-versus-permanence' target='_blank' rel='noreferrer'>pinning</a>
                 {' '} the files below!
               </p>
               <p>
@@ -87,7 +87,7 @@ class Homepage extends React.Component {
                 </li>
               </ul>
               <p>
-                <b>Use the files with{' '} <a href='https://github.com/Permissionless-Software-Foundation/docker-bchn' target='_blank' >this Docker container</a></b>
+                <b>Use the files with{' '} <a href='https://github.com/Permissionless-Software-Foundation/docker-bchn' target='_blank' rel='noreferrer'>this Docker container</a></b>
               </p>
             </div>
           </div>
@@ -110,7 +110,7 @@ class Homepage extends React.Component {
                 </li>
               </ul>
               <p>
-                <b>Use the files with{' '} <a href='https://github.com/Permissionless-Software-Foundation/docker-fulcrum' target='_blank' >this Docker container</a></b>
+                <b>Use the files with{' '} <a href='https://github.com/Permissionless-Software-Foundation/docker-fulcrum' target='_blank' rel='noreferrer'>this Docker container</a></b>
               </p>
             </div>
           </div>
@@ -134,7 +134,7 @@ class Homepage extends React.Component {
                 </li>
               </ul>
               <p>
-                <b>Use the files with{' '} <a href='https://github.com/Permissionless-Software-Foundation/psf-slp-indexer' target='_blank' >this Docker container</a></b>
+                <b>Use the files with{' '} <a href='https://github.com/Permissionless-Software-Foundation/psf-slp-indexer' target='_blank' rel='noreferrer'>this Docker container</a></b>
               </p>
             </div>
           </div>
@@ -149,7 +149,7 @@ class Homepage extends React.Component {
               <p>
                 Below are links to Docker containers and pre-synced databases for the eCash (BCHA) blockchain developed by
                 {' '}
-                <a href='https://www.bitcoinabc.org/' target='_blank'>Bitcoin ABC</a> .
+                <a href='https://www.bitcoinabc.org/' target='_blank' rel='noreferrer'>Bitcoin ABC</a> .
               </p>
             </div>
           </div>
@@ -172,7 +172,7 @@ class Homepage extends React.Component {
                 </li>
               </ul>
               <p>
-                <b>Use the files with{' '} <a href='https://github.com/Permissionless-Software-Foundation/docker-abc' target='_blank' >this Docker container</a></b>
+                <b>Use the files with{' '} <a href='https://github.com/Permissionless-Software-Foundation/docker-abc' target='_blank' rel='noreferrer'>this Docker container</a></b>
               </p>
             </div>
           </div>
@@ -195,7 +195,7 @@ class Homepage extends React.Component {
                 </li>
               </ul>
               <p>
-                <b>Use the files with{' '} <a href='https://github.com/Permissionless-Software-Foundation/docker-fulcrum' target='_blank' >this Docker container</a></b>
+                <b>Use the files with{' '} <a href='https://github.com/Permissionless-Software-Foundation/docker-fulcrum' target='_blank' rel='noreferrer'>this Docker container</a></b>
               </p>
             </div>
           </div>
@@ -219,7 +219,7 @@ class Homepage extends React.Component {
                 </li>
               </ul>
               <p>
-                <b>Use the files with{' '} <a href='https://github.com/Permissionless-Software-Foundation/docker-slpdb' target='_blank' >this Docker container</a></b>
+                <b>Use the files with{' '} <a href='https://github.com/Permissionless-Software-Foundation/docker-slpdb' target='_blank' rel='noreferrer'>this Docker container</a></b>
               </p>
             </div>
           </div>

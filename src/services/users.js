@@ -10,14 +10,14 @@ export const isBrowser = () => typeof window !== 'undefined'
 export const getUsers = async () => {
   const token = getUser().jwt ? getUser().jwt : ''
 
-  //try to get all projects
+  // try to get all projects
   try {
     const options = {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
-      },
+        Authorization: `Bearer ${token}`
+      }
     }
     const resp = await fetch(`${SERVER}/users`, options)
     if (resp.ok) {
@@ -34,14 +34,14 @@ export const getUsers = async () => {
 export const getUserById = async id => {
   const token = getUser().jwt ? getUser().jwt : ''
 
-  //try to get all projects
+  // try to get all projects
   try {
     const options = {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
-      },
+        Authorization: `Bearer ${token}`
+      }
     }
     const resp = await fetch(`${SERVER}/users/${id}`, options)
     if (resp.ok) {
@@ -58,15 +58,15 @@ export const updateUser = async user => {
   console.log(user)
   const token = getUser().jwt ? getUser().jwt : ''
 
-  //try to get all projects
+  // try to get all projects
   try {
     const options = {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${token}`
       },
-      body: JSON.stringify({ user: user }),
+      body: JSON.stringify({ user })
     }
     const resp = await fetch(`${SERVER}/users/${user._id}`, options)
     console.log(resp)

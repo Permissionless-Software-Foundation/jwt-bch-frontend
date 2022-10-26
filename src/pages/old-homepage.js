@@ -22,16 +22,16 @@ const BizPlanButton = styled.a`
 `
 
 class Homepage extends React.Component {
-  render() {
+  render () {
     const siteTitle = 'Permissionless Software Foundation'
 
     return (
       <Layout>
         <Helmet title={siteTitle} />
-        <section id="one" className="main style1">
-          <div className="grid-wrapper">
-            <div className="col-6">
-              <header className="major">
+        <section id='one' className='main style1'>
+          <div className='grid-wrapper'>
+            <div className='col-6'>
+              <header className='major'>
                 <h2>
                   Permissionless
                   <br />
@@ -44,8 +44,8 @@ class Homepage extends React.Component {
                 The mission of the Permissionless Software Foundation is to
                 promote{' '}
                 <a
-                  href="https://en.wikipedia.org/wiki/Self-ownership"
-                  target="_blank"
+                  href='https://en.wikipedia.org/wiki/Self-ownership'
+                  target='_blank' rel='noreferrer'
                 >
                   individual sovereignty
                 </a>{' '}
@@ -53,13 +53,13 @@ class Homepage extends React.Component {
                 development and promotion of software that makes it easy for
                 individuals to protect their privacy, circumvent censorship, and
                 engage in{' '}
-                <a href="https://en.wikipedia.org/wiki/Agorism" target="_blank">
+                <a href='https://en.wikipedia.org/wiki/Agorism' target='_blank' rel='noreferrer'>
                   Agorism
                 </a>
                 .
               </p>
             </div>
-            <div className="col-6">
+            <div className='col-6'>
               <center>
                 <p>
                   The business plan for the Permissionless Softare Foundation
@@ -71,9 +71,9 @@ class Homepage extends React.Component {
                   sponshorship, or other fiduciary responsibility.
                 </p>
                 <BizPlanButton
-                  href="https://docs.google.com/document/d/1UgX_h4TB9CtxxabseC7lRGwQlCsNikPo7DJUlIrNv0k/edit?usp=sharing"
-                  target="_blank"
-                  className="button special"
+                  href='https://docs.google.com/document/d/1UgX_h4TB9CtxxabseC7lRGwQlCsNikPo7DJUlIrNv0k/edit?usp=sharing'
+                  target='_blank'
+                  className='button special'
                 >
                   Read the Business Plan
                 </BizPlanButton>
@@ -82,12 +82,12 @@ class Homepage extends React.Component {
           </div>
         </section>
 
-        <section id="two" className="main style2">
-          <div className="grid-wrapper">
-            <div className="col-6">
+        <section id='two' className='main style2'>
+          <div className='grid-wrapper'>
+            <div className='col-6'>
               <center>
-                <span className="image">
-                  <img src={qrcode} alt="" />
+                <span className='image'>
+                  <img src={qrcode} alt='' />
                 </span>
                 <BchAddress>
                   bitcoincash:qzl6k0wvdd5ky99hewghqdgfj2jhcpqnfq8xtct0al
@@ -95,19 +95,19 @@ class Homepage extends React.Component {
                 <BadgerButton />
               </center>
             </div>
-            <div className="col-6">
-              <header className="major">
+            <div className='col-6'>
+              <header className='major'>
                 <h2>Buy or Sell PSF Tokens</h2>
               </header>
               <p>
                 You can buy or sell tokens by sending BCH or tokens to the
                 liquidity app. Scan the QR code with a Wormhole token-aware BCH
                 wallet, like the{' '}
-                <a href="https://wallet.wormhole.cash/" target="_blank">
+                <a href='https://wallet.wormhole.cash/' target='_blank' rel='noreferrer'>
                   Wormhole Android wallet
                 </a>
                 . Or install the{' '}
-                <a href="https://badgerwallet.cash/" target="_blank">
+                <a href='https://badgerwallet.cash/' target='_blank' rel='noreferrer'>
                   Badger Wallet
                 </a>{' '}
                 browser extension and click the Buy button.
@@ -129,10 +129,10 @@ class Homepage extends React.Component {
           </div>
         </section>
 
-        <section id="three" className="main style1 special">
-          <div className="grid-wrapper">
-            <div className="col-12">
-              <header className="major">
+        <section id='three' className='main style1 special'>
+          <div className='grid-wrapper'>
+            <div className='col-12'>
+              <header className='major'>
                 <h2>Software Projects</h2>
               </header>
               <p>
@@ -141,7 +141,7 @@ class Homepage extends React.Component {
               </p>
             </div>
 
-            <div className="col-6">
+            <div className='col-6'>
               <h3>Consolidating CoinJoin</h3>
               <p>
                 Consolidating CoinJoin is a peer-to-peer mixing service that
@@ -152,19 +152,19 @@ class Homepage extends React.Component {
                 transfer data between the <i>clearnet</i>
                 and the <i>darkweb</i>.
               </p>
-              <ul className="actions">
+              <ul className='actions'>
                 <li>
                   <a
-                    href="https://gist.github.com/christroutner/8d54597da652fe2affa5a7230664bc45"
-                    target="_blank"
-                    className="button"
+                    href='https://gist.github.com/christroutner/8d54597da652fe2affa5a7230664bc45'
+                    target='_blank'
+                    className='button' rel='noreferrer'
                   >
                     More Info
                   </a>
                 </li>
               </ul>
             </div>
-            <div className="col-6">
+            <div className='col-6'>
               <h3>P2P VPS: Peer-to-Peer Cloud Infrastructure</h3>
               <p>
                 P2P VPS allows people to rent out unused computing power for
@@ -172,12 +172,12 @@ class Homepage extends React.Component {
                 other cloud services. Any device capable of running Docker can
                 be rented on the network, in exchange for the PSF token.
               </p>
-              <ul className="actions">
+              <ul className='actions'>
                 <li>
                   <a
-                    href="https://p2pvps.org/about"
-                    target="_blank"
-                    className="button"
+                    href='https://p2pvps.org/about'
+                    target='_blank'
+                    className='button' rel='noreferrer'
                   >
                     More Info
                   </a>

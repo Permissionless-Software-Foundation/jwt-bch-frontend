@@ -6,31 +6,33 @@ import { getUser, isLoggedIn, logout } from '../services/auth'
 import './nav-bar.css'
 import Logo from '../assets/images/fullstackcash-Grey.png'
 class Header extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     this.state = {}
   }
-  render() {
+
+  render () {
     return (
-      <header id="nav" className="alt reveal">
+      <header id='nav' className='alt reveal'>
         <nav>
-          <a href="/"><img
+          <a href='/'><img
             src={Logo}
-            className="fullstack-logo" /></a>
-            
-          <a
-            className="menu-link"
-            onClick={this.props.onToggleMenu}
-            href="#!"
-          >
+            className='fullstack-logo'
+                      />
           </a>
+
+          <a
+            className='menu-link'
+            onClick={this.props.onToggleMenu}
+            href='#!'
+          />
         </nav>
       </header>
     )
   }
 }
 Header.propTypes = {
-  onToggleMenu: PropTypes.func,
+  onToggleMenu: PropTypes.func
 }
 export default Header

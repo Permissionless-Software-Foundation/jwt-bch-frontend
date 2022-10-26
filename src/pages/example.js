@@ -9,17 +9,17 @@ import pic03 from '../assets/images/pic03.jpg'
 import pic04 from '../assets/images/pic04.jpg'
 
 class Homepage extends React.Component {
-  render() {
+  render () {
     const siteTitle = 'Gatsby Starter - Photon'
 
     return (
       <Layout>
         <Helmet title={siteTitle} />
 
-        <section id="one" className="main style1">
-          <div className="grid-wrapper">
-            <div className="col-6">
-              <header className="major">
+        <section id='one' className='main style1'>
+          <div className='grid-wrapper'>
+            <div className='col-6'>
+              <header className='major'>
                 <h2>
                   Lorem ipsum dolor adipiscing
                   <br />
@@ -33,40 +33,40 @@ class Homepage extends React.Component {
                 tempus adipiscing id accumsan.
               </p>
             </div>
-            <div className="col-6">
-              <span className="image fit">
-                <img src={pic01} alt="" />
+            <div className='col-6'>
+              <span className='image fit'>
+                <img src={pic01} alt='' />
               </span>
             </div>
           </div>
         </section>
 
-        <section id="two" className="main style2">
-          <div className="grid-wrapper">
-            <div className="col-6">
-              <ul className="major-icons">
+        <section id='two' className='main style2'>
+          <div className='grid-wrapper'>
+            <div className='col-6'>
+              <ul className='major-icons'>
                 <li>
-                  <span className="icon style1 major fas fa-code"></span>
+                  <span className='icon style1 major fas fa-code' />
                 </li>
                 <li>
-                  <span className="icon style2 major fas fa-bolt"></span>
+                  <span className='icon style2 major fas fa-bolt' />
                 </li>
                 <li>
-                  <span className="icon style3 major fas fa-camera-retro"></span>
+                  <span className='icon style3 major fas fa-camera-retro' />
                 </li>
                 <li>
-                  <span className="icon style4 major fas fa-cog"></span>
+                  <span className='icon style4 major fas fa-cog' />
                 </li>
                 <li>
-                  <span className="icon style5 major fas fa-desktop"></span>
+                  <span className='icon style5 major fas fa-desktop' />
                 </li>
                 <li>
-                  <span className="icon style6 major fas fa-calendar"></span>
+                  <span className='icon style6 major fas fa-calendar' />
                 </li>
               </ul>
             </div>
-            <div className="col-6">
-              <header className="major">
+            <div className='col-6'>
+              <header className='major'>
                 <h2>
                   Lorem ipsum dolor adipiscing
                   <br />
@@ -98,10 +98,10 @@ class Homepage extends React.Component {
           </div>
         </section>
 
-        <section id="three" className="main style1 special">
-          <div className="grid-wrapper">
-            <div className="col-12">
-              <header className="major">
+        <section id='three' className='main style1 special'>
+          <div className='grid-wrapper'>
+            <div className='col-12'>
+              <header className='major'>
                 <h2>Adipiscing amet consequat</h2>
               </header>
               <p>
@@ -109,52 +109,52 @@ class Homepage extends React.Component {
               </p>
             </div>
 
-            <div className="col-4">
-              <span className="image fit">
-                <img src={pic02} alt="" />
+            <div className='col-4'>
+              <span className='image fit'>
+                <img src={pic02} alt='' />
               </span>
               <h3>Magna feugiat lorem</h3>
               <p>
                 Adipiscing a commodo ante nunc magna lorem et interdum mi ante
                 nunc lobortis non amet vis sed volutpat et nascetur.
               </p>
-              <ul className="actions">
+              <ul className='actions'>
                 <li>
-                  <a href="#" className="button">
+                  <a href='#' className='button'>
                     More
                   </a>
                 </li>
               </ul>
             </div>
-            <div className="col-4">
-              <span className="image fit">
-                <img src={pic03} alt="" />
+            <div className='col-4'>
+              <span className='image fit'>
+                <img src={pic03} alt='' />
               </span>
               <h3>Magna feugiat lorem</h3>
               <p>
                 Adipiscing a commodo ante nunc magna lorem et interdum mi ante
                 nunc lobortis non amet vis sed volutpat et nascetur.
               </p>
-              <ul className="actions">
+              <ul className='actions'>
                 <li>
-                  <a href="#" className="button">
+                  <a href='#' className='button'>
                     More
                   </a>
                 </li>
               </ul>
             </div>
-            <div className="col-4">
-              <span className="image fit">
-                <img src={pic04} alt="" />
+            <div className='col-4'>
+              <span className='image fit'>
+                <img src={pic04} alt='' />
               </span>
               <h3>Magna feugiat lorem</h3>
               <p>
                 Adipiscing a commodo ante nunc magna lorem et interdum mi ante
                 nunc lobortis non amet vis sed volutpat et nascetur.
               </p>
-              <ul className="actions">
+              <ul className='actions'>
                 <li>
-                  <a href="#" className="button">
+                  <a href='#' className='button'>
                     More
                   </a>
                 </li>
@@ -163,20 +163,20 @@ class Homepage extends React.Component {
           </div>
         </section>
 
-        <section id="four" className="main style2 special">
-          <div className="container">
-            <header className="major">
+        <section id='four' className='main style2 special'>
+          <div className='container'>
+            <header className='major'>
               <h2>Ipsum feugiat consequat?</h2>
             </header>
             <p>Sed lacus nascetur ac ante amet sapien.</p>
-            <ul className="actions uniform">
+            <ul className='actions uniform'>
               <li>
-                <a href="#" className="button special">
+                <a href='#' className='button special'>
                   Sign Up
                 </a>
               </li>
               <li>
-                <a href="#" className="button">
+                <a href='#' className='button'>
                   Learn More
                 </a>
               </li>

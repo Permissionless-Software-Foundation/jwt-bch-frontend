@@ -10,7 +10,7 @@ import pic03 from '../assets/images/pic03.jpg'
 import pic04 from '../assets/images/pic04.jpg'
 
 class Homepage extends React.Component {
-  render() {
+  render () {
     const siteTitle = 'Pricing'
 
     return (
@@ -18,18 +18,18 @@ class Homepage extends React.Component {
         <Helmet title={siteTitle} />
 
         <section
-          id="three"
-          className="main style1 special"
+          id='three'
+          className='main style1 special'
           style={{ paddingBottom: '0px' }}
         >
-          <div className="grid-wrapper">
-            <div className="col-12">
-              <header className="major">
+          <div className='grid-wrapper'>
+            <div className='col-12'>
+              <header className='major'>
                 <h2>How much does FullStack.cash cost?</h2>
               </header>
             </div>
 
-            <div className="col-12">
+            <div className='col-12'>
               <p>
                 You can <b>get started for free</b>, and paid tiers are
                 available for businesses with greater resource needs.
@@ -57,7 +57,7 @@ class Homepage extends React.Component {
                     <td>$9.99</td>
                     <td>$19.99</td>
                     <td>
-                      <a href="/contact">Contact Us</a>
+                      <a href='/contact'>Contact Us</a>
                     </td>
                   </tr>
                   <tr>
@@ -66,7 +66,7 @@ class Homepage extends React.Component {
                     <td>100</td>
                     <td>250</td>
                     <td>
-                      <a href="/contact">Contact Us</a>
+                      <a href='/contact'>Contact Us</a>
                     </td>
                   </tr>
                   <tr>
@@ -75,7 +75,7 @@ class Homepage extends React.Component {
                     <td>100</td>
                     <td>250</td>
                     <td>
-                      <a href="/contact">Contact Us</a>
+                      <a href='/contact'>Contact Us</a>
                     </td>
                   </tr>
                   <tr>
@@ -84,7 +84,7 @@ class Homepage extends React.Component {
                     <td>100</td>
                     <td>250</td>
                     <td>
-                      <a href="/contact">Contact Us</a>
+                      <a href='/contact'>Contact Us</a>
                     </td>
                   </tr>
                 </tbody>
@@ -96,16 +96,16 @@ class Homepage extends React.Component {
               </p>
             </div>
 
-            <div className="col-12">
+            <div className='col-12'>
               <p>
                 FullStack.cash maintains the{' '}
-                <a href="/cashstrap">software infrastructure</a> that apps need
+                <a href='/cashstrap'>software infrastructure</a> that apps need
                 to interact with rapidly-changing Bitcoin Cash technology:
               </p>
             </div>
 
-            <div className="col-3"></div>
-            <div className="col-6" style={{ textAlign: 'left' }}>
+            <div className='col-3' />
+            <div className='col-6' style={{ textAlign: 'left' }}>
               <ul>
                 <li>
                   Archival Full Node with a full copy of the blockchain and RPC
@@ -126,29 +126,29 @@ class Homepage extends React.Component {
                 <br />
                 <li>
                   JavaScript npm libraries and{' '}
-                  <a href="/examples">quick start examples</a>.
+                  <a href='/examples'>quick start examples</a>.
                 </li>
                 <br />
               </ul>
             </div>
-            <div className="col-3"></div>
+            <div className='col-3' />
           </div>
         </section>
 
         <section
-          id="four"
-          className="main special"
+          id='four'
+          className='main special'
           style={{ backgroundColor: '#DDD' }}
         >
-          <div className="container">
-            <ul className="actions uniform">
+          <div className='container'>
+            <ul className='actions uniform'>
               <li>
-                <a href="/profile" className="button special">
+                <a href='/profile' className='button special'>
                   Sign Up
                 </a>
               </li>
               <li>
-                <a href="/" className="button">
+                <a href='/' className='button'>
                   Learn More
                 </a>
               </li>
@@ -156,16 +156,16 @@ class Homepage extends React.Component {
           </div>
         </section>
 
-        <section id="five" className="main style1 special">
-          <div className="grid-wrapper">
-            <div className="col-12">
-              <header className="major">
+        <section id='five' className='main style1 special'>
+          <div className='grid-wrapper'>
+            <div className='col-12'>
+              <header className='major'>
                 <h2>Private Infrastructure</h2>
               </header>
               <p>
                 Our larger clients have us host private, customized
                 infrastructure for them. This is the same infrastructure listed
-                on the <a href="/cashstrap">CashStrap page</a>. Each instance is
+                on the <a href='/cashstrap'>CashStrap page</a>. Each instance is
                 isolated so that only the client and the client's users have
                 access to the resource. This is in contrast to the $14.99 per
                 month tier, which is a shared resource.

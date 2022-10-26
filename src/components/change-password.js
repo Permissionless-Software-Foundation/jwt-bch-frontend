@@ -15,7 +15,7 @@ const StyledContent = styled.div`
 let _this
 
 class ChangePassword extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     this.state = {
@@ -24,36 +24,38 @@ class ChangePassword extends React.Component {
       firtsPassword: '',
       secondPassword: '',
       placeHolder: 'Enter Old Password',
-      step: 1,
+      step: 1
     }
     _this = this
     this.Notification = Notification
   }
 
-  render() {
+  render () {
     return (
       <StyledContent>
-        {_this.state.showButtom ? (
-          <button onClick={_this.hideButton}>Change Password</button>
-        ) : (
-          <div>
-            <strong>{_this.state.placeHolder}</strong>
-            <br></br>
-            <input
-              id="input_password"
-              name="change_password"
-              type="password"
-              placeholder={_this.state.placeHolder}
-              onBlur={_this.resetState}
-              onKeyDown={_this.handleKeyDown}
-            />
-          </div>
-        )}
+        {_this.state.showButtom
+          ? (
+            <button onClick={_this.hideButton}>Change Password</button>
+            )
+          : (
+            <div>
+              <strong>{_this.state.placeHolder}</strong>
+              <br />
+              <input
+                id='input_password'
+                name='change_password'
+                type='password'
+                placeholder={_this.state.placeHolder}
+                onBlur={_this.resetState}
+                onKeyDown={_this.handleKeyDown}
+              />
+            </div>
+            )}
       </StyledContent>
     )
   }
 
-  async handleKeyDown(e) {
+  async handleKeyDown (e) {
     const value = e.target.value
 
     // if user press esc, cancel edit
@@ -71,7 +73,7 @@ class ChangePassword extends React.Component {
           _this.setState({
             oldPassword: value,
             placeHolder: 'Enter New Password',
-            step: _this.state.step + 1,
+            step: _this.state.step + 1
           })
           break
 
@@ -80,14 +82,14 @@ class ChangePassword extends React.Component {
           _this.setState({
             firtsPassword: value,
             placeHolder: 'Repeat New Password',
-            step: _this.state.step + 1,
+            step: _this.state.step + 1
           })
           break
 
         // For Reapeat New Password Input
         case 3:
           _this.setState({
-            secondPassword: value,
+            secondPassword: value
           })
 
           // Validate Password Match
@@ -106,22 +108,23 @@ class ChangePassword extends React.Component {
       inputElement.value = ''
     }
   }
+
   // Reset default state
-  async resetState() {
+  async resetState () {
     _this.setState({
       showButtom: true,
       oldPassword: '',
       firtsPassword: '',
       secondPassword: '',
       placeHolder: 'Enter Old Password',
-      step: 1,
+      step: 1
     })
   }
 
-  //Hide "change password" button
-  async hideButton() {
+  // Hide "change password" button
+  async hideButton () {
     _this.setState({
-      showButtom: false,
+      showButtom: false
     })
     // Set focus on input
     setTimeout(() => {
@@ -132,14 +135,14 @@ class ChangePassword extends React.Component {
 
   // TODO: we can validate old password
   // with the auth service for more security
-  async changeRequest() {
+  async changeRequest () {
     // try to update user data
     try {
       const user = getUser()
       // Model to update
       const userUpdated = {
         password: _this.state.firtsPassword,
-        _id: user.userdata.user._id,
+        _id: user.userdata.user._id
       }
       const updateResult = await updateUser(userUpdated)
       if (!updateResult) throw new Error('Error  Changing Password')

@@ -14,7 +14,7 @@ const MainDiv = styled.section`
 `
 
 class WarningDiv extends React.Component {
-  render() {
+  render () {
     return (
       <MainDiv>
         <p>
@@ -25,13 +25,13 @@ class WarningDiv extends React.Component {
           This demo illustrates the token liquidity app and a new economic model
           for utility tokens.{' '}
           <a
-            href="https://docs.google.com/document/d/1UgX_h4TB9CtxxabseC7lRGwQlCsNikPo7DJUlIrNv0k/edit?usp=sharing"
-            target="_blank"
+            href='https://docs.google.com/document/d/1UgX_h4TB9CtxxabseC7lRGwQlCsNikPo7DJUlIrNv0k/edit?usp=sharing'
+            target='_blank' rel='noreferrer'
           >
             Read the business plan
           </a>{' '}
           to learn about the economic model. Developers can explore a{' '}
-          <a href="/testnet">testnet version of the liquidty app here</a>.
+          <a href='/testnet'>testnet version of the liquidty app here</a>.
         </p>
       </MainDiv>
     )

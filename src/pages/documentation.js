@@ -13,90 +13,91 @@ import slp from '../assets/images/slp-transparent.png'
 import tutorialCash from '../assets/images/tutorialcash.png'
 
 class Homepage extends React.Component {
-  render() {
+  render () {
     const siteTitle = 'Documentation'
 
     return (
       <Layout>
         <Helmet title={siteTitle} />
 
-        <section id="one" className="main style1">
-          <div className="grid-wrapper">
-            <div className="col-6">
-              <header className="major">
+        <section id='one' className='main style1'>
+          <div className='grid-wrapper'>
+            <div className='col-6'>
+              <header className='major'>
                 <h2>
                   The Best Technical Reference:
                 </h2>
               </header>
               <p>
                 Adapted from Mastering Bitcoin
-                by <a href="https://twitter.com/aantonop" target="_blank">Andreas Antonopoulos</a>,
-                {' '}<a href="http://zh.thedev.id/mastering-bitcoin-cash/" target="_blank">Mastering Bitcoin Cash</a> is
+                by <a href='https://twitter.com/aantonop' target='_blank' rel='noreferrer'>Andreas Antonopoulos</a>,
+                {' '}<a href='http://zh.thedev.id/mastering-bitcoin-cash/' target='_blank' rel='noreferrer'>Mastering Bitcoin Cash</a> is
                 the most approachable technical reference
                 to working with the Bitcoin Cash protocol.
               </p>
-              <center><ul className="actions">
+              <center><ul className='actions'>
                 <li>
-                  <a href="http://zh.thedev.id/mastering-bitcoin-cash/" target="_blank" className="button">
+                  <a href='http://zh.thedev.id/mastering-bitcoin-cash/' target='_blank' className='button' rel='noreferrer'>
                     More
                   </a>
                 </li>
-              </ul></center>
+              </ul>
+              </center>
             </div>
 
-            <div className="col-6">
-              <span className="image fit">
-                <a href="http://zh.thedev.id/mastering-bitcoin-cash/" target="_blank">
-                  <img src={masteringBitcoinCash} alt="" />
+            <div className='col-6'>
+              <span className='image fit'>
+                <a href='http://zh.thedev.id/mastering-bitcoin-cash/' target='_blank' rel='noreferrer'>
+                  <img src={masteringBitcoinCash} alt='' />
                 </a>
               </span>
             </div>
           </div>
         </section>
 
-        <section id="three" className="main style2 special">
-          <div className="grid-wrapper">
+        <section id='three' className='main style2 special'>
+          <div className='grid-wrapper'>
 
-            <div className="col-6">
-              <span className="image fit">
-                <span className="icon style4 major fas fa-cog"></span>
+            <div className='col-6'>
+              <span className='image fit'>
+                <span className='icon style4 major fas fa-cog' />
               </span>
               <h3>The 'Cash Stack'</h3>
               <p>
                 Learn about the 'full stack' of software required for a modern
                 phone app or website to communicate directly with the blockchain.
               </p>
-              <ul className="actions">
+              <ul className='actions'>
                 <li>
-                  <a href="https://cashstack.info" target="_blank" className="button">
+                  <a href='https://cashstack.info' target='_blank' className='button' rel='noreferrer'>
                     More
                   </a>
                 </li>
               </ul>
             </div>
 
-            <div className="col-6">
-              <span className="image fit">
-                <span className="icon style1 major fas fa-code"></span>
+            <div className='col-6'>
+              <span className='image fit'>
+                <span className='icon style1 major fas fa-code' />
               </span>
               <h3>bch-js</h3>
               <p>
-                This <a href="https://www.npmjs.com/package/@chris.troutner/bch-js" target="_blank">npm JavaScript library </a> can
+                This <a href='https://www.npmjs.com/package/@chris.troutner/bch-js' target='_blank' rel='noreferrer'>npm JavaScript library </a> can
                 be added to your node.js project
                 to instantly allow your app to talk to Bitcoin Cash Blockchain.
               </p>
-              <ul className="actions">
+              <ul className='actions'>
                 <li>
-                  <a href="https://bchjs.fullstack.cash/" target="_blank" className="button">
+                  <a href='https://bchjs.fullstack.cash/' target='_blank' className='button' rel='noreferrer'>
                     More
                   </a>
                 </li>
               </ul>
             </div>
 
-            <div className="col-6">
-              <span className="image fit">
-                <span className="icon style2 major fas fa-bolt"></span>
+            <div className='col-6'>
+              <span className='image fit'>
+                <span className='icon style2 major fas fa-bolt' />
               </span>
               <h3>bch-api</h3>
               <p>
@@ -104,30 +105,30 @@ class Homepage extends React.Component {
                 being operated by FullStack.cash. Every major programming language
                 can communicate with a REST API.
               </p>
-              <ul className="actions">
+              <ul className='actions'>
                 <li>
-                  <a href="https://api.fullstack.cash/docs" target="_blank" className="button">
+                  <a href='https://api.fullstack.cash/docs' target='_blank' className='button' rel='noreferrer'>
                     More
                   </a>
                 </li>
               </ul>
             </div>
 
-            <div className="col-6">
-              <span className="image fit">
-                <span className="icon style4 major fas fa-compress-alt"></span>
+            <div className='col-6'>
+              <span className='image fit'>
+                <span className='icon style4 major fas fa-compress-alt' />
               </span>
               <h3>jwt-bch-lib</h3>
               <p>
-                <a href="https://www.npmjs.com/package/jwt-bch-lib" target="_blank">An npm library</a> which
+                <a href='https://www.npmjs.com/package/jwt-bch-lib' target='_blank' rel='noreferrer'>An npm library</a> which
                 makes it easy for your app to easily use FullStack.cash JWT tokens.
                 Contains simple methods for retrieving, validating, and renewing
                 JWT tokens. Used in
-                the <a href="https://github.com/Permissionless-Software-Foundation/jwt-bch-demo" target="_blank">jwt-bch-demo</a> repository.
+                the <a href='https://github.com/Permissionless-Software-Foundation/jwt-bch-demo' target='_blank' rel='noreferrer'>jwt-bch-demo</a> repository.
               </p>
-              <ul className="actions">
+              <ul className='actions'>
                 <li>
-                  <a href="https://jwt-bch-lib.fullstack.cash/" target="_blank" className="button">
+                  <a href='https://jwt-bch-lib.fullstack.cash/' target='_blank' className='button' rel='noreferrer'>
                     More
                   </a>
                 </li>
@@ -137,17 +138,17 @@ class Homepage extends React.Component {
           </div>
         </section>
 
-        <section id="three" className="main style1 special">
-          <div className="grid-wrapper">
+        <section id='three' className='main style1 special'>
+          <div className='grid-wrapper'>
 
-            <div className="col-12">
+            <div className='col-12'>
               <h2>Community Resources</h2>
             </div>
 
-            <div className="col-6">
-              <span className="image fit">
-                <a href="https://tutorial.cash" target="_blank">
-                  <img src={tutorialCash} alt="" />
+            <div className='col-6'>
+              <span className='image fit'>
+                <a href='https://tutorial.cash' target='_blank' rel='noreferrer'>
+                  <img src={tutorialCash} alt='' />
                 </a>
               </span>
               <h3>Tutorial.cash</h3>
@@ -156,19 +157,19 @@ class Homepage extends React.Component {
                 the Bitcoin Cash Community. Many are non-technical, which makes
                 for a great introduction to the space.
               </p>
-              <ul className="actions">
+              <ul className='actions'>
                 <li>
-                  <a href="https://tutorial.cash" target="_blank" className="button">
+                  <a href='https://tutorial.cash' target='_blank' className='button' rel='noreferrer'>
                     More
                   </a>
                 </li>
               </ul>
             </div>
 
-            <div className="col-6">
-              <span className="image fit">
-                <a href="https://slp.dev" target="_blank">
-                  <img src={slp} alt="" />
+            <div className='col-6'>
+              <span className='image fit'>
+                <a href='https://slp.dev' target='_blank' rel='noreferrer'>
+                  <img src={slp} alt='' />
                 </a>
               </span>
               <h3>slp.dev</h3>
@@ -177,32 +178,31 @@ class Homepage extends React.Component {
                 Ledger Protocol) tokens and all the tools available for developers
                 who want to work with them.
               </p>
-              <ul className="actions">
+              <ul className='actions'>
                 <li>
-                  <a href="https://slp.dev" target="_blank" className="button">
+                  <a href='https://slp.dev' target='_blank' className='button' rel='noreferrer'>
                     More
                   </a>
                 </li>
               </ul>
             </div>
 
-
           </div>
         </section>
 
-        <section id="four" className="main style3 special">
-          <div className="container">
-            <header className="major">
+        <section id='four' className='main style3 special'>
+          <div className='container'>
+            <header className='major'>
               <h2>Ready to get started?</h2>
             </header>
-            <ul className="actions uniform">
+            <ul className='actions uniform'>
               <li>
-                <a href="/profile" className="button special">
+                <a href='/profile' className='button special'>
                   Sign Up
                 </a>
               </li>
               <li>
-                <a href="/examples" className="button">
+                <a href='/examples' className='button'>
                   Example Code
                 </a>
               </li>

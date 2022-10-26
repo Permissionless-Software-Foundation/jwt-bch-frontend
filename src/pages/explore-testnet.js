@@ -12,62 +12,64 @@ const VERSION = '/v5'
 const SERVER = `${process.env.TESTNETSERVER}`
 
 class ExploreTestnet extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     _this = this
     this.state = {
       routesData: [],
-      endpointIndex: 0,
+      endpointIndex: 0
     }
   }
 
-  componentDidMount() {
+  componentDidMount () {
     console.log(routes)
     _this.setState({
-      routesData: routes,
+      routesData: routes
     })
   }
 
-  render() {
+  render () {
     return (
       <Layout>
-        <section id="one" className="main style1">
-          <div className="explore-container">
+        <section id='one' className='main style1'>
+          <div className='explore-container'>
             <select
-              className="explore-select"
-              defaultValue="Testnet"
+              className='explore-select'
+              defaultValue='Testnet'
               onChange={_this.changeServer}
             >
-              <option value="Testnet">Testnet</option>
-              <option value="BCHN">BCHN</option>
-              <option value="ABC">ABC</option>
+              <option value='Testnet'>Testnet</option>
+              <option value='BCHN'>BCHN</option>
+              <option value='ABC'>ABC</option>
             </select>
             {_this.state.routesData.map((val, i) => {
               return (
-                <div key={i} className="route-container-collapsible">
+                <div key={i} className='route-container-collapsible'>
                   <div
-                    className="route-container"
+                    className='route-container'
                     onClick={e => _this.showEndpoints(i)}
                   >
-                    <div className="route-name-container ">
+                    <div className='route-name-container '>
                       <a>{val.name}</a>
                       <span>{val.description}</span>
                     </div>
-                    <div className="route-find-out-more ">
-                      <a href={val.docUrl} target="_blank">
+                    <div className='route-find-out-more '>
+                      <a href={val.docUrl} target='_blank' rel='noreferrer'>
                         Find out more
                       </a>
                     </div>
                   </div>
-                  {_this.state.endpointIndex === i ? (
-                    <Endpoint
-                      endpoints={val.endpoints}
-                      SERVER={SERVER}
-                      VERSION={VERSION}
-                    />
-                  ) : (
-                    ''
-                  )}
+                  {_this.state.endpointIndex === i
+                    ? (
+                      <Endpoint
+                        endpoints={val.endpoints}
+                        SERVER={SERVER}
+                        VERSION={VERSION}
+                      />
+                      )
+                    : (
+                        ''
+                      )}
                 </div>
               )
             })}
@@ -78,20 +80,20 @@ class ExploreTestnet extends React.Component {
     )
   }
 
-  showEndpoints(i) {
+  showEndpoints (i) {
     const _i = _this.state.endpointIndex === i ? '' : i
     _this.setState({
-      endpointIndex: _i,
+      endpointIndex: _i
     })
   }
 
-  changeServer(event) {
+  changeServer (event) {
     const value = event.target.value
     if (value === 'ABC') {
-      navigate(`/explore-abc`)
+      navigate('/explore-abc')
     }
     if (value === 'BCHN') {
-      navigate(`/explore-bchn`)
+      navigate('/explore-bchn')
     }
   }
 }

@@ -21,25 +21,25 @@ export const handleLogin = async ({ email, password }) => {
     const options = {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        email: email,
-        password: password,
-      }),
+        email,
+        password
+      })
     }
     const data = await fetch(`${SERVER}/auth/`, options)
     const users = await data.json()
     console.log(`users: ${JSON.stringify(users, null, 2)}`)
 
-    //console.log(`name: ${users.user.username}`)
-    //console.log(`token: ${users.token}`)
+    // console.log(`name: ${users.user.username}`)
+    // console.log(`token: ${users.token}`)
 
     setUser({
       username: users.user.username,
       jwt: users.token,
       userdata: users,
-      email: users.user.email,
+      email: users.user.email
     })
 
     return true

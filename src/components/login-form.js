@@ -30,7 +30,7 @@ const OutMsg = styled.p`
 let _this
 
 class LoginForm extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     _this = this
@@ -39,19 +39,19 @@ class LoginForm extends React.Component {
       inFetch: false,
       message: '',
       email: '',
-      password: '',
+      password: ''
     }
     this.Notification = Notification
   }
 
-  render() {
+  render () {
     return (
       <form>
         Email:
         <br />
         <input
-          type="text"
-          name="email"
+          type='text'
+          name='email'
           onChange={this.handleUpdate}
           onKeyDown={_this.handleKeyDown}
         />
@@ -59,29 +59,29 @@ class LoginForm extends React.Component {
         Password:
         <br />
         <input
-          type="password"
-          name="password"
+          type='password'
+          name='password'
           onChange={this.handleUpdate}
           onKeyDown={_this.handleKeyDown}
         />
-        <br></br>
+        <br />
         {!_this.state.inFetch && (
           <>
             <StyledButton
-              href="#"
-              className="button special"
-              id="createBtn"
+              href='#'
+              className='button special'
+              id='createBtn'
               onClick={this.createClick}
-              data-to="bitcoincash:qzl6k0wvdd5ky99hewghqdgfj2jhcpqnfq8xtct0al"
+              data-to='bitcoincash:qzl6k0wvdd5ky99hewghqdgfj2jhcpqnfq8xtct0al'
             >
               Create
             </StyledButton>
             <StyledButton
-              href="#"
-              className="button special"
-              id="loginBtn"
+              href='#'
+              className='button special'
+              id='loginBtn'
               onClick={this.loginClick}
-              data-to="bitcoincash:qzl6k0wvdd5ky99hewghqdgfj2jhcpqnfq8xtct0al"
+              data-to='bitcoincash:qzl6k0wvdd5ky99hewghqdgfj2jhcpqnfq8xtct0al'
             >
               Login
             </StyledButton>
@@ -89,10 +89,10 @@ class LoginForm extends React.Component {
         )}
         {_this.state.inFetch && (
           <img
-            width="100"
-            src="https://i.imgur.com/8n8PYAi.gif"
-            alt="Loading..."
-          ></img>
+            width='100'
+            src='https://i.imgur.com/8n8PYAi.gif'
+            alt='Loading...'
+          />
         )}
         <br />
         <OutMsg>{this.state.message}</OutMsg>
@@ -100,33 +100,33 @@ class LoginForm extends React.Component {
     )
   }
 
-  async handleKeyDown(e) {
+  async handleKeyDown (e) {
     if (e.key === 'Enter') {
       _this.loginClick(e)
     }
   }
 
-  validateEmail(email) {
+  validateEmail (email) {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
       return true
     }
     return false
   }
 
-  handleUpdate(event) {
+  handleUpdate (event) {
     _this.setState({
-      [event.target.name]: event.target.value,
+      [event.target.name]: event.target.value
     })
   }
 
-  async createClick(event) {
+  async createClick (event) {
     try {
       event.preventDefault()
       // const isEmail = _this.validateEmail(_this.state.email)
 
       if (!_this.state.email) {
         _this.setState(prevState => ({
-          message: 'Error:  Must be Email Format',
+          message: 'Error:  Must be Email Format'
         }))
 
         _this.Notification.notify('Email', 'Must be Email Format', 'danger')
@@ -134,20 +134,20 @@ class LoginForm extends React.Component {
         return
       }
       _this.setState({
-        inFetch: true,
+        inFetch: true
       })
       try {
         const options = {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json'
           },
           body: JSON.stringify({
             user: {
               email: _this.state.email,
-              password: _this.state.password,
-            },
-          }),
+              password: _this.state.password
+            }
+          })
         }
 
         // console.log(`options.body: ${JSON.stringify(options.body,null,2)}`)
@@ -156,28 +156,28 @@ class LoginForm extends React.Component {
         const users = await data.json()
         console.log(`users: ${JSON.stringify(users, null, 2)}`)
 
-        //console.log(`name: ${users.user.username}`)
-        //console.log(`token: ${users.token}`)
+        // console.log(`name: ${users.user.username}`)
+        // console.log(`token: ${users.token}`)
 
         setUser({
           email: users.user.email,
           username: users.user.username,
           jwt: users.token,
-          userdata: users,
+          userdata: users
         })
 
         _this.Notification.notify('LogIn', 'Success!!', 'success')
         _this.setState({
-          inFetch: false,
+          inFetch: false
         })
         setTimeout(() => {
-          navigate(`/profile`)
+          navigate('/profile')
         }, 1500)
       } catch (err) {
         // If something goes wrong with auth, return false.
-        //return false;
+        // return false;
         _this.setState(prevState => ({
-          message: err.message,
+          message: err.message
         }))
 
         _this.Notification.notify('Error', err.message, 'danger')
@@ -187,14 +187,14 @@ class LoginForm extends React.Component {
     }
   }
 
-  async loginClick(event) {
+  async loginClick (event) {
     try {
       event.preventDefault()
       // const isEmail = _this.validateEmail(_this.state.email)
       const isEmail = true
       if (!isEmail) {
         _this.setState(prevState => ({
-          message: 'Error:  Must be Email Format',
+          message: 'Error:  Must be Email Format'
         }))
 
         _this.Notification.notify('Email', 'Must be Email Format', 'danger')
@@ -202,17 +202,17 @@ class LoginForm extends React.Component {
         return
       }
 
-      //_this.setState(prevState => ({
+      // _this.setState(prevState => ({
       //  message: "You clicked the Login button."
-      //}))
+      // }))
 
-      //console.log(`state: ${JSON.stringify(_this.state,null,2)}`)
+      // console.log(`state: ${JSON.stringify(_this.state,null,2)}`)
 
       const handleSuccess = await handleLogin(_this.state)
 
       if (!handleSuccess) {
         _this.setState(prevState => ({
-          message: 'Username or password does not match.',
+          message: 'Username or password does not match.'
         }))
 
         _this.Notification.notify(
@@ -223,7 +223,7 @@ class LoginForm extends React.Component {
       } else {
         _this.Notification.notify('LogIn', 'Success!!', 'success')
         setTimeout(() => {
-          navigate(`/profile`)
+          navigate('/profile')
         }, 1500)
       }
     } catch (err) {

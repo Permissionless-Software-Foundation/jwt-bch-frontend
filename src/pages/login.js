@@ -34,33 +34,33 @@ const BizPlanButton = styled.a`
 `
 
 class Homepage extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       usdPerToken: 0,
       usdPerBCH: 0,
       bchBalance: 0,
-      tokenBalance: 0,
+      tokenBalance: 0
     }
   }
 
-  render() {
+  render () {
     const siteTitle = 'API Keys for api.fullstack.cash'
 
     return (
-      <Layout loading="loading">
-        <div className={`body`}>
+      <Layout loading='loading'>
+        <div className='body'>
           <Helmet title={siteTitle} />
 
-          <section id="two" className="main style2">
-            <div className="grid-wrapper">
-              <div className="col-3" />
-              <div className="col-6">
+          <section id='two' className='main style2'>
+            <div className='grid-wrapper'>
+              <div className='col-3' />
+              <div className='col-6'>
                 <center>
                   <h2>Get Your API Key</h2>
                   <p>
                     This site distributes API keys for the{' '}
-                    <a href="https://api.fullstack.cash" target="_blank">
+                    <a href='https://api.fullstack.cash' target='_blank' rel='noreferrer'>
                       api.fullstack.cash
                     </a>{' '}
                     REST API. Enter your email and password below to create an
@@ -69,21 +69,21 @@ class Homepage extends React.Component {
                   <LoginForm />
                 </center>
               </div>
-              <div className="col-3" />
+              <div className='col-3' />
             </div>
 
-            <div className="grid-wrapper">
-              <div className="col-3" />
-              <div className="col-6">
+            <div className='grid-wrapper'>
+              <div className='col-3' />
+              <div className='col-6'>
                 <p>
                   If you need help or have questions, join our{' '}
-                  <a href="https://t.me/bch_js_toolkit" target="_blank">
+                  <a href='https://t.me/bch_js_toolkit' target='_blank' rel='noreferrer'>
                     Telegram channel
                   </a>
                   .
                 </p>
               </div>
-              <div className="col-3" />
+              <div className='col-3' />
             </div>
           </section>
         </div>
@@ -92,10 +92,10 @@ class Homepage extends React.Component {
   }
 
   // React Lifecycle - component has mounted.
-  async componentDidMount() {
+  async componentDidMount () {
     // If user is already logged in, forward them to the private area.
     if (isLoggedIn()) {
-      navigate(`/profile`)
+      navigate('/profile')
     }
   }
 }
