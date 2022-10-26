@@ -41,8 +41,10 @@ class Homepage extends React.Component {
                 >
                   bch-js
                 </a>{' '}
-                is the primary JavaScript library for interacting with a
-                blockchain, but FullStack.cash maintains several additional
+                is a low-level JavaScript library for generating custom Bitcoin Cash
+                transactions. <a href="https://www.npmjs.com/package/minimal-slp-wallet" target="_blank">minimal-slp-wallet</a> is
+                high-level JavaScript library for executing common wallet features.
+                FullStack.cash maintains several additional
                 libraries for specific blockchain use cases. This page lists the
                 most popular and important libraries we maintain.
               </p>
@@ -114,23 +116,44 @@ class Homepage extends React.Component {
 
             <div className='col-6'>
               <h3>
-                <b>slp-cli-wallet</b>
+                <b>minimal-slp-wallet</b>
               </h3>
               <p>
-                This command-line wallet is a handy tool for rapidly prototyping
-                ideas. Because there is no graphical user interface, the burden
-                for trying new ideas is greatly reduced. It works on both the
-                BCH and eCash blockchains.
-              </p>
-              <p>
-                This is a HD wallet with full support for SLP and NFT tokens.
-                It's also an npm library that can be easily added to your own
-                applications to infuse them with same wallet capabilities.
+                A lightweight, single-address wallet library for Bitcoin Cash.
+                Optimized for front-end (web browser) use. This is the BCH
+                wallet 'engine' used in {' '}
+                <a href='https://wallet.fullstack.cash' target='_blank' rel='noreferrer'>
+                  wallet.fullstack.cash
+                </a>{' '}
+                and our <a href='/front-end'>front-end software</a>.
               </p>
               <ul className='actions'>
                 <li>
                   <a
-                    href='https://github.com/Permissionless-Software-Foundation/slp-cli-wallet'
+                    href='https://www.npmjs.com/package/minimal-slp-wallet'
+                    className='button'
+                    target='_blank' rel='noreferrer'
+                  >
+                    Library
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className='col-6'>
+              <h3>
+                <b>psf-bch-wallet</b>
+              </h3>
+              <p>
+                This command-line wallet app is a handy tool for rapidly prototyping
+                ideas. Because there is no graphical user interface, the burden
+                for trying new ideas is greatly reduced. It works on both the
+                BCH and eCash blockchains. This is a single-address wallet with full support for SLP and NFT tokens.
+              </p>
+              <ul className='actions'>
+                <li>
+                  <a
+                    href='https://github.com/Permissionless-Software-Foundation/psf-bch-wallet'
                     className='button'
                     target='_blank' rel='noreferrer'
                   >
@@ -140,51 +163,22 @@ class Homepage extends React.Component {
               </ul>
             </div>
 
-            <div className='col-6'>
-              <h3>
-                <b>avax-cli-wallet</b>
-              </h3>
-              <p>
-                This is a fork of slp-cli-wallet, but modified to work with the{' '}
-                <a href='https://avax.network' target='_blank' rel='noreferrer'>
-                  Avalanche blockchain
-                </a>
-                . It contains many of the same commands for sending AVAX and
-                tokens (ANTs) on their X-chain. It includes HD wallet
-                functionality.
-              </p>
-              <ul className='actions'>
-                <li>
-                  <a
-                    href='https://github.com/Permissionless-Software-Foundation/avax-cli-wallet'
-                    className='button'
-                    target='_blank' rel='noreferrer'
-                  >
-                    Code
-                  </a>
-                </li>
-              </ul>
-            </div>
 
             <div className='col-6'>
               <h3>
                 <b>bch-message-lib</b>
               </h3>
               <p>
-                A utility library encomposing much of the functionality provided
-                by{' '}
-                <a href='https://message.fullstack.cash' target='_blank' rel='noreferrer'>
-                  message.FullStack.cash
-                </a>
-                . It can detect and read blockchain messages utilizing the{' '}
+                A utility library for reading and sending messages
+                to addresses on the blockchain.
+                It can detect and read blockchain messages utilizing the{' '}
                 <a
                   href='https://github.com/Permissionless-Software-Foundation/specifications/blob/master/ps001-media-sharing.md'
                   target='_blank' rel='noreferrer'
                 >
                   PS001
                 </a>{' '}
-                spec. This library is also used for calculating merit for
-                'staking' token.
+                specification.
               </p>
               <ul className='actions'>
                 <li>
@@ -221,31 +215,7 @@ class Homepage extends React.Component {
               </ul>
             </div>
 
-            <div className='col-6'>
-              <h3>
-                <b>minimal-slp-wallet</b>
-              </h3>
-              <p>
-                A lightweight, single-address wallet library for Bitcoin Cash.
-                Optimized for front-end (web browser) use. This is the BCH
-                wallet 'engine' used in the Gatsby Theme behind{' '}
-                <a href='https://wallet.fullstack.cash' target='_blank' rel='noreferrer'>
-                  wallet.fullstack.cash
-                </a>{' '}
-                and our <a href='/front-end'>front-end software</a>.
-              </p>
-              <ul className='actions'>
-                <li>
-                  <a
-                    href='https://www.npmjs.com/package/minimal-slp-wallet'
-                    className='button'
-                    target='_blank' rel='noreferrer'
-                  >
-                    Library
-                  </a>
-                </li>
-              </ul>
-            </div>
+
           </div>
         </section>
 

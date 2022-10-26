@@ -197,27 +197,19 @@ class Homepage extends React.Component {
           <div className='grid-wrapper'>
             <div className='col-6'>
               <header className='major'>
-                <h2>Coming From Bitcoin.com?</h2>
+                <h2>Wondering How To Get Started?</h2>
               </header>
               <p>
-                FullStack.cash has roots from{' '}
-                <a href='https://developer.bitcoin.com' target='_blank' rel='noreferrer'>
-                  developer.bitcoin.com
-                </a>
-                . The open source software started by Bitcoin.com was forked in
-                March 2020. It recieved several upgrades, and was modified to
-                work with the decentralized infrastructure listed on the{' '}
-                <a href='/cashstrap' target='_blank'>
-                  CashStrap page
-                </a>
-                .
+                This video was produced as part of a Bitcoin Cash event. It
+                explores how to get started building applications that talk
+                to the BCH blockchain. It compares and contrasts application
+                development on the blockchain vs conventional software.
               </p>
               <p>
                 The <b>Cash Stack</b> is a core idea in building scaleable apps
-                with a cash-like experience. The button below will take you to
+                with a fast, cash-like experience. The button below will take you to
                 an introduction to the Cash Stack. The video to the right will
-                discuss the differences between Bitcoin.com and FullStack.cash,
-                with regard to the Cash Stack infrastructure.
+                introduce FullStack.cash and how it leverages the Cash Stack.
               </p>
               <div>
                 <center>
@@ -242,8 +234,8 @@ class Homepage extends React.Component {
               <br />
               <div className='youtube-responsive-container'>
                 <iframe
-                  title='Transitioning from Bitcoin.com to FullStack.cash'
-                  src='https://www.youtube.com/embed/FWzTBOgwy-s'
+                  title='How to Get Started as a Bitcoin Cash Application Developer'
+                  src='https://www.youtube.com/embed/F5Wo2MHhpN0'
                   frameBorder='0'
                   allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
                   allowFullScreen

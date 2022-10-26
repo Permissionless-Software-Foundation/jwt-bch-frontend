@@ -190,11 +190,11 @@ class Homepage extends React.Component {
                     <td>$60</td>
                   </tr>
                   <tr>
-                    <td>ABC Full Node</td>
+                    <td>BCHN Full Node</td>
                     <td>$150</td>
                   </tr>
                   <tr>
-                    <td>BCHN Full Node</td>
+                    <td>eCash Full Node</td>
                     <td>$150</td>
                   </tr>
                   <tr>
@@ -203,7 +203,7 @@ class Homepage extends React.Component {
                   </tr>
                   <tr>
                     <td>SLP Indexer</td>
-                    <td>$200</td>
+                    <td>$100</td>
                   </tr>
                 </tbody>
               </table>
