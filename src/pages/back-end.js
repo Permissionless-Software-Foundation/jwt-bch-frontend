@@ -23,12 +23,12 @@ class Homepage extends React.Component {
             <div className='col-6'>
               <header className='major'>
                 <h2>
-                  Back-End: Docker Containers
+                  Back End: Docker Containers
                   <br /> and DevOps
                 </h2>
               </header>
               <p>
-                The 'Back-End' of the Cash Stack is concerned with the REST API
+                The 'back end' of the Cash Stack is concerned with the REST API
                 layer and all the layers below it. This software has been
                 conveniently packaged in Docker containers that can mount
                 pre-synced databases. The pre-synced databases can be downloaded
@@ -53,7 +53,7 @@ class Homepage extends React.Component {
           <div className='grid-wrapper'>
             <div className='col-12'>
               <header className='major'>
-                <h2>back-end Software</h2>
+                <h2>Back-End Software</h2>
               </header>
               <p>
                 The software repositories below are used to create Docker
@@ -93,6 +93,15 @@ class Homepage extends React.Component {
                     Code
                   </a>
                 </li>
+                <li>
+                  <a
+                    href='https://api.fullstack.cash/docs/'
+                    className='button'
+                    target='_blank' rel='noreferrer'
+                  >
+                    API Reference
+                  </a>
+                </li>
               </ul>
             </div>
             <div className='col-6'>
@@ -108,19 +117,12 @@ class Homepage extends React.Component {
                 >
                   BCHN
                 </a>
-                ,{' '}
-                <a
-                  href='https://github.com/Permissionless-Software-Foundation/docker-bchd'
-                  target='_blank' rel='noreferrer'
-                >
-                  BCHD
-                </a>
-                ,{' '}
+                {' '}and{' '}
                 <a
                   href='https://github.com/Permissionless-Software-Foundation/docker-abc'
                   target='_blank' rel='noreferrer'
                 >
-                  ABC
+                  eCash
                 </a>{' '}
                 full nodes.
               </p>
@@ -143,7 +145,7 @@ class Homepage extends React.Component {
               </h3>
               <p>
                 Fulcrum is the most performant indexer available for BTC, BCH,
-                and eCash (BCHA) blockchains. It implements the Electrumx
+                and eCash (XEC) blockchains. It implements the Electrumx
                 protocol used by the Electrum series of wallet software. This
                 indexer provides UTXO, address balance, and transaction history
                 needed by any wallet app.
@@ -163,17 +165,63 @@ class Homepage extends React.Component {
 
             <div className='col-6'>
               <h3>
-                <b>SLPDB</b>
+                <b>SLP Indexer</b>
               </h3>
               <p>
-                SLPDB populates a Mongo database with blockchain data about SLP
-                tokens. Expressive queries can be executed against this database
-                to get all kinds of statistics about SLP and NFT tokens.
+                The psf-slp-indexer crawls the blockchain and tracks all SLP
+                tokens and NFTs on the blockchain. This indexer is required for any
+                application that needs to interact with tokens.
               </p>
               <ul className='actions'>
                 <li>
                   <a
-                    href='https://github.com/Permissionless-Software-Foundation/docker-slpdb'
+                    href='https://github.com/Permissionless-Software-Foundation/psf-slp-indexer'
+                    className='button'
+                    target='_blank' rel='noreferrer'
+                  >
+                    Docker Container
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className='col-6'>
+              <h3>
+                <b>Pay-to-Write Database</b>
+              </h3>
+              <p>
+                The pay-to-write database (P2WDB) is a censorship resistent database.
+                It's similar to a blockchain, but better optimized for data. Each
+                write can contain up to 10 KB of data. It serves an important role
+                when building cryptocurrency apps, since blockchains are not
+                optimized for storing data.
+              </p>
+              <ul className='actions'>
+                <li>
+                  <a
+                    href='https://p2wdb.com'
+                    className='button'
+                    target='_blank' rel='noreferrer'
+                  >
+                    Find Out More
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className='col-6'>
+              <h3>
+                <b>IPFS Service Provider</b>
+              </h3>
+              <p>
+                This Docker container communicates with bch-api in order to proxy
+                the API calls over the IPFS network. This is a core piece of
+                software that enables the 'web3' version of the Cash Stack.
+              </p>
+              <ul className='actions'>
+                <li>
+                  <a
+                    href='https://github.com/Permissionless-Software-Foundation/ipfs-bch-wallet-service'
                     className='button'
                     target='_blank' rel='noreferrer'
                   >
@@ -185,133 +233,6 @@ class Homepage extends React.Component {
           </div>
         </section>
 
-        <section id='four' className='main style3 special'>
-          <div className='grid-wrapper'>
-            <div className='col-12'>
-              <header className='major'>
-                <h2>Software As A Service</h2>
-              </header>
-              <p>
-                Just as FullStack.cash offers blockchain infrastructure access
-                as-a-service,{' '}
-                <a href='https://psfoundation.cash' target='_blank' rel='noreferrer'>
-                  the PSF
-                </a>{' '}
-                also offers back-end code to help other developers sell back-end
-                software-as-a-service (SaaS). These reposities will be of
-                interest to entreprenurial-minded developers that want to earn
-                cryptocurrency by selling software services.
-              </p>
-            </div>
-
-            <div className='col-6'>
-              <h3>
-                <b>Earn Cryptocurrency from an API</b>
-              </h3>
-              <p>
-                This video is a bit old, but it still explains how
-                entreprenurialy minded developers can earn cryptocurrency by
-                running infrastructure services like FullStack.cash.
-              </p>
-              <div className='youtube-responsive-container'>
-                <iframe
-                  title='Create Your Own BCH or eCash Web Wallet'
-                  src='https://www.youtube.com/embed/oFa8Q2OCSaw'
-                  frameBorder='0'
-                  allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-                  allowFullScreen
-                />
-              </div>
-              <br />
-              <br />
-            </div>
-
-            <div className='col-6'>
-              <h3>
-                <b>ipfs-service-provider</b>
-              </h3>
-              <p>
-                This is a boilerplate repository of code for creating new SaaS
-                applications. It's intended to be forked and customized for your
-                own use. It includes all the core infrastructure needed to build
-                the back-end of a SaaS app, using the the following interfaces:
-              </p>
-              <ul>
-                <li>REST API over HTTP</li>
-                <li>
-                  JSON RCP over{' '}
-                  <a href='https://ipfs.io' target='_blank' rel='noreferrer'>
-                    IPFS
-                  </a>
-                </li>
-              </ul>
-              <ul className='actions'>
-                <li>
-                  <a
-                    href='https://github.com/Permissionless-Software-Foundation/ipfs-service-provider'
-                    className='button'
-                    target='_blank' rel='noreferrer'
-                  >
-                    Code
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div className='col-6'>
-              <h3>
-                <b>docker-gatsby-web-server</b>
-              </h3>
-              <p>
-                This back-end web server simultaniously serves website or web
-                app content to the clear web, Tor, and IPFS. The web app can be
-                accessed over any combination of the three options. This
-                provides a number of options for privacy, performance, and
-                censorship resistance for web app builders.
-              </p>
-              <ul className='actions'>
-                <li>
-                  <a
-                    href='https://github.com/Permissionless-Software-Foundation/docker-gatsby-webserver'
-                    className='button'
-                    target='_blank' rel='noreferrer'
-                  >
-                    Code
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div className='col-6'>
-              <h3>
-                <b>ipfs-p2wdb-service</b>
-              </h3>
-              <p>
-                Based on ipfs-service-provider, this SaaS app sells access to a
-                decentralized database, which possesses qualities similar to a
-                blockchain. Data in this database is accessible to any
-                application on the BCH, eCash, or Avalanche blockchains, as well
-                as the IPFS network. It's a highly accessible, cross-chain
-                database with high censorship resistance.
-              </p>
-              <p>
-                Warning: This software is open for Alpha testing, and not ready
-                for production.
-              </p>
-              <ul className='actions'>
-                <li>
-                  <a
-                    href='https://github.com/Permissionless-Software-Foundation/ipfs-p2wdb-service'
-                    className='button'
-                    target='_blank' rel='noreferrer'
-                  >
-                    Code
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
 
         <section id='five' className='main style3 special'>
           <div className='container'>

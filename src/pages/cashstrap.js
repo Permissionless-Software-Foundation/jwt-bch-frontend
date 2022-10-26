@@ -54,6 +54,13 @@ class Homepage extends React.Component {
                   <li><code>ipfs swarm connect /ip4/5.161.42.62/tcp/4001/p2p/12D3KooWPRRyk3rh7dHTY4tQsRM3UEUK7uo5ZAqqxwTT3iSBTu6K/p2p-circuit/p2p/12D3KooWNYcNyB1ACYiDfGG6QZYrq72GQJA1WMpUeCSY5z14vcDV</code></li>
                 </ul>
               </p>
+              <br />
+
+              <p>
+                Having issues downloading the files? Reach out
+                on <a href="https://t.me/bch_js_toolkit" target="_blank">our Telegram channel</a> for 
+                assistence.
+              </p>
             </div>
           </div>
         </section>
