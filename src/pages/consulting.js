@@ -111,8 +111,29 @@ class Homepage extends React.Component {
             <div className='col-12'>
               <p>
                 Many business owners simply need an online shopping cart where customers can
-                purchase goods for Bitcoin Cash. We can install a simple Wordpress store that
-                allows you to display goods, and allows customers to pay in Bitcion Cash.
+		purchase goods for Bitcoin Cash. We can install a simple Wordpress store that
+		allows you to display goods, and allows customers to pay in Bitcoin Cash or tokens.
+              </p>
+              <p>
+                Here is the cost breakdown for this service. <a href="/contact">Contact us</a> for
+                details of these costs.
+              </p>
+              <ul>
+                <li>
+                  Setup: $2,000 (one time fee)
+                </li>
+                <li>
+                  Hosting: $100 (per month)
+                </li>
+                <li>
+                  Maintence: $100 (per hour)
+                </li>
+              </ul>
+              <p>
+                We encourage entrepreneurs to maintain their
+                own store inventory, or hire someone that we can train to do so.
+                But FullStack.cash can do that if there is no other option, at
+                the maintenance cost list above.
               </p>
               <br />
               <a href='https://bchstore.com' className='button'>See Demo</a>
