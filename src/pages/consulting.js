@@ -137,6 +137,7 @@ class Homepage extends React.Component {
               </p>
               <br />
               <a href='https://bchstore.com' className='button'>See Demo</a>
+              <a href='/contact' className='button'>Contact Us</a>
             </div>
           </div>
 
@@ -155,9 +156,8 @@ class Homepage extends React.Component {
               <p>
                 If you already have an existing website, and simply want to give
                 users an option to pay in BCH, we've got a solution for that too.
-                Every merchants website is a little different, but we can work
-                with your website manager to insert a 'Buy Now' button. The cost
-                for this service is $100 per hour.
+                Every merchant's website is a little different, but we can work
+                with your website manager to insert a 'Buy Now' button.
               </p>
               <p>
                 Check out our simple demo showing an embedded 'Buy Now' button,
@@ -166,6 +166,7 @@ class Homepage extends React.Component {
 
               <br />
               <a href='https://buy-now.fullstack.cash/' className='button'>See Demo</a>
+              <a href='/contact' className='button'>Contact Us</a>
             </div>
           </div>
 
@@ -234,7 +235,7 @@ class Homepage extends React.Component {
                 <li><b>General apps</b>: We focus on crypto apps. If the app doesn't involve cryptocurrency, we'll help you partner with a general app design company.</li>
                 <li><b>App stores</b>: We can not help you get your app into the iOS or Google app stores. That is often a full-time job in itself.</li>
               </ul>
-
+              <a href='/contact' className='button'>Contact Us</a>
             </div>
           </div>
 
