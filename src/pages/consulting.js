@@ -137,6 +137,7 @@ class Homepage extends React.Component {
               </p>
               <br />
               <a href='https://bchstore.com' className='button'>See Demo</a>
+              <br />
               <a href='/contact' className='button'>Contact Us</a>
             </div>
           </div>
@@ -166,6 +167,7 @@ class Homepage extends React.Component {
 
               <br />
               <a href='https://buy-now.fullstack.cash/' className='button'>See Demo</a>
+              <br />
               <a href='/contact' className='button'>Contact Us</a>
             </div>
           </div>
@@ -235,6 +237,7 @@ class Homepage extends React.Component {
                 <li><b>General apps</b>: We focus on crypto apps. If the app doesn't involve cryptocurrency, we'll help you partner with a general app design company.</li>
                 <li><b>App stores</b>: We can not help you get your app into the iOS or Google app stores. That is often a full-time job in itself.</li>
               </ul>
+              <br />
               <a href='/contact' className='button'>Contact Us</a>
             </div>
           </div>
