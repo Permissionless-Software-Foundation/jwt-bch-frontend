@@ -136,7 +136,7 @@ class Homepage extends React.Component {
                 the maintenance cost list above.
               </p>
               <br />
-              <a href='https://bchstore.com' className='button'>See Demo</a>
+              <a href='https://bchstore.com' target="_blank" className='button'>See Demo</a>
               <br />
               <br />
               <a href='/contact' className='button'>Contact Us</a>
@@ -167,7 +167,7 @@ class Homepage extends React.Component {
               </p>
 
               <br />
-              <a href='https://buy-now.fullstack.cash/' className='button'>See Demo</a>
+              <a href='https://buy-now.fullstack.cash/' target="_blank" className='button'>See Demo</a>
               <br />
               <br />
               <a href='/contact' className='button'>Contact Us</a>
