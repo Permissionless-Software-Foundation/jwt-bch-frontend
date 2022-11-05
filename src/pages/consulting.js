@@ -147,6 +147,35 @@ class Homepage extends React.Component {
           <div className='grid-wrapper'>
             <div className='col-12'>
               <header className='major'>
+                <h3>Want to accept BCH in your existing website? We've got that too.</h3>
+              </header>
+            </div>
+
+            <div className='col-12'>
+              <p>
+                If you already have an existing website, and simply want to give
+                users an option to pay in BCH, we've got a solution for that too.
+                Every merchants website is a little different, but we can work
+                with your website manager to insert a 'Buy Now' button. The cost
+                for this service is $100 per hour.
+              </p>
+              <p>
+                Check out our simple demo showing an embedded 'Buy Now' button,
+                allowing easy payment with BCH.
+              </p>
+
+              <br />
+              <a href='https://buy-now.fullstack.cash/' className='button'>See Demo</a>
+            </div>
+          </div>
+
+          <br />
+          <hr />
+          <br />
+
+          <div className='grid-wrapper'>
+            <div className='col-12'>
+              <header className='major'>
                 <h3>Need Something More Advanced? We've got that too.</h3>
               </header>
             </div>
