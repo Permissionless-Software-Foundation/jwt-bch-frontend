@@ -138,6 +138,7 @@ class Homepage extends React.Component {
               <br />
               <a href='https://bchstore.com' className='button'>See Demo</a>
               <br />
+              <br />
               <a href='/contact' className='button'>Contact Us</a>
             </div>
           </div>
@@ -167,6 +168,7 @@ class Homepage extends React.Component {
 
               <br />
               <a href='https://buy-now.fullstack.cash/' className='button'>See Demo</a>
+              <br />
               <br />
               <a href='/contact' className='button'>Contact Us</a>
             </div>
