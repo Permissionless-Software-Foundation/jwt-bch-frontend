@@ -41,7 +41,7 @@ class Homepage extends React.Component {
                 <ul className='actions uniform'>
                   <li>
                     <a
-                      href='https://github.com/Permissionless-Software-Foundation/bch-js-examples'
+                      href='https://github.com/Permissionless-Software-Foundation/psf-js-examples'
                       target='_blank'
                       className='button' rel='noreferrer'
                     >
@@ -117,7 +117,7 @@ class Homepage extends React.Component {
               <ul className='actions'>
                 <li>
                   <a
-                    href='https://github.com/Permissionless-Software-Foundation/bch-js-examples'
+                    href='https://github.com/Permissionless-Software-Foundation/psf-js-examples'
                     className='button'
                     target='_blank' rel='noreferrer'
                   >
