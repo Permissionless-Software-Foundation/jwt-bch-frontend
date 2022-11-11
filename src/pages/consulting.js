@@ -136,7 +136,41 @@ class Homepage extends React.Component {
                 the maintenance cost list above.
               </p>
               <br />
-              <a href='https://bchstore.com' className='button'>See Demo</a>
+              <a href='https://bchstore.com' target="_blank" className='button'>See Demo</a>
+              <br />
+              <br />
+              <a href='/contact' className='button'>Contact Us</a>
+            </div>
+          </div>
+
+          <br />
+          <hr />
+          <br />
+
+          <div className='grid-wrapper'>
+            <div className='col-12'>
+              <header className='major'>
+                <h3>Want to accept BCH in your existing website? We've got that too.</h3>
+              </header>
+            </div>
+
+            <div className='col-12'>
+              <p>
+                If you already have an existing website, and simply want to give
+                users an option to pay in BCH, we've got a solution for that too.
+                Every merchant's website is a little different, but we can work
+                with your website manager to insert a 'Buy Now' button.
+              </p>
+              <p>
+                Check out our simple demo showing an embedded 'Buy Now' button,
+                allowing easy payment with BCH.
+              </p>
+
+              <br />
+              <a href='https://buy-now.fullstack.cash/' target="_blank" className='button'>See Demo</a>
+              <br />
+              <br />
+              <a href='/contact' className='button'>Contact Us</a>
             </div>
           </div>
 
@@ -205,7 +239,8 @@ class Homepage extends React.Component {
                 <li><b>General apps</b>: We focus on crypto apps. If the app doesn't involve cryptocurrency, we'll help you partner with a general app design company.</li>
                 <li><b>App stores</b>: We can not help you get your app into the iOS or Google app stores. That is often a full-time job in itself.</li>
               </ul>
-
+              <br />
+              <a href='/contact' className='button'>Contact Us</a>
             </div>
           </div>
 
