@@ -1,4 +1,4 @@
-import React from 'react'
+i	mport React from 'react'
 import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
@@ -130,14 +130,14 @@ class Homepage extends React.Component {
               <ul style={{ textAlign: 'left' }}>
                 <li>
                   <b>Filename:</b>
-                  <br /> slp-indexer-742800.zip
+                  <br /> slp-indexer-815000.zip
                 </li>
                 <li>
                   <b>File size:</b> 6.0GB
                 </li>
                 <li>
                   <b>IPFS Hash:</b>
-                  {' '} QmZgVkerRGb933CcwJs5oKcVBCva8FtsfXTkmpa324CaPY
+                  {' '} QmdiAuoMbWZFmq1pdqHZj77q6hCXDaGE4pNM4ut6MFbKnC
                 </li>
               </ul>
               <p>
