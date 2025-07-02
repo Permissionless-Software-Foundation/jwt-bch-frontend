@@ -111,11 +111,11 @@ class Homepage extends React.Component {
             <div className='col-12'>
               <p>
                 Many business owners simply need an online shopping cart where customers can
-		purchase goods for Bitcoin Cash. We can install a simple Wordpress store that
-		allows you to display goods, and allows customers to pay in Bitcoin Cash or tokens.
+                purchase goods for Bitcoin Cash. We can install a simple Wordpress store that
+                allows you to display goods, and allows customers to pay in Bitcoin Cash or tokens.
               </p>
               <p>
-                Here is the cost breakdown for this service. <a href="/contact">Contact us</a> for
+                Here is the cost breakdown for this service. <a href='/contact'>Contact us</a> for
                 details of these costs.
               </p>
               <ul>
@@ -136,7 +136,7 @@ class Homepage extends React.Component {
                 the maintenance cost list above.
               </p>
               <br />
-              <a href='https://bchstore.com' target="_blank" className='button'>See Demo</a>
+              <a href='https://bchstore.com' target='_blank' className='button' rel='noreferrer'>See Demo</a>
               <br />
               <br />
               <a href='/contact' className='button'>Contact Us</a>
@@ -167,7 +167,7 @@ class Homepage extends React.Component {
               </p>
 
               <br />
-              <a href='https://buy-now.fullstack.cash/' target="_blank" className='button'>See Demo</a>
+              <a href='https://buy-now.fullstack.cash/' target='_blank' className='button' rel='noreferrer'>See Demo</a>
               <br />
               <br />
               <a href='/contact' className='button'>Contact Us</a>

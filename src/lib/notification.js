@@ -1,27 +1,24 @@
 import React from 'react'
-import { store } from 'react-notifications-component'
+import { toast } from 'react-toastify'
 
 let _this
 class Notification extends React.Component {
   constructor (props) {
     super(props)
     _this = this
-    this.store = store
   }
 
   notify (title, msj, type, time) {
-    _this.store.addNotification({
-      title,
-      message: msj,
-      type, // danger, success
-      insert: 'bottom',
-      container: 'bottom-right',
-      animationIn: ['animated', 'fadeIn'],
-      animationOut: ['animated', 'fadeOut'],
-      dismiss: {
-        duration: time || 2500,
-        onScreen: true
-      }
+    const toastType = type === 'danger' ? 'error' : type === 'success' ? 'success' : 'info'
+
+    toast[toastType](msj, {
+      position: 'bottom-right',
+      autoClose: time || 2500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined
     })
   }
 }

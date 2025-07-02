@@ -1,11 +1,13 @@
-@import 'libs/vars';
-@import 'libs/functions';
-@import 'libs/mixins';
-@import 'libs/skel';
+@use "sass:color";
+@use "sass:meta";
+@use 'libs/vars';
+@use 'libs/functions';
+@use 'libs/mixins';
+@use 'libs/skel';
 @import url('../css/all.min.css');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic');
 
-@import 'css-grid';
+@include meta.load-css('css-grid');
 
 /*
 	Photon by HTML5 UP
@@ -13,7 +15,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-@include skel-breakpoints(
+@include skel.skel-breakpoints(
   (
     xlarge: '(max-width: 1680px)',
     large: '(max-width: 1280px)',
@@ -24,7 +26,7 @@
   )
 );
 
-@include skel-layout(
+@include skel.skel-layout(
   (
     reset: 'full',
     boxModel: 'border',
@@ -34,14 +36,14 @@
 /* Basic */
 
 body {
-  background: _palette(bg);
+  background: functions.palette(bg);
 
   .body.is-loading {
     *,
     *:before,
     *:after {
-      @include vendor('animation', 'none !important');
-      @include vendor('transition', 'none !important');
+      @include skel.vendor('animation', 'none !important');
+      @include skel.vendor('transition', 'none !important');
     }
   }
 }
@@ -50,35 +52,35 @@ body,
 input,
 select,
 textarea {
-  color: _palette(fg);
-  font-family: _font(family);
+  color: functions.palette(fg);
+  font-family: functions.font(family);
   font-size: 16pt;
-  font-weight: _font(weight);
+  font-weight: functions.font(weight);
   line-height: 1.65em;
 }
 
 a {
-  @include vendor(
+  @include skel.vendor(
     'transition',
     (
-      'color #{_duration(transition)} ease-in-out',
-      'border-color #{_duration(transition)} ease-in-out'
+      'color #{functions.duration(transition)} ease-in-out',
+      'border-color #{functions.duration(transition)} ease-in-out'
     )
   );
-  border-bottom: dotted 1px _palette(fg);
+  border-bottom: dotted 1px functions.palette(fg);
   color: inherit;
   text-decoration: none;
 
   &:hover {
     border-bottom-color: transparent !important;
-    color: _palette(accent3);
+    color: functions.palette(accent3);
   }
 }
 
 strong,
 b {
-  color: _palette(fg-bold);
-  font-weight: _font(weight-bold);
+  color: functions.palette(fg-bold);
+  font-weight: functions.font(weight-bold);
 }
 
 em,
@@ -87,7 +89,7 @@ i {
 }
 
 p {
-  margin: 0 0 _size(element-margin) 0;
+  margin: 0 0 functions.size(element-margin) 0;
 }
 
 h1,
@@ -96,9 +98,9 @@ h3,
 h4,
 h5,
 h6 {
-  color: _palette(fg-bold);
+  color: functions.palette(fg-bold);
   line-height: 1em;
-  margin: 0 0 (_size(element-margin) * 0.5) 0;
+  margin: 0 0 (functions.size(element-margin) * 0.5) 0;
 
   a {
     color: inherit;
@@ -150,28 +152,28 @@ sup {
 
 hr {
   border: 0;
-  border-bottom: solid 1px _palette(border);
+  border-bottom: solid 1px functions.palette(border);
 
   // This is the *only* instance where we need to rely on margin collapse.
-  margin: _size(element-margin) 0;
+  margin: functions.size(element-margin) 0;
 
   &.major {
-    margin: (_size(element-margin) * 1.5) 0;
+    margin: (functions.size(element-margin) * 1.5) 0;
   }
 }
 
 blockquote {
-  border-left: solid 4px _palette(border);
+  border-left: solid 4px functions.palette(border);
   font-style: italic;
-  margin: 0 0 _size(element-margin) 0;
+  margin: 0 0 functions.size(element-margin) 0;
   padding: 0.5em 0 0.5em 2em;
 }
 
 code {
-  background: _palette(border-bg);
-  border-radius: _size(border-radius);
-  border: solid 1px _palette(border);
-  font-family: _font(family-fixed);
+  background: functions.palette(border-bg);
+  border-radius: functions.size(border-radius);
+  border: solid 1px functions.palette(border);
+  font-family: functions.font(family-fixed);
   font-size: 0.9em;
   margin: 0 0.25em;
   padding: 0.25em 0.65em;
@@ -179,9 +181,9 @@ code {
 
 pre {
   -webkit-overflow-scrolling: touch;
-  font-family: _font(family-fixed);
+  font-family: functions.font(family-fixed);
   font-size: 0.9em;
-  margin: 0 0 _size(element-margin) 0;
+  margin: 0 0 functions.size(element-margin) 0;
 
   code {
     display: block;
@@ -219,21 +221,21 @@ article {
 
 header {
   p {
-    color: _palette(fg-light);
-    margin: 0 0 (_size(element-margin) * 0.75) 0;
+    color: functions.palette(fg-light);
+    margin: 0 0 (functions.size(element-margin) * 0.75) 0;
     position: relative;
   }
 
   h2 + p {
     font-size: 1.25em;
     line-height: 1.5em;
-    margin-top: (_size(element-margin) * -0.5);
+    margin-top: (functions.size(element-margin) * -0.5);
   }
 
   h3 + p {
     font-size: 1.1em;
     line-height: 1.5em;
-    margin-top: (_size(element-margin) * -0.4);
+    margin-top: (functions.size(element-margin) * -0.4);
   }
 
   h4 + p,
@@ -241,18 +243,18 @@ header {
   h6 + p {
     font-size: 0.9em;
     line-height: 1.5em;
-    margin-top: (_size(element-margin) * -0.3);
+    margin-top: (functions.size(element-margin) * -0.3);
   }
 
   &.major {
-    margin: 0 0 (_size(element-margin) * 0.5) 0;
+    margin: 0 0 (functions.size(element-margin) * 0.5) 0;
 
     &:after {
-      background: _palette(border);
+      background: functions.palette(border);
       content: '';
       display: inline-block;
       height: 1px;
-      margin-top: (_size(element-margin) * 0.75);
+      margin-top: (functions.size(element-margin) * 0.75);
       width: 6em;
     }
 
@@ -265,7 +267,7 @@ header {
     }
 
     p {
-      margin: (_size(element-margin) * 0.35) 0 0 0;
+      margin: (functions.size(element-margin) * 0.35) 0 0 0;
     }
   }
 
@@ -276,17 +278,17 @@ header {
 
 #nav nav {
   border-bottom: 1px solid #d3d3d3;
-  background-color: _palette(bg);
+  background-color: functions.palette(bg);
   justify-content: space-between !important;
   a {
-    color: _palette(fg-strong);
+    color: functions.palette(fg-strong);
   }
 
   :hover {
-    color: _palette(highlight);
+    color: functions.palette(highlight);
   }
   .fullstack-logo {
-    background-color: _palette(bg);
+    background-color: functions.palette(bg);
     height: 100%;
     width: auto;
     padding: 5px;
@@ -295,13 +297,13 @@ header {
 }
 
 #menu {
-  color: _palette(fg-strong);
+  color: functions.palette(fg-strong);
 
   .actions {
-    background-color: _palette(fg-strong);
+    background-color: functions.palette(fg-strong);
 
     :hover {
-      background-color: _palette(highlight);
+      background-color: functions.palette(highlight);
     }
   }
 }
@@ -309,15 +311,15 @@ header {
 /* Form */
 
 form {
-  margin: 0 0 _size(element-margin) 0;
+  margin: 0 0 functions.size(element-margin) 0;
 }
 
 label {
-  color: _palette(fg-bold);
+  color: functions.palette(fg-bold);
   display: block;
   font-size: 0.9em;
-  font-weight: _font(weight-bold);
-  margin: 0 0 (_size(element-margin) * 0.5) 0;
+  font-weight: functions.font(weight-bold);
+  margin: 0 0 (functions.size(element-margin) * 0.5) 0;
 }
 
 input[type='text'],
@@ -325,11 +327,11 @@ input[type='password'],
 input[type='email'],
 select,
 textarea {
-  @include vendor('appearance', 'none');
-  background: _palette(border-bg);
-  border-radius: _size(border-radius);
+  @include skel.vendor('appearance', 'none');
+  background: functions.palette(border-bg);
+  border-radius: functions.size(border-radius);
   border: none;
-  border: solid 1px _palette(border);
+  border: solid 1px functions.palette(border);
   color: inherit;
   display: block;
   outline: 0;
@@ -342,27 +344,27 @@ textarea {
   }
 
   &:focus {
-    border-color: _palette(accent3);
+    border-color: functions.palette(accent3);
   }
 }
 
 .select-wrapper {
-  @include icon;
+  @include mixins.icon;
   display: block;
   position: relative;
 
   &:before {
-    color: _palette(border);
+    color: functions.palette(border);
     content: '\f078';
     display: block;
-    height: _size(element-height);
-    line-height: _size(element-height);
+    height: functions.size(element-height);
+    line-height: functions.size(element-height);
     pointer-events: none;
     position: absolute;
     right: 0;
     text-align: center;
     top: 0;
-    width: _size(element-height);
+    width: functions.size(element-height);
   }
 
   select::-ms-expand {
@@ -374,7 +376,7 @@ input[type='text'],
 input[type='password'],
 input[type='email'],
 select {
-  height: _size(element-height);
+  height: functions.size(element-height);
 }
 
 textarea {
@@ -383,7 +385,7 @@ textarea {
 
 input[type='checkbox'],
 input[type='radio'] {
-  @include vendor('appearance', 'none');
+  @include skel.vendor('appearance', 'none');
   display: block;
   float: left;
   margin-right: -2em;
@@ -392,44 +394,44 @@ input[type='radio'] {
   z-index: -1;
 
   & + label {
-    @include icon;
-    color: _palette(fg);
+    @include mixins.icon;
+    color: functions.palette(fg);
     cursor: pointer;
     display: inline-block;
     font-size: 1em;
-    font-weight: _font(weight);
-    padding-left: (_size(element-height) * 0.6) + 0.75em;
+    font-weight: functions.font(weight);
+    padding-left: (functions.size(element-height) * 0.6) + 0.75em;
     padding-right: 0.75em;
     position: relative;
 
     &:before {
-      background: _palette(border-bg);
-      border-radius: _size(border-radius);
-      border: solid 1px _palette(border);
+      background: functions.palette(border-bg);
+      border-radius: functions.size(border-radius);
+      border: solid 1px functions.palette(border);
       content: '';
       display: inline-block;
-      height: (_size(element-height) * 0.6);
+      height: (functions.size(element-height) * 0.6);
       left: 0;
-      line-height: (_size(element-height) * 0.575);
+      line-height: (functions.size(element-height) * 0.575);
       position: absolute;
       text-align: center;
       top: 0;
-      width: (_size(element-height) * 0.6);
+      width: (functions.size(element-height) * 0.6);
     }
   }
 
   &:checked + label {
     &:before {
-      background: _palette(dark, bg);
-      border-color: _palette(dark, bg);
-      color: _palette(dark, fg-bold);
+      background: functions.palette(dark, bg);
+      border-color: functions.palette(dark, bg);
+      color: functions.palette(dark, fg-bold);
       content: '\f00c';
     }
   }
 
   &:focus + label {
     &:before {
-      border-color: _palette(accent3);
+      border-color: functions.palette(accent3);
     }
   }
 }
@@ -437,7 +439,7 @@ input[type='radio'] {
 input[type='checkbox'] {
   & + label {
     &:before {
-      border-radius: _size(border-radius);
+      border-radius: functions.size(border-radius);
     }
   }
 }
@@ -451,36 +453,36 @@ input[type='radio'] {
 }
 
 ::-webkit-input-placeholder {
-  color: _palette(fg-light) !important;
+  color: functions.palette(fg-light) !important;
   opacity: 1;
 }
 
 :-moz-placeholder {
-  color: _palette(fg-light) !important;
+  color: functions.palette(fg-light) !important;
   opacity: 1;
 }
 
 ::-moz-placeholder {
-  color: _palette(fg-light) !important;
+  color: functions.palette(fg-light) !important;
   opacity: 1;
 }
 
 :-ms-input-placeholder {
-  color: _palette(fg-light) !important;
+  color: functions.palette(fg-light) !important;
   opacity: 1;
 }
 
 .formerize-placeholder {
-  color: _palette(fg-light) !important;
+  color: functions.palette(fg-light) !important;
   opacity: 1;
 }
 
 /* Box */
 
 .box {
-  border-radius: _size(border-radius);
-  border: solid 1px _palette(border);
-  margin-bottom: _size(element-margin);
+  border-radius: functions.size(border-radius);
+  border: solid 1px functions.palette(border);
+  margin-bottom: functions.size(element-margin);
   padding: 1.5em;
 
   > :last-child,
@@ -499,7 +501,7 @@ input[type='radio'] {
 /* Icon */
 
 .icon {
-  @include icon;
+  @include mixins.icon;
   border-bottom: none;
   position: relative;
 
@@ -509,41 +511,41 @@ input[type='radio'] {
 
   &.style1 {
     &:before {
-      color: _palette(accent1);
+      color: functions.palette(accent1);
     }
   }
   &.style2 {
     &:before {
-      color: _palette(accent2);
+      color: functions.palette(accent2);
     }
   }
   &.style3 {
     &:before {
-      color: _palette(accent3);
+      color: functions.palette(accent3);
     }
   }
   &.style4 {
     &:before {
-      color: _palette(accent4);
+      color: functions.palette(accent4);
     }
   }
   &.style5 {
     &:before {
-      color: _palette(accent5);
+      color: functions.palette(accent5);
     }
   }
   &.style6 {
     &:before {
-      color: _palette(accent6);
+      color: functions.palette(accent6);
     }
   }
 
   &.major {
-    @include icon;
-    color: _palette(fg-bold);
+    @include mixins.icon;
+    color: functions.palette(fg-bold);
     cursor: default;
     display: inline-block;
-    margin: 0 0 (_size(element-margin) * 0.75) 0;
+    margin: 0 0 (functions.size(element-margin) * 0.75) 0;
 
     &:before {
       font-size: 4em;
@@ -555,13 +557,13 @@ input[type='radio'] {
 /* Image */
 
 .image {
-  border-radius: _size(border-radius);
+  border-radius: functions.size(border-radius);
   border: 0;
   display: inline-block;
   position: relative;
 
   img {
-    border-radius: _size(border-radius);
+    border-radius: functions.size(border-radius);
     display: block;
   }
 
@@ -588,7 +590,7 @@ input[type='radio'] {
 
   &.fit {
     display: block;
-    margin: 0 0 _size(element-margin) 0;
+    margin: 0 0 functions.size(element-margin) 0;
     width: 100%;
 
     img {
@@ -601,7 +603,7 @@ input[type='radio'] {
 
 ol {
   list-style: decimal;
-  margin: 0 0 _size(element-margin) 0;
+  margin: 0 0 functions.size(element-margin) 0;
   padding-left: 1.25em;
 
   li {
@@ -611,7 +613,7 @@ ol {
 
 ul {
   list-style: disc;
-  margin: 0 0 _size(element-margin) 0;
+  margin: 0 0 functions.size(element-margin) 0;
   padding-left: 1em;
 
   li {
@@ -623,7 +625,7 @@ ul {
     padding-left: 0;
 
     li {
-      border-top: solid 1px _palette(border);
+      border-top: solid 1px functions.palette(border);
       padding: 0.5em 0;
 
       &:first-child {
@@ -664,9 +666,9 @@ ul {
       text-align: center;
 
       .icon {
-        @include vendor('transform', 'rotate(45deg)');
-        border-radius: _size(border-radius);
-        border: solid 1px _palette(border);
+        @include skel.vendor('transform', 'rotate(45deg)');
+        border-radius: functions.size(border-radius);
+        border: solid 1px functions.palette(border);
         display: inline-block;
         height: 8em;
         line-height: 8em;
@@ -675,7 +677,7 @@ ul {
         width: 8em;
 
         &:before {
-          @include vendor('transform', 'rotate(-45deg)');
+          @include skel.vendor('transform', 'rotate(-45deg)');
           display: inline-block;
           line-height: inherit;
         }
@@ -690,7 +692,7 @@ ul {
 
     li {
       display: inline-block;
-      padding: 0 (_size(element-margin) * 0.5) 0 0;
+      padding: 0 (functions.size(element-margin) * 0.5) 0 0;
       vertical-align: middle;
 
       &:last-child {
@@ -700,14 +702,14 @@ ul {
 
     &.small {
       li {
-        padding: 0 (_size(element-margin) * 0.25) 0 0;
+        padding: 0 (functions.size(element-margin) * 0.25) 0 0;
       }
     }
 
     &.vertical {
       li {
         display: block;
-        padding: (_size(element-margin) * 0.5) 0 0 0;
+        padding: (functions.size(element-margin) * 0.5) 0 0 0;
 
         &:first-child {
           padding-top: 0;
@@ -720,7 +722,7 @@ ul {
 
       &.small {
         li {
-          padding: (_size(element-margin) * 0.25) 0 0 0;
+          padding: (functions.size(element-margin) * 0.25) 0 0 0;
 
           &:first-child {
             padding-top: 0;
@@ -739,14 +741,14 @@ ul {
 
     &.fit {
       display: table;
-      margin-left: (_size(element-margin) * -0.5);
+      margin-left: (functions.size(element-margin) * -0.5);
       padding: 0;
       table-layout: fixed;
-      width: calc(100% + #{(_size(element-margin) * 0.5)});
+      width: calc(100% + #{functions.size(element-margin) * 0.5});
 
       li {
         display: table-cell;
-        padding: 0 0 0 (_size(element-margin) * 0.5);
+        padding: 0 0 0 (functions.size(element-margin) * 0.5);
 
         > * {
           margin-bottom: 0;
@@ -754,11 +756,11 @@ ul {
       }
 
       &.small {
-        margin-left: (_size(element-margin) * -0.25);
-        width: calc(100% + #{(_size(element-margin) * 0.25)});
+        margin-left: (functions.size(element-margin) * -0.25);
+        width: calc(100% + #{functions.size(element-margin) * 0.25});
 
         li {
-          padding: 0 0 0 (_size(element-margin) * 0.25);
+          padding: 0 0 0 (functions.size(element-margin) * 0.25);
         }
       }
     }
@@ -766,7 +768,7 @@ ul {
 }
 
 dl {
-  margin: 0 0 _size(element-margin) 0;
+  margin: 0 0 functions.size(element-margin) 0;
 }
 
 /* Table */
@@ -777,7 +779,7 @@ dl {
 }
 
 table {
-  margin: 0 0 _size(element-margin) 0;
+  margin: 0 0 functions.size(element-margin) 0;
   width: 100%;
 
   tbody {
@@ -786,7 +788,7 @@ table {
       border-right: 0;
 
       &:nth-child(2n + 1) {
-        background-color: _palette(border-bg);
+        background-color: functions.palette(border-bg);
       }
     }
   }
@@ -796,19 +798,19 @@ table {
   }
 
   th {
-    color: _palette(fg-bold);
+    color: functions.palette(fg-bold);
     font-size: 0.9em;
-    font-weight: _font(weight-bold);
+    font-weight: functions.font(weight-bold);
     padding: 0 0.75em 0.75em 0.75em;
     //text-align: left;
   }
 
   thead {
-    border-bottom: solid 1px _palette(border);
+    border-bottom: solid 1px functions.palette(border);
   }
 
   tfoot {
-    border-top: solid 1px _palette(border);
+    border-top: solid 1px functions.palette(border);
   }
 
   &.alt {
@@ -817,7 +819,7 @@ table {
     tbody {
       tr {
         td {
-          border: solid 1px _palette(border);
+          border: solid 1px functions.palette(border);
           border-left-width: 0;
           border-top-width: 0;
 
@@ -851,23 +853,23 @@ input[type='reset'],
 input[type='button'],
 button,
 .button {
-  @include vendor('appearance', 'none');
-  @include vendor(
+  @include skel.vendor('appearance', 'none');
+  @include skel.vendor(
     'transition',
     (
-      'background-color #{_duration(transition)} ease-in-out',
-      'color #{_duration(transition)} ease-in-out'
+      'background-color #{functions.duration(transition)} ease-in-out',
+      'color #{functions.duration(transition)} ease-in-out'
     )
   );
   background-color: transparent;
-  border-radius: _size(border-radius);
+  border-radius: functions.size(border-radius);
   border: 0;
-  box-shadow: inset 0 0 0 1px _palette(border);
-  color: _palette(fg-bold) !important;
+  box-shadow: inset 0 0 0 1px functions.palette(border);
+  color: functions.palette(fg-bold) !important;
   cursor: pointer;
   display: inline-block;
   font-size: 0.9em;
-  font-weight: _font(weight-bold);
+  font-weight: functions.font(weight-bold);
   height: 2.75em;
   letter-spacing: 0.125em;
   line-height: 2.75em;
@@ -879,11 +881,11 @@ button,
   white-space: nowrap;
 
   &:hover {
-    background-color: _palette(border-bg);
+    background-color: functions.palette(border-bg);
   }
 
   &:active {
-    background-color: _palette(border2-bg);
+    background-color: functions.palette(border2-bg);
   }
 
   &.icon {
@@ -896,7 +898,7 @@ button,
 
   &.fit {
     display: block;
-    margin: 0 0 (_size(element-margin) * 0.5) 0;
+    margin: 0 0 (functions.size(element-margin) * 0.5) 0;
     width: 100%;
   }
 
@@ -909,16 +911,16 @@ button,
   }
 
   &.special {
-    background-color: _palette(fg-bold);
+    background-color: functions.palette(fg-bold);
     box-shadow: none !important;
-    color: _palette(bg) !important;
+    color: functions.palette(bg) !important;
 
     &:hover {
-      background-color: lighten(_palette(fg-bold), 5);
+      background-color: color.adjust(functions.palette(fg-bold), $lightness: 5%);
     }
 
     &:active {
-      background-color: darken(_palette(fg-bold), 5);
+      background-color: color.adjust(functions.palette(fg-bold), $lightness: -5%);
     }
   }
 
@@ -931,15 +933,15 @@ button,
 
 // Dark (mixin)
 
-@mixin dark($color-this-bg: _palette(dark, bg)) {
+@mixin dark($color-this-bg: functions.palette(dark, bg)) {
   background-color: $color-this-bg;
-  color: _palette(dark, fg);
+  color: functions.palette(dark, fg);
 
   a {
-    border-bottom-color: transparentize(_palette(dark, fg), 0.25);
+    border-bottom-color: color.adjust(functions.palette(dark, fg), $alpha: calc(-0.25% / 1%));
 
     &:hover {
-      color: _palette(dark, fg-bold);
+      color: functions.palette(dark, fg-bold);
     }
   }
 
@@ -951,17 +953,17 @@ button,
   h6,
   strong,
   b {
-    color: _palette(dark, fg-bold);
+    color: functions.palette(dark, fg-bold);
   }
 
   header {
     p {
-      color: _palette(dark, fg-bold);
+      color: functions.palette(dark, fg-bold);
     }
 
     &.major {
       &:after {
-        background: _palette(dark, border);
+        background: functions.palette(dark, border);
       }
     }
   }
@@ -971,29 +973,29 @@ button,
   input[type='button'],
   button,
   .button {
-    box-shadow: inset 0 0 0 1px _palette(dark, border);
-    color: _palette(dark, fg-bold) !important;
+    box-shadow: inset 0 0 0 1px functions.palette(dark, border);
+    color: functions.palette(dark, fg-bold) !important;
 
     &:hover {
-      background-color: _palette(dark, border-bg);
+      background-color: functions.palette(dark, border-bg);
     }
 
     &:active {
-      background-color: _palette(dark, border2-bg);
+      background-color: functions.palette(dark, border2-bg);
     }
 
     &.special {
-      background-color: _palette(dark, fg-bold);
-      box-shadow: inset 0 0 0 1px _palette(dark, border) !important;
+      background-color: functions.palette(dark, fg-bold);
+      box-shadow: inset 0 0 0 1px functions.palette(dark, border) !important;
       color: $color-this-bg !important;
 
       &:hover {
-        background-color: _palette(dark, border-bg) !important;
-        color: _palette(dark, fg-bold) !important;
+        background-color: functions.palette(dark, border-bg) !important;
+        color: functions.palette(dark, fg-bold) !important;
       }
 
       &:active {
-        background-color: _palette(dark, border2-bg) !important;
+        background-color: functions.palette(dark, border2-bg) !important;
       }
     }
   }
@@ -1002,7 +1004,7 @@ button,
     &.major-icons {
       li {
         .icon {
-          border-color: _palette(dark, border);
+          border-color: functions.palette(dark, border);
         }
       }
     }
@@ -1010,7 +1012,7 @@ button,
 
   .icon {
     &.major {
-      color: _palette(dark, fg-bold);
+      color: functions.palette(dark, fg-bold);
     }
   }
 }
@@ -1018,10 +1020,10 @@ button,
 /* Main */
 
 .main {
-  @include padding(6em, 0);
+  @include mixins.padding(6em, 0);
 
   &.style1 {
-    background: _palette(bg);
+    background: functions.palette(bg);
   }
 
   &.style2 {
@@ -1031,21 +1033,21 @@ button,
     background-size: auto, cover;
   }
   &.style-dark {
-    background: _palette(bg-dark);
+    background: functions.palette(bg-dark);
   }
 }
 /* Header */
 
 #header {
-  @include padding(9em, 0, (0, 0, _size(element-margin), 0));
+  @include mixins.padding(9em, 0, (0, 0, functions.size(element-margin), 0));
   @include dark(#4686a0);
   background-attachment: fixed, fixed, fixed;
   background-image: url('../images/overlay2.png'), url('../images/overlay3.svg'),
     linear-gradient(
       45deg,
-      _palette(accent1-alt) 5%,
-      _palette(accent3-alt) 30%,
-      _palette(accent6-alt)
+      functions.palette(accent1-alt) 5%,
+      functions.palette(accent3-alt) 30%,
+      functions.palette(accent6-alt)
     );
   background-position: top left, center center, center center;
   background-size: auto, cover, cover;
@@ -1058,15 +1060,15 @@ button,
   }
 
   p {
-    margin: (_size(element-margin) * 0.5) 0 0 0;
+    margin: (functions.size(element-margin) * 0.5) 0 0 0;
   }
 
   .actions {
-    margin: (_size(element-margin) * 1.25) 0 0 0;
+    margin: (functions.size(element-margin) * 1.25) 0 0 0;
     position: relative;
 
     &:after {
-      background: _palette(dark, border);
+      background: functions.palette(dark, border);
       content: '';
       height: 100vh;
       left: 50%;
@@ -1077,27 +1079,27 @@ button,
   }
 
   .inner {
-    @include vendor('transition', ('transform 1.5s ease', 'opacity 2s ease'));
-    @include vendor('transition-delay', '0.25s');
-    @include vendor('transform', 'scale(1)');
+    @include skel.vendor('transition', ('transform 1.5s ease', 'opacity 2s ease'));
+    @include skel.vendor('transition-delay', '0.25s');
+    @include skel.vendor('transform', 'scale(1)');
     opacity: 1;
     position: relative;
     z-index: 1;
 
     .actions {
-      @include vendor('transition', 'transform 1.25s ease');
-      @include vendor('transition-delay', '1s');
-      @include vendor('transform', 'translateY(0)');
+      @include skel.vendor('transition', 'transform 1.25s ease');
+      @include skel.vendor('transition-delay', '1s');
+      @include skel.vendor('transform', 'translateY(0)');
       opacity: 1;
     }
   }
 
   &:after {
-    @include vendor('transition', 'opacity 1s ease');
+    @include skel.vendor('transition', 'opacity 1s ease');
     background-image: linear-gradient(
       45deg,
-      _palette(accent3-alt),
-      _palette(accent6-alt)
+      functions.palette(accent3-alt),
+      functions.palette(accent6-alt)
     );
     content: '';
     height: 100%;
@@ -1112,11 +1114,11 @@ button,
 .body.is-loading {
   #header {
     .inner {
-      @include vendor('transform', 'scale(1.05)');
+      @include skel.vendor('transform', 'scale(1.05)');
       opacity: 0;
 
       .actions {
-        @include vendor('transform', 'translateY(30em)');
+        @include skel.vendor('transform', 'translateY(30em)');
         opacity: 0;
       }
     }
@@ -1130,15 +1132,15 @@ button,
 /* Footer */
 
 #footer {
-  @include padding(6em, 0, (0, 0, _size(element-margin), 0));
+  @include mixins.padding(6em, 0, (0, 0, functions.size(element-margin), 0));
   @include dark(#4686a0);
   background-attachment: fixed, fixed, fixed;
   background-image: url('../images/overlay2.png'), url('../images/overlay4.svg'),
     linear-gradient(
       45deg,
-      _palette(accent6-alt),
-      _palette(accent3-alt) 50%,
-      _palette(accent1-alt) 95%
+      functions.palette(accent6-alt),
+      functions.palette(accent3-alt) 50%,
+      functions.palette(accent1-alt) 95%
     );
   background-position: top left, center center, center center;
   background-size: auto, cover, cover;
@@ -1151,7 +1153,7 @@ button,
   .copyright {
     font-size: 0.8em;
     list-style: none;
-    margin: _size(element-margin) 0 0 0;
+    margin: functions.size(element-margin) 0 0 0;
     padding: 0;
 
     li {
@@ -1192,8 +1194,8 @@ button,
 //Explore Page
 .style-dark {
   .explore-container {
-    border-color: _palette(fg-strong);
-    color: _palette(fg-strong);
+    border-color: functions.palette(fg-strong);
+    color: functions.palette(fg-strong);
 
     h1,
     h2,
@@ -1201,13 +1203,13 @@ button,
     h4,
     h5,
     b {
-      color: _palette(fg-strong);
+      color: functions.palette(fg-strong);
     }
     button {
-      color: _palette(fg-strong) !important;
+      color: functions.palette(fg-strong) !important;
     }
     .explore-select option {
-      color: _palette(bg-dark);
+      color: functions.palette(bg-dark);
     }
   }
 }
@@ -1216,8 +1218,8 @@ button,
   .endpoint-container,
   .endpoint-example-container,
   .route-container {
-    border-color: _palette(border) !important;
-    color: _palette(bg-dark) !important;
+    border-color: functions.palette(border) !important;
+    color: functions.palette(bg-dark) !important;
 
     h1,
     h2,
@@ -1225,10 +1227,10 @@ button,
     h4,
     h5,
     b {
-      color: _palette(bg-dark) !important;
+      color: functions.palette(bg-dark) !important;
     }
     button {
-      color: _palette(bg-dark) !important;
+      color: functions.palette(bg-dark) !important;
     }
   }
 }
@@ -1395,7 +1397,7 @@ button,
 }
 /* XLarge */
 
-@include breakpoint(xlarge) {
+@include skel.breakpoint(xlarge) {
   /* Basic */
 
   body,
@@ -1408,7 +1410,7 @@ button,
   /* Header */
 
   #header {
-    @include padding(6em, 0, (0, 0, _size(element-margin), 0));
+    @include mixins.padding(6em, 0, (0, 0, functions.size(element-margin), 0));
   }
   /*captcha*/
 
@@ -1419,7 +1421,7 @@ button,
 
 /* Large */
 
-@include breakpoint(large) {
+@include skel.breakpoint(large) {
   /* Basic */
 
   body,
@@ -1459,7 +1461,7 @@ button,
   /* Main */
 
   .main {
-    @include padding(4em, 0);
+    @include mixins.padding(4em, 0);
 
     &.style2 {
       background-attachment: scroll;
@@ -1469,7 +1471,7 @@ button,
   /* Header */
 
   #header {
-    @include padding(5em, 0, (0, 0, _size(element-margin), 0));
+    @include mixins.padding(5em, 0, (0, 0, functions.size(element-margin), 0));
     background-attachment: scroll;
 
     br {
@@ -1480,7 +1482,7 @@ button,
   /* Footer */
 
   #footer {
-    @include padding(4em, 0, (0, 0, _size(element-margin), 0));
+    @include mixins.padding(4em, 0, (0, 0, functions.size(element-margin), 0));
     background-attachment: scroll;
   }
 
@@ -1493,7 +1495,7 @@ button,
 
 /* Medium */
 
-@include breakpoint(medium) {
+@include skel.breakpoint(medium) {
   /* List */
 
   ul {
@@ -1513,19 +1515,19 @@ button,
   /* Main */
 
   .main {
-    @include padding(5em, 3em);
+    @include mixins.padding(5em, 3em);
   }
 
   /* Header */
 
   #header {
-    @include padding(8em, 3em, (0, 0, _size(element-margin), 0));
+    @include mixins.padding(8em, 3em, (0, 0, functions.size(element-margin), 0));
   }
 
   /* Footer */
 
   #footer {
-    @include padding(5em, 3em, (0, 0, _size(element-margin), 0));
+    @include mixins.padding(5em, 3em, (0, 0, functions.size(element-margin), 0));
   }
 
   /* One */
@@ -1562,7 +1564,7 @@ button,
 
 /* Small */
 
-@include breakpoint(small) {
+@include skel.breakpoint(small) {
   /* Basic */
 
   body,
@@ -1612,7 +1614,7 @@ button,
 
   .icon {
     &.major {
-      margin: 0 0 (_size(element-margin) * 0.5) 0;
+      margin: 0 0 (functions.size(element-margin) * 0.5) 0;
     }
   }
 
@@ -1630,23 +1632,23 @@ button,
   /* Main */
 
   .main {
-    @include padding(3em, 1.5em);
+    @include mixins.padding(3em, 1.5em);
   }
 
   /* Header */
 
   #header {
-    @include padding(4em, 3em, (0, 0, _size(element-margin), 0));
+    @include mixins.padding(4em, 3em, (0, 0, functions.size(element-margin), 0));
 
     .actions {
-      margin: _size(element-margin) 0 0 0;
+      margin: functions.size(element-margin) 0 0 0;
     }
   }
 
   /* Footer */
 
   #footer {
-    @include padding(3em, 1.5em, (0, 0, _size(element-margin), 0));
+    @include mixins.padding(3em, 1.5em, (0, 0, functions.size(element-margin), 0));
   }
 
   /*Explore page */
@@ -1664,16 +1666,16 @@ button,
 
 /* XSmall */
 
-@include breakpoint(xsmall) {
+@include skel.breakpoint(xsmall) {
   /* List */
 
   ul {
     &.actions {
-      margin: 0 0 _size(element-margin) 0;
+      margin: 0 0 functions.size(element-margin) 0;
 
       li {
         display: block;
-        padding: (_size(element-margin) * 0.5) 0 0 0;
+        padding: (functions.size(element-margin) * 0.5) 0 0 0;
         text-align: center;
         width: 100%;
 
@@ -1695,7 +1697,7 @@ button,
 
       &.small {
         li {
-          padding: (_size(element-margin) * 0.25) 0 0 0;
+          padding: (functions.size(element-margin) * 0.25) 0 0 0;
 
           &:first-child {
             padding-top: 0;
@@ -1717,13 +1719,13 @@ button,
   /* Main */
 
   .main {
-    @include padding(2em, 1.5em);
+    @include mixins.padding(2em, 1.5em);
   }
 
   /* Header */
 
   #header {
-    @include padding(4em, 2em, (0, 0, _size(element-margin), 0));
+    @include mixins.padding(4em, 2em, (0, 0, functions.size(element-margin), 0));
     br {
       display: none;
     }
@@ -1732,10 +1734,10 @@ button,
   /* Footer */
 
   #footer {
-    @include padding(2em, 1.5em, (0, 0, _size(element-margin), 0));
+    @include mixins.padding(2em, 1.5em, (0, 0, functions.size(element-margin), 0));
 
     .copyright {
-      margin: (_size(element-margin) * 0.75) 0 0 0;
+      margin: (functions.size(element-margin) * 0.75) 0 0 0;
 
       li {
         border: 0;
@@ -1752,7 +1754,7 @@ button,
   /*Body Grid Wrapper*/
 
   .grid-wrapper {
-    margin-top: (_size(element-margin) * 0.5);
+    margin-top: (functions.size(element-margin) * 0.5);
   }
 
   /* Explore page*/
@@ -1776,7 +1778,7 @@ button,
 
 /* XXSmall */
 
-@include breakpoint(xxsmall) {
+@include skel.breakpoint(xxsmall) {
   /* Basic */
 
   html,
@@ -1787,35 +1789,35 @@ button,
   /* Main */
 
   .main {
-    @include padding(2em, 1em);
+    @include mixins.padding(2em, 1em);
   }
 
   /* Header */
 
   #header {
-    @include padding(3em, 1em, (0, 0, _size(element-margin), 0));
+    @include mixins.padding(3em, 1em, (0, 0, functions.size(element-margin), 0));
   }
 
   /* Body Grid Wrapper*/
 
   .grid-wrapper {
-    margin-top: (_size(element-margin) * 0.5);
+    margin-top: (functions.size(element-margin) * 0.5);
   }
 
   /* Footer */
 
   #footer {
-    @include padding(2em, 1em, (0, 0, _size(element-margin), 0));
+    @include mixins.padding(2em, 1em, (0, 0, functions.size(element-margin), 0));
   }
 }
 
 // Component.
 
-@import 'components/contact-method';
-@import 'components/image';
+@include meta.load-css('components/contact-method');
+@include meta.load-css('components/image');
 
 // Layout
-@import 'layout/nav';
-@import 'layout/menu';
-@import 'layout/contact';
-@import 'layout/main';
+@include meta.load-css('layout/nav');
+@include meta.load-css('layout/menu');
+@include meta.load-css('layout/contact');
+@include meta.load-css('layout/main');

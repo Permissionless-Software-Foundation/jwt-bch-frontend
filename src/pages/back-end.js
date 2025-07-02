@@ -233,7 +233,6 @@ class Homepage extends React.Component {
           </div>
         </section>
 
-
         <section id='five' className='main style3 special'>
           <div className='container'>
             <header className='major'>

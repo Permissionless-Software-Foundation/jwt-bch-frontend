@@ -1,3 +1,6 @@
+@use "../libs/functions";
+@use "../libs/skel";
+
 ///
 /// Forty by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,12 +10,12 @@
 /* Contact */
 
 #contact {
-    background-color: _palette(bg-alt);
+    background-color: functions.palette(bg-alt);
     padding : 4em 2em 0 2em;
 
 
     > * {
-        border-top: solid 1px _palette(border);
+        border-top: solid 1px functions.palette(border);
 
         &:first-child {
             border-top: 0;
@@ -23,11 +26,11 @@
 
     &.alt {
         background-color: transparent;
-        border-bottom: solid 1px _palette(border);
+        border-bottom: solid 1px functions.palette(border);
     }
     & h1 {
         font-size: 2.5em;
-        width: calc(100% + .5em);
+        width: calc(100% + 0.5em);
         font-weight: 600;
         margin: 0px;
     }
@@ -52,14 +55,14 @@
 
 
 
-     @include breakpoint(xlarge) {
+     @include skel.breakpoint(xlarge) {
 
         .contact-button{
             width: 15%;
         }
     }
 
-    @include breakpoint(large) {
+    @include skel.breakpoint(large) {
         .captcha-container{
             max-width: 25%;
         }
@@ -68,7 +71,7 @@
         }
     }
 
-    @include breakpoint(small) {
+    @include skel.breakpoint(small) {
         .captcha-container{
             max-width: 35%;
         }
@@ -77,7 +80,7 @@
         }
     }
 
-    @include breakpoint(xsmall) {
+    @include skel.breakpoint(xsmall) {
         .captcha-container{
             max-width: 65%;
         }
