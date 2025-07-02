@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 
 import Layout from '../components/layout'
 import PSFIMG from '../assets/images/favicon.png'
-import CircularProgress from '@material-ui/core/CircularProgress'
+// import CircularProgress from '@material-ui/core/CircularProgress'
 
 import NOTIFICATION from '../lib/notification'
 import Captcha from '../components/captcha'

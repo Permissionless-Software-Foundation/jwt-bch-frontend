@@ -8,7 +8,7 @@ import '../../assets/scss/main.scss'
 import JSONPretty from 'react-json-pretty'
 import fetchToCurl from 'fetch-to-curl'
 
-import CircularProgress from '@material-ui/core/CircularProgress';
+import CircularProgress from '@mui/material/CircularProgress';
 
 
 

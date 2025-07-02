@@ -34,7 +34,8 @@ class Homepage extends React.Component {
               <p>
                 The web wallet is based on{' '}
                 <a href='https://create-react-app.dev/' target='_blank' rel='noreferrer'>
-                React</a>.{' '}
+                  React
+                </a>.{' '}
                 We provide boilerplates,
                 plugins, and example apps. Your app can be compiled into native iOS and
                 Android apps using{' '}
@@ -49,22 +50,23 @@ class Homepage extends React.Component {
                 These graduated boilerplates start simple and increasingly
                 add features. They are all based
                 on <a href='https://create-react-app.dev/' target='_blank' rel='noreferrer'>Create
-                React App</a> and <a href='https://react-bootstrap.github.io/' target='_blank' rel='noreferrer'>React Bootstrap</a>.
+                  React App
+                   </a> and <a href='https://react-bootstrap.github.io/' target='_blank' rel='noreferrer'>React Bootstrap</a>.
               </h4>
               <ul>
                 <li>
-                  <a href="https://github.com/Permissionless-Software-Foundation/react-bootstrap-web3-spa" target="_blank">
+                  <a href='https://github.com/Permissionless-Software-Foundation/react-bootstrap-web3-spa' target='_blank' rel='noreferrer'>
                     react-bootstrap-web3-spa
-                  </a> - Single Page App (SPA) integrating <a href="https://www.npmjs.com/package/minimal-slp-wallet" target="_blank">minimal-slp-wallet</a>.
+                  </a> - Single Page App (SPA) integrating <a href='https://www.npmjs.com/package/minimal-slp-wallet' target='_blank' rel='noreferrer'>minimal-slp-wallet</a>.
                 </li>
                 <li>
-                  <a href="https://github.com/Permissionless-Software-Foundation/react-bootstrap-web3-android" target="_blank">
+                  <a href='https://github.com/Permissionless-Software-Foundation/react-bootstrap-web3-android' target='_blank' rel='noreferrer'>
                     react-bootstrap-web3-android
-                  </a> - Same as above, but with <a href="https://capacitorjs.com/" target="_blank">CapacitorJS</a> integrated
+                  </a> - Same as above, but with <a href='https://capacitorjs.com/' target='_blank' rel='noreferrer'>CapacitorJS</a> integrated
                   to convert the web app to a native Android APK.
                 </li>
                 <li>
-                  <a href="https://github.com/Permissionless-Software-Foundation/bch-wallet-web3-android" target="_blank">
+                  <a href='https://github.com/Permissionless-Software-Foundation/bch-wallet-web3-android' target='_blank' rel='noreferrer'>
                     bch-wallet-web3-android
                   </a> - Based on the above two libraries. A full-features web wallet for Bitcoin Cash.
                 </li>
@@ -93,7 +95,7 @@ class Homepage extends React.Component {
               <p>
                 A React boilerplate to get you started quickly.
                 This boilerplate
-                integrates <a href="https://www.npmjs.com/package/minimal-slp-wallet" target="_blank">minimal-slp-wallet</a> for
+                integrates <a href='https://www.npmjs.com/package/minimal-slp-wallet' target='_blank' rel='noreferrer'>minimal-slp-wallet</a> for
                 talking
                 to the Bitcoin Cash blockchain. It can query balances,
                 convert addresses, generate paper wallets, and other small,
@@ -127,7 +129,7 @@ class Homepage extends React.Component {
               </h3>
               <p>
                 This is the same boilerplate as react-bootstrap-web3-spa, but
-                with <a href="https://capacitorjs.com/" target="_blank">CapacitorJS</a> integrated
+                with <a href='https://capacitorjs.com/' target='_blank' rel='noreferrer'>CapacitorJS</a> integrated
                 to convert the web app to a native Android APK. Using this boilerplate
                 will allow you to build your own Android or iOS app.
               </p>
@@ -350,8 +352,6 @@ class Homepage extends React.Component {
           </div>
         </section>
 
-
-
         <section id='five' className='main style3 special'>
           <div className='container'>
             <header className='major'>
@@ -392,7 +392,6 @@ export default Homepage
       allowFullScreen
     />
   </div>
-
 
   <section id='four' className='main style2 special'>
     <div className='grid-wrapper'>

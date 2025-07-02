@@ -58,7 +58,7 @@ class Homepage extends React.Component {
 
               <p>
                 Having issues downloading the files? Reach out
-                on <a href="https://t.me/bch_js_toolkit" target="_blank">our Telegram channel</a> for 
+                on <a href='https://t.me/bch_js_toolkit' target='_blank' rel='noreferrer'>our Telegram channel</a> for
                 assistence.
               </p>
             </div>

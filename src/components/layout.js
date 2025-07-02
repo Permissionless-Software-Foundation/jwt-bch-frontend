@@ -6,8 +6,8 @@ import '../assets/scss/main.scss'
 import NavBar from './nav-bar'
 import Menu from './Menu'
 
-import ReactNotification from 'react-notifications-component'
-import 'react-notifications-component/dist/theme.css'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 class Template extends React.Component {
   constructor (props) {
@@ -54,7 +54,7 @@ class Template extends React.Component {
 
     return (
       <>
-        <ReactNotification />
+        <ToastContainer />
         <div
           className={`body ${this.state.loading} ${
             this.state.isMenuVisible ? 'is-menu-visible' : ''

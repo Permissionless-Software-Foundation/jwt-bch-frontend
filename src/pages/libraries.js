@@ -42,7 +42,7 @@ class Homepage extends React.Component {
                   bch-js
                 </a>{' '}
                 is a low-level JavaScript library for generating custom Bitcoin Cash
-                transactions. <a href="https://www.npmjs.com/package/minimal-slp-wallet" target="_blank">minimal-slp-wallet</a> is
+                transactions. <a href='https://www.npmjs.com/package/minimal-slp-wallet' target='_blank' rel='noreferrer'>minimal-slp-wallet</a> is
                 high-level JavaScript library for executing common wallet features.
                 FullStack.cash maintains several additional
                 libraries for specific blockchain use cases. This page lists the
@@ -163,7 +163,6 @@ class Homepage extends React.Component {
               </ul>
             </div>
 
-
             <div className='col-6'>
               <h3>
                 <b>bch-message-lib</b>
@@ -214,7 +213,6 @@ class Homepage extends React.Component {
                 </li>
               </ul>
             </div>
-
 
           </div>
         </section>
